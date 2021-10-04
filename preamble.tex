@@ -1,0 +1,76 @@
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont} 
+\usepackage{csquotes}
+\usepackage{calc}
+\usepackage{booktabs}
+\usepackage{algorithmic}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[acronym,shortcuts]{glossaries}
+% \usepackage{layouts}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{rotating}
+\usepackage{siunitx}
+\usepackage[backend=biber,minbibnames=2,maxbibnames=2,maxcitenames=1,mincitenames=1,sorting=none,style=numeric]{biblatex}
+\bibliography{bibfile}
+%\setcounter{biburllcpenalty}{10000}
+\setcounter{biburlucpenalty}{2000}
+%\setcounter{biburlnumpenalty}{1000}
+\renewcommand{\namelabeldelim}{\addnbspace}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgffor}
+\usepackage{pdfpages}
+\usepackage{subcaption}
+\usepackage{standalone}
+\usepackage{multirow,tabularx}
+\usepackage{hyperref}
+
+\usetikzlibrary{calc,positioning, shapes}
+
+%\pgfplotsset{width=\columnwidth,compat=1.14}\usepgfplotslibrary{statistics}
+%\pgfplotsset{boxplot/.cd,every median/.style={red}}
+%\pgfplotsset{grid style={help lines}}
+%\pgfplotsset{minor grid style={very thin, dotted}}
+%\pgfplotsset{major grid style={thick}}
+
+\newcommand{\unsim}{\mathord{\sim}}
+\newcommand{\e}{\ensuremath{\mathrm{e}}}
+
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\newcommand{\Pot}{\ensuremath{\mathcal{P}}}
+
+
+\newcommand{\rowvec}[2]{\begin{pmatrix}
+#1&#2\\
+\end{pmatrix}}
+
+\newcommand{\colvec}[2]{\begin{pmatrix}
+#1\\
+#2
+\end{pmatrix}}
+
+\newcommand{\TODO}[1]{{\color{red} TODO (#1)}}
+
+\newcommand{\authorblock}{
+Florian Loher \textit{Technical University of Applied
+Science Regensburg} \\
+florian.loher@st.oth-regensburg.de
+}
+
+\newcommand{\deactivateGlossaries}
+{
+    \renewcommand{\makenoidxglossaries}{}
+    \renewcommand{\printnoidxglossaries}{}
+}
+
+\deactivateGlossaries
+
+\makenoidxglossaries
