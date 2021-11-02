@@ -1,7 +1,10 @@
 % !TeX spellcheck = de_DE
 % !LuaLaTeX
-\documentclass[parskip=half,twoside,BCOR=2cm,11pt,DIV=10]{scrreprt}
+\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half]{scrreprt}
 \input{preamble}
+\addbibresource{Recherche/My Collection.bib}
+\defbibheading{Literatur}{\chapter{Literaturverzeichnis}} 
+\defbibheading{Quellen}{\section*{Quellenverzeichnis}} 
 
 \begin{document}
 \input{titelseite}
@@ -25,7 +28,7 @@ Bei der Beschäftigung mit Nebenläufigkeit treten Probleme auf, die bei rein se
 
 \paragraph{Race Conditions} Wenn Aufgaben auf geteilte Ressource zugreifen, sind sie nicht mehr ohne Weiteres nebenläufig. Greift mindestens eine Aufgabe auf die Ressource in verändernder Weise zu, kann das Verhalten der Aufgaben nicht mehr vorhergesagt werden. Das Ergebnis hängt von der genauen Ausführreihenfolge ab. Diese ist einem Programm nicht zugänglich und kann sich bei jeder Ausführung unterscheiden. Solche Situationen, in denen die Ausführreihenfolge Einfluss auf das Ergebnis des Programmlaufs hat, werden Race Conditions genannt.
 
-Um korrekte Nebenläufigkeit zu garantieren, müssen diese verhindert werden.
+Um korrekte Nebenläufigkeit zu garantieren, müssen diese verhindert werden.\cite{Friesen2015}\cite{Pike2012}\cite{Harper2011}\cite{Hettel2016}
 \subsection{Threading in Java}
 \section{Anforderungen der blocklib an eine Threading API}
 \subsection{Kontrolle über Threads an einer Stelle}
@@ -48,7 +51,11 @@ Um korrekte Nebenläufigkeit zu garantieren, müssen diese verhindert werden.
 \section{Implementierung der Threading API}
 \section{Integration und Performanceanalyse}
 
-\chapter
-{Fazit und Ausblick}
+\chapter{Fazit und Ausblick}
+
+\printbibliography[title={Literaturverzeichnis},heading=bibintoc,notkeyword=online]
+
+\printbibliography[title={Quellenverzeichnis},heading=bibintoc,keyword=online] 
+
 
 \end{document}

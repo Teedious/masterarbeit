@@ -3,10 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{microtype}
+\usepackage{geometry}
+\geometry{a4paper, top=27mm, left=30mm, right=20mm, bottom=35mm, headsep=10mm, footskip=12mm}
 
 \usepackage{amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont} 
 \usepackage{csquotes}
-\usepackage{calc}
 \usepackage{booktabs}
 \usepackage{algorithmic}
 
@@ -17,11 +18,15 @@
 \usepackage{xcolor}
 \usepackage{rotating}
 \usepackage{siunitx}
-\usepackage[backend=biber,minbibnames=2,maxbibnames=2,maxcitenames=1,mincitenames=1,sorting=none,style=numeric]{biblatex}
-\bibliography{bibfile}
-%\setcounter{biburllcpenalty}{10000}
-\setcounter{biburlucpenalty}{2000}
-%\setcounter{biburlnumpenalty}{1000}
+\usepackage[backend=biber,minbibnames=2,maxbibnames=2,maxcitenames=1,mincitenames=1,style=alphabetic]{biblatex}
+\setcounter{biburlnumpenalty}{9000}
+\setcounter{biburlucpenalty}{9000}
+\setcounter{biburllcpenalty}{9000}
+
+% new stretchable space between characters
+\setlength{\biburlnumskip}{0mu plus 1mu}
+\setlength{\biburlucskip}{0mu plus 1mu}
+\setlength{\biburllcskip}{0mu plus 1mu}
 \renewcommand{\namelabeldelim}{\addnbspace}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -58,11 +63,6 @@
 
 \newcommand{\TODO}[1]{{\color{red} TODO (#1)}}
 
-\newcommand{\authorblock}{
-Florian Loher \textit{Technical University of Applied
-Science Regensburg} \\
-florian.loher@st.oth-regensburg.de
-}
 
 \newcommand{\deactivateGlossaries}
 {
@@ -73,3 +73,29 @@ florian.loher@st.oth-regensburg.de
 \deactivateGlossaries
 
 \makenoidxglossaries
+
+\usepackage{listings}
+\lstset{basicstyle=\footnotesize, captionpos=b, breaklines=true, showstringspaces=false, tabsize=2, frame=lines, numbers=left, numberstyle=\tiny, xleftmargin=2em, framexleftmargin=2em}
+\makeatletter
+\def\l@lstlisting#1#2{\@dottedtocline{1}{0em}{1em}{\hspace{1,5em} Lst. #1}{#2}}
+\makeatother
+
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\definecolor{gray}{rgb}{0.6,0.6,0.6}
+ 
+\lstset{language=Java,
+basicstyle=\ttfamily\footnotesize,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen}\itshape\bfseries,
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+numbers=left,
+numberstyle=\tiny\color{gray},
+stepnumber=1,
+numbersep=10pt,
+tabsize=3,
+showspaces=false,
+showstringspaces=false}
