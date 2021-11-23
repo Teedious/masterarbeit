@@ -12,10 +12,12 @@
 \usepackage{algorithmic}
 
 \usepackage{graphicx}
-\usepackage[acronym,shortcuts]{glossaries}
+\graphicspath{ {./img/} }
 % \usepackage{layouts}
-\usepackage{textcomp}
-\usepackage{xcolor}
+\usepackage{textcomp} 
+\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
+
+\usepackage[layout={margin,index},draft]{fixme}
 \usepackage{rotating}
 \usepackage{siunitx}
 \usepackage[backend=biber,minbibnames=2,maxbibnames=2,maxcitenames=1,mincitenames=1,style=alphabetic]{biblatex}
@@ -34,7 +36,8 @@
 \usepackage{subcaption}
 \usepackage{standalone}
 \usepackage{multirow,tabularx}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage[acronym,shortcuts]{glossaries}
 
 \usetikzlibrary{calc,positioning, shapes}
 
@@ -61,16 +64,13 @@
 #2
 \end{pmatrix}}
 
-\newcommand{\TODO}[1]{{\color{red} TODO (#1)}}
-
-
 \newcommand{\deactivateGlossaries}
 {
     \renewcommand{\makenoidxglossaries}{}
     \renewcommand{\printnoidxglossaries}{}
 }
 
-\deactivateGlossaries
+%\deactivateGlossaries
 
 \makenoidxglossaries
 
@@ -99,3 +99,8 @@ numbersep=10pt,
 tabsize=3,
 showspaces=false,
 showstringspaces=false}
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+\newcommand{\todo}[1]{\fxnote{{\color{red}#1}}}
+\newcommand{\TODO}[2]{\fxnote*{{\color{red}#1}}{\underline{#2}}}

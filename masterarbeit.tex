@@ -5,7 +5,7 @@
 \addbibresource{Recherche/My Collection.bib}
 \defbibheading{Literatur}{\chapter{Literaturverzeichnis}} 
 \defbibheading{Quellen}{\section*{Quellenverzeichnis}} 
-
+\input{glossary}
 \begin{document}
 \input{titelseite}
 \null\thispagestyle{empty}\clearpage
@@ -21,14 +21,31 @@
 \chapter{Entwicklung einer Threading API}
 
 \section{Grundlagen zu Threading}
-\subsection{Grundlegende Konzepte und Probleme bei Nebenläufigkeit}
-Die Begriffe Nebenläufigkeit und Parallelität lassen sich leicht verwechseln. Es ist allerdings wichtig, deren Unterschiede zu kennen, um zu verstehen welches Thema genau behandelt wird und aus welchem Blickwinkel. Beide Konzepte beschäftigen sich mit der Ausführung von (beliebigen) Aufgaben. Wenn Aufgaben zeitlich unabhängig von einander ausgeführt werden können, bezeichnet man diese als nebenläufig. Parallelität bezeichnet die tatsächliche gleichzeitige Ausführung mehrerer Aufgaben. Als Spieleprogrammierer liegt der Fokus also eher auf Fragen bezüglich Nebenläufigkeit, da Parallelität plattformabhängig ist und meist durch Betriebssysteme abstrahiert wird. Parallelität bezieht also auf die Frage: \enquote{Wie kann ich verschiedene Aufgaben gleichzeitig durchführen?}, und Nebenläufigkeit auf die Frage: \enquote{Wie muss ich mein Programm strukturieren, damit ich von Parallelität profitieren kann?}. 
+\subsection{Definition von Thread}
+Um definieren zu können, was ein Thread ist, müssen zuerst einige weitere Grundbegriffe eingeführt werden. 
 
-Bei der Beschäftigung mit Nebenläufigkeit treten Probleme auf, die bei rein sequenziellen Aufgaben nicht auftreten können. Einige dieser Probleme werden im Folgenden beschrieben.
+Als \emph{Programm} wird in dieser Arbeit die konkrete Niederschrift eines Algorithmus bezeichnet. Die Elemente, aus denen das Programm besteht, werden als \emph{Anweisungen} bezeichnet. Bei der Ausführung eines Programms werden Einzelschritte durchlaufen, diese bezeichnet man als \emph{Aktivitäten}. Eine Sequenz von Aktivitäten, die ein isoliertes Problem abarbeitet, wird \emph{Prozess} genannt. Um diese Definition des Prozessbegriffs von späteren Definitionen abzugrenzen wird er im Folgenden \emph{Rechenprozess} genannt. Die Ausführungseinheit, auf der die Schritte eines Rechenprozesses durchgeführt werden, wird \emph{Prozessor} genannt.\cite{Herrtwich1989}
 
-\paragraph{Race Conditions} Wenn Aufgaben auf geteilte Ressource zugreifen, sind sie nicht mehr ohne Weiteres nebenläufig. Greift mindestens eine Aufgabe auf die Ressource in verändernder Weise zu, kann das Verhalten der Aufgaben nicht mehr vorhergesagt werden. Das Ergebnis hängt von der genauen Ausführreihenfolge ab. Diese ist einem Programm nicht zugänglich und kann sich bei jeder Ausführung unterscheiden. Solche Situationen, in denen die Ausführreihenfolge Einfluss auf das Ergebnis des Programmlaufs hat, werden Race Conditions genannt.
+Wenn ein Programm auf einem Betriebssystem ausgeführt wird, erzeugt das Betriebssystem einen isolierten Adressraum, in dem das Programm ausgeführt wird. Ein Rechenprozess, der auf diese Weise ausgeführt wird, wird als \emph{(System-)Prozess} bezeichnet. Systemprozesse können selbst weitere Systemprozesse starten, wenn das Betriebssystem dies zulässt. Diese Systemprozesse besitzen dann ihren eigenen Adressraum. Die Anzahl der Systemprozesse, die auf einem Rechner laufen, ist meist höher als die Anzahl der Prozessoren des Rechners. Somit können nicht alle Prozesse zur gleichen Zeit laufen. Damit dennoch alle Prozesse voranschreiten können, wechseln moderne Betriebssysteme die Systemprozesse, die auf den Prozessoren des Rechners ausgeführt werden, in schneller Folge. Dabei muss das Betriebssystem einige zu den Systemprozessen gehörende Daten, den \emph{Prozesskontrollblock}, tauschen, sodass der jeweils gerade ausführende Systemprozess seinen eigenen Prozesskontrollblock zur Verfügung hat. Dieser Tausch wird \emph{Kontextwechsel} genannt.\cite{Jobst2018}
 
-Um korrekte Nebenläufigkeit zu garantieren, müssen diese verhindert werden.\cite{Friesen2015}\cite{Pike2012}\cite{Harper2011}\cite{Hettel2016}
+Das Speichern und Laden der Prozesskontrollblöcken im Rahmen der Kontextwechsel von Systemprozessen benötigt eine nicht zu vernachlässigende Menge an Zeit. Ein solcher Zeitverbrauch wird auch als \emph{Overhead} bezeichnet. Um den Overhead von Kontextwechseln zu vermindern, bieten moderne Betriebssysteme Systemprozessen die Möglichkeit Rechenprozesse zu erzeugen, die denselben Adressraum wie der erzeugende Systemprozess besitzen. Ein auf diese Art erzeugter Rechenprozess heißt \emph{Thread}. Da die Menge der thread-eigenen Daten, des \emph{Threadkontrollblocks}, deutlich geringer ist als die des Prozesskontrollblocks, erzeugt der Kontextwechsel zwischen Threads einen geringeren Overhead. Zudem können Threads aufgrund des gemeinsamen Adressraums einfacher auf geteilte Ressourcen zugreifen. Das vereinfacht die Kooperation zwischen diesen Rechenprozessen.\cite{Jobst2018}
+
+\subsection{Nebenläufigkeit}
+Im vorherigen Abschnitt \TODO{hier ist Vergangenheit}{wurde beschrieben}, dass verschiedene Rechenprozesse unabhängig von einander \enquote{gleichzeit} laufen können. Ein Programm wird häufig als Sequenz von Anweisungen verstanden. In der Definition von Programm in dieser Arbeit wird bewusst auf das Wort Sequenz verzichtet, denn bei vielen Programmen kann es bei bestimmten Anweisungen irrelevant sein, in welcher Reihenfolge sie ausgeführt werden oder ob sie sogar gleichzeitig. Man betrachte das folgende Programm, das die Quadratsumme zweier Ganzzahlen ausgibt: 
+\begin{lstlisting}
+printSummedSquare(int a, int b){
+  x <- a*a
+  y <- b*b
+  print(x+y)
+}
+\end{lstlisting}
+Es ist leicht zu erkennen, dass es vollkommen egal ist, ob zuerst \code{x} ausgerechnet wird oder \code{y} oder die Berechnungen simultan stattfinden. Einzig der Ausgabebefehl in Zeile 4 muss ausgeführt nachdem \code{x} und \code{y} berechnet wurden. Paare oder Gruppen von Anweisungen, die (wie Zeile 2 und Zeile 3 des obigen Programms) gleichzeitig oder in beliebiger Reihenfolge ausgeführt werden können, heißen \emph{nebenläufig}. Anweisungen können auch beispielsweise durch einen Compiler in mehrere Anweisungen geteilt werden oder schon aus mehreren Anweisungen bestehen (man denke an Funktionsaufrufe). Solche Anweisungen werden \gls{na} genannt. Eine Menge von nebenläufigen Anweisungen von denen mindestens eine \gls{na} ist. Eine Ausführung von Anweisungen ist verzahnt, wenn der Ausführung der Teile einer \glsuseri{na} Anweisung andere Anweisungen ausgeführt werden. Abbildung \ref{fig:concAnweisungen} zeigt, zur Veranschaulichung die verschiedenen Möglichkeiten, wie 
+\begin{figure}
+\includegraphics[draft,width=\textwidth, height=5cm]{IM_Logo.pdf}
+\caption{Mögliche Ausführungen nebenläufiger Anweisungen}\label{fig:concAnweisungen}
+\end{figure}
+
+\paragraph{Race Conditions}
 \subsection{Threading in Java}
 \section{Anforderungen der blocklib an eine Threading API}
 \subsection{Kontrolle über Threads an einer Stelle}
@@ -52,6 +69,8 @@ Um korrekte Nebenläufigkeit zu garantieren, müssen diese verhindert werden.\ci
 \section{Integration und Performanceanalyse}
 
 \chapter{Fazit und Ausblick}
+
+\printnoidxglossaries
 
 \printbibliography[title={Literaturverzeichnis},heading=bibintoc,notkeyword=online]
 
