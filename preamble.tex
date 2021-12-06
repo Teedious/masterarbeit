@@ -1,3 +1,4 @@
+\usepackage{scrhack}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -9,7 +10,6 @@
 \usepackage{amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont} 
 \usepackage{csquotes}
 \usepackage{booktabs}
-\usepackage{algorithmic}
 
 \usepackage{graphicx}
 \graphicspath{ {./img/} }
@@ -20,6 +20,7 @@
 \usepackage[layout={margin,index},draft]{fixme}
 \usepackage{rotating}
 \usepackage{siunitx}
+
 \usepackage[backend=biber,minbibnames=2,maxbibnames=2,maxcitenames=1,mincitenames=1,style=alphabetic]{biblatex}
 \setcounter{biburlnumpenalty}{9000}
 \setcounter{biburlucpenalty}{9000}
@@ -31,7 +32,6 @@
 \setlength{\biburllcskip}{0mu plus 1mu}
 \renewcommand{\namelabeldelim}{\addnbspace}
 \usepackage{tikz}
-\usepackage{pgfplots}
 \usepackage{pdfpages}
 \usepackage{subcaption}
 \usepackage{standalone}
@@ -41,6 +41,7 @@
 
 \usetikzlibrary{calc,positioning, shapes}
 
+%\usepackage{pgfplots}
 %\pgfplotsset{width=\columnwidth,compat=1.14}\usepgfplotslibrary{statistics}
 %\pgfplotsset{boxplot/.cd,every median/.style={red}}
 %\pgfplotsset{grid style={help lines}}
@@ -76,9 +77,9 @@
 
 \usepackage{listings}
 \lstset{basicstyle=\footnotesize, captionpos=b, breaklines=true, showstringspaces=false, tabsize=2, frame=lines, numbers=left, numberstyle=\tiny, xleftmargin=2em, framexleftmargin=2em}
-\makeatletter
-\def\l@lstlisting#1#2{\@dottedtocline{1}{0em}{1em}{\hspace{1,5em} Lst. #1}{#2}}
-\makeatother
+% \makeatletter
+% \def\l@lstlisting#1#2{\@dottedtocline{1}{0em}{1em}{\hspace{1,5em} Lst. #1}{#2}}
+% \makeatother
 
 \definecolor{javared}{rgb}{0.6,0,0} % for strings
 \definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
@@ -103,4 +104,4 @@ showstringspaces=false}
 \newcommand{\code}[1]{\texttt{#1}}
 
 \newcommand{\todo}[1]{\fxnote{{\color{red}#1}}}
-\newcommand{\TODO}[2]{\fxnote*{{\color{red}#1}}{\underline{#2}}}
+\newcommand{\TODO}[2]{\fxnote*{{\color{red}#1}}{\underline{\emph{#2}}}}
