@@ -43,7 +43,61 @@ Es ist leicht zu erkennen, dass es vollkommen egal ist, ob zuerst \code{x} oder 
 
 Paare oder Gruppen von Anweisungen, die (wie Zeile 2 und Zeile 3 des obigen Programms) gleichzeitig oder in beliebiger Reihenfolge ausgeführt werden können, heißen \emph{nebenläufig}. Eine Anweisung kann beispielsweise durch einen Compiler in mehrere Anweisungen geteilt werden oder schon aus mehreren Anweisungen bestehen (man denke zum Beispiel an Funktionsaufrufe). Solche Anweisungen werden \gls{na} genannt. Eine Menge von nebenläufigen Anweisungen, von denen mindestens eine \gls{na} ist, kann \emph{verzahnt} ausgeführt werden. Eine Ausführung von Anweisungen ist verzahnt, wenn zwischen der Ausführung der Teile einer \glsuseri{na} Anweisung andere Anweisungen ausgeführt werden. Abbildung \ref{fig:concAnweisungen} zeigt zur Veranschaulichung die verschiedenen Möglichkeiten, wie zwei nebenläufige \glspl{na} Anweisungen im Zeitverlauf ausgeführt werden können, sowohl auf einem Prozessor als auch auf zwei Prozessoren. 
 \begin{figure}[hbt]
-\includegraphics[draft,width=\textwidth, height=5cm]{IM_Logo.pdf}
+\newlength\aOne
+\newlength\aTwo
+\newlength\aThree
+\newlength\bOne
+\newlength\bTwo
+\pgfmathsetlength{\aOne}{4cm}
+\pgfmathsetlength{\aTwo}{2cm}
+\pgfmathsetlength{\aThree}{3cm}
+\pgfmathsetlength{\bOne}{2.5cm}
+\pgfmathsetlength{\bTwo}{3.7cm}
+\begin{subfigure}{\textwidth}
+\begin{tikzpicture}
+
+	\draw[->] (0,0) -- (15,0) node[right] {Zeit};
+	
+	\node[draw,fill=red, anchor=south west, minimum width = \aOne] at (0, .5) (A1) {A Teil1};
+	\node[draw,fill=red, anchor=west, minimum width = \aTwo] at (A1.east) (A2) {A Teil2};
+	\node[draw,fill=red, anchor=west, minimum width = \aThree] at (A2.east) (A3) {A Teil3};
+	
+	\node[draw,fill=cyan, anchor=south west, minimum width = \bOne] at (0, 1.5) (B1) {B Teil1};
+	\node[draw,fill=cyan, anchor=west, minimum width = \bTwo] at (B1.east) (B2) {B Teil2};
+
+\end{tikzpicture}
+\subcaption{Gleichzeitige Ausführung der Anweisungen A und B auf zwei Prozessoren}
+\end{subfigure}
+\\[1.5em]
+\begin{subfigure}{\textwidth}
+\begin{tikzpicture}
+
+	\draw[->] (0,0) -- (15,0) node[right] {Zeit};
+	
+	\node[draw,fill=cyan, anchor=south west, minimum width = \bOne] at (0, .5) (B1) {B Teil1};
+	\node[draw,fill=cyan, anchor=west, minimum width = \bTwo] at (B1.east) (B2) {B Teil2};
+	\node[draw,fill=red, anchor=west, minimum width = \aOne] at (B2.east) (A1) {A Teil1};
+	\node[draw,fill=red, anchor=west, minimum width = \aTwo] at (A1.east) (A2) {A Teil2};
+	\node[draw,fill=red, anchor=west, minimum width = \aThree] at (A2.east) (A3) {A Teil3};
+\end{tikzpicture}
+\subcaption{Sequenzielle Ausführung der Anweisungen A und B auf einem Prozessor}
+\end{subfigure}
+\\[1.5em]
+\begin{subfigure}{\textwidth}
+\begin{tikzpicture}
+
+	\draw[->] (0,0) -- (15,0) node[right] {Zeit};
+	
+	\node[draw,fill=cyan, anchor=south west, minimum width = \bOne] at (0, .5) (B1) {B Teil1};
+	\node[draw,fill=red, anchor=west, minimum width = \aOne] at (B1.east) (A1) {A Teil1};
+	\node[draw,fill=red, anchor=west, minimum width = \aTwo] at (A1.east) (A2) {A Teil2};
+	\node[draw,fill=cyan, anchor=west, minimum width = \bTwo] at (A2.east) (B2) {B Teil2};
+	\node[draw,fill=red, anchor=west, minimum width = \aThree] at (B2.east) (A3) {A Teil3};
+
+\end{tikzpicture}
+\subcaption{Verzahnte Ausführung der Anweisungen A und B auf einem Prozessor}
+\end{subfigure}
+
 \caption{Mögliche Ausführungen nebenläufiger Anweisungen}\label{fig:concAnweisungen}
 \end{figure}
 
