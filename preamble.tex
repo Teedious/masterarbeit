@@ -32,6 +32,7 @@
 \setlength{\biburllcskip}{0mu plus 1mu}
 \renewcommand{\namelabeldelim}{\addnbspace}
 \usepackage{tikz}
+\usetikzlibrary{calc,positioning, shapes, petri}
 \usepackage{pdfpages}
 \usepackage{subcaption}
 \usepackage{standalone}
@@ -39,7 +40,6 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[acronym,shortcuts]{glossaries}
 
-\usetikzlibrary{calc,positioning, shapes}
 
 %\usepackage{pgfplots}
 %\pgfplotsset{width=\columnwidth,compat=1.14}\usepgfplotslibrary{statistics}
@@ -52,6 +52,7 @@
 \newcommand{\e}{\ensuremath{\mathrm{e}}}
 
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
 \newcommand{\F}{\ensuremath{\mathbb{F}}}
 \newcommand{\Pot}{\ensuremath{\mathcal{P}}}
 
@@ -102,6 +103,12 @@ showspaces=false,
 showstringspaces=false}
 
 \newcommand{\code}[1]{\texttt{#1}}
+
+\tikzset{
+    transV/.style={transition, fill=black, minimum height = 12mm, minimum width = 1.5mm,inner sep = 0mm},
+    transH/.style={transition, fill=black, minimum width = 12mm, minimum height = 1.5mm,inner sep = 0mm},
+    node distance=1.5
+}
 
 \newcommand{\todo}[1]{\fxnote{{\color{red}#1}}}
 \newcommand{\TODO}[2]{\fxnote*{{\color{red}#1}}{\underline{\emph{#2}}}}

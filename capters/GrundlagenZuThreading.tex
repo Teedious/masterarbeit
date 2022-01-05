@@ -112,3 +112,110 @@ Um das Auftreten von Wettkampfbedingungen beim schreibenden Zugriff von nebenlä
 \paragraph{Snychronisierungsanforderungen} Nach \textcite{Herrtwich1989} gibt es allgemein zwei Arten von Anforderungen an Synchronisierungmechanismen, je nachdem welche Art von Zugriff auf geteilte Ressourcen stattfindet. Sie unterscheiden dabei zwischen \emph{kausal abhäningen} Relationen und \emph{kausal unabhängigen} Relationen zwischen nebenläufigen Anweisungen. Ist Anweisung $B$ kausal abhängig von Anweisung $A$, so dürfen die Aktivitäten von $B$ erst ausgeführt werden, nachdem die Aktivitäten von $A$ abgeschlossen sind. Man schreibt $ A \to B$\todo{Überlegen wie das mit Nebenläufigkeit zusammenhängt. Insbesondere: Unterschied logische Abhängigkeit/strukturelle Abhängigkeit}. 
 
 \paragraph{Synchronisierungsmethoden} Es gibt mehrere Möglichkeiten, die Synchronisierung zwischen nebenläufigen Anweisungen zu erreichen. \textcite{Michael1996} unterteilen Algorithmen diesbezüglich in zwei Kategorien: \emph{blockende} und \emph{nicht-blockende}. Blockende Synchronisierungsalgorithmen führen laut ihnen möglicherweise dazu, dass Rechenprozesse durch andere Rechenprozesse beliebig lang beim Zugriff auf geteilte Daten aufhalten können. Nicht-blockende Algorithmen dagegen garantieren, dass mindestens einer der beteiligten Rechenprozesse mit einer endlichen Anzahl an Aktivitäten endet.
+
+\subsection{Petri-Netze}
+Es gibt einige Ansätze zur Modellierung verteilter oder nebenläufiger Programme. Darunter finden sich auch Petri-Netze~\cite{Murata1989}. Mit einem Petrinetz kann ein modelliertes Programm mathematisch formal definiert und analysiert werden. Der Begriff Petri-Netz beschreibt auch eine Familie von verwandten Modellen. Das hier im Folgenden beschriebene Petri-Netz Modell wird auch Platz-Transitions-Netz (PT-Netz) genannt. Formal lässt sich ein PT-Netz $N$ als 5-Tupel $ N=(P,T,F,W,m_0)$ beschreiben. Dabei sind 
+\begin{align*}
+	&P  \quad \text{eine endliche Menge von Plätzen,}\\
+	&T  \quad \text{eine endliche Menge von Transitionen,}\\
+	&F \subseteq (P\times T) \cup (T \times P) \quad \text{die Menge der Relationen zwischen Plätzen und Transitionen,}\\
+	&W: F \mapsto \N  \quad \text{eine Gewichtungsfunktion der Relationen und}\\
+	&m_0: P \mapsto \N_0   \quad \text{die anfängliche Markierung der Plätze~\cite{Murata1989}.}\\
+\end{align*}
+Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. Die Plätze $p \in P$ werden dabei als Kreise dargestellt, die Transitionen $ t \in T$ durch schwarz gefüllte Rechtecke, die Relationen $ f \in F$ durch gerichtete Kanten zwischen den Kreisen und Rechtecken, wobei die Elemente der Gewichtungsfunktion $W$ an die jeweiligen Kanten gesetzt werden. Die Markierung wird durch schwarze Punkte in den Plätzen dargestellt. Abbildun~\ref{fig:petrinet} zeigt ein simples Beispiel eines PT-Netzes  formal beschrieben (Abbildung~\ref{fig:petrinet:formal}) und seine grafische Repräsentation (Abbildung~\ref{fig:petrinet:graph}).
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{.48\textwidth}
+		$\begin{aligned}
+			N &= (P,T,F,W,m_0)\\
+			P &= \{p_1, p_2\}\\
+			T &= \{t_1, t_2\}\\
+			F &= \{(p_1, t_1), (p_2, t_2), (t_1, p_2)\}\\
+			W &= \{((p_1, t_1),1), ((p_2, t_2),2), ((t_1, p_2), 1)\}\\
+			m_0 &= \{(p_1, 1), (p_2, 0)\}
+		\end{aligned}$
+		\subcaption{}\label{fig:petrinet:formal}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.48\textwidth}
+		\begin{tikzpicture}
+			\node[place, label=$p_1$, tokens=1] (p1) at (0,0) {};
+			\node[transV,label=$t_1$, right = of p1] (t1){};
+			\node[place, label=$p_2$, right = of t1] (p2) {};
+			\node[transV,label=$t_2$, right = of p2] (t2){};
+
+			\draw 
+			(p1) edge[post] node[above] {1} (t1)
+			(t1) edge[post] node[above] {2} node[below=1cm] {$N$} (p2)
+			(p2) edge[post] node[above] {1} (t2);
+		\end{tikzpicture}
+		\subcaption{}\label{fig:petrinet:graph}
+	\end{subfigure}
+	\caption{}\label{fig:petrinet}
+\end{figure}
+
+\paragraph{Transitions-Regel} Um nun das Verhalten von Programmen beschreiben zu können, kann die Markierung eines Petrinetzes anhand der folgenden sogenannten Transitions-Regel geändert werden~\cite{Murata1989}.
+\begin{enumerate}
+	\item Eine Transition $t_i \in T$ heißt \emph{aktiviert}, wenn für alle $(p,t_i) \in F $ gilt $ W((p,t_i)) \leq M(p)$ wobei $M$ die aktuelle Markierung ist. Es müssen also in allen Plätzen mit eingehenden Kanten genügend Marken bezüglich der Gewichtungsfunktion existieren. Diese Plätze werden auch \emph{Vorbedinungen} für die Transition genannt. Wenn ein Platz genügend Marken für eine Transition enthält, nennt man die Vorbedinung (bezüglich dieser Transition) \emph{erfüllt}.
+	\item Eine aktivierte Transition kann, muss aber nicht \emph{feuern}.
+	\item Feuert eine aktivierte Transition $t_i$, geht eine Markierung $M$ in eine Markierung $M'$ über. Dies erfolgt nach den folgenden Regeln.
+	\begin{enumerate}
+		\item $P$ wird in die disjunkten Mengen $P_\emptyset, P_\rightarrow, P_\leftarrow, P_\leftrightarrow$ unterteilt, wobei 
+		\item $P_\emptyset = \{p \in P | (p,t_i) \notin F \land (t_i,p) \notin F\}$ die unbeteiligten Plätze sind,
+		\item $P_\rightarrow = \{p \in P | (p,t_i) \in F \land (t_i,p) \notin F\}$ die Plätze mit eingehenden Kanten zur Transition,
+		\item $P_\leftarrow = \{p \in P | (p,t_i) \notin F \land (t_i,p) \in F\}$ die Plätze mit ausgehenden Kanten aus der Transition und 
+		\item $P_\leftrightarrow = \{p \in P | (p,t_i) \in F \land (t_i,p) \in F\}$ die Plätze mit eingehenden und ausgehenden Kanten.
+		\item Dann gilt $
+			M'(p) = \left\{ 
+				\begin{aligned}
+					& M(p) && \; , \; p \in P_\emptyset\\
+					& M(p)-W((p,t_i)) && \; , \; p \in P_\rightarrow\\
+					&M(p)+W((t_i,p)) && \; , \; p \in P_\leftarrow\\
+					& M(p)-W((p,t_i))+W((t_i,p)) && \; , \; p \in P_\leftrightarrow
+				\end{aligned}
+				\right\}
+		$
+	\end{enumerate}
+\end{enumerate}
+Betrachtet man Abbildung~\ref{fig:petrinet} erneut, lässt sich erkennen, dass Transition $t_1$ aktiviert ist und Transition $t_2$ nicht, da in $p_2$ keine Marken sind. 
+
+\paragraph{Erweiterte Petri-Netze}
+Um das Konzept von Variablenzugriffen einfacher zu modellieren führen \textcite{Goel1990} ein erweitertes Petri-Netz Modell ein. Dabei wird das 5-Tupel des Petri-Netzes um die folgenden Komponenten erweitert:
+\begin{enumerate}
+	\item eine Menge von Variablen $V$,
+	\item eine Funktion $L: P \mapsto \Pot(V)$, die \emph{lesenden Zugriff} auf die Variablen modelliert, und
+	\item eine Funktion $S: P \mapsto \Pot(V)$, die \emph{schreibenden Zugriff} auf die Variablen modelliert.
+\end{enumerate}
+Ein Beispiel für ein erweitertes Petri-Netz, das ansonsten identisch zu dem Petri-Netz in Abbildung~\ref{fig:petrinet} ist, ist in Abbildung~\ref{fig:augpetrinet} gegeben.
+\begin{figure}
+\centering
+	\begin{minipage}[c]{.49\textwidth}
+		$\begin{aligned}
+			N &= (P,T,F,W,m_0, V, L, S)\\
+			P &= \{p_1, p_2\}\\
+			T &= \{t_1, t_2\}\\
+			F &= \{(p_1, t_1), (p_2, t_2), (t_1, p_2)\}\\
+			W &= \{((p_1, t_1),1), ((p_2, t_2),2), ((t_1, p_2), 1)\}\\
+			m_0 &= \{(p_1, 1), (p_2, 0)\}\\
+			V &= \{a,b\}\\
+			L &= \{(p_1,\emptyset),(p_2,\{a,b\})\}\\
+			S &= \{(p_1,\emptyset),(p_2,\{a\})\}
+		\end{aligned}$
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{.49\textwidth}
+		\begin{tikzpicture}
+			\node[place, label=$p_1$, tokens=1] (p1) at (0,0) {};
+			\node[transV,label=$t_1$, right = of p1] (t1){};
+			\node[place, label=$p_2$, right = of t1] (p2) {};
+			\node[transV,label=$t_2$, right = of p2] (t2){};
+			\node[below=0mm of p2, align=left, anchor=north] {$L$: $a,b$\\$S$: $a$};
+
+			\draw 
+			(p1) edge[post] node[above] {1} (t1)
+			(t1) edge[post] node[above] {2} node[below=2cm] {$N$} (p2)
+			(p2) edge[post] node[above] {1} (t2);
+		\end{tikzpicture}
+	\end{minipage}
+	\caption{Beispiel eines erweiterten Petri-Netzes. Links ist die formale Definition gegeben, rechts der dazugehörige Graph. In Platz $p_2$ wird auf die Variablen $a$ und $b$ lesend zugegriffen und auf Variable $a$ schreibend.}\label{fig:augpetrinet}
+\end{figure}
