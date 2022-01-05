@@ -65,7 +65,7 @@ Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. 
 Betrachtet man Abbildung~\ref{fig:petrinet} erneut, lässt sich erkennen, dass Transition $t_1$ aktiviert ist und Transition $t_2$ nicht, da in $p_2$ keine Marken sind.
 
 \subsection{Erreichbarkeitsgraph}
-Mittels der Transitionsregel lassen sich in einem Petri-Netz ausgehend von der Anfangsmarkierung $m_0$ gegebenenfalls weitere Markierungen erzeugen. Durch die wiederholte Anwendung der Transitionsregel auf alle daraus entstehenden Markierungen lässt sich ein Graph erstellen, der alle von der Anfangsmarkierung aus erreichbaren Markierungen erhält, den \emph{Erreichbarkeitsgraph} des Petri-Netzes.
+Mittels der Transitionsregel lassen sich in einem Petri-Netz $N$ ausgehend von der Anfangsmarkierung $m_0$ gegebenenfalls weitere Markierungen erzeugen. Durch die wiederholte Anwendung der Transitionsregel auf alle daraus entstehenden Markierungen lässt sich ein Graph erstellen, der alle von der Anfangsmarkierung aus erreichbaren Markierungen erhält, den \emph{Erreichbarkeitsgraph} $E(N)$ des Petri-Netzes.
 \begin{figure}
 	\begin{tikzpicture}[node distance=5mm,auto,state/.append style={rounded rectangle}]
 		\node[state, initial] (q1) {$\{(p_1,1),(p_2,0)\}$};
@@ -90,7 +90,7 @@ Mittels der Transitionsregel lassen sich in einem Petri-Netz ausgehend von der A
 \end{figure}
 In Abbildung~\ref{fig:reachability} wird der Erreichbarkeitsgraph des in Abbildung~\ref{fig:petrinet} dargestellten Petri-Netzes gezeigt. Die Knoten des Graphen sind die Markierungen des Petri-Netzes, die durch die Transitionsregel erreicht werden können. Da die Plätze des Petri-Netzes nummeriert sind, kann die Markierung verkürzt geschrieben werden, indem der Index des Tupels der Knotenbezeichnung den Platz beschreibt und die Zahl die Anzahl der Marken des Platzes kennzeichnet. In der Abbildung ist oben der Graph mit den vollständigen Markierungsbezeichnungen dargestellt. Unten wird die verkürzte Schreibweise genutzt.
 
-ist die maximale Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraphen maximal $1$, kann die Schreibweise weiter verkürzt werden, indem nur die Plätze beziehungsweise die Indizes der Plätze, die eine Marke enthalten genannt werden. Abbildung~\ref{fig:1-bpetrinet} zeigt eine Abwandlung des Petri-Netzes aus Abbildung~\ref{fig:petrinet}, das der gerade beschriebenen Eigenschaft entspricht, und den zugehörigen Erreichbarkeitsgraphen in verkürzter Schreibweise.
+ist die Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraphen maximal $1$, kann die Schreibweise weiter verkürzt werden, indem nur die Plätze beziehungsweise die Indizes der Plätze, die eine Marke enthalten genannt werden. Abbildung~\ref{fig:1-bpetrinet} zeigt eine Abwandlung des Petri-Netzes aus Abbildung~\ref{fig:petrinet}, das der gerade beschriebenen Eigenschaft entspricht, und den zugehörigen Erreichbarkeitsgraphen in verkürzter Schreibweise.
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{.48\textwidth}
@@ -126,8 +126,11 @@ ist die maximale Anzahl der Marken pro Platz in jeder Markierung des Erreichbark
 Um die Arbeit mit Petri-Netzen zu vereinfachen, werden nun noch einige weitere Definitionen eingeführt.
 
 \begin{enumerate}
-	\item Die Menge der Knoten mit Kanten zu einem Knoten $k \in P\cup T$ heißt \emph{Vorbereich} $^\circ k = \{v | (v,k) \in F\}$ des Knotens $k$.
-	\item Die Menge der Knoten mit Kanten von einem Knoten $k \in P\cup T$ heißt \emph{Nachbereic} $k^\circ  = \{n | (k,n) \in F\}$ des Knotens $k$.
+	\item Die Menge der Knoten mit Kanten zu einem Knoten $k \in P\cup T$ heißt \emph{Vorbereich} des Knotens $k$ und ist definiert als $^\circ k = \{v | (v,k) \in F\}$.
+	\item Die Menge der Knoten mit Kanten von einem Knoten $k \in P\cup T$ heißt \emph{Nachbereich} des Knotens $k$ und ist definiert als $k^\circ  = \{n | (k,n) \in F\}$.
+	\item Die Menge der Knoten einer Markierung $m$ mit mindesten $n$ Marken $\{x | m(x)\geq n\}$ wird $M_{\geq n}$ genannt.
+	\item Das Maximum einer Markierung $m$, $\deg(m) \coloneqq \max \{m(p)|p\in P\}$, wird ihr \emph{Grad} genannt.
+	\item Ein Petri-Netz $N$ heißt \emph{$n$-beschränkt}, wenn $n$ das Maximum der Grade der Markierungen des Erreichbarkeitsgraphen $(V,K)=E(N)$ ist, also $n = \max\{\deg(m)| m\in V \}$.
 \end{enumerate}
 
 
@@ -136,8 +139,8 @@ Um die Arbeit mit Petri-Netzen zu vereinfachen, werden nun noch einige weitere D
 Um das Konzept von Variablenzugriffen einfacher zu modellieren führen \textcite{Goel1990} ein erweitertes Petri-Netz Modell ein. Dabei wird das 5-Tupel des Petri-Netzes um die folgenden Komponenten erweitert:
 \begin{enumerate}
 	\item eine Menge von Variablen $V$,
-	\item eine Funktion $L: P \mapsto \Pot(V)$, die \emph{lesenden Zugriff} auf die Variablen modelliert, und
-	\item eine Funktion $S: P \mapsto \Pot(V)$, die \emph{schreibenden Zugriff} auf die Variablen modelliert.
+	\item eine Funktion $L: T \mapsto \Pot(V)$, die \emph{lesenden Zugriff} auf die Variablen modelliert, und
+	\item eine Funktion $S: T \mapsto \Pot(V)$, die \emph{schreibenden Zugriff} auf die Variablen modelliert.
 \end{enumerate}
 Ein Beispiel für ein erweitertes Petri-Netz, das ansonsten identisch zu dem Petri-Netz in Abbildung~\ref{fig:petrinet} ist, ist in Abbildung~\ref{fig:augpetrinet} gegeben.
 \begin{figure}
@@ -151,18 +154,17 @@ Ein Beispiel für ein erweitertes Petri-Netz, das ansonsten identisch zu dem Pet
 			W &= \{((p_1, t_1),1), ((p_2, t_2),2), ((t_1, p_2), 1)\}\\
 			m_0 &= \{(p_1, 1), (p_2, 0)\}\\
 			V &= \{a,b\}\\
-			L &= \{(p_1,\emptyset),(p_2,\{a,b\})\}\\
-			S &= \{(p_1,\emptyset),(p_2,\{a\})\}
+			L &= \{(t_1,\{a,b\}), (t_2,\emptyset)\}\\
+			S &= \{(t_1,\{a\}), (t_2,\emptyset)\}
 		\end{aligned}$
 	\end{minipage}
 	\hfill
 	\begin{minipage}[c]{.49\textwidth}
 		\begin{tikzpicture}
 			\node[place, label=$p_1$, tokens=1] (p1) at (0,0) {};
-			\node[transV,label=$t_1$, right = of p1] (t1){};
+			\node[transV,label=$t_1$, right = of p1, label=below:{\LSset{a,b}{a}}] (t1){};
 			\node[place, label=$p_2$, right = of t1] (p2) {};
 			\node[transV,label=$t_2$, right = of p2] (t2){};
-			\node[below=0mm of p2, align=left, anchor=north] {$L$: $a,b$\\$S$: $a$};
 
 			\draw 
 			(p1) edge[post] node[above] {1} (t1)

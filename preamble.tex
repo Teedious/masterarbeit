@@ -7,7 +7,8 @@
 \usepackage{geometry}
 \geometry{a4paper, top=27mm, left=30mm, right=20mm, bottom=35mm, headsep=10mm, footskip=12mm}
 
-\usepackage{amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont} 
+\usepackage{amsmath,amssymb,amsthm,mathrsfs,amsfonts}
+
 \usepackage{csquotes}
 \usepackage{booktabs}
 
@@ -39,6 +40,7 @@
 \usepackage{multirow,tabularx}
 \usepackage[hidelinks]{hyperref}
 \usepackage[acronym,shortcuts]{glossaries}
+\usepackage{mathtools}
 
 
 %\usepackage{pgfplots}
@@ -103,6 +105,8 @@ showspaces=false,
 showstringspaces=false}
 
 \newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\LSset}[2]{\scriptsize $\begin{aligned}&\{#1\}_L\\&\{#2\}_S\end{aligned}$}
+
 
 \tikzset{
     transV/.style={transition, fill=black, minimum height = 12mm, minimum width = 1.5mm,inner sep = 0mm},
