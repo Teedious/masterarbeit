@@ -1,4 +1,4 @@
-\subsection{Petri-Netze}
+\section{Petri-Netze}
 Es gibt einige Ansätze zur Modellierung verteilter oder nebenläufiger Programme. Darunter finden sich auch Petri-Netze~\cite{Murata1989}. Mit einem Petrinetz kann ein modelliertes Programm mathematisch formal definiert und analysiert werden. Der Begriff Petri-Netz beschreibt auch eine Familie von verwandten Modellen. Das hier im Folgenden beschriebene Petri-Netz Modell wird auch Platz-Transitions-Netz (PT-Netz) genannt. Formal lässt sich ein PT-Netz $N$ als 5-Tupel $ N=(P,T,F,W,m_0)$ beschreiben. Dabei sind 
 \begin{align*}
 	&P  \quad \text{eine endliche Menge von Plätzen,}\\
@@ -39,7 +39,7 @@ Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. 
 	\caption{}\label{fig:petrinet}
 \end{figure}
 
-\paragraph{Transitionsregel} Um nun das Verhalten von Programmen beschreiben zu können, kann die Markierung eines Petrinetzes anhand der folgenden sogenannten Transitions-Regel geändert werden~\cite{Murata1989}.
+\subsection{Transitionsregel} Um nun das Verhalten von Programmen beschreiben zu können, kann die Markierung eines Petrinetzes anhand der folgenden sogenannten Transitions-Regel geändert werden~\cite{Murata1989}.
 \begin{enumerate}
 	\item Eine Transition $t_i \in T$ heißt \emph{aktiviert}, wenn für alle $(p,t_i) \in F $ gilt $ W((p,t_i)) \leq M(p)$ wobei $M$ die aktuelle Markierung ist. Es müssen also in allen Plätzen mit eingehenden Kanten genügend Marken bezüglich der Gewichtungsfunktion existieren. Diese Plätze werden auch \emph{Vorbedinungen} für die Transition genannt. Wenn ein Platz genügend Marken für eine Transition enthält, nennt man die Vorbedinung (bezüglich dieser Transition) \emph{erfüllt}.
 	\item Eine aktivierte Transition kann, muss aber nicht \emph{feuern}.
@@ -64,7 +64,7 @@ Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. 
 \end{enumerate}
 Betrachtet man Abbildung~\ref{fig:petrinet} erneut, lässt sich erkennen, dass Transition $t_1$ aktiviert ist und Transition $t_2$ nicht, da in $p_2$ keine Marken sind.
 
-\paragraph{Erreichbarkeitsgraph}
+\subsection{Erreichbarkeitsgraph}
 Mittels der Transitionsregel lassen sich in einem Petri-Netz ausgehend von der Anfangsmarkierung $m_0$ gegebenenfalls weitere Markierungen erzeugen. Durch die wiederholte Anwendung der Transitionsregel auf alle daraus entstehenden Markierungen lässt sich ein Graph erstellen, der alle von der Anfangsmarkierung aus erreichbaren Markierungen erhält, den \emph{Erreichbarkeitsgraph} des Petri-Netzes.
 \begin{figure}
 	\begin{tikzpicture}[node distance=5mm,auto,state/.append style={rounded rectangle}]
@@ -105,7 +105,7 @@ ist die maximale Anzahl der Marken pro Platz in jeder Markierung des Erreichbark
 			(t1) edge[post] node[above] {1} (p2)
 			(p2) edge[post] node[above] {1} (t2);
 		\end{tikzpicture}
-		\subcaption{}\label{fig:petrinet:graph}
+		\subcaption{}\label{fig:1-bpetrinet:graph}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{.48\textwidth}
@@ -117,12 +117,12 @@ ist die maximale Anzahl der Marken pro Platz in jeder Markierung des Erreichbark
 			(q1) edge node {$t_1$} (q2)
 			(q2) edge node {$t_2$} (q3);
 		\end{tikzpicture}
-		\subcaption{}\label{fig:petrinet:formal}
+		\subcaption{}\label{fig:1-bpetrinet:reachability}
 	\end{subfigure}
 \caption{}\label{fig:1-bpetrinet}
 \end{figure} 
 
-\paragraph{Weitere Definitionen}
+\subsection{Weitere Definitionen}
 Um die Arbeit mit Petri-Netzen zu vereinfachen, werden nun noch einige weitere Definitionen eingeführt.
 
 \begin{enumerate}
@@ -132,7 +132,7 @@ Um die Arbeit mit Petri-Netzen zu vereinfachen, werden nun noch einige weitere D
 
 
 
-\paragraph{Erweiterte Petri-Netze}
+\subsection{Erweiterte Petri-Netze}
 Um das Konzept von Variablenzugriffen einfacher zu modellieren führen \textcite{Goel1990} ein erweitertes Petri-Netz Modell ein. Dabei wird das 5-Tupel des Petri-Netzes um die folgenden Komponenten erweitert:
 \begin{enumerate}
 	\item eine Menge von Variablen $V$,
