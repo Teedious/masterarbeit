@@ -10,6 +10,9 @@ Wenn ein Programm auf einem Betriebssystem ausgeführt wird, erzeugt das Betrieb
 
 Das Speichern und Laden der Prozesskontrollblöcken im Rahmen der Kontextwechsel von Systemprozessen benötigt eine nicht zu vernachlässigende Menge an Zeit. Ein solcher Zeitverbrauch wird auch als \emph{Overhead} bezeichnet. Um den Overhead von Kontextwechseln zu vermindern, bieten moderne Betriebssysteme Systemprozessen die Möglichkeit Rechenprozesse zu erzeugen, die denselben Adressraum wie der erzeugende Systemprozess besitzen. Ein auf diese Art erzeugter Rechenprozess heißt \emph{Thread}. Da die Menge der thread-eigenen Daten, des \emph{Threadkontrollblocks}, deutlich geringer ist als die des Prozesskontrollblocks, erzeugt der Kontextwechsel zwischen Threads einen geringeren Overhead. Zudem können Threads aufgrund des gemeinsamen Adressraums einfacher auf geteilte Ressourcen zugreifen. Das vereinfacht die Kooperation zwischen diesen Rechenprozessen.\cite{Jobst2018}
 
+\paragraph{Anweisungen und Petri-Netze}
+Um formal Eigenschaften eines Programms zu finden, ist es möglich dieses mittels eines Petri-Netzes (automatisiert) zu modellieren. Dazu müssen Petri-Netz-Konstrukte genutzt werden, die die Anweisungen des Programms abbilden können. Für die Analyse nebenläufiger Programme sind nur Anweisungen \emph{Rendevous}-Anweisungen sowie Kontrollstrukturen relevant~\cite{Goel1990}. \todo{weiterschreiben}
+
 \subsection{Nebenläufigkeit}\label{sec:nebenl}
 Im vorherigen Abschnitt \TODO{hier ist Vergangenheit}{wurde beschrieben}, dass verschiedene Rechenprozesse unabhängig von einander \enquote{gleichzeitig} ablaufen können. Ein Programm wird häufig als \emph{Sequenz} von Anweisungen verstanden. In der Definition von Programm in dieser Arbeit wird bewusst auf das Wort Sequenz verzichtet, denn bei vielen Programmen kann es bei bestimmten Anweisungen irrelevant sein, in welcher Reihenfolge oder ob sie sogar gleichzeitig ausgeführt werden. Man betrachte das folgende Programm in Listing~\ref{lst:squareSeqEx}, das die Quadratsumme zweier Ganzzahlen (im Folgenden auch Quadratsumme genannt) ausgibt: 
 \begin{lstlisting}[caption={Beispiel eines Programms das die Summe von Quadraten zweier Ganzzahlen berechnet. Die Berechnung der Quadratzahlen wird nacheinander in einer fest definierten Sequenz durchgeführt.}, label={lst:squareSeqEx}]
@@ -21,7 +24,7 @@ printSummedSquare(int a, int b){
 \end{lstlisting}
 Es ist leicht zu erkennen, dass es vollkommen egal ist, ob zuerst \code{x} oder \code{y} ausgerechnet wird oder die Berechnungen simultan stattfinden. Einzig der Ausgabebefehl in Zeile 4 muss ausgeführt werden, nachdem \code{x} und \code{y} berechnet wurden. Zuzulassen, dass die Ausführreihenfolge in dem Programm nicht definiert ist, bringt das Design des Programs näher an die Problembeschreibung \enquote{gib die Quadratsumme zweier Ganzzahlen aus} und ermöglicht auch eine potenziell schnellere Berechnung, da die Quadrate gleichzeitig berechnet werden können.
 
-Paare oder Gruppen von Anweisungen, die (wie Zeile 2 und Zeile 3 des obigen Programms) gleichzeitig oder in beliebiger Reihenfolge ausgeführt werden können, heißen \emph{nebenläufig}. Eine Anweisung kann beispielsweise durch einen Compiler in mehrere Anweisungen geteilt werden oder schon aus mehreren Anweisungen bestehen (man denke zum Beispiel an Funktionsaufrufe). Solche Anweisungen werden \gls{na} genannt. Eine Menge von nebenläufigen Anweisungen, von denen mindestens eine \gls{na} ist, kann \emph{verzahnt} ausgeführt werden. Eine Ausführung von Anweisungen ist verzahnt, wenn zwischen der Ausführung der Teile einer \glsuseri{na} Anweisung andere Anweisungen ausgeführt werden. Abbildung \ref{fig:concAnweisungen} zeigt zur Veranschaulichung die verschiedenen Möglichkeiten, wie zwei nebenläufige \glspl{na} Anweisungen im Zeitverlauf ausgeführt werden können, sowohl auf einem Prozessor als auch auf zwei Prozessoren. 
+Paare oder Gruppen von Anweisungen, die (wie Zeile 3 und Zeile 3 in Listing~\ref{lst:squareConcEx}) gleichzeitig oder in beliebiger Reihenfolge ausgeführt werden können, heißen \emph{nebenläufig}. Eine Anweisung kann beispielsweise durch einen Compiler in mehrere Anweisungen geteilt werden oder schon aus mehreren Anweisungen bestehen (man denke zum Beispiel an Funktionsaufrufe). Solche Anweisungen werden \gls{na} genannt. Eine Menge von nebenläufigen Anweisungen, von denen mindestens eine \gls{na} ist, kann \emph{verzahnt} ausgeführt werden. Eine Ausführung von Anweisungen ist verzahnt, wenn zwischen der Ausführung der Teile einer \glsuseri{na} Anweisung andere Anweisungen ausgeführt werden. Abbildung \ref{fig:concAnweisungen} zeigt zur Veranschaulichung die verschiedenen Möglichkeiten, wie zwei nebenläufige \glspl{na} Anweisungen im Zeitverlauf ausgeführt werden können, sowohl auf einem Prozessor als auch auf zwei Prozessoren. 
 \begin{figure}[hbt]
 \newlength\aOne
 \newlength\aTwo
@@ -91,7 +94,7 @@ printSummedSquare(int a, int b){
   print(x+y)
 }
 \end{lstlisting}
-In einem \code{conc}-Block, definiert durch \code{conc} und \code{conc end}, sind alle Anweisungen die durch \code{||} getrennt sind als nebenläufig zu verstehen. Wie man an obigem Beispiel erkennen kann, beschäftigt Nebenläufigkeit sich besonders mit der Struktur und der Möglichkeit der Zusammensetzung voneinander unabhängiger Anweisungen. Somit ist es Aufgabe der nebenläufigen Programmierung, Probleme oder Aufgaben in unabhängige Teile zu zerlegen und zu strukturieren~\cite{Pike2012,Hettel2016}. Blöcke von Anweisungen, die (bezüglich der Aufgabe) nebenläufig sein könnten, aber als Anweisungssequenz definiert sind, werden in dieser Arbeit als \TODO{Hier könnte Prof Kern fragen: Warum?}{\emph{pseudo-sequenzialisiert} bezeichnet}. 
+In einem \code{conc}-Block, definiert durch \code{conc} und \code{conc end}, sind alle Anweisungen die durch \code{||} getrennt sind als nebenläufig zu verstehen. Wie man an obigem Beispiel erkennen kann, beschäftigt Nebenläufigkeit sich besonders mit der Struktur und der Möglichkeit der Zusammensetzung voneinander unabhängiger Anweisungen. Somit ist es Aufgabe der nebenläufigen Programmierung, Probleme oder Aufgaben in unabhängige Teile zu zerlegen und zu strukturieren~\cite{Pike2012,Hettel2016}. Blöcke von Anweisungen, die (bezüglich der Aufgabe) nebenläufig sein könnten, aber als Anweisungssequenz definiert sind (siehe Listing~\ref{lst:squareSeqEx} Zeile 2 und 3), werden in dieser Arbeit als \TODO{Hier könnte Prof Kern fragen: Warum?}{\emph{pseudo-sequenzialisiert} bezeichnet}. 
 
 \subsection{Unterschied zwischen Nebenläufigkeit und Parallelität}
 
@@ -102,33 +105,56 @@ Enthält ein Programm nebenläufige Anweisungen, ist die Reihenfolge der daraus 
 \paragraph{Nichtreproduzierbarkeit}
 Da das Wissen und die Kontrolle über die Ausführreihenfolge abgegeben wird, wird die Nachvollziebarkeit des Programmablaufs erschwert~\cite{Herrtwich1989}. Tritt beispielsweise ein Fehler auf, kann im Nachhinein nicht ermittelt werden was die Ausführreihenfolge war, die zu dem Fehler geführt hat. Dasselbe Problem ergibt sich ebenfalls, wenn ein nichtdeterminiertes Programm eine Lösung ausgibt und nachvollzogen werden soll, welche Ausführreihenfolge zu diesem Ergebnis geführt hat. Insbesondere das Testen von Software wird dadurch erschwert, da es unmöglich ist bei jedem Test die selben Bedinungen herzustellen, sodass beispielsweise Tests Fehler nicht verlässlich aufzeigen, weil diese nur bei bestimmten Ausführreihenfolgen auftreten~\cite{Herrtwich1989}. Somit muss ein Test entweder alle möglichen Ausführreihenfolgen simulieren oder es muss anderweitig sichergestellt werden, dass die Ausführreihenfolge der nebenläufigen Anweisungen keine Rolle spielt.
 \paragraph{Wettkampfbedingungen}
-\TODO{Reccource/Datum definieren*}{Daten} und spielen in Programmen eine zentrale Rolle. Greift eine Gruppe von Anweisungen auf die selben (geteilten) Daten zu, ist die Reihenfolge des Zugriffs, wie alle anderen Aktivitäten, beliebig. Wenn mindestens eine der Anweisungen schreibend auf die geteilten Daten zugreift (diese also verändert), hängt der Zustand der Ausgabe des Programms im Allgemeinen von der Reihenfolge der Ausführung ab. Diese Situation wird \emph{Wettkampfbedinung} (engl. Race Condition) genannt~\cite{Hettel2016}. Erwähnenswert ist hier, dass Wettkampfbedingungen nur auftreten können, wenn die geteilten Daten nebenläufig geändert werden. Ausschließlich lesende Zugriffe sind unkritisch, da die Daten unabhängig von der Ausführreihenfolge immer identisch sind. Wenn Daten von lesenden Anweisungen zu jederzeit in einem Zustand gefunden werden, der korrekt ist, werden sie als \emph{threadsicher} bezeichnet. Formal können Wettkampfbedinungen auch mittels erweiterten Petri-Netzen definiert werden. Eine Markierung eines erweiterten Petri-Netzes enthält eine Wettkampfbedingung, wenn sich schreibende und lesende Variablen in den Vorbereichen der Plätze mit mindestens einer Marke: 
+\TODO{Reccource/Datum definieren*}{Daten} und spielen in Programmen eine zentrale Rolle. Greift eine Gruppe von Anweisungen auf die selben (geteilten) Daten zu, ist die Reihenfolge des Zugriffs, wie alle anderen Aktivitäten, beliebig. Wenn mindestens eine der Anweisungen schreibend auf die geteilten Daten zugreift (diese also verändert), hängt der Zustand der Ausgabe des Programms im Allgemeinen von der Reihenfolge der Ausführung ab. Diese Situation wird \emph{Wettkampfbedinung} (engl. Race Condition) genannt~\cite{Hettel2016}. 
+
+Erwähnenswert ist hier, dass Wettkampfbedingungen nur auftreten können, wenn die geteilten Daten nebenläufig \emph{geändert} werden. Ausschließlich lesende Zugriffe sind unkritisch, da die Daten unabhängig von der Ausführreihenfolge immer identisch sind. Wenn Daten von lesenden Anweisungen zu jederzeit in einem Zustand gefunden werden, der korrekt ist, werden sie als \emph{threadsicher} bezeichnet.
+
+Formal können Wettkampfbedinungen auch mittels erweiterten Petri-Netzen definiert werden. Eine Markierung eines erweiterten Petri-Netzes enthält eine Wettkampfbedingung, wenn sich schreibende und lesende Variablen in der Markierung überschneiden. Dazu muss man die Transitionen in den Vorbereichen der markierten Plätze betrachten also $ {}^\circ\!M_{\geq1} \coloneqq \bigcup_{p \in M_{\geq1}} {}^\circ p$. Wie in Abschnitt~\ref{sec:petri} definiert, ist $M_{\geq1}$ die Menge der Knoten, die mindestens eine Marke enthalten. Eine Wettkampfbedingung lässt sich nun feststellen, wenn die paarweisen Schnitte der Variablenmengen nicht leer sind:
 \begin{align*}
-	\emptyset \neq \bigcup_{p \in M_{\geq1}} \left( S(p) \cap \left(\bigcup_{q \in M_{\geq1}\setminus \{p\}} S(q) \cup L(q) \right)\right).
+	\text{Wettkampfbedingung} \iff \exists s,t \in {}^\circ\!M_{\geq1}, s \neq t: S(s) \cap (S(t) \cup L(t)) \neq \emptyset.
 \end{align*}
-$M_{\geq1}$ ist, wie in Abschnitt~\ref{sec:petri} definiert, die Menge der Knoten, die mindestens eine Marke enthalten. Um das Konzept zu veranschaulichen, ist in Abbildung~\ref{fig:wettkampfpetri} ein erweitertes Petri-Netz gezeigt, dessen Markierung eine Wettkampfbedingung enthält.
+Die Menge der \emph{kritischen} Variablen, die zur Existenz der Wettkampfbedingung fürhen, ist gegeben durch
+\begin{align*}
+	V_\text{krit} = \bigcup_{\substack{s,t\, \in \,{}^\circ\!M_{\geq1}\\s\neq t}} \left( S(s) \cap (S(t) \cup L(t))\right).
+\end{align*}
+Es lässt sich leicht zeigen, dass gilt $V_\text{krit} \neq \emptyset \iff \text{Wettkampfbedingung}$. Der Beweis wird hier der Übersichtlichkeit halber ausgelassen. 
+
 \begin{figure}
 	\centering
 	\begin{tikzpicture}[node distance=2cm,on grid, auto]
 		\node[place, label=$p_1$] (p1) {};
 		\node[transV, label=$t_1$, right = of p1] (t1) {};
-		\node[place, tokens=1, label=$p_2$,label=right:{\LSset{a,{\color{red}b}}{a}}, above right = of t1] (p2) {};
-		\node[place, tokens=1, label=$p_3$,label=right:{\LSset{b}{{\color{red}b}}}, below right = of t1] (p3) {};
-		\node[transV,label=$t_2$, below right = of p2] (t2){};
-		\node[place, label=$p_4$, right = of t2] (p4) {};
-
-
+		\node[place, label=$p_2$, above right = of t1] (p2) {};
+		\node[place, label=$p_3$, below right = of t1] (p3) {};
+		\node[transV,label=$t_2$, right = of p2,label=below:{\LSset{a,{\color{red}b}}{a}} ] (t2){};
+		\node[transV,label=$t_3$, right = of p3,label=below:{\LSset{b}{{\color{red}b}}}] (t3){};
+		\node[place, label=$p_4$, tokens=1, right = of t2] (p4) {};
+		\node[place, label=$p_5$, tokens=1, right = of t3] (p5) {};
+		\node[transV, label=$t_4$, below right = of p4] (t4) {};
+		\node[place, label=$p_6$, right = of t4] (p6) {};
+	
+	
+	
 		\draw 
 		(p1) edge[post] node {1} (t1)
 		(t1) edge[post] node [swap] {1} (p2)
 		(t1) edge[post] node {1} (p3)
-		(p2) edge[post] node [swap] {1} (t2)
-		(p3) edge[post] node  {1} (t2)
+		(p2) edge[post] node {1} (t2)
+		(p3) edge[post] node {1} (t3)
 		(t2) edge[post] node {1} (p4)
+		(t3) edge[post] node {1} (p5)
+		(p4) edge[post] node [swap] {1} (t4)
+		(p5) edge[post] node {1} (t4)
+		(t4) edge[post] node {1} (p6)
 		;
 	\end{tikzpicture}
 	\caption{Ein erweitertes Petri-Netz, dessen Markierung eine Wettkampfbedingung enthält. Die Schreibmenge von $p_3$ enthält die Variable $b$, diese ist allerdings auch in der Lesemenge von $p_2$ enthalten. Die problematische Variable $b$ ist rot markiert. Das Auftauchen von $b$ in der Lesemenge von $p_3$ stellt kein Problem dar.}\label{fig:wettkampfpetri}
 \end{figure}
+
+Um das Konzept zu veranschaulichen, ist in Abbildung~\ref{fig:wettkampfpetri} ein erweitertes Petri-Netz gezeigt, dessen Markierung eine Wettkampfbedingung enthält. Die Plätze $p_4$ und $p_5$ enthalten je eine Markierung. Daher müssen nun ihre Vorbereiche betrachtet werden. Diese sind $\{t_2\}$ und $\{t_3\}$. Wie in der Abbildung rot markiert, ist ersichtlich, dass sich die Lese- und Schreibmenge der Vorbereiche überschneiden, da $V_\text{krit} = \{b\} \neq \emptyset$ ist. Somit enthält die gezeigte Markierung eine Wettkampfbedingung.
+
+Ein erweitertes Petri-Netz enthält eine Wettkampfbedingung, wenn mindestens eine Markierung seines Erreichbarkeitsgraphen eine Wettkampfbedingung enthält.
+
 
 Aufgabe der nebenläufigen Programmierung ist es also, Anweisungen so zu strukturieren, dass alle von nebenläufigen Anweisungen genutzten Daten threadsicher sind oder Daten, die nicht threadsicher sind, explizit synchronisiert werden.
 

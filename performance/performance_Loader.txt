@@ -1,0 +1,12 @@
+LoadScheduler:				
+67,73918	s	/	10000	frames
+65,45602	s	/	10000	frames
+65,96554	s	/	10000	frames
+66,25243	s	/	10000	frames
+66,3532925	avg			
+				
+76,1138	s	/	10000	frames
+62,165047	s	/	10000	frames
+63,40767	s	/	10000	frames
+65,97619	s	/	10000	frames
+66,91567675	avg			
