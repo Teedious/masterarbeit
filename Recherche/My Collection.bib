@@ -1,20 +1,37 @@
+@book{Herrtwich1989,
+author = {Herrtwich, Ralf Guido and Hommel, G{\"{u}}nter},
+doi = {10.1007/978-3-642-97851-7},
+isbn = {3-540-51701-4},
+publisher = {Springer-Verlag},
+series = {Studienreihe Informatik},
+title = {{Kooperation und Konkurrenz : Nebenl{\"{a}}ufige, verteilte und echtzeitabh{\"{a}}ngige Programmsysteme}},
+url = {http://link.springer.com/10.1007/978-3-642-97851-7},
+year = {1989}
+}
+@inproceedings{Michael1996,
+abstract = {Drawing ideas from previous authors, we present a new non-blocking concurrent queue algorithm and a new two-lock queue algorithm in which one enqueue and one dequeue can proceed concurrently. Both algorithms are simple, fast, and practical; we were surprised not to find them in the literature. Experiments on a 12-node SGI Challenge multiprocessor indicate that the new non-blocking queue consistently outperforms the best known alternatives; it is the clear algorithm of choice for machines that provide a universal atomic primitive (e.g. compare{\_}and{\_}swap or load{\_}linked/store{\_}conditional). The two-lock concurrent queue outperforms a single lock when several processes are competing simultaneously for access; it appears to be the algorithm of choice for busy queues on machines with non-universal atomic primitives (e.g. test{\_}and{\_}set). Since much of the motivation for non-blocking algorithms is rooted in their immunity to large, unpredictable delays in process execution, we report experimental results both for systems with dedicated processors and for systems with several processes multiprogrammed on each processor.},
+author = {Michael, Maged M and Scott, Michael L},
+booktitle = {Proceedings of the Annual ACM Symposium on Principles of Distributed Computing},
+doi = {10.1145/248052.248106},
+file = {:C$\backslash$:/Users/Florian/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Michael, Scott - Unknown - Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms.pdf:pdf},
+keywords = {compare and swap,concurrent queue,lock-free,multiprogramming,non-blocking},
+pages = {267--275},
+title = {{Simple, fast, and practical non-blocking and blocking concurrent queue algorithms}},
+year = {1996}
+}
+@book{Hettel2016,
+author = {Hettel, Jörg and Tran, Manh Tien},
+isbn = {978-3-86490-369-4},
+publisher = {dpunkt.verlag},
+title = {{Nebenläufige Programmierung mit Java : Konzepte und Programmiermodelle für Multicore-Systeme}},
+year = {2016}
+}
 @misc{Tatarchuk2014,
 author = {Tatarchuk, Natalya},
 title = {{Destiny's Multithreaded Rendering Architecture}},
 url = {https://advances.realtimerendering.com/destiny/gdc{\_}2015/Tatarchuk{\_}GDC{\_}2015{\_}{\_}Destiny{\_}Renderer{\_}web.pdf},
 urldate = {2021-11-05},
 year = {2014}
-}
-@article{Herlihy1991,
-author = {Herlihy, Maurice},
-file = {:C$\backslash$:/Users/Florian/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Herlihy - 1991 - Wait-Free Synchronization.pdf:pdf},
-journal = {ACM Transactions on Programming Languages and Systems},
-month = {jan},
-number = {1},
-title = {{Wait-Free Synchronization}},
-url = {https://cs.brown.edu/{~}mph/Herlihy91/p124-herlihy.pdf},
-volume = {11},
-year = {1991}
 }
 @misc{Marlowe,
 author = {Marlowe, Simon},
@@ -33,6 +50,17 @@ url = {https://existentialtype.wordpress.com/2011/03/17/parallelism-is-not-concu
 urldate = {2021-11-02},
 year = {2011}
 }
+@article{Herlihy1991,
+author = {Herlihy, Maurice},
+file = {:C$\backslash$:/Users/Florian/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Herlihy - 1991 - Wait-Free Synchronization.pdf:pdf},
+journal = {ACM Transactions on Programming Languages and Systems},
+month = {jan},
+number = {1},
+title = {{Wait-Free Synchronization}},
+url = {https://cs.brown.edu/{~}mph/Herlihy91/p124-herlihy.pdf},
+volume = {11},
+year = {1991}
+}
 @misc{Pike2012,
 author = {Pike, Rob},
 keywords = {online},
@@ -42,33 +70,25 @@ url = {https://talks.golang.org/2012/waza.slide},
 urldate = {2021-11-02},
 year = {2012}
 }
-@book{Hettel2016,
-author = {Hettel, Jörg and Tran, Manh Tien},
-isbn = {978-3-86490-369-4},
-publisher = {dpunkt.verlag},
-title = {{Nebenläufige Programmierung mit Java : Konzepte und Programmiermodelle für Multicore-Systeme}},
+@book{Tanenbaum2016,
+abstract = {Auch in dieser komplett {\"{u}}berarbeiteten Neuauflage des preisgekr{\"{o}}nten Lehrbuchs stellen die Autoren wie gewohnt auf unterhaltsame Art und Weise alle Konzepte rund um das Thema Betriebssysteme vor, die man ben{\"{o}}tigt, um moderne Betriebssysteme zu verstehen und zu entwickeln. Dabei wurden den neuesten Entwicklungen der Betriebssysteme sowie der zugrunde liegenden Hardware Rechnung getragen.Hier finden Sie Downloads zu diesem Titel.},
+author = {Tanenbaum, Andrew S and Bos, Herbert},
+isbn = {9783868942705},
+keywords = {Android,Betriebssysteme,Linux,Unix,Windows},
+pages = {1152},
+publisher = {Pearson Deutschland},
+title = {{Moderne Betriebssysteme }},
+url = {https://elibrary.pearson.de/book/99.150005/9783863267667},
 year = {2016}
 }
-@inproceedings{Michael1996,
-abstract = {Drawing ideas from previous authors, we present a new non-blocking concurrent queue algorithm and a new two-lock queue algorithm in which one enqueue and one dequeue can proceed concurrently. Both algorithms are simple, fast, and practical; we were surprised not to find them in the literature. Experiments on a 12-node SGI Challenge multiprocessor indicate that the new non-blocking queue consistently outperforms the best known alternatives; it is the clear algorithm of choice for machines that provide a universal atomic primitive (e.g. compare{\_}and{\_}swap or load{\_}linked/store{\_}conditional). The two-lock concurrent queue outperforms a single lock when several processes are competing simultaneously for access; it appears to be the algorithm of choice for busy queues on machines with non-universal atomic primitives (e.g. test{\_}and{\_}set). Since much of the motivation for non-blocking algorithms is rooted in their immunity to large, unpredictable delays in process execution, we report experimental results both for systems with dedicated processors and for systems with several processes multiprogrammed on each processor.},
-author = {Michael, Maged M and Scott, Michael L},
-booktitle = {Proceedings of the Annual ACM Symposium on Principles of Distributed Computing},
-doi = {10.1145/248052.248106},
-file = {:C$\backslash$:/Users/Florian/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Michael, Scott - Unknown - Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms.pdf:pdf},
-keywords = {compare and swap,concurrent queue,lock-free,multiprogramming,non-blocking},
-pages = {267--275},
-title = {{Simple, fast, and practical non-blocking and blocking concurrent queue algorithms}},
-year = {1996}
-}
-@book{Herrtwich1989,
-author = {Herrtwich, Ralf Guido and Hommel, G{\"{u}}nter},
-doi = {10.1007/978-3-642-97851-7},
-isbn = {3-540-51701-4},
-publisher = {Springer-Verlag},
-series = {Studienreihe Informatik},
-title = {{Kooperation und Konkurrenz : Nebenl{\"{a}}ufige, verteilte und echtzeitabh{\"{a}}ngige Programmsysteme}},
-url = {http://link.springer.com/10.1007/978-3-642-97851-7},
-year = {1989}
+@article{Goel1990,
+author = {Goel, Amrit L and Mansouri, Nashat},
+file = {:C$\backslash$:/Users/Florian/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Goel, Mansouri - 1990 - A Petri Net-Based Tool for Detecting Deadlocks and Race A Petri Net-Based Tool for Detecting Deadlocks and Race.pdf:pdf},
+journal = {Electrical Engineering and Computer Science - Technical Reports},
+title = {{A Petri Net-Based Tool for Detecting Deadlocks and Race Conditions in Concurrent Programs}},
+url = {https://surface.syr.edu/eecs{\_}techreports/86},
+volume = {86},
+year = {1990}
 }
 @article{Murata1989,
 abstract = {This is an invited tutorial-review paper on Petri nets-a graphical and mathematical modeling tool. Petri nets are a promising tool for describing and studying information processing systems that are characterized as being concurrent, asynchronous, distributed, parallel, nondeterministic, and/or stochastic. The paper starts with a brief review of the history and the application areas considered in the literature. It then proceeds with introductory modeling examples, behavioral and structural properties, three methods of analysis, subclasses of Petri nets and their analysis. In particular, one section is devoted to marked graphs- the concurrent system model most amenable to analysis. In addition, the paper presents introductory discussions on stochastic nets with their application to performance modeling, and on highlevel nets with their application to logic programming. Also included are recent results on reachability criteria. Suggestions are provided for further reading on many subject areas of Petri nets. {\textcopyright} 1989 IEEE},
@@ -82,15 +102,6 @@ pages = {541--580},
 title = {{Petri Nets: Properties, Analysis and Applications}},
 volume = {77},
 year = {1989}
-}
-@article{Goel1990,
-author = {Goel, Amrit L and Mansouri, Nashat},
-file = {:C$\backslash$:/Users/Florian/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Goel, Mansouri - 1990 - A Petri Net-Based Tool for Detecting Deadlocks and Race A Petri Net-Based Tool for Detecting Deadlocks and Race.pdf:pdf},
-journal = {Electrical Engineering and Computer Science - Technical Reports},
-title = {{A Petri Net-Based Tool for Detecting Deadlocks and Race Conditions in Concurrent Programs}},
-url = {https://surface.syr.edu/eecs{\_}techreports/86},
-volume = {86},
-year = {1990}
 }
 @article{Kharitonov2020,
 abstract = {The article describes an approach to detecting race conditions with respect to a variable in a program, based on the automatic construction of a program model in terms of Petri nets. A simple sample program having race condition is given and the analysis of its behavior shows four different results of execution due to the race condition. Compositional model of the program in terms of Petri nets is presented that illustrates the process of automatic model generation. Notions of program control flow, global area and environment models are introduced. Reduction rules for the control flow model are defined and compositional representation of reduced program model is described. The formula for detection of race conditions is defined as: for a race conditions to occur, it is necessary that between the moment a variable is read by a thread and the moment this thread writes to a variable, an event of writing to the variable by another thread may occur. Compositional model of global variable capable of intercepting writing to variable events that lead to race condition is presented. By synchronizing the program control flow model with the global variable model it is possible to detect race conditions by building the reachability tree and checking for the presence of error event in it.},

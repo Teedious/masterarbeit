@@ -20,29 +20,31 @@
 \begin{document}    
 \begin{tikzpicture}[node distance=2cm,on grid, auto]
   \node[place, label=$p_1$] (p1) {};
-  \node[transV, label=$t_1$, right = of p1] (t1) {};
-  \node[place, label=$p_2$, above right = of t1] (p2) {};
-  \node[place, label=$p_3$, below right = of t1] (p3) {};
-  \node[transV,label=$t_2$, right = of p2,label=below:{\LSset{a,{\color{red}b}}{a}} ] (t2){};
-  \node[transV,label=$t_3$, right = of p3,label=below:{\LSset{b}{{\color{red}b}}}] (t3){};
-  \node[place, label=$p_4$, tokens=1, right = of t2] (p4) {};
-  \node[place, label=$p_4$, tokens=1, right = of t3] (p5) {};
-  \node[transV, label=$t_4$, below right = of p4] (t4) {};
-  \node[place, label=$p_6$, right = of t4] (p6) {};
+  \node[transV, label=\texttt{if}, above right = of p1] (if) {};
+  \node[transV, label=\texttt{else},below right = of p1] (else) {};
+  \node[right = of if] (dots1){$\dots$};
+  \node[right = of else] (dots2){$\dots$};
+  \node[place, label=$p_2$, right = of dots1] (p2) {};
+  \node[place, label=$p_3$, right = of dots2] (p3) {};
+  \node[transV, label=$t_1$, right = of p2] (t1) {};
+  \node[transV, label=$t_2$, right = of p3] (t2) {};
+  \node[place, label=$p_4$, below right = of t1] (p4) {};
+  \node[transV, label=\texttt{end if}, right = of p4] (endif) {};
 
 
 
   \draw 
-  (p1) edge[post] node {1} (t1)
-  (t1) edge[post] node [swap] {1} (p2)
-  (t1) edge[post] node {1} (p3)
-  (p2) edge[post] node {1} (t2)
-  (p3) edge[post] node {1} (t3)
-  (t2) edge[post] node {1} (p4)
-  (t3) edge[post] node {1} (p5)
-  (p4) edge[post] node [swap] {1} (t4)
-  (p5) edge[post] node {1} (t4)
-  (t4) edge[post] node {1} (p6)
+  (p1) edge[post] (if)
+  (p1) edge[post] (else)
+  (if) edge[post] (dots1)
+  (else) edge[post] (dots2)
+  (dots1) edge[post] (p2) 
+  (dots2) edge[post] (p3) 
+  (p2) edge[post] (t1)
+  (p3) edge[post] (t2)
+  (t1) edge[post] (p4)
+  (t2) edge[post] (p4)
+  (p4) edge[post] (endif)
   ;
 \end{tikzpicture}
 \end{document}

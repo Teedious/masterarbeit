@@ -65,7 +65,7 @@ Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. 
 Betrachtet man Abbildung~\ref{fig:petrinet} erneut, lässt sich erkennen, dass Transition $t_1$ aktiviert ist und Transition $t_2$ nicht, da in $p_2$ keine Marken sind.
 
 \subsection{Erreichbarkeitsgraph}
-Mittels der Transitionsregel lassen sich in einem Petri-Netz $N$ ausgehend von der Anfangsmarkierung $m_0$ gegebenenfalls weitere Markierungen erzeugen. Durch die wiederholte Anwendung der Transitionsregel auf alle daraus entstehenden Markierungen lässt sich ein Graph erstellen, der alle von der Anfangsmarkierung aus erreichbaren Markierungen erhält, den \emph{Erreichbarkeitsgraph} $E(N)$ des Petri-Netzes.
+Mittels der Transitionsregel lassen sich in einem Petri-Netz $N$ ausgehend von der Anfangsmarkierung $m_0$ gegebenenfalls weitere Markierungen erzeugen. Durch die wiederholte Anwendung der Transitionsregel auf alle daraus entstehenden Markierungen lässt sich ein Graph erstellen, der alle von der Anfangsmarkierung aus erreichbaren Markierungen erhält, den \emph{Erreichbarkeitsgraph} $\E{N}$ des Petri-Netzes.
 \begin{figure}
 	\begin{tikzpicture}[node distance=5mm,auto,state/.append style={rounded rectangle}]
 		\node[state, initial] (q1) {$\{(p_1,1),(p_2,0)\}$};
@@ -130,7 +130,8 @@ Um die Arbeit mit Petri-Netzen zu vereinfachen, werden nun noch einige weitere D
 	\item Die Menge der Knoten mit Kanten von einem Knoten $k \in P\cup T$ heißt \emph{Nachbereich} des Knotens $k$ und ist definiert als $k^\circ  = \{n | (k,n) \in F\}$.
 	\item Die Menge der Knoten einer Markierung $m$ mit mindesten $n$ Marken $\{x | m(x)\geq n\}$ wird $M_{\geq n}$ genannt.
 	\item Das Maximum einer Markierung $m$, $\deg(m) \coloneqq \max \{m(p)|p\in P\}$, wird ihr \emph{Grad} genannt.
-	\item Ein Petri-Netz $N$ heißt \emph{$n$-beschränkt}, wenn $n$ das Maximum der Grade der Markierungen des Erreichbarkeitsgraphen $(V,K)=E(N)$ ist, also $n = \max\{\deg(m)| m\in V \}$.
+	\item Ein Petri-Netz $N$ heißt \emph{$n$-beschränkt}, wenn $n$ das Maximum der Grade der Markierungen des Erreichbarkeitsgraphen $(V,K)=\E{N}$ ist, also $n = \max\{\deg(m)| m\in V \}$.
+	\item Gilt für eine Kante $((a, b),w) \in W$, dass $w = 1$, so kann im dazugehörigen Graphen die Beschriftung entfallen. Kanten ohne Beschriftung haben also ein implizites Gewicht von $1$.
 \end{enumerate}
 
 
