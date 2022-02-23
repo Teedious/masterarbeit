@@ -107,7 +107,12 @@ tabsize=3,
 showspaces=false,
 showstringspaces=false}
 
-\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\code}[1]{\lstinline!#1!}
+\newcommand{\class}[1]{\lstinline!#1!}
+\newcommand{\const}[1]{\lstinline!#1!}
+
+\lstset{escapeinside={(*}{*)}}
+
 \newcommand{\LSset}[2]{\scriptsize $\begin{aligned}&\{#1\}_L\\&\{#2\}_S\end{aligned}$}
 
 

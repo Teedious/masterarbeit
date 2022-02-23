@@ -21,18 +21,30 @@
 
 \chapter{Analyse der blocklib}
 
+\section{Game Loop}
+\input{chapters/AnalyseDerBlocklib/GameLoop.tex}
+
 
 \chapter{Entwicklung einer Threading API}
 
 
 \subsection{Threading in Java}
+
 \section{Anforderungen der blocklib an eine Threading API}
 \subsection{Kontrolle über Threads an einer Stelle}
+\input{chapters/Anforderungen/Kontrolle.tex}
 \subsection{Verteilung von Berechnungen an Worker Threads}
 \subsection{Verhinderung von Livenessproblemen durch Archtektur}
 \subsection{Einfaches starten von Hintergrundtasks und einmaligen Aufgaben}
+
 \section{Design der Threading API}
+\input{chapters/DesignDerThreadingApi/Design.tex}
+\subsection{Renderthread und Job-API}
+\input{chapters/DesignDerThreadingApi/RenderthreadUndJobApi.tex}
+\subsection{Etablierung einer Kompositionroot}
+
 \section{Implementierung der Threading API}
+\input{chapters/Implementierung/Implementierung.tex}
 \section{Integration und Performanceanalyse}
 
 \chapter{Fazit und Ausblick}

@@ -1,0 +1,38 @@
+\paragraph{Schattenflackern}
+Bei der parallelen Ausführung des Renderthreads ist bei der Darstellung der Schatten ein Flackern zu erkennen. Die Tatsache, dass das Flackern in irregulären Intervallen auftritt, lässt auf das Vorhandensein einer Race-Condition schließen. Diese Vermutung kann dadurch bestätigt werden, dass das Flackern nichtmehr auftritt sobald \code{update()} und \code{render()} sequentialisiert werden.
+
+Da Variablen zeitgleich von verschiedenen Threads bearbeitet werden, ist die Suche nach dem Ursprung des Flackerns schwierig. Da der Fehler nur bei nebenläufiger Ausführung auftritt, müssen die problematischen Stellen auf \code{update()} und \code{render()} verteilt sein. Da der Fehler visuell sichtbar ist, lässt sich das Problem über die Anweisungen in \code{render()} nachverfolgen. 
+
+Eine naive Herangehensweise mittels Debugging ist nahezu unmöglich, da das Flackern zufällig auftritt. Zuerst muss also eine Möglichkeit gefunden werden, um das Auftreten des Flackerns programmatisch zu erkennen.
+
+In der \class{Configuration}-Klasse gibt es das Flag \const{SHOW_SHADOW_MAP_FRAME}. Ist dieses auf \code{true} gesetzt, wird in der linken oberen Ecke des Fensters ein Feld angezeigt, das die sogenannte \class{ShadowMap} zeigt. Abbildung~\ref{fig:ShadowMap} zeigt einen Screenshot der Blocklib mit \code{SHOW_SHADOW_MAP_FRAME = true}. Die \class{ShadowMap} wird genutzt, um zu berechnen, an welchen Stellen Schatten gerendert werden.
+\begin{figure}
+	\caption{Screenshot}\label{fig:ShadowMap}
+\end{figure}
+\textcite{Ebbinger2018} beschreibt, wie genau das Rendering von Schatten in der Blocklib umgesetzt ist. Wie der Name der Klasse \class{ShadowMap} vermuten lässt, wird für die Berechnung der Schatten das sogenannte \emph{Shadow Mapping} verwendet. Dazu wird eine zweite Kamera implementiert, die die Spielwelt aus der Sicht einer Lichtquelle, im Fall der Blocklib die Sonne, betrachtet. Die so gerenderte Sicht wird dann genutzt, um zu berechnen ob ein Fragment das erste Hindernis aus Sicht der Lichtquelle ist. Ist dies der Fall, so wird das Fragment beleuchtet, ansonsten ist etwas anderes vor dem Fragment und es befindet sich im Schatten.
+
+Wird die \class{ShadowMap} mitangezeigt, so kann man erkennen, dass diese sich zeitgleich mit dem Flackern verschiebt. Die Position der \class{ShadowMap} wird über die Klasse \class{ShadowBounds} bestimmt. Die Position muss in zwei Fällen geändert werden, zum einen, wenn die Sonne sich bewegt, also, wenn der Tag-Nacht-Zyklus aktiv ist, zum anderen, wenn sich die Spielerkamera bewegt, da die Darstellung von Schatten immer mit dem Sichtfeld des Spielers übereinstimmen muss.
+
+Die Ausgabe der Position der \class{ShadowBounds} während des Spiels bei deaktiviertem Tag-Nacht-Zyklus und stillstehender Spielerkamera bestätigt, dass diese Position sich ztatsächlich zeitgleich mit dem Auftreten des Flackerns verändert. Das Auftreten der Wettkampfbedingung lässt sich also erkennen, indem eine Änderung der Position der \class{ShadowBounds} in aufeinanderfolgenden Frames erkannt wird.
+
+Nun gilt es die Ursache der Positionsänderung ausfindig zu machen. Die Position der \class{ShadowBounds} hängt selbst von mehreren Variablen ab. Verfolgt man den Verlauf der Änderungen, finden sich die folgenden Abhängigkeiten:
+
+\begin{tabular}{ll}
+	\class{ShadowMap} &$\to$ \code{ShadowBounds.update}\\
+	& $\to$ \class{LightViewMatrix}\\
+	& $\to$ \code{DayNightLighting.getSunUp()} \\
+	& $\to$ \code{DayNightLighting.position}\\
+	& $\to$ \code{DayNightLightig.updateLightPosition(float, boolean)}
+\end{tabular}
+
+\code{DayNightLightig.updateLightPosition(float, boolean)} wird nicht im Renderthread ausgeführt sondern während \code{update()} in einem anderen Thread. Der relevante Abschnitt der Methode ist 
+\begin{lstlisting}[]
+private void updateLightPosition(float progress, boolean day) {
+	// ...
+	position = new Vector3f(direction.x, direction.y, direction.z);
+	position.scale(SUN_HEIGHT); (*\label{lst:updateLightPosition:scale}*)
+	// let sun stay relative to the player
+	position = Vector3f.add(position, Context.getInstance().getCamera().getPosition(), new Vector3f());
+}
+\end{lstlisting}
+Wird also der Wert von \code{DayNightLighting.position} im Renderthread ausgelesen, während die Methode in Ausführung ist, beispielsweise während Zeile~\ref{lst:updateLightPosition:scale}, so enthält \code{DayNightLighting.position} einen vollkommen falschen Wert. Hier existiert also die gesuchte Wettkampfbedingung.

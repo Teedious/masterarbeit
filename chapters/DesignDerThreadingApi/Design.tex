@@ -1,0 +1,5 @@
+Bei der Nutzung von Multithreading in Spielen gibt es zwei prominente Ansätze, zum einen die Nutzung eines separaten Threads, der das Rendern übernimmt, und zum anderen den Einsatz einer Jobarchitektur.
+
+Die Idee der Nutzung eines Renderthreads ergibt sich daraus, dass Simulation des Spiels und Anzeige zwei unabhängige Bereiche sind, die also nebenläufig ausgeführt werden können. Da Rendering sehr rechenintensiv ist, ist es also sinnvoll diese Aktivitäten in einen eigenen Thread auszulagern, damit sie den gesamten Frame für die Ausführung nutzen können.
+
+Der Einsatz eines separaten Renderthreads ist dabei auch in der Jobarchitektur vorgesehen.
