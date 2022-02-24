@@ -1,0 +1,19 @@
+In der Blocklib implementieren alle zu zeichnenden Elemente das Interface \class{Renderable}. Dieses definiert die Funktionalität, die zum Zeichnen eines Elements notwendig ist, sowie die Methoden \code{show()} und \code{hide()}. Das Rendersystem ist so aufgebaut, dass ein Element nach einem Aufruf von \code{show()} solange gezeichnet wird, bis \code{hide()} aufgerufen wird. Dies wird erreicht, indem eine Datenstruktur im \class{MasterRenderer} alle Renderables speichert. Diese zustandsbehaftete Zeichenmethode birgt Vor- und Nachteile.
+
+\todo{itemize mit + und - ?}
+\begin{itemize}
+	\item + Da \code{show()} nur einmal aufgerufen werden muss, können auch Systeme ohne Updatemethode das Zeichnen von Elementen veranlassen.
+	\item + Ein \todo{Vorteile hinzufügen}
+	\item + Da die Elemente gespeichert sind, müssen sie nicht jedes Mal neu hinzugefügt werden. Das verringert den Rechenbedarf.
+	\item - Werden Renderables häufig ausgetauscht, müssen die alten Elemente jedes Mal entfernt werden.
+	\item - Da die Einführung eines parallelen Renderthreads ansonsten zu Race Conditions führen würde, muss diese Datenstruktur aus Sicht des Renderthreads während des Zeichnens unverändert sein. Wie beschrieben, wird dazu ein Double Buffer eingesetzt. Bei einem zustandsbehafteten Double Buffer müssen beim Swap die Elemente des einen Buffers tatsächlich in den anderen Buffer kopiert werden. Das erfordert Zeit, die nicht parallelisiert werden kann, da das Wechseln des Buffers synchronisiert sein muss.
+	\item - Die Existenz von paarweise aufzurufenden Funktionen birgt die Gefahr, dass der zweite Aufruf vergessen wird. Wie bei \code{malloc()} und \code{free()} in C entsteht durch einen fehlenden Aufruf von \code{hide()} ein Speicherleck. Zudem wird dann die Anzahl der zu zeichnenden Elemente immer größer und der Rendervorgang wird verlangsamt. Des weiteren werden möglicherweise Renderables gezeichnet, die nicht gezeichnet werden sollen.
+\end{itemize}
+
+Um den Zeichenaufwand zu veringern, implementiert die Klasse \class{ChunkManager} das sogenannte \emph{Frustum Culling}. Es wird berechnet, welche Chunks sich im Sichtfeld der Kamera befinden. Nur diese Chunks sollen gezeichnet werden. Dazu entfernt der ChunkManager jeden Frame alle Chunks mittels \code{hide()} aus der Datenstruktur der zu zeichnenden Elemente und fügt nur die als sichtbar ermittelten Chunks wieder ein. Die Chunks machen mit etwa 
+% 334*2/(334*2+4+73+142)
+75 \% bis
+% 529*2/(529*2+4+73+142)
+82 \% einen Großteil aller Rendereables aus. Es wird also bereits ein Großteil der zu zeichnenden Elemente in jedem Frame neu hinzugefügt. Des weiteren gibt es in der Blocklib bis jetzt keine Klasse, die Renderables zu der Datenstruktur hinzufügt, aber keine Updatemethode besitzt. Somit werden die Gefahr von vergessenen \code{hide()} Aufrufen und der Kopieraufwand des Double Buffers als wichtiger eingeschätzt, als die oben beschriebenen Vorteile.
+
+Die Datenstruktur ist nun wie folgt implementiert. Die Methode \code{hide()} entfällt ersatzlos. Stattdessen wird nach dem Swap des Double Buffers der Renderables, der Buffer für die nächsten zu zeichnenden Elemente geleert, sodass Renderables automatisch nicht mehr gezeichnet werden, wenn sie nicht mehr hinzugefügt werden. Die Methode \code{show()} wird zu \code{draw()} umbenannt, um zu signalisieren, dass es sich um einen einmaligen Vorgang handelt.
