@@ -14,10 +14,12 @@
 
 \usepackage{graphicx}
 \graphicspath{ {./img/} }
+\usepackage{wrapfig}
 % \usepackage{layouts}
 \usepackage{textcomp} 
 \usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
-
+\usepackage{svg}
+\svgsetup{inkscapelatex=false, inkscapearea=drawing}
 \usepackage[layout={margin,index},draft]{fixme}
 \usepackage{rotating}
 \usepackage{siunitx}
@@ -124,3 +126,5 @@ showstringspaces=false}
 
 \newcommand{\todo}[1]{\fxnote{{\color{red}#1}}}
 \newcommand{\TODO}[2]{\fxnote*{{\color{red}#1}}{\underline{\emph{#2}}}}
+
+\newlength{\wrapfigwidth}
