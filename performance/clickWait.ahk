@@ -17,7 +17,7 @@ ResizeWin(Width = 500,Height = 0)
 ;CoordMode, Mouse, Screen
 ;CoordMode, Pixel, Screen
 
-Loop, 2
+Loop, 20
 {
 	yoffset := 45
 
