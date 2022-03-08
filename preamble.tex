@@ -34,6 +34,21 @@
 \setlength{\biburlucskip}{0mu plus 1mu}
 \setlength{\biburllcskip}{0mu plus 1mu}
 \renewcommand{\namelabeldelim}{\addnbspace}
+
+\addbibresource{Recherche/My Collection.bib}
+\defbibheading{Literatur}{\chapter{Literaturverzeichnis}} 
+\defbibheading{Quellen}{\section*{Quellenverzeichnis}} 
+
+\DeclareSourcemap{
+  \maps{
+    \map{
+      \step[fieldsource=url,
+            match=\regexp{\$\\sim\$},
+            replace=\regexp{\~}]
+    }
+  }
+}
+
 \usepackage{tikz}
 \usetikzlibrary{calc,positioning, shapes, petri, automata}
 \usepackage{pdfpages}

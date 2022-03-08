@@ -140,7 +140,7 @@ In dieser Arbeit heißen zwei Transitionen $t_1, t_2$ eines Petrinetzes $N$ gena
 
 \subsection{Unterschied zwischen Nebenläufigkeit und Parallelität}
 
-\subsection{Folgen von Nebenläufigkeit}
+\subsection{Folgen von Nebenläufigkeit}\label{sec:nebenl-folgen}
 Wie in Abschnitt \ref{sec:nebenl} beschrieben, muss ein Programm keine Sequenz von Anweisungen sein sondern kann auch nebenläufige Anweisungen enthalten. Diese Möglichkeit hat eine Reihe von Folgen, die es bei der nebneläufigen Programmierung zu beachten gilt.
 \paragraph{Nichtdeterminismus}
 Enthält ein Programm nebenläufige Anweisungen, ist die Reihenfolge der daraus resultierenden Aktivitäten nicht definiert und kann sich bei jedem Programmdurchlauf ändern. Die Ausführung ist also \emph{nichtdeterministisch}, als direkte Folge der Nebenläufigkeit~\cite[S.~17~f.]{Herrtwich1989}. Erwartet man von einem Programm \emph{Determiniertheit}\footnote{Es kann durchaus sein, dass Determiniertheit in einem Programm nicht gewünscht ist. Man betrachte beispielsweise ein Programm, das einen echten Zufallsgenerator beschreibt. Hier wäre Determiniertheit ein direkter Widerspruch zur Aufgabe des Programms.}, also die Eigenschaft, dass gleiche Eingaben immer zu den gleichen Ausgaben führen, ist Nichtdeterminismus in der Regel zu vermeiden. Liefert ein Programm bei jeder beliebigen Ausführreihenfolge das selbe Ergebnis, ist es trotz Nichtdeterminismus weiterhin determiniert, weil die Ausführreihenfolge für das Ergebnis keine Rolle spielt~\cite[S.~18~f.]{Herrtwich1989}. 
