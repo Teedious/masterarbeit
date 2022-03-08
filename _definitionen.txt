@@ -3,7 +3,7 @@ Kritischer Bereich
 Double Buffer
 Hardwarethread
 FPS
-
+OpenGL
 
 
 
