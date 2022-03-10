@@ -44,4 +44,6 @@ Das Programm definiert ein statisches Feld \code{count}, dann wird ein \class{Ru
 
 Das Schlüsselwort \code{synchronized} kann auch als Teil der Signatur einer Methode verwendet werden, in diesem Fall wird kein Objekt angegeben, dessen Zugriff synchronisiert werden soll. Bei Instanzmethoden ist das automatisch das Objekt selbst, das die Methode ausführt also \code{this}, bei statischen Methoden wird der Zugriff auf das Klassenobjekt synchronisiert.
 
+\paragraph{\texttt{volatile}} Variablen können mit dem Schlüsselwort \code{volatile} ausgestattet werden. Threads, die auf eine als \code{volatile} gekennzeichnete Variable zugreifen, lesen immer den aktuellsten Wert dieser Variable und greifen dafür immer auf den Hauptspeicher zu anstatt auf den Cache (der schon veraltet sein könnte)~\cite[S.~30~ff.]{Friesen2015}.
+
 \subsection{Executors}\label{sec:executor}
