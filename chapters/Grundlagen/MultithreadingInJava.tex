@@ -1,11 +1,47 @@
 In Java können Threads über ein einheitliches Interface verwaltet werden. Zur Entkopplung vom Betriebssystem übernimmt die Java Runtime die Aufrufe der betriebssystemspezifischen Funktionen zur Erzeugung und Verwaltung eines Threads~\cite[S.~3]{Friesen2015}. Das einheitliche Interface wird durch die Klasse \class{Thread} repräsentiert, die einen Java Thread von einem Thread des  Betriebssystems entkoppelt. 
 
-Um die Ausführung eines Java Threads zu starten, wird dessen Methode \code{start(): void} aufgerufen~\cite[S.~8]{Friesen2015}. Ohne eine Angabe der auszuführenden Anweisungen ist allerdings noch nicht definiert, welche Aktivitäten der Thread bei der Ausführung durchführen soll. Java enthält das Interface \class{Runnable}, das eine einzige Methode \code{run(): void} definiert, die weder Parameter noch Rückgabewert besitzt. Die Klasse \class{Thread} besitzt Konstruktoren die als Argument ein Objekt erwarten, das \class{Runnable} implementiert, wird der Java Thread gestartet, so wird in der Ausführung die \code{run()} Methode des übergebenen Objekts aufgerufen~\cite[S.~3]{Friesen2015}.
+Um die Ausführung eines Java Threads zu starten, wird dessen Methode \code{start(): void} aufgerufen~\cite[S.~8]{Friesen2015}. Ohne eine Angabe der auszuführenden Anweisungen ist allerdings noch nicht definiert, welche Aktivitäten der Thread bei der Ausführung durchführen soll. Java enthält das Interface \class{Runnable}, das eine einzige Methode \code{run(): void} definiert, die weder Parameter noch Rückgabewert besitzt. Die Klasse \class{Thread} besitzt Konstruktoren die als Argument ein Objekt erwarten, das \class{Runnable} implementiert, wird der Java Thread gestartet, so wird in der Ausführung die \code{run()} Methode des übergebenen Objekts aufgerufen~\cite[S.~3]{Friesen2015}. Ein einfaches Programm, das auf diese Weise arbeitet, könnte wie folgt aussehen.
+\begin{lstlisting}
+public static void main(String[] args) {
+	var helloThread = new Thread(new Runnable() {
+		@Override
+		public void run() {
+			System.out.println("Hello thread!");
+		}
+	});
+	helloThread.start();
+}
+\end{lstlisting}
+Das Programm erzeugt ein Java Thread Objekt, dem eine Implementierung von \class{Runnable} übergeben wird. In diesem Beispiel wird nur der Text \enquote{Hello thread!} ausgegeben. Hier könnte sich natürliche ein beliebiger Algorithmus befinden, der dann in dem Thread ausgeführt wird.
 
 Alternativ kann eine Klasse von \class{Thread} erben, da \class{Thread} selbst \class{Runnable} implementiert, und die Definition von \code{run()} überschreiben~\cite[S.~335]{Rauber2006}. Da die Klasse von \class{Thread} erbt, besitzen Objekte der Klasse ebenfalls die Methode \code{start()}. Wird diese aufgerufen, so wird wie bei \class{Thread} ein Betriebssystem Thread gestartet, der nun die überschriebene Definition von \code{run()} ausführt. Das Erben von von \class{Thread} ist im Normalfall nicht empfohlen, da dieses Design einige Probleme verusacht. Beispielsweise kann die Thread-Unterklasse von keiner anderen Klasse mehr erben~\cite[S.~335]{Rauber2006}, zudem sind die Definition der Anweisungen mit der Definition der Ausführung höchstmöglich gekoppelt, was dem grundlegenden Prinzip der \emph{losen Kopplung} entgegensteht. Entscheidet man sich also für dieses Design, sollte dies eine gute Begründung haben.
 
 Um die Ausführung mehrerer Java Threads zu koordinieren, bietet Java einige Synchronisationsmechanismen. Diese werden nun vorgestellt
 
 \subsection{Synchonisierung in Java}
+Da die Bandbreite der Möglichkeiten zur Synchonisierung in Java ganze Bücher füllen kann, werden hier nur einige ausgewählte Methoden dargestellt. Für eine ausführlichere Lektüre zu dem Thema werden \cite{Friesen2015} und \cite{Hettel2016} empfohlen.
+
+\paragraph{\texttt{synchronized}} Das Schlüsselwort \code{synchronized} ermöglicht die blockierende Synchronisierung beim Zugriff auf beliebige Objekte. Das Schlüsselwort kann auf zwei Arten eingesetzt werden~\Cite[S.~339~ff.]{Rauber2006}. Einerseits kann ein Code-Block definiert werden in dem der Zugriff auf ein Objekt synchronisiert wird, wie in folgendem Beispiel.
+\begin{lstlisting}
+public class MultithreadedIncrement {
+	public static Integer count = 0;
+	public static void main(String[] args) {
+		var increment = new Runnable(){
+			@Override
+			public void run() {
+				synchronized (count){
+					count++;
+					System.out.println(count);
+				}
+			}
+		};
+		new Thread(increment).start();
+		new Thread(increment).start();
+	}
+}	
+\end{lstlisting}
+Das Programm definiert ein statisches Feld \code{count}, dann wird ein \class{Runnable} implementiert, das einen \code{synchronized} Block enthält. Versucht ein Thread, diesen Block auszuführen, versucht er automatisch die zu \code{count} gehörige Sperre erhalten. Dieser Vorgang ist threadsicher und nur ein Thread kann die Sperre zu einem Objekt gleichzeitig besitzen. Dadurch ist es nun möglich, gefahrlos den Wert von \code{count} zu erhöhen und den neuen Wert auf der Konsole auszugeben. Beim Verlassen des \code{synchronized} Blocks wird die Sperre des zugehörigen Objekts wieder freigegeben. Ist die Sperre nicht belegt, wenn ein Thread diese erhalten möchte, wird die Ausführung des Threads solange suspendiert, bis diese freigegeben wird. Java ordnet jedem Objekt implizit eine solche Sperre zu~\cite{Friesen2015}, sodass \code{synchronized} mit beliebigen Objekten genutzt werden kann. Für primitive Datentypen ist das nicht möglich.
+
+Das Schlüsselwort \code{synchronized} kann auch als Teil der Signatur einer Methode verwendet werden, in diesem Fall wird kein Objekt angegeben, dessen Zugriff synchronisiert werden soll. Bei Instanzmethoden ist das automatisch das Objekt selbst, das die Methode ausführt also \code{this}, bei statischen Methoden wird der Zugriff auf das Klassenobjekt synchronisiert.
 
 \subsection{Executors}\label{sec:executor}
