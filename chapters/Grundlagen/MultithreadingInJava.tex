@@ -1,0 +1,11 @@
+In Java können Threads über ein einheitliches Interface verwaltet werden. Zur Entkopplung vom Betriebssystem übernimmt die Java Runtime die Aufrufe der betriebssystemspezifischen Funktionen zur Erzeugung und Verwaltung eines Threads~\cite[S.~3]{Friesen2015}. Das einheitliche Interface wird durch die Klasse \class{Thread} repräsentiert, die einen Java Thread von einem Thread des  Betriebssystems entkoppelt. 
+
+Um die Ausführung eines Java Threads zu starten, wird dessen Methode \code{start(): void} aufgerufen~\cite[S.~8]{Friesen2015}. Ohne eine Angabe der auszuführenden Anweisungen ist allerdings noch nicht definiert, welche Aktivitäten der Thread bei der Ausführung durchführen soll. Java enthält das Interface \class{Runnable}, das eine einzige Methode \code{run(): void} definiert, die weder Parameter noch Rückgabewert besitzt. Die Klasse \class{Thread} besitzt Konstruktoren die als Argument ein Objekt erwarten, das \class{Runnable} implementiert, wird der Java Thread gestartet, so wird in der Ausführung die \code{run()} Methode des übergebenen Objekts aufgerufen~\cite[S.~3]{Friesen2015}.
+
+Alternativ kann eine Klasse von \class{Thread} erben, da \class{Thread} selbst \class{Runnable} implementiert, und die Definition von \code{run()} überschreiben~\cite[S.~335]{Rauber2006}. Da die Klasse von \class{Thread} erbt, besitzen Objekte der Klasse ebenfalls die Methode \code{start()}. Wird diese aufgerufen, so wird wie bei \class{Thread} ein Betriebssystem Thread gestartet, der nun die überschriebene Definition von \code{run()} ausführt. Das Erben von von \class{Thread} ist im Normalfall nicht empfohlen, da dieses Design einige Probleme verusacht. Beispielsweise kann die Thread-Unterklasse von keiner anderen Klasse mehr erben~\cite[S.~335]{Rauber2006}, zudem sind die Definition der Anweisungen mit der Definition der Ausführung höchstmöglich gekoppelt, was dem grundlegenden Prinzip der \emph{losen Kopplung} entgegensteht. Entscheidet man sich also für dieses Design, sollte dies eine gute Begründung haben.
+
+Um die Ausführung mehrerer Java Threads zu koordinieren, bietet Java einige Synchronisationsmechanismen. Diese werden nun vorgestellt
+
+\subsection{Synchonisierung in Java}
+
+\subsection{Executors}\label{sec:executor}
