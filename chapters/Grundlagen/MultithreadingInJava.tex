@@ -19,7 +19,7 @@ Alternativ kann eine Klasse von \class{Thread} erben, da \class{Thread} selbst \
 Um die Ausführung mehrerer Java Threads zu koordinieren, bietet Java einige Synchronisationsmechanismen. Diese werden nun vorgestellt
 
 \subsection{Synchonisierung in Java}
-Da die Bandbreite der Möglichkeiten zur Synchonisierung in Java ganze Bücher füllen kann, werden hier nur einige ausgewählte Methoden dargestellt. Für eine ausführlichere Lektüre zu dem Thema werden \cite{Friesen2015} und \cite{Hettel2016} empfohlen.
+Da die Bandbreite der Möglichkeiten zur Synchonisierung in Java ist sehr groß. Daher werden hier nur einige ausgewählte Methoden dargestellt. Für eine ausführlichere Lektüre zu dem Thema lassen sich die Bücher von \textcite{Friesen2015} und \textcite{Hettel2016} empfehlen.
 
 \paragraph{\texttt{synchronized}} Das Schlüsselwort \code{synchronized} ermöglicht die blockierende Synchronisierung beim Zugriff auf beliebige Objekte. Das Schlüsselwort kann auf zwei Arten eingesetzt werden~\Cite[S.~339~ff.]{Rauber2006}. Einerseits kann ein Code-Block definiert werden in dem der Zugriff auf ein Objekt synchronisiert wird, wie in folgendem Beispiel.
 \begin{lstlisting}
@@ -46,6 +46,29 @@ Das Schlüsselwort \code{synchronized} kann auch als Teil der Signatur einer Met
 
 \paragraph{\texttt{volatile}} Variablen können mit dem Schlüsselwort \code{volatile} ausgestattet werden. Threads, die auf eine als \code{volatile} gekennzeichnete Variable zugreifen, lesen immer den aktuellsten Wert dieser Variable und greifen dafür immer auf den Hauptspeicher zu anstatt auf den Cache (der schon veraltet sein könnte)~\cite[S.~30~ff.]{Friesen2015}. Lese- und Schreibvorgänge einer \code{volatile} Variable sind atomar, und damit threadsicher.
 
-Dies gilt insbesondere auch für 64-bit Variablen. Obwohl einige Quellen davor warnen beispielsweise \code{volatile} für Variablen des Typs \code{long} oder \code{double} zu verwenden, unter dem Verweis darauf, dass 32-bit Computer zwei Operationen für das Lesen und Schreiben dieser Variablen benötigen~\cite[S.~34]{Friesen2015}, beschreibt die Java Spezifikation explizit, dass auch der Zugriff auf 64-bit Variablen immer atomar ist, sofern diese als \code{volatile} deklariert sind~\cite{Java7Spec17}. Weiter wird dort insbesondere darauf hingewiesen, dass Entwickler aus diesem Grund 64-bit Variablen, auf die von mehreren Threads zugegriffen wird, als \code{volatile} zu deklarieren, um Atomarität von Lese- und Schreibzugriffen zu gewährleisten.  
+Dies gilt insbesondere auch für 64-bit Variablen. Obwohl einige Quellen davor warnen beispielsweise \code{volatile} für Variablen des Typs \code{long} oder \code{double} zu verwenden, unter dem Verweis darauf, dass 32-bit Computer zwei Operationen für das Lesen und Schreiben dieser Variablen benötigen~\cite[S.~34]{Friesen2015}, beschreibt die Java Spezifikation explizit, dass auch der Zugriff auf 64-bit Variablen immer atomar ist, sofern diese als \code{volatile} deklariert sind~\cite{Java7Spec17}. Weiter wird dort insbesondere darauf hingewiesen, dass Entwickler aus diesem Grund 64-bit Variablen, auf die von mehreren Threads zugegriffen wird, als \code{volatile} zu deklarieren, um Atomarität von Lese- und Schreibzugriffen zu gewährleisten. Lesen und subsequentes schreiben einer \code{volatile} Variable (beispielsweise \code{count++;}) ist allerdings weiterhin nicht atomar, da mehr als nur eine Operation durch geführt wird -- Lesen, neuen Wert berechnen und Schreiben. \code{volatile} ist also nur dann zu verwenden, wenn der neue Wert einer Variable nicht vom alten Wert abhängt, beispielsweise, wenn er gänzlich neu berechnet wird. 
+
+\paragraph{Atomics und Concurrent Collections} Da das Ändern von Variablen basierend auf ihrem vorherigen Wert offensichtlicherweise häufig nötig ist (beispielsweise für die Generierung einer fortlaufenden Nummer) und die ständige Synchronisierung der Variable über \code{synchronized} oder andere blockierende Methoden beträchtliche Performanceeinbußen zur Folge haben können~\cite[S.~130]{Friesen2015}, enthält Java \emph{Atomics}. Atomics sind Wrapper für bestimmte Datentypen, die es erlauben, atomare Operationen auch auf Basis des aktuellen Werts einer Variable durchzuführen ohne dabei den Zugriff auf diese Variable durch eine Sperre zu blockieren~\cite[S.~130]{Friesen2015}. 
+
+Java stellt unter anderem die Klassen \class{AtomicBoolean}, \class{AtomicInteger}, \class{AtomicLong} und \class{AtomicReference} bereit~\cite[S.~131]{Friesen2015}. Klassen für die Datentypen \code{byte}, \code{short}, \code{float} und \code{double} gibt es nicht. Die Java Dokumentation erklärt dies damit, dass diese über \class{AtomicInteger} und im Fall von \code{double} über \class{AtomicLong} dargestellt werden können~\cite{Java7DocAtomic}.
+
+Eine nützliche Anwendung von Atomics ist die threadsichere Beschränkung einer Klasse auf eine Objektinstanz, ohne globalen Zugriff auf diese bereitstellen zu müssen wie es bei der Standardimplementierung eines Singleton der Fall wäre. Allerdings ermöglicht diese Implementierung keine Prüfung während des Kompiliervorgangs sondern erst zur Laufzeit.
+\begin{lstlisting}
+public class LocalSingleton {
+private static AtomicBoolean instanced = new AtomicBoolean(false);
+
+public LocalSingleton() {
+	ensureUniqueInstance();
+}
+
+private void ensureUniqueInstance(){
+	if(!instanced.compareAndSet(false, true)){
+		throw new UnsupportedOperationException();
+	}
+}
+\end{lstlisting}
+Die gezeigte Klasse \class{LocalSingleton} nutzt eine statische Instanz von \class{AtomicBoolean}, um im Konstruktor zu überprüfen, ob bereits eine Instanz von \class{LocalSingleton} erzeugt wurde. Ist dies der Fall, wie eine Exception geworfen und das Objekt kann nicht erzeugt werden. Dazu wird eine Compare-and-Swap Intruktion verwendet, die in Java \code{compareAndSet(...)} genannt wird.
+
+Compare-and-Swap Intruktionen werden ebenfalls in den von Java bereitgestellten \emph{Concurrent Collections} verwendet~\cite[S. 133~f.]{Friesen2015}. Es gibt verschiedene nicht-blockierende Implementierungen für Warteschlangen (\class{ConcurrentLinkedQueue}), Maps (\class{ConcurrentHashMap}), Mengen (\class{ConcurrentSkipListSet}) und viele weitere. Diese sind selbstverständlich besonders nützlich, wenn verschiedene Threads auf solche Datenstrukturen zugreifen müssen, da keine explizite Synchronisierung nötig ist und keine Sperren verwendet werden, welche sich zu einem Flaschenhals entwickeln könnten~\cite[S.~125~ff.]{Friesen2015}.
 
 \subsection{Executors}\label{sec:executor}
