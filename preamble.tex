@@ -110,22 +110,56 @@
 \definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
 \definecolor{gray}{rgb}{0.6,0.6,0.6}
  
-\lstset{language=Java,
-basicstyle=\ttfamily\footnotesize,
-keywordstyle=\color{javapurple}\bfseries,
-stringstyle=\color{javared},
-commentstyle=\color{javagreen}\itshape\bfseries,
-morecomment=[s][\color{javadocblue}]{/**}{*/},
-numbers=left,
-numberstyle=\tiny\color{gray},
-stepnumber=1,
-numbersep=10pt,
-tabsize=3,
-showspaces=false,
-showstringspaces=false}
+\lstset{
+	language=Java,
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen}\itshape\bfseries,
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	stepnumber=1,
+	numbersep=10pt,
+	tabsize=3,
+	showspaces=false,
+	showstringspaces=false
+}
 
-\newcommand{\code}[1]{\lstinline[basicstyle=\ttfamily\normalsize,
-keywordstyle=\ttfamily\normalsize]!#1!}
+\lstdefinestyle{inline}{
+	basicstyle=\ttfamily\normalsize,
+	keywordstyle=\ttfamily\normalsize,
+	breaklines=true,
+	breakatwhitespace=true,
+	literate={A}{}{0\discretionary{}{A}{A}}
+           {B}{}{0\discretionary{}{B}{B}}
+           {C}{}{0\discretionary{}{C}{C}}
+           {D}{}{0\discretionary{}{D}{D}}
+           {E}{}{0\discretionary{}{E}{E}}
+           {F}{}{0\discretionary{}{F}{F}}
+           {G}{}{0\discretionary{}{G}{G}}
+           {H}{}{0\discretionary{}{H}{H}}
+           {I}{}{0\discretionary{}{I}{I}}
+           {J}{}{0\discretionary{}{J}{J}}
+           {K}{}{0\discretionary{}{K}{K}}
+           {L}{}{0\discretionary{}{L}{L}}
+           {M}{}{0\discretionary{}{M}{M}}
+           {N}{}{0\discretionary{}{N}{N}}
+           {O}{}{0\discretionary{}{O}{O}}
+           {P}{}{0\discretionary{}{P}{P}}
+           {Q}{}{0\discretionary{}{Q}{Q}}
+           {R}{}{0\discretionary{}{R}{R}}
+           {S}{}{0\discretionary{}{S}{S}}
+           {T}{}{0\discretionary{}{T}{T}}
+           {U}{}{0\discretionary{}{U}{U}}
+           {V}{}{0\discretionary{}{V}{V}}
+           {W}{}{0\discretionary{}{W}{W}}
+           {X}{}{0\discretionary{}{X}{X}}
+           {Y}{}{0\discretionary{}{Y}{Y}}
+           {Z}{}{0\discretionary{}{Z}{Z}}
+}
+
+\newcommand{\code}[1]{\lstinline[style=inline]!#1!}
 \newcommand{\class}[1]{\code{#1}}
 \newcommand{\const}[1]{\code{#1}}
 
