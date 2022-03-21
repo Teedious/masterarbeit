@@ -1,0 +1,18 @@
+Aus der in Abschnitt~\ref{sec:blocklibAnalyse} beschriebenen Analyse lassen sich einige Anforderungen ableiten, die von der API der nebenläufigen Architektur erfüllt werden müssen. Neben den aus des Analyse erwachsenen Anforderungen, lassen sich weitere Anforderungen definieren, die für die Blocklib in Zukunft nützlich sind.
+
+Die Threading API muss sich in das bestehende Ökosystem der Codebasis der Blocklib integrieren, sodass deren Nutzung möglichst einfach von der Hand geht und angenommen wird.
+
+\subsection{Kontrolle über Threads an einer Stelle}
+Um die Nutzung der API einfach zu gestalten, ist es notwendig, die Verwaltung und Kontrolle über die Java Threads, die nebenläufige Anweisungen ausführen, hinter der API zu verstecken. Der Lebenszyklus eines Threads ist für die asynchrone Abarbeitung von Tasks  irrelevant, ist allerdings gegebenenfalls komplex. Diese Komplexität darf nicht an die Nutzer der API herandringen.
+
+Zudem ist es sinnvoll, diese Verwaltung an einer Stelle zu bündeln, um den Überblick über die Anzahl der Java Threads nicht zu verlieren, damit durch die Auswahl einer geeigneten Zahl Kontextwechsel möglichst vermieden werden können. Diese Übersicht und Kontrolle lässt sich am besten an einer Stelle gebündelt verwirklichen.
+
+Des weiteren wird so Redundanz in der Codebasis verringert, da der Code zur Verwaltung der Threads nur an einer Stelle benötigt wird. Gäbe es hier mehrere Orte, würde sich beispielsweise eventuell der Code, der für die Generierung eines Java Threads zuständig ist, an mehreren Stellen wiederholen. Dies ginge dann mit den üblichen Problemen von Redundanz einher. Mit der Zeit unterscheiden sich die verschiedenen Codeteile, da vergessen wird Änderungen an allen Orten durchzuführen und Änderungen sind aufwendiger, da sie an allen Stellen durchgeführt werden müssen.
+
+\subsection{Verteilung von Berechnungen an Worker Threads}
+Wie in Abschnitt~\ref{sec:nutzungMultithreading} beschrieben, werden für die Generierung von Chunks Threads genutzt. Die Blocklib benötigt also eine Möglichkeit Anweisungen asynchron an einen Executor zu übergeben. Der Executor kann in Zukunft auch für Übergabe anderer asynchroner Aufgaben genutzt werden. So kann die Blocklib die vorhandene Parallelität in der Hardware voll ausnutzen.
+
+\subsection{Einfaches starten von Hintergrundtasks und einmaligen Aufgaben}
+Einige Systeme der Blocklib, wie beispielsweise das System zu Berechnung von Flüssigkeitsbewegungen, führen Aufgaben durch, die periodisch im Hintergrund ablaufen. So wird Im Flüssigkeitssystem für jede Flüssigkeit nach einem eigenen Zeitintervall geprüft, wohin die Flüssigkeit fließt. Es muss eine einfache Möglichkeit geben solche periodischen Aufgaben an die Threading API zu übergeben, die sich dann um die Ausführung zur korrekten Zeit kümmert.
+
+Eine ähnliche Aufgabe ist, eine Aufgabe zu definieren, die nach dem Ablauf eines festgelegten Intervalls einmalig ausgeführt wird. Man überlege sich beispielsweise eine Art Falle, die durch das Betreten eines bestimmten Blocks in der Blocklib ausgelöst werden könnte und dann nach ein paar Sekunden zuschnappt. Ein solches System gibt es in der Blocklib zwar noch nicht, ließe sich dann durch die API allerdings einfach realisieren.

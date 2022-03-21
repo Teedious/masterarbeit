@@ -20,25 +20,14 @@
 \section{Multithreading in Spielen}
 \input{chapters/Grundlagen/MultithreadingInSpielen.tex}
 
-\chapter{Analyse der Blocklib}
 
-\section{Game Loop}
-\input{chapters/AnalyseDerBlocklib/GameLoop.tex}
-\section{Nutzung von Multithreading}
-\input{chapters/AnalyseDerBlocklib/ThreadNutzung.tex}
+\chapter{Entwicklung einer nebenläufigen Architektur}
 
+\section{Analyse der Blocklib}\label{sec:blocklibAnalyse}
+\input{chapters/EntwicklungEinerNebenläufigen/AnalyseDerBlocklib.tex}
 
-\chapter{Entwicklung einer Threading API}
-
-
-\subsection{Threading in Java}
-
-\section{Anforderungen der blocklib an eine Threading API}
-\subsection{Kontrolle über Threads an einer Stelle}
-\input{chapters/Anforderungen/Kontrolle.tex}
-\subsection{Verteilung von Berechnungen an Worker Threads}
-\subsection{Verhinderung von Livenessproblemen durch Archtektur}
-\subsection{Einfaches starten von Hintergrundtasks und einmaligen Aufgaben}
+\section{Anforderungen der Blocklib an eine Threading API}
+\input{chapters/EntwicklungEinerNebenläufigen/Anforderungen.tex}
 
 \section{Design der Threading API}
 \input{chapters/DesignDerThreadingApi/Design.tex}
