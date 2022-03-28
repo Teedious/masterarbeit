@@ -8,6 +8,9 @@
 \null\thispagestyle{empty}\clearpage
 \tableofcontents
 \chapter{Einleitung}
+
+\setstretch{1.15}
+
 \section{Blocklib}
 \section{Nebenläufige Programmierung}
 \section{Testen und Testframeworks}
@@ -41,31 +44,20 @@
 \input{chapters/Implementierung/UmstellungRenderarchitektur.tex}
 \section{Integration und Performanceanalyse}
 
-\chapter{Fazit und Ausblick}
+\chapter{Fazit}
+\chapter{Ausblick}
 \section{Etablierung einer Composition Root}
 \input{chapters/Ausblick/EtablierungEinerKompositionroot.tex}
 \section{Dynamisches Rendern von Schrift}
 \section{Thread Affinity}
+\section{Jobsystem mit PriorityQueue}
+\section{Konsolidieren des Jobsystems in der Simulation}
+\section{Verstärktes Batching in der Simulation}
 \printnoidxglossaries
 
 \printbibliography[title={Literaturverzeichnis},heading=bibintoc,notkeyword=online]
 
 \printbibliography[title={Quellenverzeichnis},heading=bibintoc,keyword=online] 
 
-\appendix
-\clearpage
-\pagenumbering{Roman}
-\setcounter{page}{1}
-
-\chapter{Executor im Concurrency Framework}\label{appendix:concFrameworkExecutor}
-\includesvg[width=\textwidth]{ConcurrencyFrameworkExecutor.svg}
-\todo{Caption}
-
-\chapter{Context vollständiges Klassendiagramm}\label{appendix:context}
-{
-	\centering
-	\includesvg[height=.7\textheight]{Context.svg}
-	\todo{Caption}
-}
-
+\input{chapters/Anhang/anhang.tex}
 \end{document}

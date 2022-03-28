@@ -1,6 +1,5 @@
 In der Blocklib implementieren alle zu zeichnenden Elemente das Interface \class{Renderable}. Dieses definiert die Funktionalität, die zum Zeichnen eines Elements notwendig ist, sowie die Methoden \code{show()} und \code{hide()}. Das Rendersystem ist so aufgebaut, dass ein Element nach einem Aufruf von \code{show()} solange gezeichnet wird, bis \code{hide()} aufgerufen wird. Dies wird erreicht, indem eine Datenstruktur im \class{MasterRenderer} alle Renderables speichert. Diese zustandsbehaftete Zeichenmethode birgt Vor- und Nachteile.
 
-\todo{itemize mit + und - ?}
 \begin{itemize}
 	\item[$+$] Da \code{show()} nur einmal aufgerufen werden muss, können auch Systeme ohne Updatemethode das Zeichnen von Elementen veranlassen.
 	\item[$+$] Da die Elemente gespeichert sind, müssen sie nicht jedes Mal neu hinzugefügt werden. Das verringert den Rechenbedarf.
@@ -9,7 +8,7 @@ In der Blocklib implementieren alle zu zeichnenden Elemente das Interface \class
 	\item[$-$] Die Existenz von paarweise aufzurufenden Funktionen birgt die Gefahr, dass der zweite Aufruf vergessen wird. Wie bei \code{malloc()} und \code{free()} in C entsteht durch einen fehlenden Aufruf von \code{hide()} ein Speicherleck. Zudem wird dann die Anzahl der zu zeichnenden Elemente immer größer und der Rendervorgang wird verlangsamt. Des weiteren werden möglicherweise Renderables gezeichnet, die nicht gezeichnet werden sollen.
 \end{itemize}
 
-Um den Zeichenaufwand zu veringern, implementiert die Klasse \class{ChunkManager} das sogenannte \emph{Frustum Culling}. Es wird berechnet, welche Chunks sich im Sichtfeld der Kamera befinden. Nur diese Chunks sollen gezeichnet werden. Dazu entfernt der ChunkManager jeden Frame alle Chunks mittels \code{hide()} aus der Datenstruktur der zu zeichnenden Elemente und fügt nur die als sichtbar ermittelten Chunks wieder ein. Die Chunks machen mit etwa 
+Um den Zeichenaufwand zu verringern, implementiert die Klasse \class{ChunkManager} das sogenannte \emph{Frustum Culling}. Es wird berechnet, welche Chunks sich im Sichtfeld der Kamera befinden. Nur diese Chunks sollen gezeichnet werden. Dazu entfernt der ChunkManager jeden Frame alle Chunks mittels \code{hide()} aus der Datenstruktur der zu zeichnenden Elemente und fügt nur die als sichtbar ermittelten Chunks wieder ein. Die Chunks machen mit etwa 
 % 334*2/(334*2+4+73+142)
 75 \% bis
 % 529*2/(529*2+4+73+142)
