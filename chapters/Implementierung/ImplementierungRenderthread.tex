@@ -1,0 +1,14 @@
+Da ein Jobsystem implementiert wird, bietet sich der \code{main}-Thread als Renderthread an. Alle anderen Rechenprozesse werden über das Jobsystem auf anderen Threads ausgeführt.
+
+In der Blocklib werden häufig Daten an die Grafikkarte übergeben, beispielsweise bei der Generierung von Chunks. Da alle Aufrufe an OpenGL auf einem Thread ausgeführt werden müssen, ist dafür zu sorgen, dass Anweisungen, die mit der Grafikkarte interagieren, zwischengespeichert werden. Dann können die zwischengespeicherten Anweisungen vom Renderthread ausgelesen und ausgeführt werden. 
+
+Um Anweisungen zum Laden von Daten auf die Grafikkarte zwischenzuspeichern, muss die dafür zuständige Klasse \class{Loader} angepasst werden. Die Klasse wird um eine Warteschlange erweitert, die Objekte vom Typ \class{Runnable} enthält. Anstatt die Ladeanweisungen direkt auszuführen, werden sie als \class{Runnable}-Objekte dieser Warteschlange hinzugefügt. Bei der Warteschlange handelt es sich um eine Erweiterung der in Java bereitgestellten \class{ConcurrentLinkedQueue}. Die Warteschlange bietet damit nicht-blockierende Synchronisierung, wodurch mehrere Threads gleichzeitig Elemente der Warteschlange hinzufügen können, ohne dass das zu Wettkampfbedingungen führen kann. Im Game Loop der Blocklib wird diese Warteschlange zu Beginn vom Renderthread abgearbeitet, damit danach sowohl die Simulation als auch der Renderer darauf Zugriff haben.
+
+Die Abarbeitung aller Ladevorgänge der Klasse \class{Loader} muss synchronisiert sein, da die Simulation sonst beispielsweise versuchen könnte ein Objekt, das noch nicht geladen wurde, rendern zu lassen. 
+
+
+
+
+
+
+\subsection{Zustandsloses Rendering}

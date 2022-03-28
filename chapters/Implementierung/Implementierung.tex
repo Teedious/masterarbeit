@@ -1,5 +1,3 @@
 Wie das Design, ist auch die Implementierung der nebenläufigen Architektur prinzipiell in zwei Bereiche unterteilt, die Implementierung des Renderthreads und die Implementierung der Job API.
 
 Um einen Renderthread in die Architektur der Blocklib zu integrieren, muss besonders darauf geachtet werden, dass Wettkampfbedingungen vermieden werden. Wie in Abschnitt~\ref{sec:desgignRenderthread} kann dies unter anderem durch die Nutzung von Double Buffern gelingen. Folgend wird die Implementierung des Renderthreads beschrieben. Im darauffolgenden Abschnitt wird die Implementierung des Jobsystems beschrieben.
-
-Bei der Implementierung des Jobsystems liegt die Aufgabe insbesondere darin, die Verkettung von Jobs durch \class{CompletableFuture} zu ermöglichen. Während der Implementierung ist eine weitere Anforderung zum Vorschein gekommen, die aufgrund des Zeitpunkts, zu dem sie aufgetaucht ist, nicht vollständig gelöst ist. Dabei handelt es sich um die in Abschnitt~\ref{sec:reqBackgroundTasks} beschriebene Anforderung, die Ausführung von Hintergrundtasks zu ermöglichen, ohne die Ausführung anderer Tasks zu blockieren.
