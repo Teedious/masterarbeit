@@ -12,7 +12,7 @@ Des weiteren wird so Redundanz in der Codebasis verringert, da der Code zur Verw
 \subsection{Verteilung von Berechnungen an Worker Threads}
 Wie in Abschnitt~\ref{sec:nutzungMultithreading} beschrieben, werden für die Generierung von Chunks Threads genutzt. Die Blocklib benötigt also eine Möglichkeit Anweisungen asynchron an einen Executor zu übergeben. Der Executor kann in Zukunft auch für Übergabe anderer asynchroner Aufgaben genutzt werden. So kann die Blocklib die vorhandene Parallelität in der Hardware voll ausnutzen.
 
-\subsection{Einfaches starten von Hintergrundtasks und einmaligen Aufgaben}
+\subsection{Einfaches starten von Hintergrundtasks und einmaligen Aufgaben}\label{sec:reqBackgroundTasks}
 Einige Systeme der Blocklib, wie beispielsweise das System zu Berechnung von Flüssigkeitsbewegungen, führen Aufgaben durch, die periodisch im Hintergrund ablaufen. So wird Im Flüssigkeitssystem für jede Flüssigkeit nach einem eigenen Zeitintervall geprüft, wohin die Flüssigkeit fließt. Es muss eine einfache Möglichkeit geben solche periodischen Aufgaben an die Threading API zu übergeben, die sich dann um die Ausführung zur korrekten Zeit kümmert.
 
 Damit verwandt ist, eine Aufgabe zu definieren, die nach dem Ablauf eines festgelegten Intervalls einmalig ausgeführt wird. Man überlege sich beispielsweise eine Art Falle, die durch das Betreten eines bestimmten Blocks in der Blocklib ausgelöst werden könnte und dann nach ein paar Sekunden zuschnappt. Ein solches System gibt es in der Blocklib zwar noch nicht, ließe sich dann durch die API allerdings einfach realisieren.
