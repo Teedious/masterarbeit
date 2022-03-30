@@ -1,0 +1,3 @@
+Stone-Count:766
+Triangle-Count: 766*3*2+5 = 4596 + 5 = 4601
+5 entstehen aus der Skybox von der 3 Seiten zu sehen sind, ein Dreieck ist auserhalb des Blickwinkels.
