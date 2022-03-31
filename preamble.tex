@@ -60,12 +60,10 @@
 \usepackage{mathtools}
 
 
-%\usepackage{pgfplots}
-%\pgfplotsset{width=\columnwidth,compat=1.14}\usepgfplotslibrary{statistics}
-%\pgfplotsset{boxplot/.cd,every median/.style={red}}
-%\pgfplotsset{grid style={help lines}}
-%\pgfplotsset{minor grid style={very thin, dotted}}
-%\pgfplotsset{major grid style={thick}}
+\usepackage{pgfplots}
+    \pgfplotsset{
+        table/search path={performance/measurements},
+    }
 
 \newcommand{\unsim}{\mathord{\sim}}
 \newcommand{\e}{\ensuremath{\mathrm{e}}}
@@ -177,7 +175,7 @@
 
 \DeclareSIUnit{\Bit}{bit}
 \DeclareSIUnit{\Byte}{B}
-\DeclareSIUnit{\fps}{FPS}
+
 
 \newcommand{\todo}[1]{\fxnote{{\color{red}#1}}}
 \newcommand{\TODO}[2]{\fxnote*{{\color{red}#1}}{\underline{\emph{#2}}}}
