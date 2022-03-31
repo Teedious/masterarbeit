@@ -37,11 +37,18 @@ Die Anordnung der Blöcke in Szenario 1 ist in Abbildung~\ref{fig:hexagon} darge
 \begin{figure}
 	\begin{tikzpicture}
 		\begin{axis}
-				\addplot table[col sep=comma,header=true,x index=0, y index=4] {seed-0-hexagon-multi-cpu.csv};
-				\addplot table[col sep=comma,header=true,x index=0, y index=7] {seed-0-hexagon-multi-gpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=4] {seed-0-hexagon-single-cpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=4] {seed-0-hexagon-multi-gpu.csv};
 		\end{axis}
 	\end{tikzpicture}
 \end{figure}
+
+\begin{figure}
+	\memplot{seed-0-hexagon-single-mem.csv}
+\end{figure}
+
+
+
 
 
 

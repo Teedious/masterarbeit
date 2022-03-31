@@ -1,0 +1,56 @@
+\newcommand{\memplot}[1]{ 
+\begin{tikzpicture}
+	\begin{axis}[
+		ymin=0,
+		ymax=1000000000,
+		stack plots=y,
+		no markers,
+		axis lines=none,
+		every axis plot post/.append style={
+			% add the fill color to each `\addplot`
+			% (`.` is an abbreviation for the "current color")
+			fill=.!25,
+			draw=none,
+		},
+	]
+		\addplot[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1} \closedcycle;
+	\end{axis}
+	\begin{axis}[
+		ymin=0,
+		ymax=1000000000,
+		stack plots=y,
+		no markers,
+		axis lines=none,
+	]
+		\addplot[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1};
+	\end{axis}
+	\begin{axis}[
+		ymin=0,
+		ymax=1000000000,
+		stack plots=y,
+    no markers,
+    every axis plot post/.append style={
+          % add the fill color to each `\addplot`
+          % (`.` is an abbreviation for the "current color")
+          fill=.!25,
+					draw=none,
+    },
+		% we don't want to draw the axis lines etc. twice
+		axis lines=none,
+	]
+			\addplot table[col sep=comma,header=true,x index=0, y index=1] {#1} \closedcycle;
+			\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1}  \closedcycle;
+			\addplot table[col sep=comma,header=true,x index=0, y index=3] {#1}  \closedcycle;
+	\end{axis}
+	\begin{axis}[
+		ymin=0,
+		ymax=1000000000,
+		stack plots=y,
+    no markers,
+	]
+			\addplot table[col sep=comma,header=true,x index=0, y index=1] {#1};
+			\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1};
+			\addplot table[col sep=comma,header=true,x index=0, y index=3] {#1};
+	\end{axis}
+\end{tikzpicture}
+}

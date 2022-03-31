@@ -23,43 +23,6 @@
 \newcommand{\LSset}[2]{\scriptsize $\begin{aligned}&\{#1\}_L\\&\{#2\}_S\end{aligned}$}
 
 
-\begin{document}    
-\begin{tikzpicture}
-	\begin{axis}[axis y line*=left,xmin=10000,xmax=62000]
-			\addplot[blue] table[col sep=comma,header=true,x index=0, y index=2] {seed-0-cube-single-fps.csv};
-			\addplot[red] table[col sep=comma,header=true,x index=0, y index=2] {seed-0-cube-multi-fps.csv};
-	\end{axis}
-	\begin{axis}[ymin = 0, ymax=100,axis y line*=right,xmin=10000,xmax=62000,axis x line=none]
-		\addplot[cyan] table[col sep=comma,header=true,x index=0, y index=4] {seed-0-cube-single-cpu.csv};
-		\addplot[orange] table[col sep=comma,header=true,x index=0, y index=4] {seed-0-cube-multi-cpu.csv};
-\end{axis}
-\end{tikzpicture}
-\begin{tikzpicture}
-	\begin{axis}
-			\addplot table[col sep=comma,header=true,x index=0, y index=2] {seed-0-hexagon-single-fps.csv};
-			\addplot table[col sep=comma,header=true,x index=0, y index=2] {seed-0-hexagon-multi-fps.csv};
-	\end{axis}
-\end{tikzpicture}
-\begin{tikzpicture}
-	\begin{axis}
-			\addplot[] table[col sep=comma,header=true,x index=0, y index=2] {seed-0-walk-single-fps.csv};
-			\addplot[red] table[col sep=comma,header=true,x index=0, y index=2] {seed-0-walk-multi-fps.csv};
-			\addplot[] table[col sep=comma,header=true,x index=0, y index=2] {seed-3-walk-single-fps.csv};
-			\addplot[red] table[col sep=comma,header=true,x index=0, y index=2] {seed-3-walk-multi-fps.csv};
-			\addplot[] table[col sep=comma,header=true,x index=0, y index=2] {seed-10-walk-single-fps.csv};
-			\addplot[red] table[col sep=comma,header=true,x index=0, y index=2] {seed-10-walk-multi-fps.csv};
-	\end{axis}
-\end{tikzpicture}
-\begin{tikzpicture}
-	\begin{axis}
-			\addplot table[col sep=comma,header=true,x index=0, y index=2] {seed-0-static-single-fps.csv};
-			\addplot table[col sep=comma,header=true,x index=0, y index=2] {seed-0-static-multi-fps.csv};
-	\end{axis}
-\end{tikzpicture}
-\begin{tikzpicture}
-	\begin{axis}
-			\addplot table[col sep=comma,header=true,x index=0, y index=2] {seed-0-rotate-single-fps.csv};
-			\addplot table[col sep=comma,header=true,x index=0, y index=2] {seed-0-rotate-multi-fps.csv};
-	\end{axis}
-\end{tikzpicture}
+\begin{document}
+
 \end{document}
