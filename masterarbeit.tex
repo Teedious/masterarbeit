@@ -1,12 +1,20 @@
 % !TeX spellcheck = de_DE
 % !LuaLaTeX
-\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half,numbers=noendperiod]{scrartcl}
+\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half,numbers=noenddot]{scrartcl}
 \input{preamble}
 \input{glossary}
 \begin{document}
 \input{titelseite}
 \null\thispagestyle{empty}\clearpage
-\tableofcontents
+\markright{Inhaltsverzeichnis}
+\tableofcontents\clearpage
+
+\RedeclareSectionCommand[afterindent=no,runin=no,beforeskip=4pt,afterskip=0pt]{section}
+\RedeclareSectionCommand[afterindent=no,runin=no,beforeskip=4pt,afterskip=-2pt]{subsection}
+\RedeclareSectionCommand[afterindent=no,runin=no,beforeskip=4pt,afterskip=-4pt]{subsubsection}
+\RedeclareSectionCommand[afterindent=no,beforeskip=4pt]{paragraph}
+
+\pagebreak
 \section{Einleitung}
 
 \setstretch{1.15}
@@ -15,6 +23,7 @@
 \subsection{Nebenläufige Programmierung}
 \subsection{Testen und Testframeworks}
 
+\pagebreak
 \section{Grundlagen}
 \input{chapters/Grundlagen/PetriNetze.tex}
 \input{chapters/Grundlagen/GrundlagenZuThreading.tex}
@@ -23,7 +32,7 @@
 \subsection{Multithreading in Spielen}
 \input{chapters/Grundlagen/MultithreadingInSpielen.tex}
 
-
+\pagebreak
 \section{Entwicklung einer nebenläufigen Architektur}
 
 \subsection{Analyse der Blocklib}\label{sec:blocklibAnalyse}
@@ -49,7 +58,9 @@
 \subsection{Performanceanalyse}
 \input{chapters/Performance/performance.tex}
 
+\pagebreak
 \section{Fazit}
+\pagebreak
 \section{Ausblick}
 \subsection{Etablierung einer Composition Root}
 \input{chapters/Ausblick/EtablierungEinerKompositionroot.tex}
@@ -60,9 +71,12 @@
 \subsection{Verstärktes Batching in der Simulation}
 \printnoidxglossaries
 
+\pagebreak
 \printbibliography[title={Literaturverzeichnis},heading=bibintoc,notkeyword=online]
 
+\pagebreak
 \printbibliography[title={Quellenverzeichnis},heading=bibintoc,keyword=online] 
+
 
 \input{chapters/Anhang/anhang.tex}
 \end{document}

@@ -1,12 +1,15 @@
 \appendix
 \clearpage
+\renewcommand{\sectionmark}[1]{\markboth{\Ifnumbered{section}{Anhang \thesection}{}}{#1}}
 \pagenumbering{Roman}
 \setcounter{page}{1}
+
 
 \section{Executor im Concurrency Framework}\label{appendix:concFrameworkExecutor}
 \includesvg[width=\textwidth]{ConcurrencyFrameworkExecutor.svg}
 \todo{Caption}
 
+\pagebreak
 \section{\texttt{Context} vollständiges Klassendiagramm}\label{appendix:context}
 {
 	\centering
@@ -14,6 +17,7 @@
 	\todo{Caption}
 }
 
+\pagebreak
 \section{\texttt{BlocklibExecutorService} Klassendiagramm}\label{appendix:BlocklibExecutorService}
 {
 	\centering

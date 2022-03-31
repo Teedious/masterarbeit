@@ -61,9 +61,10 @@
 
 
 \usepackage{pgfplots}
-    \pgfplotsset{
-        table/search path={performance/measurements},
-    }
+\pgfplotsset{
+	compat=1.18,
+  table/search path={performance/measurements},
+}
 
 \newcommand{\unsim}{\mathord{\sim}}
 \newcommand{\e}{\ensuremath{\mathrm{e}}}
@@ -181,3 +182,16 @@
 \newcommand{\TODO}[2]{\fxnote*{{\color{red}#1}}{\underline{\emph{#2}}}}
 
 \newlength{\wrapfigwidth}
+
+\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+\renewcommand{\sectionmark}[1]{\markboth{\Ifnumbered{section}{Kapitel \thesection}{}}{#1}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\subsubsectionmark}[1]{}
+\lohead{\leftmark}
+\rohead{\rightmark}
+\chead[]{}
+\lofoot{Entwicklung einer nebenläufigen Architektur für eine 3D-Spielebibliothek}
+\cfoot[]{}
+\rofoot{Seite \pagemark}
+\pagestyle{scrheadings}
+\setkomafont{pageheadfoot}{\small}
