@@ -26,26 +26,47 @@ Um den Effekt der nebenläufigen Architektur möglichst zu isolieren, werden in 
 \end{figure}
 Die Anordnung der Blöcke in Szenario 1 ist in Abbildung~\ref{fig:hexagon} dargestellt. Wie auf der Abbildung bei genauem Hinsehen zu erkennen ist, sind von jedem Block drei Seiten sichtbar. Dadurch lässt sich die genaue Anzahl der Elemente bestimmen, die gezeichnet werden. Damit lässt sich die Gesamtzahl der gezeichneten Polygone\footnote{In der Blocklib besteht jedes gezeichnete Element aus Dreiecken oder aus Rechtecken, zusammenfassend werden diese als Polygone bezeichnet. Die meisten Elemente in der Welt werden als Dreiecke gezeichnet, die Elemente der graphischen Oberfläche nutzen Rechtecke. Jede Seite eines Blocks aus zwei Dreiecken hier aus zwei Dreiecken zusammengesetzt. Siehe dazu Auch Abbildung~\ref{fig:cube}.} für dieses Szenario genau berechnen. Jeden Frame müssen genau $766\cdot3\cdot2 + 3\cdot2-1 = 4596 +5 = 4601$ Polygone gezeichnet werden. Die $5$ zusätzlichen Polygone stammen von der \emph{Skybox}, einem großen Würfel um die Spielwelt herum, der eine Himmelstextur zeigt. Eines der Dreiecke der drei Seiten der Skybox ist außerhalb des Sichtfelds. Daher müssen nur $5$ Polygone hinzugezählt werden.
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\begin{tikzpicture}
 		\begin{axis}
 				\addplot table[col sep=comma,header=true,x index=0, y index=2] {seed-0-hexagon-single-fps.csv};
 				\addplot table[col sep=comma,header=true,x index=0, y index=2] {seed-0-hexagon-multi-fps.csv};
 		\end{axis}
 	\end{tikzpicture}
+	\caption{}\label{fig:seed-0-hexagon-fps}
 \end{figure}
-\begin{figure}
+Abbildung~\ref{fig:seed-0-hexagon-fps} zeigt den Verlauf der \si{\fps}. Die Framerate unter SystemA ist durchschnittlich \SI{317}{\fps} unter SystemB \SI{1040}{\fps}. Das ist ein Zuwachs von \SI{228}{\percent}. Unter SystemA ist der Start der Blocklib schneller. Hier werden Frames nach \SI{11,2}{\second} erzeugt, in SystemB nach \SI{13,6}{\second}. SystemB benötigt für den Start also \SI{21}{\percent} mehr Zeit. Über die Zeit hinweg bleiben die Frameraten beider Systeme in etwa konstant.
+
+
+\begin{figure}[!htbp]
 	\begin{tikzpicture}
 		\begin{axis}
 				\addplot table[col sep=comma,header=true,x index=0, y index=4] {seed-0-hexagon-single-cpu.csv};
-				\addplot table[col sep=comma,header=true,x index=0, y index=4] {seed-0-hexagon-multi-gpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=4] {seed-0-hexagon-multi-cpu.csv};
 		\end{axis}
 	\end{tikzpicture}
+	\caption{}\label{fig:seed-0-hexagon-cpu}
 \end{figure}
+Der Verlauf der Auslastung der CPU durch die Blocklib ist in Abbildung~\ref{fig:seed-0-hexagon-cpu} zu sehen. Beide System zeigen hier eine Spitze in der Auslastung beim Start der Blocklib. In SystemA ist die maximale Auslastung von \SI{47}{\percent} nach \SI{11,6}{\second} erreicht, SystemB erreicht eine Auslastung von \SI{42}{\percent} nach \SI{15,6}{\second}. Die maximale Auslastung ist bei SystemB \SI{11}{\percent} niedriger als be SystemA. Die durchschnittliche Auslastung ist in SystemB mit einem Wert von \SI{19}{\percent} um \SI{38}{\percent} höher als in SystemB mit durchschnittlich \SI{14}{\percent}. Nach der anfänglichen Spitze ist die Auslastung in beiden System in etwa konstant.
 
+\begin{figure}[!htbp]
+	\begin{tikzpicture}
+		\begin{axis}
+				\addplot table[col sep=comma,header=true,x index=0, y index=7] {seed-0-hexagon-single-gpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=7] {seed-0-hexagon-multi-gpu.csv};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{}\label{fig:seed-0-hexagon-gpu}
+\end{figure}
+Der in Abbildung~\ref{fig:seed-0-hexagon-gpu} dargestellte Graph beschreibt die Auslastung der GPU im zeitlichen Verlauf. Da für diese Messungen ein externer Profiler genutzt wird, kann die Auslastung der GPU über die gesamte Messzeit hinweg ermittelt werden. Die Daten zu Beginn und zum Ende der Messung sind allerdings mit Vorsicht zu betrachten. So ist Auslastungsspitze zu Beginn der Messung nicht der Blocklib selbst zuzuordnen und zum Ende der Messung kann der Abfall der Auslastung nach Beendigung der Blocklib beobachtet werden.
+
+%\tikzexternaldisable 
 \begin{figure}
 	\memplot{seed-0-hexagon-single-mem.csv}
-\end{figure}
+	\memplot{seed-0-hexagon-multi-mem.csv}
+	\caption{}\label{fig:seed-0-hexagon-mem}
+\end{figure} 
+%\tikzexternalenable
 
 
 

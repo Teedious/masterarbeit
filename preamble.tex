@@ -50,7 +50,8 @@
 }
 
 \usepackage{tikz}
-\usetikzlibrary{calc,positioning, shapes, petri, automata,external}
+\usetikzlibrary{calc,positioning, shapes, petri, automata}
+%\usetikzlibrary{external}
 \usepackage{pdfpages}
 \usepackage{subcaption}
 \usepackage{standalone}
@@ -62,13 +63,14 @@
 
 \usepackage{pgfplots}
 \pgfplotsset{
+	grid=major,
 	width=\textwidth,
 	height=5cm,
 	compat=1.18,
   table/search path={performance/measurements},
 }
-\usepgfplotslibrary{external}
-\tikzexternalize[prefix=tikz/,optimize command away=\includepdf]
+%\usepgfplotslibrary{external}
+%\tikzexternalize[prefix=tikz/,optimize command away=\includepdf]
 
 \newcommand{\unsim}{\mathord{\sim}}
 \newcommand{\e}{\ensuremath{\mathrm{e}}}
