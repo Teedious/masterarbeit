@@ -1,6 +1,6 @@
 Bei tiefgreifenden Änderungen in einer Codebasis, wie es die Entwicklung einer nebenläufigen Architektur ist, unabhängig davon, ob die Architektur auf \ac{sot} oder einem Jobsystem basiert, ist es ein Verständnis für die bestehende Architektur der Codebasis nötig. Interessant ist dabei insbesondere wie die Game Loop, beschrieben in Abschnitt~\ref{sec:gameLoop}, gestaltet ist und an welchen Stellen bereits von Multithreading Gebrauch gemacht wird, was in Abschnitt~\ref{sec:nutzungMultithreading} erläutert wird.
 
-\subsection{Game Loop}\label{sec:gameLoop}
+\subsubsection{Game Loop}\label{sec:gameLoop}
 Ein nahezu universelles Designelement von Spielen ist die sogenannte \emph{Game Loop}~\cite[S.~161~ff.]{Nystrom2015}. Sie ist für die Aktualisierung des Spiels zuständig und umfasst typischerweise die Aufgaben 
 \begin{itemize}
   \item Berechnung des neuen Spielzustands
@@ -42,7 +42,7 @@ Man nehme an, dass der \class{EntityManager} prüft, welche Chunks geladen sind,
 Die (mögliche) Abhängigkeit des Verhaltens von der Reihenfolge der updates, zeigt, dass sich diese Berechnungen nicht einfach parallelisieren lassen, da man den gesamten Simulationscode auf mögliche Race Conditions prüfen müsste.
 
 
-\subsection{Nutzung von Multithreading}\label{sec:nutzungMultithreading}
+\subsubsection{Nutzung von Multithreading}\label{sec:nutzungMultithreading}
 Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufige Anweisungen zu parallelisieren. Darunter fallen insbesondere Hintergrundaufgaben, wie das Erstellen von Chunks, und das Ausführen zeitlich gesteuerter Abläufe, wie die Updates der Flüsse von Flüssigkeiten. Insgesamt gibt es zu Beginn der Arbeit sechs Klassen, die Threads erzeugen und nutzen. Eine Auflistung der Klassen und deren Verwendung von Threads ist in Tabelle~\ref{tab:concTasksBlocklib} zu finden.
 
 \begin{table}

@@ -1,7 +1,7 @@
-\section{Grundlagen zu Threading}
+\subsection{Grundlagen zu Threading}
 
 
-\subsection{Definition von Thread}
+\subsubsection{Definition von Thread}
 Um definieren zu können, was ein Thread ist, müssen zuerst einige weitere Grundbegriffe eingeführt werden. 
 
 Als \emph{Programm} wird in dieser Arbeit die konkrete Niederschrift eines Algorithmus bezeichnet. Die Elemente, aus denen das Programm besteht, werden als \emph{Anweisungen} bezeichnet. Bei der Ausführung eines Programms werden Einzelschritte durchlaufen, diese bezeichnet man als \emph{Aktivitäten}. Eine Sequenz von Aktivitäten, die ein isoliertes Problem abarbeitet, wird \emph{Prozess} genannt. Um diese Definition des Prozessbegriffs von späteren Definitionen abzugrenzen wird er im Folgenden \emph{Rechenprozess} genannt. Die Ausführungseinheit, auf der die Schritte eines Rechenprozesses durchgeführt werden, wird \emph{Prozessor} genannt~\cite[S.~22]{Herrtwich1989}.
@@ -48,7 +48,7 @@ Um formal Eigenschaften eines Programms zu beschreiben, ist es möglich dieses m
 
 Die Plätze $p_1,p_2,p_3,p_4$ und die Transitionen $t_1,t_2$ sind Hilfselemente die die semantische Korrektheit der Transitionen \code{if}, \code{else} und \code{end if}\todo{Farbe anpassen} sicherstellen. Eine Markierung kann exlusiv nur von \code{if} oder von \code{else} zum feuern verwendet werden. Durch die Transitionen $t_1$ und $t_2$ entsteht eine Markierung in $p_5$ wodurch \code{end if} feuern kann egal ob anfangs \code{if} oder \code{else} gefeuert hat. $p_2$ und $p_3$ existierten, damit das Petri-Netz ein bipartiter Graph bleibt, sich also immer Plätze und Transitionen \enquote{abwechseln}. Die Modellierung eines \code{switch}-Statements erfolgt analog, indem die Anzahl der Pfade zwischen $p_1$ und $p_4$ angepasst wird.
 
-\subsection{Nebenläufigkeit}\label{sec:nebenl}
+\subsubsection{Nebenläufigkeit}\label{sec:nebenl}
 Im vorherigen Abschnitt wurde beschrieben, dass verschiedene Rechenprozesse unabhängig von einander \enquote{gleichzeitig} ablaufen können. Ein Programm wird häufig als \emph{Sequenz} von Anweisungen verstanden. In der Definition von Programm in dieser Arbeit wird bewusst auf das Wort Sequenz verzichtet, denn bei vielen Programmen kann es bei bestimmten Anweisungen irrelevant sein, in welcher Reihenfolge oder ob sie sogar gleichzeitig ausgeführt werden. Man betrachte das folgende Programm in Listing~\ref{lst:squareSeqEx}, das die Quadratsumme zweier Ganzzahlen (im Folgenden auch Quadratsumme genannt) ausgibt: 
 \begin{lstlisting}[caption={Beispiel eines Programms das die Summe von Quadraten zweier Ganzzahlen berechnet. Die Berechnung der Quadratzahlen wird nacheinander in einer fest definierten Sequenz durchgeführt.}, label={lst:squareSeqEx}]
 printSummedSquare(int a, int b){
@@ -138,9 +138,9 @@ Normalerweise werden Petri-Netze  als inherent nebenläufig verstanden, da durch
 
 In dieser Arbeit heißen zwei Transitionen $t_1, t_2$ eines Petrinetzes $N$ genau dann nebenläufig, wenn ${}^\circ t_1 \cap {}^\circ t_2 = \emptyset$ gilt und eine Markierung $m_\text{conc}$ im Erreichbarkeitsgraphen $\E{N}$ existiert, in der sowohl $t_1$ als auch $t_2$ aktiviert sind.
 
-\subsection{Unterschied zwischen Nebenläufigkeit und Parallelität}
+\subsubsection{Unterschied zwischen Nebenläufigkeit und Parallelität}
 
-\subsection{Folgen von Nebenläufigkeit}\label{sec:nebenl-folgen}
+\subsubsection{Folgen von Nebenläufigkeit}\label{sec:nebenl-folgen}
 Wie in Abschnitt \ref{sec:nebenl} beschrieben, muss ein Programm keine Sequenz von Anweisungen sein sondern kann auch nebenläufige Anweisungen enthalten. Diese Möglichkeit hat eine Reihe von Folgen, die es bei der nebneläufigen Programmierung zu beachten gilt.
 \paragraph{Nichtdeterminismus}
 Enthält ein Programm nebenläufige Anweisungen, ist die Reihenfolge der daraus resultierenden Aktivitäten nicht definiert und kann sich bei jedem Programmdurchlauf ändern. Die Ausführung ist also \emph{nichtdeterministisch}, als direkte Folge der Nebenläufigkeit~\cite[S.~17~f.]{Herrtwich1989}. Erwartet man von einem Programm \emph{Determiniertheit}\footnote{Es kann durchaus sein, dass Determiniertheit in einem Programm nicht gewünscht ist. Man betrachte beispielsweise ein Programm, das einen echten Zufallsgenerator beschreibt. Hier wäre Determiniertheit ein direkter Widerspruch zur Aufgabe des Programms.}, also die Eigenschaft, dass gleiche Eingaben immer zu den gleichen Ausgaben führen, ist Nichtdeterminismus in der Regel zu vermeiden. Liefert ein Programm bei jeder beliebigen Ausführreihenfolge das selbe Ergebnis, ist es trotz Nichtdeterminismus weiterhin determiniert, weil die Ausführreihenfolge für das Ergebnis keine Rolle spielt~\cite[S.~18~f.]{Herrtwich1989}. 
@@ -196,7 +196,7 @@ Ein erweitertes Petri-Netz enthält eine Wettkampfbedingung, wenn mindestens ein
 
 Aufgabe der nebenläufigen Programmierung ist es also, Anweisungen so zu strukturieren, dass alle von nebenläufigen Anweisungen genutzten Daten threadsicher sind oder Daten, die nicht threadsicher sind, explizit synchronisiert werden. Über die Modellierung von Petri-Netzen ausgedrückt, gilt es also die Struktur eines Programms so zu definieren, dass in dem Petri-Netz, welches das Program modelliert, keine Wettkampfbedingungen existieren.
 
-\subsection{Synchronisierung}
+\subsubsection{Synchronisierung}
 Um das Auftreten von Wettkampfbedingungen beim schreibenden Zugriff von nebenläufigen Anweisungen auf geteilte Ressourcen zu vermeiden, muss sichergestellt werden, dass der Endzustand nach der Ausführung der Anweisungen unabhängig von der Ausführreihenfolge der daraus resultierenden Aktivitäten ist. Dieser Vorgang wird \emph{Synchronisierung} genannt~\cite[S.~4]{Maurer2019}.
 
 \paragraph{Snychronisierungsanforderungen} Nach \textcite[S.~132~ff.]{Herrtwich1989} gibt es allgemein zwei Arten von Anforderungen an Synchronisierungmechanismen, je nachdem welche Art von Zugriff auf geteilte Ressourcen stattfindet. Sie unterscheiden dabei zwischen \emph{kausal abhäningen} Relationen und \emph{kausal unabhängigen} Relationen zwischen nebenläufigen Anweisungen. Ist Anweisung $B$ kausal abhängig von Anweisung $A$, so dürfen die Aktivitäten von $B$ erst ausgeführt werden, nachdem die Aktivitäten von $A$ abgeschlossen sind. Beispielsweise werden in der Blocklib Chunks\todo{Check, dass Chunk definiert ist} im Hintergrund geladen. Benötigt eine Anweisung eines Spielelements einen noch nicht geladenen Chunk zwingend, so muss die Ausführung der zugehörigen Aktivität solange aufgeschoben werden, bis der Chunk geladen ist. Kausal unabhängige Relationen muss sichergestellt werden, dass der Zugriff auf die Ressourcen nicht zur gleichen Zeit stattfindet.  Beispielsweise wird die Liste der zu zeichnenden Objekte in der Blocklib von verschiedenen Systemen angepasst. Hier muss also darauf geachtet werden, dass diese Anpassungen zeitlich getrennt stattfinden.

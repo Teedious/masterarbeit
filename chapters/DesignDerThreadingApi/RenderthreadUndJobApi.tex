@@ -3,7 +3,7 @@ Da es sich bei der Blocklib, mit knapp $60000$ Zeilen Code und über $900$ Java 
 Die Blocklib enthält beispielsweise eine Klasse \class{Context}, die als eine Art Singletonimplementierung eines Service Locators~\cite[S.~301~ff.]{Nystrom2015} dient. Da Singletons ähnlich wie globale Variablen von überall aufgerufen werden können, wird der Code dadurch potenziell schwieriger nachvollziehbar~\cite[S.~108]{Nystrom2015}. Dadurch und durch die ebenfalls resultierende Kopplung unterschiedlicher Komponenten würden bei einer naiven Umsetzung der Jobarchitektur unvorhersehbar Wettkampfbedingungen auftreten.
 Man erinnere sich, dass Wettkampfbedingungen auftreten wenn nebenläufige Aktivitäten auf die selben Ressourcen zugreifen. Durch den \class{Context} ist es nun schwierig, einen Überblick zu haben von wo aus auf welche Ressourcen zugegriffen wird. Die Wahrscheinlichkeit, dass also Zugriffe existieren, die zu Wettkampfbedingungen führen, ist also sehr hoch, solange dabei nicht sorgsam vorgegangen wird.
 
-\subsection{Design des Renderthreads}\label{sec:desgignRenderthread}
+\subsubsection{Design des Renderthreads}\label{sec:desgignRenderthread}
 \begin{figure}
 	\centering
 	\begin{tikzpicture}[scale=1.1]
@@ -57,7 +57,7 @@ Da der Renderthread auf Daten des Spiels zugreift, um die sichtbaren Elemente zu
 
 Somit ist eine nebenläufige Architektur, wie sie in Abbildung~\ref{fig:optimalArchitecture} dargestellt wird, erstrebenswert. Es gibt einen Renderthread, der die von der Simulation im vorherigen Frame berechneten Objekte zeichnet. Alle anderen verfügbaren Hardwarethreads können in dem Jobsystem für die Simulation genutzt werden. 
 
-\subsection{Design des Jobsystems}\label{sec:desgignJobsystem}
+\subsubsection{Design des Jobsystems}\label{sec:desgignJobsystem}
 \begin{figure}
 	\centering
 	\begin{tikzpicture}[scale=1.1]

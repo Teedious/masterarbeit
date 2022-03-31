@@ -1,63 +1,63 @@
 % !TeX spellcheck = de_DE
 % !LuaLaTeX
-\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half,numbers=noendperiod]{scrreprt}
+\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half,numbers=noendperiod]{scrartcl}
 \input{preamble}
 \input{glossary}
 \begin{document}
 \input{titelseite}
 \null\thispagestyle{empty}\clearpage
 \tableofcontents
-\chapter{Einleitung}
+\section{Einleitung}
 
 \setstretch{1.15}
 
-\section{Blocklib}
-\section{Nebenläufige Programmierung}
-\section{Testen und Testframeworks}
+\subsection{Blocklib}
+\subsection{Nebenläufige Programmierung}
+\subsection{Testen und Testframeworks}
 
-\chapter{Grundlagen}
+\section{Grundlagen}
 \input{chapters/Grundlagen/PetriNetze.tex}
 \input{chapters/Grundlagen/GrundlagenZuThreading.tex}
-\section{Multithreading in Java}
+\subsection{Multithreading in Java}
 \input{chapters/Grundlagen/MultithreadingInJava.tex}
-\section{Multithreading in Spielen}
+\subsection{Multithreading in Spielen}
 \input{chapters/Grundlagen/MultithreadingInSpielen.tex}
 
 
-\chapter{Entwicklung einer nebenläufigen Architektur}
+\section{Entwicklung einer nebenläufigen Architektur}
 
-\section{Analyse der Blocklib}\label{sec:blocklibAnalyse}
+\subsection{Analyse der Blocklib}\label{sec:blocklibAnalyse}
 \input{chapters/EntwicklungEinerNebenlaeufigen/AnalyseDerBlocklib.tex}
 
-\section{Anforderungen der Blocklib an eine Threading API}\label{sec:anforderungen}
+\subsection{Anforderungen der Blocklib an eine Threading API}\label{sec:anforderungen}
 \input{chapters/EntwicklungEinerNebenlaeufigen/Anforderungen.tex}
 
-\section{Design der Threading API}
+\subsection{Design der Threading API}
 \input{chapters/DesignDerThreadingApi/Design.tex}
-\subsection{Renderthread und Job-API}
+\subsubsection{Renderthread und Job-API}
 \input{chapters/DesignDerThreadingApi/RenderthreadUndJobApi.tex}
 
-\section{Implementierung der Threading API}
+\subsection{Implementierung der Threading API}
 \input{chapters/Implementierung/Implementierung.tex}
-\subsection{Implementierung des Renderthreads}
+\subsubsection{Implementierung des Renderthreads}
 \input{chapters/Implementierung/ImplementierungRenderthread.tex}
 \input{chapters/Implementierung/UmstellungRenderarchitektur.tex}
 \input{chapters/Implementierung/SucheNachRaceConditions.tex}
-\subsection{Implementierung des Jobsystems}
+\subsubsection{Implementierung des Jobsystems}
 \input{chapters/Implementierung/ImplementierungJobsystem.tex}
 
-\section{Performanceanalyse}
+\subsection{Performanceanalyse}
 \input{chapters/Performance/performance.tex}
 
-\chapter{Fazit}
-\chapter{Ausblick}
-\section{Etablierung einer Composition Root}
+\section{Fazit}
+\section{Ausblick}
+\subsection{Etablierung einer Composition Root}
 \input{chapters/Ausblick/EtablierungEinerKompositionroot.tex}
-\section{Dynamisches Rendern von Schrift}
-\section{Thread Affinity}
-\section{Jobsystem mit PriorityQueue}
-\section{Konsolidieren des Jobsystems in der Simulation}
-\section{Verstärktes Batching in der Simulation}
+\subsection{Dynamisches Rendern von Schrift}
+\subsection{Thread Affinity}
+\subsection{Jobsystem mit PriorityQueue}
+\subsection{Konsolidieren des Jobsystems in der Simulation}
+\subsection{Verstärktes Batching in der Simulation}
 \printnoidxglossaries
 
 \printbibliography[title={Literaturverzeichnis},heading=bibintoc,notkeyword=online]

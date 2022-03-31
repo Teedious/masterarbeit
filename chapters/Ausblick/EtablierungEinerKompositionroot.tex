@@ -11,7 +11,7 @@ Das Design vieler Module in der Blocklib verfolgt häufig einen anderen Ansatz. 
 
 Sowohl das ursprüngliche Singleton Pattern von~\textcite[S.~127~ff.]{Gamma2016}, als auch das Service Locator Pattern werden inzwischen teils kritisch betrachtet~\cite[S.~103~ff.]{Nystrom2015}\cite[S.~154~ff.]{Seemann2012}. Das liegt insbesondere daran, dass es beide Patterns ermöglichen, Module über die gesamte Code Basis hinweg zu koppeln, was es wiederum erschwert Auswirkungen von Änderungen im Code abzuschätzen. Des Weiteren erschwert besonders das Singleton Pattern von \class{Context} in der Blocklib das (Unit-) Testen. Nutzt eine Klasse \class{Context}, so ist es nahezu unmöglich, diese isoliert zu testen, da deren Methodenaufrufe sich durch den \class{Context} über die ganze Code Bases erstrecken können. Diese  Aufrufe können auch nicht durch \emph{Test Doubles} (also spezielle Module, die das Verhalten von Komponenten vorspielen, damit die Originale beim Testen nicht benötigt werden) ersetzt werden, weil \class{Context} keine Möglichkeit bietet die bereitgestellten Dienste zu ersetzen. Außerdem kann im Test nicht festgestellt werden, welche Methoden überhaupt ersetzt werden müssten, da die Abhängigkeiten einer Klasse versteckt sind. Ruft eine Methode beispielsweise intern \code{Context.getInstance().getWorldInteraction()} auf, so ist das von außen nicht zu erkennen.
 
-\subsection{Vorteile einer Composition Root}
+\subsubsection{Vorteile einer Composition Root}
 
 Die Nutzung eines Singleton und Service Locator ist zwar anfangs sehr angenehm, da jedes Modul nur einen Methodenaufruf entfernt ist, sie bringt aber auch die gleichen Probleme mit sich wie globale Variablen. Anders verhält es sich bei der Nutzung von Dependency Injection über Konstruktoren und einer Composition Root. Im folgenden sind kurz einige ihrer Vorteile erläutert.
 
@@ -23,7 +23,7 @@ Die Nutzung eines Singleton und Service Locator ist zwar anfangs sehr angenehm, 
 
 \textcite[S.~15~ff.]{Seemann2012} beschreibt noch einige weitere Vorteile der Nutzung von Dependency Injection, darunter Erweiterbarkeit und die Möglichkeit leichter parallel Code zu entwickeln. Ein besonders wichtiger Punkt für die Blocklib ist zudem die verbesserte Wartbarkeit, da der Durchsatz an Entwicklerinnen und Entwicklern, die an der Blocklib arbeiten, sehr hoch ist.
 
-\subsection{Mögliche Probleme bei der Umstellung}
+\subsubsection{Mögliche Probleme bei der Umstellung}
 
 Somit kann man davon ausgehen, dass die breite Etablierung der Nutzung von Dependency Injection in Verbindung mit einer zentralen Composition Root erstrebenswert ist. Das Wort \enquote{breit} lässt allerdings bereits vermuten, dass diese Etablierung sehr viele Änderungen in der Blocklib hervorrufen wird. Im Folgenden wird nun beschrieben, welche potentiellen Probleme dabei in der Blocklib zu bewältigen sind.
 
