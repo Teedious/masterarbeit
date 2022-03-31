@@ -51,7 +51,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{calc,positioning, shapes, petri, automata}
-%\usetikzlibrary{external}
+\usetikzlibrary{external}
 \usepackage{pdfpages}
 \usepackage{subcaption}
 \usepackage{standalone}
@@ -69,8 +69,8 @@
 	compat=1.18,
   table/search path={performance/measurements},
 }
-%\usepgfplotslibrary{external}
-%\tikzexternalize[prefix=tikz/,optimize command away=\includepdf]
+\usepgfplotslibrary{external}
+\tikzexternalize[prefix=tikz/,optimize command away=\includepdf]
 
 \newcommand{\unsim}{\mathord{\sim}}
 \newcommand{\e}{\ensuremath{\mathrm{e}}}
@@ -180,8 +180,8 @@
     node distance=1.5
 }
 
-\DeclareSIUnit{\Bit}{bit}
-\DeclareSIUnit{\Byte}{B}
+\DeclareSIUnit{\bit}{bit}
+\DeclareSIUnit{\byte}{B}
 
 
 \newcommand{\todo}[1]{\fxnote{{\color{red}#1}}}

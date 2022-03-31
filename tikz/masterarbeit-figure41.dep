@@ -1,0 +1,2 @@
+tikz/masterarbeit-figure41.pdf: performance/measurements/seed-3-walk-single-cpu.csv
+tikz/masterarbeit-figure41.pdf: performance/measurements/seed-3-walk-multi-cpu.csv

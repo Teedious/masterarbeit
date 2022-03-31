@@ -58,3 +58,30 @@
 	\end{axis}
 \end{tikzpicture}
 }
+
+\newcommand{\fpsplot}[1]{
+	\begin{tikzpicture}
+		\begin{axis}
+				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1-single-fps.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1-multi-fps.csv};
+		\end{axis}
+	\end{tikzpicture}
+}
+
+\newcommand{\cpuplot}[1]{
+	\begin{tikzpicture}
+		\begin{axis}
+				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#1-single-cpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#1-multi-cpu.csv};
+		\end{axis}
+	\end{tikzpicture}
+}
+
+\newcommand{\gpuplot}[1]{
+	\begin{tikzpicture}
+		\begin{axis}
+				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#1-single-gpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#1-multi-gpu.csv};
+		\end{axis}
+	\end{tikzpicture}
+}
