@@ -57,7 +57,7 @@ Auch in der Auslastung der GPU ist zu erkennen, dass der Start der Blocklib mit 
 \end{figure} 
 Betrachtet man den in Abbildung~\ref{fig:seed-0-hexagon-mem} gezeigten Vergleich der Speichernutzung zwischen SystemA und SystemB, lässt sich erkennen, dass SystemB sowohl während des Starts der Blocklib, als auch allgemein mehr Speicher benötigt, als SystemA. Der gelbe Bereich zeigt den von Java Insgesamt angeforderten Speicher. Zum Beginn ist das bei SystemB \SI{1730}{\mega\byte} und während des Großteils der Messung \SI{947}{\mega\byte}. System benötigt die ersten \SI{37}{\second} \SI{644}{\mega\byte} Speicher, was sich bis zum Ende der Messung auf \SI{382}{\mega\byte} verringert. Durchschnittlich benötigt SystemB mit \SI{991}{\mega\byte} \SI{71}{\percent} mehr Speicher als SystemA mit durchschnittlich \SI{581}{\mega\byte} Speicherbedarf.
 
-Der rote Bereich zeigt den Speicherverbrauch kurzlebiger Objekte an. In SystemB steigt die Menge der neu erzeugten Objekte deutlich schneller an als in SystemA. Damit einher geht auch die Anzahl der durchgeführten \emph{Garbage Collections}\footnote{Wird ein Objekt in Java nicht mehr gebraucht, kann der Speicher wieder freigegeben werden. Das passiert automatisch durch den sogenannten Garbage Collector. Dieser wird nicht immer sofort tätig sondern nur zu bestimmten Situationen, insbesondere dann, wenn die freie Speichermenge zuneige geht.}. Die Spitzen in den roten Graphen markieren Zeiten zu denen der Garbage Collector aktiv geworden ist. In SystemA gibt es über die gesamte Messzeit 13 Garbage Collections, in SystemB sind es 21. Damit lässt sich abschätzen, dass SystemB kontinuierlich etwa \SI{61}{\percent} schneller Speicher mit neu erzeugten, kurzlebigen Objekten belegt als SystemA.
+Der rote Bereich zeigt den Speicherverbrauch kurzlebiger Objekte an. In SystemB steigt die Menge der neu erzeugten Objekte deutlich schneller an als in SystemA. Damit einher geht auch die Anzahl der durchgeführten \emph{Garbage Collections}\footnote{Wird ein Objekt in Java nicht mehr gebraucht, kann der Speicher wieder freigegeben werden. Das passiert automatisch durch den sogenannten Garbage Collector. Dieser wird nicht immer sofort tätig sondern nur zu bestimmten Situationen, insbesondere dann, wenn die freie Speichermenge zuneige geht.}. Die Spitzen in den roten Graphen markieren Zeiten zu denen der Garbage Collector aktiv geworden ist. In SystemA gibt es über die gesamte Messzeit 13 Garbage Collections, in SystemB sind es 21. Damit lässt sich abschätzen, dass SystemB kontinuierlich etwa \SI{61}{\percent} schneller Speicher mit neu erzeugten, kurzlebigen Objekten belegt als SystemA. Hier ist allerdings nicht berücksichtigt, dass SystemB mehr Speicher belegt, und somit  weniger Garbage Collections, benötigt wenn die Erzeugungsraten gleich sind. Berechnet man die mittlere Steigung der positiven Anstiege des roten Graphen, kann man ermitteln wie viel Speicher pro Sekunde für die Erzeugung neuer Objekte genutzt wird. SystemA verbraucht \SI{65,9}{\mega\byte\per\second}, SystemB respektive \SI{240,2}{\mega\byte\per\second}. Das ist ein Anstieg von \SI{264}{\percent}, deutlich mehr, als die geschätzten \SI{61}{\percent}.
 
 \subsubsection{Szenario 2: Halb-Würfel}
 \begin{figure}
@@ -67,12 +67,13 @@ Der rote Bereich zeigt den Speicherverbrauch kurzlebiger Objekte an. In SystemB 
 \end{figure}
 Da die Anzahl der zu zeichnenden Objekte in dem ersten Szenario relativ gering ist, wird diese in Szenario 2, das in Abbildung~\ref{fig:cube} veranschaulicht ist, erhöht. In diesem Szenario wird ein Bereich von $32 \times 32 \times 32$ Blöcken so befüllt, dass an jeder zweiten Stelle ein Block ist. Zweidimensional entspricht das einem Schachbrettmuster. Die Anzahl der platzierten Blöcke ist damit $\frac{1}{2}\cdot32^3 = 16384$. Die Anzahl der zu zeichnenden Dreiecke ist $16384\cdot6 + 5= = 98309$.
 
-Aufgrund der Anordnung wären allerdings nur wenige Blöcke sichtbar. Daher wird das Drahtgittermodell gezeichnet, also nur die Kanten der zu zeichnenden Dreiecke. Dennoch kann hier nicht mehr sichergestellt werden, dass auch tatsächlich alle Elemente gezeichnet werden, da selbst mit dem Drahtgittermodell an vielen Stellen Polygone überdeckt werden. Durch die Dartstellung als Drahtgittermodell lassen sich nun auch die Kanten der Skybox erkennen und man sieht, dass das Dreiecke in der oberen rechten Ecke nicht mer gezeichnet wird.
+Aufgrund der Anordnung wären allerdings nur wenige Blöcke sichtbar. Daher wird das Drahtgittermodell gezeichnet, also nur die Kanten der zu zeichnenden Dreiecke. Dennoch kann hier nicht mehr sichergestellt werden, dass auch tatsächlich alle Elemente gezeichnet werden, da selbst mit dem Drahtgittermodell an vielen Stellen Polygone überdeckt werden. Durch die Darstellung als Drahtgittermodell lassen sich nun auch die Kanten der Skybox erkennen und man sieht, dass das Dreiecke in der oberen rechten Ecke nicht gezeichnet wird. 
 
 \begin{figure}[!htbp]
 	\fpsplot{seed-0-cube}
 	\caption{}\label{fig:seed-0-cube-fps}
 \end{figure}
+
 
 \begin{figure}[!htbp]
 	\cpuplot{seed-0-cube}
@@ -134,7 +135,7 @@ Aufgrund der Anordnung wären allerdings nur wenige Blöcke sichtbar. Daher wird
 \begin{figure}[!htbp]
 	\memplot{seed-0-rotate-single-mem.csv}
 	\memplot{seed-0-rotate-multi-mem.csv}
-	\caption{}\label{fig:seed-0-rotate-mem}
+	\caption{}\label{fig:seed-0-rotate-mem}	
 \end{figure} 
 
 

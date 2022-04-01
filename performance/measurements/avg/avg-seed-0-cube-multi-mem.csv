@@ -1,2 +1,2 @@
-avg Uptime (ms),avg Used G1 Old Gen (bytes),avg Used G1 Eden Space (bytes),avg Used G1 Survivor Space (bytes),avg Allocated All Pools (bytes)
-35495.91836734694,341914206.0408163,202503565.0612245,8722661.877551021,1002181861.8775511
+avg Uptime (ms),avg Used G1 Old Gen (MB),avg Used G1 Eden Space (MB),avg Used G1 Survivor Space (MB),avg Allocated All Pools (MB)
+35495.91836734694,341.91438775510204,202.50353061224487,8.722714285714284,1002.1822040816324

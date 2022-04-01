@@ -60,8 +60,11 @@
 }
 
 \newcommand{\fpsplot}[1]{
+	\tikzset{external/export next=false}
 	\begin{tikzpicture}
-		\begin{axis}
+		\begin{axis}[
+			ylabel={\si{\fps}},
+		]
 				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1-single-fps.csv};
 				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1-multi-fps.csv};
 		\end{axis}

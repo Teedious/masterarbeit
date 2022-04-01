@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import math
 
-files = list(filter(lambda name: name.endswith("mem.csv"),os.listdir("performance/measurements")))
+files = list(filter(lambda name: name.endswith("mem.csv"),os.listdir("performance/measurements/mem-byte")))
 print(files)
 
 def my_fun(x):
@@ -10,11 +10,11 @@ def my_fun(x):
 
 for file in files:
 	print(file)
-	df = pd.read_csv("performance/measurements/"+file)
+	df = pd.read_csv("performance/measurements/mem-byte/"+file)
 	for name, values in df.iteritems():
 		if name == 'Uptime (ms)':
 			continue
 		df[name] = values.apply(my_fun)
 	df.columns = df.columns.str.replace('bytes', 'MB')
 	print(df)
-	df.to_csv("performance/measurements/new-"+file, index=False)
+	df.to_csv("performance/measurements/"+file, index=False)
