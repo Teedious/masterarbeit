@@ -1,0 +1,29 @@
+Um den Effekt der Implementierung der nebenläufigen Architektur quantitativ analysieren zu können, werden einige Szenarien in der Blocklib definiert. Diese Szenarien werden werden dann in einem Stand vor der Integration der nebenläufigen Architektur und einem Stand danach durchlaufen. Da die Blocklib unter Nutzung des Versionsverwaltungstools Git~\cite{Chacon2014} entwickelt wird, lassen sich sogenannte Hashes angeben, die genau definieren, welche Versionen der Blocklib für die Performanceanalyse genutzt werden. Diese Hashes werden auch Revisionsnummern genannt. Die genutzten Hashes sind in Tabelle~\ref{tab:perfHash} aufgelistet.
+\begin{table}
+	\centering
+	\begin{tabular}{ll}
+		\toprule
+		Stand & Hash / Revisionsnummer \\
+		\midrule
+		Nebenläufige Architektur & \texttt{110d0f9c227cb85d131c4f04fdf83b07ee218f39}\\
+		Ursprüngliche Architektur & \texttt{d392933e558a9864ad71e7e3ccf8561f2c16b1b3} \\
+		\bottomrule
+	\end{tabular}
+	\caption{Revisionsnummern des Versionsverwaltungstools der Blocklib, die für die Performanceanalyse genutzt werden.}\label{tab:perfHash}
+\end{table}
+
+Insgesamt werden fünf verschiedene Szenarien betrachtet. In allen Szenarien werden die folgenden Messwerte ausgewertet: \si{\fps}, Auslastung des Prozessors (CPU), Auslastung der Grafikkarte (GPU) und Speichernutzung. In jedem Szenario läuft die Blocklib für \SI{60}{\second}. Ausschlaggebend hierfür ist die durch Java mit der Methode \code{System.currentTimeMillis()} bereitgestellte Zeit. Der Code, der für die Ausführung der Szenarien benötigt wird, ist der Masterarbeit beigelegt.
+
+Das System, auf dem gemessen wird, besitzt die in Tabelle~\ref{tab:spec} aufgelistete Spezifikation.
+
+\begin{table}[!h]
+	\centering
+	\begin{tabular}[]{llll}
+		CPU & RAM & GPU & Betriebssystem\\
+		\midrule
+		AMD Ryzen 3 3100 & \SI{16}{\giga\byte} DDR4 & NVIDIA GeForce RTX 2060 & Windows 10
+	\end{tabular}
+	\caption{Spezifikation des Messsystems für die Performanceanalyse.}\label{tab:spec}
+\end{table}
+
+Die Messung der \si{\fps} wird im Code, der die Szenarien ausführt, durchgeführt. Die Messung der CPU Auslastung und Speichernutzung wird mittels der Software \emph{YourKit Java Profiler}~\cite{YourKitGmbH} in der Version 2022.3-b96 realisiert. Die Auslastung der GPU wird mit der Software \emph{GPUProfiler}~\cite{Main2021} Version 1.07a3 gemessen.

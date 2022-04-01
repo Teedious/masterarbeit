@@ -62,6 +62,18 @@
 			"env": {}
 		},
 		{
+			"name": "pdflatexshell",
+			"command": "pdflatex",
+			"args": [
+				"-synctex=1",
+				"--shell-escape",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOC%"
+			],
+			"env": {}
+		},
+		{
 			"name": "bibtex",
 			"command": "bibtex",
 			"args": [
@@ -130,6 +142,12 @@
 			"name": "latexmk (lualatex)",
 			"tools": [
 				"lualatexmk"
+			]
+		},
+		{
+			"name": "pdflatex (shell escape)",
+			"tools": [
+				"pdflatexshell",
 			]
 		},
 		{

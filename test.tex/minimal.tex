@@ -1,85 +1,26 @@
-\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half]{scrreprt}
-\usepackage{scrhack}
-\usepackage[ngerman]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{xcolor}
-
-
-
-\usepackage{listings}
-\lstset{basicstyle=\footnotesize, captionpos=b, breaklines=true, showstringspaces=false, tabsize=2, frame=lines, numbers=left, numberstyle=\tiny, xleftmargin=2em, framexleftmargin=2em}
-% \makeatletter
-% \def\l@lstlisting#1#2{\@dottedtocline{1}{0em}{1em}{\hspace{1,5em} Lst. #1}{#2}}
-% \makeatother
-
-\definecolor{javared}{rgb}{0.6,0,0} % for strings
-\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
-\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
-\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
-\definecolor{gray}{rgb}{0.6,0.6,0.6}
- 
-\lstset{
-	language=Java,
-	basicstyle=\ttfamily\footnotesize,
-	keywordstyle=\color{javapurple}\bfseries,
-	stringstyle=\color{javared},
-	commentstyle=\color{javagreen}\itshape\bfseries,
-	morecomment=[s][\color{javadocblue}]{/**}{*/},
-	numbers=left,
-	numberstyle=\tiny\color{gray},
-	stepnumber=1,
-	numbersep=10pt,
-	tabsize=3,
-	showspaces=false,
-	showstringspaces=false
+\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half]{scrartcl}
+\input{../preamble.tex}
+\input{../plots}
+\input{../glossary}
+\pgfplotsset{
+	grid=major,
+	width=\textwidth,
+	height=3.5cm,
+	compat=1.18,
+  table/search path={../performance/measurements},
 }
 
-\lstdefinestyle{inline}{
-	basicstyle=\ttfamily\normalsize,
-	keywordstyle=\ttfamily\normalsize,
-	breaklines=true,
-	breakatwhitespace=true,
-	literate={A}{A}{1\discretionary{-}{}{}}
-           {B}{B}{1\discretionary{-}{}{}}
-           {C}{C}{1\discretionary{-}{}{}}
-           {D}{D}{1\discretionary{-}{}{}}
-           {E}{E}{1\discretionary{-}{}{}}
-           {F}{F}{1\discretionary{-}{}{}}
-           {G}{G}{1\discretionary{-}{}{}}
-           {H}{H}{1\discretionary{-}{}{}}
-           {I}{I}{1\discretionary{-}{}{}}
-           {J}{J}{1\discretionary{-}{}{}}
-           {K}{K}{1\discretionary{-}{}{}}
-           {L}{L}{1\discretionary{-}{}{}}
-           {M}{M}{1\discretionary{-}{}{}}
-           {N}{N}{1\discretionary{-}{}{}}
-           {O}{O}{1\discretionary{-}{}{}}
-           {P}{P}{1\discretionary{-}{}{}}
-           {Q}{Q}{1\discretionary{-}{}{}}
-           {R}{R}{1\discretionary{-}{}{}}
-           {S}{S}{1\discretionary{-}{}{}}
-           {T}{T}{1\discretionary{-}{}{}}
-           {U}{U}{1\discretionary{-}{}{}}
-           {V}{V}{1\discretionary{-}{}{}}
-           {W}{W}{1\discretionary{-}{}{}}
-           {X}{X}{1\discretionary{-}{}{}}
-           {Y}{Y}{1\discretionary{-}{}{}}
-           {Z}{Z}{1\discretionary{-}{}{}}
-           {-}{}{0\discretionary{-}{}{-}}
-					 {:}{}{0\discretionary{:}{}{:}}
-					 {.}{}{0\discretionary{:}{}{:}}
-}
-
-\newcommand{\code}[1]{\lstinline[style=inline]!#1!}
-\newcommand{\class}[1]{\code{#1}}
-\newcommand{\const}[1]{\code{#1}}
-
-\lstset{escapeinside={(*}{*)}}
+\tikzexternaldisable
 
 \begin{document}
-
-\class{ThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreak} \class{-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t-t}
-\class{ t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t} \class{ThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreak} \class{ThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreakThisIsAVeryLongExampleClassNameAndItHasNoLineBreak}
-
+	\si{\fps}
+	\begin{figure}
+		\fpsplot{seed-0-hexagon}
+		\fpsplot{seed-0-cube}
+		\fpsplot{seed-0-static}
+		\fpsplot{seed-0-rotate}
+		\fpsplot{seed-0-walk}
+		\fpsplot{seed-3-walk}
+		\fpsplot{seed-10-walk}
+	\end{figure}
 \end{document}

@@ -60,7 +60,7 @@
 }
 
 \newcommand{\fpsplot}[1]{
-	\tikzset{external/export next=false}
+	%\tikzset{external/remake next}
 	\begin{tikzpicture}
 		\begin{axis}[
 			ylabel={\si{\fps}},
@@ -72,8 +72,11 @@
 }
 
 \newcommand{\cpuplot}[1]{
+	%\tikzset{external/remake next}
 	\begin{tikzpicture}
-		\begin{axis}
+		\begin{axis}[
+			ylabel={CPU Auslastung (\si{\percent})},
+		]
 				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#1-single-cpu.csv};
 				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#1-multi-cpu.csv};
 		\end{axis}
@@ -81,8 +84,11 @@
 }
 
 \newcommand{\gpuplot}[1]{
+	%\tikzset{external/remake next}
 	\begin{tikzpicture}
-		\begin{axis}
+		\begin{axis}[
+			ylabel={GPU Auslastung (\si{\percent})},
+		]
 				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#1-single-gpu.csv};
 				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#1-multi-gpu.csv};
 		\end{axis}
