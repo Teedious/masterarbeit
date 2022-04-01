@@ -1,1 +1,13 @@
 Bei der Implementierung des Jobsystems liegt die Aufgabe insbesondere darin, die Verkettung von Jobs durch \class{CompletableFuture} zu ermöglichen. Während der Implementierung ist eine weitere Anforderung zum Vorschein gekommen, die aufgrund des Zeitpunkts, zu dem sie aufgetaucht ist, nicht vollständig gelöst ist. Dabei handelt es sich um die in Abschnitt~\ref{sec:reqBackgroundTasks} beschriebene Anforderung, die Ausführung von Hintergrundtasks zu ermöglichen, ohne die Ausführung anderer Tasks zu blockieren. 
+
+Den Zugriffspunkt auf das Jobsystem bietet das neu definierte Interface \class{BlocklibExecutorService}, das von der Klasse \class{BlocklibExecutor} implementiert wird. Ein gekürztes Klassendiagramm ist in Abbildung~\ref{fig:diag-BlocklibExecutor} dargestellt.
+
+\begin{figure}[!htb]
+	\centering
+	\includesvg[width=\textwidth]{BlocklibExecutor-shortened.svg}
+	\caption{Klassendiagramm von \class{BlocklibExecutor}, das nur die \emph{nicht} von dem Interface \class{BlocklibExecutorService} definierten Attribute und Methoden zeigt.}\label{fig:diag-BlocklibExecutor}
+\end{figure}
+
+Um sicherzustellen, dass von der Klasse nur eine Instanz erzeugt wird, enthält \class{BlocklibExecutor} ein statisches Attribut \var{instanced: AtomicBoolean}. Beim Aufruf des Konstruktors wird mit der Methode \code{ensureUniqueInstance()} geprüft, ob bereits eine Instanz der Klasse erzeugt worden ist. \var{instanced} ist vom Type \code{AtomicBoolean}, um sicherzustellen, dass diese Prüfung nicht-blockierend synchronisiert ist. Existiert bereits eine Instanz, wird eine \class{UnsupportedOperationException} geworfen, die darauf hinweist.
+
+Die Klasse besitzt Referenzen auf zwei Instanzen von \class{ScheduledThreadPoolExecutor}. Damit wird die Anforderung, unterschiedliche Prioritäten von Jobs zu unterstützen behelfsmäßig unterstützt. Im Gegenzug wird jedoch darauf verzichtet, die Anzahl der Java Threads genau an die Anzahl der Hardwarethreads anzupassen. Die Implementierung lässt sich durch das Design des Interface \class{BlocklibExecutorService} leicht anzupassen, da dieses für die Definition von Prioritäten den Aufzählungstyp \class{TaskPriority} nutzt. \class{TaskPriority} enthält aktuell nur die Werte \const{NORMAL} und \const{BACKGROUND}, kann aber sofort erweitert werden, sobald die Implementierung des Executors mehr Prioritäten zulässt.
