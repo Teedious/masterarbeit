@@ -17,24 +17,28 @@ Aufgrund der Anordnung wären allerdings nur wenige Blöcke sichtbar. Daher wird
 	\fpsplot{seed-0-cube}
 	\caption{Seed 0 Halb-Würfel}\label{fig:seed-0-cube-fps}
 \end{figure}
-Der Verlauf der Framerate für Szenario 2 ist in Abbildung~\ref{fig:seed-0-cube-fps} dargestellt. In SystemA werden Frames ab Sekunde $11$ erzeugt, in SystemB ab Sekunde $13$. Die mittlere Framerate in SystemA ist \SI{238}{\fps} und in SystemB \SI{394}{\fps}. Damit erhöht sich die Framerate in SystemB um \SI{66}{\percent}. Dieser Wert ist deutlich geringer als in Szenario 1. Die Frameraten bleiben in beiden Systemen sehr konstant.
+\paragraph{\ac{fps}}Der Verlauf der Framerate für Szenario 2 ist in Abbildung~\ref{fig:seed-0-cube-fps} dargestellt. In SystemA werden Frames ab Sekunde $11$ erzeugt, in SystemB ab Sekunde $13$. Die mittlere Framerate in SystemA ist \SI{238}{\fps} und in SystemB \SI{394}{\fps}. Damit erhöht sich die Framerate in SystemB um \SI{66}{\percent}. Dieser Wert ist deutlich geringer als in Szenario 1. Die Frameraten bleiben in beiden Systemen sehr konstant.
 
 \begin{figure}[!htb]
 	\cpuplot{seed-0-cube}
 	\caption{Seed 0 Halb-Würfel}\label{fig:seed-0-cube-cpu}
 \end{figure}
-Die Auslastung der CPU in Szenario 2, zu sehen in Abbildung~\ref{fig:seed-0-cube-cpu}, gestaltet sich vergleichbar zu der in Szenario 1. Die Mittelwerte sind mit \SI{14}{\percent} in SystemA und \SI{19}{\percent} in SystemB nach Rundung identisch zu Szenario 1.
+\paragraph{CPU} Die Auslastung der CPU in Szenario 2, zu sehen in Abbildung~\ref{fig:seed-0-cube-cpu}, gestaltet sich vergleichbar zu der in Szenario 1. Die Mittelwerte sind mit \SI{14}{\percent} in SystemA und \SI{19}{\percent} in SystemB nach Rundung identisch zu Szenario 1.
 Auffällig ist, dass SystemB wie in Szenario 1 in den ersten Sekunden, während des Starts der Blocklib, zwei Auslastungsspitzen besitzt (\SI{32}{\percent} und \SI{50}{\percent}). SystemA dagegen besitzt nur eine (\SI{46}{\percent}). Eine mögliche Erklärung dafür ist die Trennung von Simulation und Rendering in verschiedene Threads. Dadurch könnte es passieren, die CPU zeitweise dadurch entlastet ist, dass die GPU Zeit benötigt, um übergebene Anweisungen auszuführen, beispielsweise wenn Texturen zum Start auf die Grafikkarte geladen werden.
 
 \begin{figure}[!htb]
 	\gpuplot{seed-0-cube}
 	\caption{Seed 0 Halb-Würfel}\label{fig:seed-0-cube-gpu}
 \end{figure}
-Die Auslastung des Halb-Würfel Szenario unterscheidet sich im Gegensatz zur CPU-Auslastung sehr von der im Hexagon-Szenario gemessenen. In Abbildung~\ref{fig:seed-0-cube-gpu} ist die gemessene GPU-Auslastung zeitlich aufgetragen. Anders als in Szenario 1 ist in beiden Systemen der Unterschied in der Auslastung unübersehbar. SystemB nutzt nach dem Start nahezu \SI{100}{\percent} der Leistung der GPU, während SystemA nur etwa \SI{60}{\percent} Auslastung erzeugt. Durchschnittlich liegt SystemB damit bei \SI{70}{\percent} Auslastung über die gesamte Messdauer und SystemA bei \SI{45}{\percent}. Betrachtet man nur die Auslastung nach dem Start lässt sich eine Steigerung der Auslastung um $\frac{100}{60}\si{\percent} \approx 67\si{\percent}$ errechnen. Das entspricht der Steigerung der \si{\fps}. In den weiteren Szenarien wird sich zeigen, ob das nur Zufall ist oder auf ein Muster schließen lässt.
+\paragraph{GPU} Die GPU-Auslastung des Halb-Würfel Szenario unterscheidet sich im Gegensatz zur CPU-Auslastung sehr von der im Hexagon-Szenario gemessenen. In Abbildung~\ref{fig:seed-0-cube-gpu} ist die gemessene GPU-Auslastung zeitlich aufgetragen. Anders als in Szenario 1 ist in beiden Systemen der Unterschied in der Auslastung unübersehbar. SystemB nutzt nach dem Start nahezu \SI{100}{\percent} der Leistung der GPU, während SystemA nur etwa \SI{60}{\percent} Auslastung erzeugt. Durchschnittlich liegt SystemB damit bei \SI{70}{\percent} Auslastung über die gesamte Messdauer und SystemA bei \SI{45}{\percent}. Betrachtet man nur die Auslastung nach dem Start lässt sich eine Steigerung der Auslastung um $\frac{100}{60}\si{\percent} \approx 67\si{\percent}$ errechnen. Das entspricht der Steigerung der \si{\fps}. In den weiteren Szenarien wird sich zeigen, ob das nur Zufall ist oder auf ein Muster schließen lässt.
 
 \begin{figure}[!htb]
 	\memplot{seed-0-cube-single-mem.csv}
 	\memplot{seed-0-cube-multi-mem.csv}
 	\caption{Seed 0 Halb-Würfel}\label{fig:seed-0-cube-mem}
 \end{figure} 
-Die Speichernutzung in Szenario 2 wird in Abbildung~\ref{fig:seed-0-cube-mem} gezeigt. Der Speicherverbrauch von SystemA unterscheidet sich im Vergleich zum Hexagon-Szenario kaum
+\paragraph{RAM} Die Speichernutzung in Szenario 2 wird in Abbildung~\ref{fig:seed-0-cube-mem} gezeigt. Der Ge\-samt-Spei\-cher\-ver\-brauch von beiden Systeme steigt im Vergleich zum Hexagon-Szenario leicht. SystemA benötigt durchschnittlich \SI{632}{\mega\byte} und SystemB \SI{1002}{\mega\byte}. Das ist jeweils ein Anstieg von \SI{9}{\percent} in SystemA und \SI{1}{\percent} in SystemB. Weiterhin zeigt SystemB einen großen Speicherverbrauch während des Starts der Blocklib (\SI{1732}{\mega\byte}).
+
+Die Speichernutzung der kurzlebigen Objekte ist sowohl in SystemA mit \SI{54}{\mega\byte\per\second} als auch in SystemB mit \SI{103}{\mega\byte\per\second} niedriger als in Szenario 1. Insbesondere SystemB verbraucht mit neu erzeugten Objekten weniger als halb so viel Speicher. Vergleicht man die beiden Systeme in diesem Szenario erhält man einen Anstieg von \SI{90}{\percent} Speicherverbrauch mit SystemB. Der geringere Speicherverbrauch führt auch zu einer geringeren Anzahl an Garbage Collections. Da allgemein SystemB mehr Speicher nutzt als SystemA ist die Anzahl der Garbage Collections im gemessenen Zeitraum in SystemB mit 10 Collections um eine niedriger als in SystemA. Der zusätzliche Speicher gleicht also den höheren dauerhaften Speicherverbrauch aus. 
+
+Der langlebige Speicherverbrauch bleibt in beiden Systemen mit \SI{296}{\mega\byte} (SystemA) und \SI{320}{\mega\byte} (SystemB) sehr konstant. In SystemA sinkt der Speicherverbrauch, wie auch schon im Hexagon-Szenario zu beobachten, nach einer Zeit -- auf nur noch \SI{129}{\mega\byte}.
