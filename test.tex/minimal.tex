@@ -9,18 +9,9 @@
 	compat=1.18,
   table/search path={../performance/measurements},
 }
-
+\graphicspath{ {../img/} }
 \tikzexternaldisable
 
 \begin{document}
-	\si{\fps}
-	\begin{figure}
-		\fpsplot{seed-0-hexagon}
-		\fpsplot{seed-0-cube}
-		\fpsplot{seed-0-static}
-		\fpsplot{seed-0-rotate}
-		\fpsplot{seed-0-walk}
-		\fpsplot{seed-3-walk}
-		\fpsplot{seed-10-walk}
-	\end{figure}
+\memplot{seed-0-cube-multi-mem.csv}
 \end{document}

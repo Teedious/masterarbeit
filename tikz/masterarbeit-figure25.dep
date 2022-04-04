@@ -1,2 +1,8 @@
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-static-single-fps.csv
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-static-multi-fps.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv

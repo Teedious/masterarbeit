@@ -1,8 +1,2 @@
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-mem.csv
+tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-single-gpu.csv
+tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-cube-multi-gpu.csv
