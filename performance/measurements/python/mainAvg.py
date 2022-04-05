@@ -11,5 +11,6 @@ for file in files:
 	for name, values in df.iteritems():
 		df[name] = values.mean()
 		df.rename(columns = {name:'avg '+name}, inplace = True)
+	df = df.round(3)
 	df = df.drop(list(range(1,len(df))))
 	df.to_csv("performance/measurements/main/avg/avg-"+file, index=False)

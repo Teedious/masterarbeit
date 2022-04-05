@@ -21,7 +21,7 @@ for file in files:
 		val = row[key]
 		if 25 <= val < 26:
 			i = index
-		if 55 <= val < 56:
+		if 54 <= val < 55:
 			j = index+1
 
 	df = df.drop(list(range(j,len(df))))

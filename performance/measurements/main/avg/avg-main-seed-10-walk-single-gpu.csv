@@ -1,2 +1,2 @@
 avg Time (s),avg CPU (%),avg Mem (%),avg Mem Total (MB),avg Mem Used (MB),avg Protocol (FPS),avg Protocol RTT (ms),avg GPU0 (%),avg GPU0 Mem (%),avg GPU0 Encode (%),avg GPU0 Decode (%),avg GPU0 Mem Total (MB),avg GPU0 Mem Used (MB)
-40.0,28.49838709677419,57.03225806451613,16313.0,9412.09677419355,0.0,0.0,32.12903225806452,18.261290322580642,0.0,0.0,6144.0,1121.967741935484
+39.5,28.81,57.0,16313.0,9410.367,0.0,0.0,32.333,18.256,0.0,0.0,6144.0,1121.667
