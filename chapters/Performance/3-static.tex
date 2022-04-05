@@ -9,7 +9,7 @@ Neben den beiden selbst erzeugten Szenarien, werden nun Szenarien betrachtet, in
 \end{figure}
 Damit SystemA und SystemB bei Messungen mit Terrain-Generierung vergleichbar sind, wird in beiden Systemen der selbe Seed verwendet, wodurch die selbe Welt generiert wird. Abbildung~\ref{fig:static} zeigt zwei Screenshots von generierten Welten. Das linke Bild zeigt die mit dem Seed $0$ generierte Welt, das rechte Bild nutzt als Seed $2$. Hier sieht man beispielhaft, dass bereits kleine Unterschiede im Seed völlig andere Welten erzeugen. Für die folgenden Messungen wird der Seed $0$ verwendet. 
 
-Im Szenario Welt Statisch bleibt die Kamera wie in den vorherigen beiden Szenarien an ein und der selben Stelle.
+Im Szenario Welt-Statisch bleibt die Kamera wie in den vorherigen beiden Szenarien an ein und der selben Stelle.
 
 
 
@@ -18,13 +18,17 @@ Im Szenario Welt Statisch bleibt die Kamera wie in den vorherigen beiden Szenari
 	\fpsplot{seed-0-static}
 	\caption{Seed 0 Statisch}\label{fig:seed-0-static-fps}
 \end{figure}
-Der Verlauf der \ac{fps} in diesem Szenario ist in Abbildung~\ref{fig:seed-0-static-fps} abgebildet. Vergleicht man die Framerate mit denen der vorherigen Szenarien, lässt sich erkennen, dass die Startphase sich in beiden Systemen verlängert. SystemA benötigt \SI{20}{\second} statt \SI{15}{\second}, um eine konstante Framerate von \SI{}{}
+Der Verlauf der \ac{fps} in diesem Szenario ist in Abbildung~\ref{fig:seed-0-static-fps} abgebildet. Vergleicht man die Framerate mit denen der vorherigen Szenarien, lässt sich erkennen, dass die Startphase sich in beiden Systemen verlängert. SystemA benötigt \SI{20}{\second} statt \SI{15}{\second}, um eine konstante Framerate von etwa \SI{201}{\fps} zu erreichen. SystemB erreicht einen stabilen Zustand nach etwa \SI{22}{\second} mit durchschnittlich \SI{468}{\fps}.
+Die Durchschnittswerte des stabilen Zustands sind aus den Messungen zwischen Sekunde 25 und 55 ermittelt. Beide Systeme benötigen mit Terrain-Generierung also etwa \SI{5}{\second} länger für den Start. SystemB erreicht nach dem Start eine um \SI{133}{\percent} gesteigerte Framerate gegenüber SystemA. Dieser Wert liegt zwischen den gemessenen Werten der ersten beiden Szenarien.
 
 \paragraph{CPU}
+Unter Betrachtung der CPU-Auslastung im Welt-Statisch Szenario, die in Abbildung~\ref{fig:seed-0-static-cpu} zu sehen ist, lässt sich der zusätzliche Aufwand für die Terrain-Generierung der Welt ebenfalls erkennen.
 \begin{figure}[!htbp]
 	\cpuplot{seed-0-static}
 	\caption{Seed 0 Statisch}\label{fig:seed-0-static-cpu}
 \end{figure}
+Während des Starts der Blocklib lasten beide System die CPU bis zu \SI{97}{\percent} aus. Nach dem Start fällt die Auslastung in beiden Systemen, auf durchschnittlich \SI{13}{\percent} in SystemA und \SI{23}{\percent} in SystemB.
+SystemB führt im Vergleich zu SystemA in diesem Szenario also zu einer um \SI{77}{\percent} erhöhten Auslastung der CPU. SystemB lastet die CPU in diesem Szenario mehr aus als in den Szenarien ohne generierter Welt. SystemA dagegen erreicht nach dem Start eine zu den bisherigen Szenarien vergleichbare Auslastung.
 
 \paragraph{GPU}
 \begin{figure}[!htbp]
