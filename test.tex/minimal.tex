@@ -13,5 +13,31 @@
 \tikzexternaldisable
 
 \begin{document}
-\memplot{seed-0-cube-multi-mem.csv}
+\pgfplotsset{
+	height=4cm,
+}
+\si[]{\fps}\ac{cpu}\ac{gpu}\\
+\fpsplot[]{seed-0-hexagon}
+\fpsplot[]{seed-0-cube}
+\fpsplot[]{seed-0-static}
+\fpsplot[]{seed-0-rotate}
+\fpsplot{seed-0-walk}
+\fpsplot[]{seed-3-walk}
+\fpsplot{seed-10-walk}
+\clearpage
+\cpuplot[]{seed-0-hexagon}
+\cpuplot[]{seed-0-cube}
+\cpuplot[]{seed-0-static}
+\cpuplot[]{seed-0-rotate}
+\cpuplot[]{seed-0-walk}
+\cpuplot[]{seed-3-walk}
+\cpuplot{seed-10-walk}
+\clearpage
+\gpuplot[]{seed-0-hexagon}
+\gpuplot[]{seed-0-cube}
+\gpuplot[]{seed-0-static}
+\gpuplot[]{seed-0-rotate}
+\gpuplot[]{seed-0-walk}
+\gpuplot[]{seed-3-walk}
+\gpuplot{seed-10-walk}
 \end{document}

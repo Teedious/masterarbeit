@@ -2,6 +2,7 @@
 \begin{tikzpicture}
 	\begin{axis}[
 		xmin=0,
+		xmax=65,
 		ymin=0,
 		ymax=2000,
 		stack plots=y,
@@ -21,6 +22,7 @@
 	\end{axis}
 	\begin{axis}[
 		xmin=0,
+		xmax=65,
 		ymin=0,
 		ymax=2000,
 		stack plots=y,
@@ -31,6 +33,7 @@
 	\end{axis}
 	\begin{axis}[
 		xmin=0,
+		xmax=65,
 		ymin=0,
 		ymax=2000,
 		stack plots=y,
@@ -50,6 +53,7 @@
 	\end{axis}
 	\begin{axis}[
 		xmin=0,
+		xmax=65,
 		ymin=0,
 		ymax=2000,
 		stack plots=y,
@@ -64,50 +68,68 @@
 \end{tikzpicture}
 }
 
-\newcommand{\fpsplot}[1]{
+\newcommand{\fpsplot}[2][Zeit (\si{\second})]{
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
-		\begin{axis}[
+		\ifthenelse{\isempty{#1}}{
+			\begin{axis}[
+				xticklabels={,,},
+		}{
+			\begin{axis}[
+		}
+			xlabel={#1},
 			xmin=0,
 			ymin=0,
+			xmax=65,
 			ymax=1100,
 			ylabel={\si{\fps}},
-			xlabel={Zeit (\si{\second})},
 		]
-				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1-single-fps.csv};
-				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1-multi-fps.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#2-single-fps.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#2-multi-fps.csv};
 		\end{axis}
 	\end{tikzpicture}
 }
 
-\newcommand{\cpuplot}[1]{
+\newcommand{\cpuplot}[2][Zeit (\si{\second})]{
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
-		\begin{axis}[
+		\ifthenelse{\isempty{#1}}{
+			\begin{axis}[
+				xticklabels={,,},
+		}{
+			\begin{axis}[
+		}
+			xlabel={#1},
 			xmin=0,
+			xmax=65,
 			ymin=0,
 			ymax=100,
-			ylabel={\ac{cpu} Auslastung (\si{\percent})},
-			xlabel={Zeit (\si{\second})},
+			ylabel={\ac{cpu} (\si{\percent})},
 		]
-				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#1-single-cpu.csv};
-				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#1-multi-cpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#2-single-cpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#2-multi-cpu.csv};
 		\end{axis}
 	\end{tikzpicture}
 }
 
-\newcommand{\gpuplot}[1]{
+\newcommand{\gpuplot}[2][Zeit (\si{\second})]{
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
-		\begin{axis}[
+		\ifthenelse{\isempty{#1}}{
+			\begin{axis}[
+				xticklabels={,,},
+		}{
+			\begin{axis}[
+		}
+			xlabel={#1},
 			xmin=0,
+			xmax=65,
 			ymin=0,
 			ymax=100,
-			ylabel={\ac{gpu} Auslastung (\si{\percent})},
-			xlabel={Zeit (\si{\second})},
+			ylabel={\ac{gpu} (\si{\percent})},
 		]
-				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#1-single-gpu.csv};
-				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#1-multi-gpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#2-single-gpu.csv};
+				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#2-multi-gpu.csv};
 		\end{axis}
 	\end{tikzpicture}
 }
