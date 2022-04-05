@@ -87,7 +87,7 @@
 			xmin=0,
 			ymin=0,
 			ymax=100,
-			ylabel={CPU Auslastung (\si{\percent})},
+			ylabel={\ac{cpu} Auslastung (\si{\percent})},
 			xlabel={Zeit (\si{\second})},
 		]
 				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#1-single-cpu.csv};
@@ -103,7 +103,7 @@
 			xmin=0,
 			ymin=0,
 			ymax=100,
-			ylabel={GPU Auslastung (\si{\percent})},
+			ylabel={\ac{gpu} Auslastung (\si{\percent})},
 			xlabel={Zeit (\si{\second})},
 		]
 				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#1-single-gpu.csv};

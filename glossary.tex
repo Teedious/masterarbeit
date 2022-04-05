@@ -1,11 +1,33 @@
-\newglossaryentry{na}{
-first={\emph{nicht-atomar}},
+\newglossaryentry{nichtAtomar}{
 name={nicht-atomar},
 plural={nicht-atomare},
 user1={nicht-atomaren},
 description={Beschreibung einer Anweisung, die selbst aus weiteren Anweisungen besteht}
 }
+\newglossaryentry{compositionRoot}{
+name={Composition Root},
+description={Position in einer Anwendung an der Module zusammengesetzt werden}
+}
+\newglossaryentry{dependencyInjection}{
+name={Dependency Injection},
+description={Designarchitektur, in der Module ihre Abhängigkeiten nicht selbst erzeugen, sondern diese Aufgabe an aufrufende Module übertragen}
+}
+\newglossaryentry{servicelocator}{
+name={Service Locator},
+description={Designpattern zur dynamischen Lokalisierung von Abhängigkeiten über eine zentrales Modul}
+}
+\newglossaryentry{singleton}{
+name={Singleton},
+description={Designpattern, mit dem ein Objekt global verfügbar gemacht und dessen mehrfache Instanziierung verhindert wird}
+}
+\newglossaryentry{testdouble}{
+name={Test Double},
+description={spezielles Modul, das das Verhalten einer Komponente vorspielt, damit das Original beim Testen nicht benötigt wird}
+}
 
-\newacronym[]{fps}{FPS}{Frames per second (dt. Bilder pro Sekunde)}
+\newacronym[]{fps}{FPS}{Frames per Second (dt. Bilder pro Sekunde)}
 \DeclareSIUnit{\fps}{\ac{fps}}
 \newacronym[]{sot}{SoT}{System on a Thread}
+\newacronym[]{cpu}{CPU}{Prozessor (Central Processing Unit)}
+\newacronym[]{gpu}{GPU}{Grafikkarte (Graphics Processing Unit)}
+\newacronym[]{ram}{RAM}{Hauptspeicher (Random Access Memory)}

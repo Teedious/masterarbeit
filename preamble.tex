@@ -57,7 +57,20 @@
 \usepackage{standalone}
 \usepackage{multirow,tabularx}
 \usepackage[hidelinks]{hyperref}
-\usepackage[acronym,shortcuts,toc]{glossaries}
+\usepackage[acronym,shortcuts,toc]{glossaries-extra}
+%\usepackage{glossary-longbooktabs}
+\setabbreviationstyle[acronym]{long-short} 
+
+\renewcommand{\glsxtrregularfont}[1]{\textcolor{violet}{\glsxtrifwasfirstuse{\emph{#1}}{#1}}}
+\renewcommand{\glsxtrabbreviationfont}[1]{\textcolor{teal}{\glsxtrifwasfirstuse{\emph{#1}}{#1}}}
+% or
+%\renewcommand{\glsxtrregularfont}[1]{\textcolor{violet}{\ifglsused{\glslabel}{#1}{\emph{#1}}}}
+%\renewcommand{\glsxtrabbreviationfont}[1]{\textcolor{teal}{\ifglsused{\glslabel}{#1}{\emph{#1}}}}
+
+\renewcommand*{\glsxtrsetupfulldefs}{%
+  \renewcommand*{\glsxtrifwasfirstuse}[2]{##2}%
+}
+
 \usepackage{mathtools}
 
 
