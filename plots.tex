@@ -1,6 +1,7 @@
 \newcommand{\memplot}[1]{ 
 \begin{tikzpicture}
 	\begin{axis}[
+		xmin=0,
 		ymin=0,
 		ymax=2000,
 		stack plots=y,
@@ -19,6 +20,7 @@
 		\addplot[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1} \closedcycle;
 	\end{axis}
 	\begin{axis}[
+		xmin=0,
 		ymin=0,
 		ymax=2000,
 		stack plots=y,
@@ -28,6 +30,7 @@
 		\addplot[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1};
 	\end{axis}
 	\begin{axis}[
+		xmin=0,
 		ymin=0,
 		ymax=2000,
 		stack plots=y,
@@ -46,6 +49,7 @@
 			\addplot table[col sep=comma,header=true,x index=0, y index=3] {#1}  \closedcycle;
 	\end{axis}
 	\begin{axis}[
+		xmin=0,
 		ymin=0,
 		ymax=2000,
 		stack plots=y,
@@ -64,6 +68,7 @@
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
 		\begin{axis}[
+			xmin=0,
 			ymin=0,
 			ymax=1100,
 			ylabel={\si{\fps}},
@@ -79,6 +84,7 @@
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
 		\begin{axis}[
+			xmin=0,
 			ymin=0,
 			ymax=100,
 			ylabel={CPU Auslastung (\si{\percent})},
@@ -94,6 +100,7 @@
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
 		\begin{axis}[
+			xmin=0,
 			ymin=0,
 			ymax=100,
 			ylabel={GPU Auslastung (\si{\percent})},

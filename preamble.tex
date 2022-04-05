@@ -67,10 +67,12 @@
 	width=\textwidth,
 	height=5cm,
 	compat=1.18,
+	no markers,
   table/search path={performance/measurements},
 }
 \usepgfplotslibrary{external}
 \tikzexternalize[prefix=tikz/,optimize command away=\includepdf]
+%\tikzset{external/force remake}
 
 \newcommand{\unsim}{\mathord{\sim}}
 \newcommand{\e}{\ensuremath{\mathrm{e}}}
