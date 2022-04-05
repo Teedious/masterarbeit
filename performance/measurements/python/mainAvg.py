@@ -12,4 +12,4 @@ for file in files:
 		df[name] = values.mean()
 		df.rename(columns = {name:'avg '+name}, inplace = True)
 	df = df.drop(list(range(1,len(df))))
-	df.to_csv("performance/measurements/main/avg/main-avg-"+file, index=False)
+	df.to_csv("performance/measurements/main/avg/avg-"+file, index=False)
