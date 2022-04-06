@@ -1,0 +1,54 @@
+
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=1.1]
+		\fill[lightgray]  (0,0) rectangle (11,1);
+		\fill[lightgray] (0,-1.5) rectangle (11,-0.5);
+		\fill[lightgray]  (0,1.5) rectangle (11,2.5);
+		
+		\node[anchor=east] at (0,2) {Thread 1};
+		\node[anchor=east] at (0,0.5) {Thread 2};
+		\node[anchor=east] at (0,-1) {Renderthread};
+		
+		
+		\fill [orange,draw=lightgray] (0.5,1.5) rectangle node[black,font=\footnotesize] {Sim 1} (1.5,2.5);
+		\fill [orange,draw=lightgray] (0.5,0) rectangle node[black,font=\footnotesize] {Sim 2} (1.5,1);
+		\fill [orange,draw=lightgray] (1.5,1.5) rectangle node[black,font=\footnotesize] {Sim 3} (2.5,2.5);
+		\fill [orange,draw=lightgray] (2.5,1.5) rectangle node[black,font=\footnotesize] {Sim 4} (3.5,2.5);
+		\fill [orange,draw=lightgray] (1.5,0) rectangle node[black,font=\footnotesize] {Sim 5} (2.5,1);
+		\fill [orange,draw=lightgray] (3.5,1.5) rectangle node[black,font=\footnotesize] {Sim 6} (4.5,2.5);
+		\fill [orange,draw=lightgray] (2.5,0) rectangle node[black,font=\footnotesize] {Sim 7} (3.5,1);
+		\fill [orange,draw=lightgray] (3.5,0) rectangle node[black,font=\footnotesize] {Sim 8} (4.5,1);
+		
+		\fill [orange,draw=lightgray] ($(4.5,0)+(0.5,1.5)$) rectangle node[black,font=\footnotesize] {Sim 1} ($(4.5,0)+(1.5,2.5)$);
+		\fill [orange,draw=lightgray] ($(4.5,0)+(0.5,0)$) rectangle node[black,font=\footnotesize] {Sim 2} ($(4.5,0)+(1.5,1)$);
+		\fill [orange,draw=lightgray] ($(4.5,0)+(1.5,1.5)$) rectangle node[black,font=\footnotesize] {Sim 3} ($(4.5,0)+(2.5,2.5)$);
+		\fill [orange,draw=lightgray] ($(4.5,0)+(2.5,1.5)$) rectangle node[black,font=\footnotesize] {Sim 5} ($(4.5,0)+(3.5,2.5)$);
+		\fill [orange,draw=lightgray] ($(4.5,0)+(1.5,0)$) rectangle node[black,font=\footnotesize] {Sim 4} ($(4.5,0)+(2.5,1)$);
+		\fill [orange,draw=lightgray] ($(4.5,0)+(3.5,1.5)$) rectangle node[black,font=\footnotesize] {Sim 6} ($(4.5,0)+(4.5,2.5)$);
+		\fill [orange,draw=lightgray] ($(4.5,0)+(2.5,0)$) rectangle node[black,font=\footnotesize] {Sim 7} ($(4.5,0)+(3.5,1)$);
+		\fill [orange,draw=lightgray] ($(4.5,0)+(3.5,0)$) rectangle node[black,font=\footnotesize] {Sim 8} ($(4.5,0)+(4.5,1)$);
+	
+		\fill [magenta] (0.5,-0.5) rectangle node[black]{Render $n-1$} (4.2,-1.5);
+		\fill [magenta] (5,-0.5) rectangle node[black]{Render $n$} (8.7,-1.5);
+		
+		\node at (2.5,3.5) {Frame $n$};
+		\node at (7,3.5) {Frame $n+1$};
+		
+		\draw  (0.5,3) rectangle (4.5,-2);
+		\draw  (5,3) rectangle (9,-2);
+	\end{tikzpicture}
+	\caption{Darstellung des Designs der Multithreading Architektur der Blocklib. Es existiert ein gesonderter Renderthread, der einen großen Teil der Rechenzeit während eines Frames nutzt.}\label{fig:optimalArchitecture}
+	\todo{Caption}
+\end{figure}
+
+Da der Performancegewinn, in Form von \ac{fps}, bei der Nutzung eines Renderthreads als hoch zu erwarten ist, soll dieser in die Blocklib integriert werden. Um die Anforderungen von Kapitel~\ref{sec:anforderungen} zu erfüllen, wird ein Jobsystem implementiert. Da die Blocklib OpenGL als Grafik Schnittstelle nutzt und OpenGL, wie in Abschnitt~\ref{sec:gamesJobsystem} beschrieben, Multithreading nicht unterstützt, kann das Rendering selbst nicht nebenläufig durchgeführt werden.
+
+Der Renderthread kann einerseits als Teil des Jobsystems designt werden, andererseits gibt es die Möglichkeit den Renderthread von diesem zu trennen. Ist der Renderthread Teil des Jobsystems, kann dieser voll zur Bearbeitung von Jobs mitgenutzt werden. Da üblicherweise die Anzahl der Threads der Anzahl der Prozessorkerne entspricht, kann man so automatisch immer die Leistung aller Prozessorkerne nutzen. Trennt man den Thread dagegen ab, entsteht die Problematik zu entscheiden, wann welche Anzahl von Threads genutzt wird, um möglichst alle Kerne zu nutzen, aber gleichzeitig zu verhindern, dass sich die Threads in der Ausführung gegenseitig behindern. Andererseits gestaltet sich die Implementierung eines getrennten Renderthreads als deutlich einfacher und intuitiver~\cite{Tatarchuk2014}, im Gegensatz zur Jobsystemintegration.
+
+Nach Messungen ergibt sich, dass das Rendering in etwa \SI{50}{\percent}\todo{messen} der Zeit eines Frames benötigt. Daher bietet es sich an, den Renderthread zu separieren. Der prinzipiell mögliche Performancegewinn durch die Integration in das Jobsystem ist ausgeschlossen, da das Rendering selbst sie gesamte Rechenleistung des Kerns jeden Frame beansprucht. Da das Rendering im sequentialisierten Fall circa \SI{50}{\percent} der Zeit benötigt, entspricht das annähernd \SI{100}{\percent}, sobald Simulation und Rendering in zwei Threads nebenläufig ausgeführt werden. Wird die Simulation selbst nebenläufig durchgeführt verstärkt sich dieser Effekt, wodurch die Framezeit, durch das Rendering bestimmt wird. Damit lässt sich auch die Anzahl der Threads des Jobsystems bestimmen, indem die Anzahl der Jobthreads um eins verringert wird ohne dadurch Prozessorkerne ohne Arbeit zu verursachen.
+
+Da der Renderthread auf Daten des Spiels zugreift, um die sichtbaren Elemente zu zeichnen, muss sichergestellt werden, dass diese Daten keinen Wettkampfbedingungen unterliegen. In der Spielentwicklung ist es üblich einen \emph{Spielzustand} (engl. Game State) zu definieren, der während der Simulation in jedem Frame angepasst wird. Der Teil des Zustandes auf den der Renderthread zugreift muss also konstant sein. Während der Simulation wird dieser allerdings verändert. Eine Möglichkeit, dieses Problem zu beheben, besteht darin einen \emph{Double Buffer}~\cite[S.~143]{Nystrom2015} zu nutzen, um den gesamten Spielzustand zwischenzuspeichern~\cite{Tatarchuk2014}. Die Blocklib ist nicht mit diesem Hintergrund entwickelt worden, weswegen es keine einfache Möglichkeit gibt, den gesamten Spielzustand auf diese Weise zwischenzuspeichern. Die Objekte, die den Spielzustand darstellen, sind über die Blocklib hinweg verteilt. Um dennoch einen Renderthread nutzen zu können, müssen die Objekte identifiziert werden, die für das Rendering benötigt werden. Für diese Objekte muss dann ein geeigneter Double Buffer erzeugt werden, sodass die Daten aus Renderthread-Sicht konstant sind.
+
+Somit ist eine nebenläufige Architektur, wie sie in Abbildung~\ref{fig:optimalArchitecture} dargestellt wird, erstrebenswert. Es gibt einen Renderthread, der die von der Simulation im vorherigen Frame berechneten Objekte zeichnet. Alle anderen verfügbaren Hardwarethreads können in dem Jobsystem für die Simulation genutzt werden.

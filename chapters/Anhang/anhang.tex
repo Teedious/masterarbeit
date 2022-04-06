@@ -7,7 +7,20 @@
 
 \section{Executor im Concurrency Framework}\label{appendix:concFrameworkExecutor}
 \includesvg[width=\textwidth]{ConcurrencyFrameworkExecutor.svg}
-\todo{Caption}
+
+\section{\texttt{CompletionStage} im Concurrency Framework}\label{appendix:CompletionStage}
+\includesvg[width=\textwidth]{CompletionStage.svg}
+Klassendiagramm des Interface \class{CompletionStage}, auf das auf Seite~\pageref{sec:CompletableFuture} verwiesen wird. Die definierten Methoden bieten verschiedene Möglichkeiten der Komposition.
+
+\begin{tblr}{
+	colspec={ll},
+	row{1}={font=\bfseries}
+	}
+	Komposition & Methoden \\
+	Verkettung & \code{thenApply(...)}, \code{thenAccept(...)}, \code{thenRun(...)}\\
+	Zusammenführung & \code{thenCombine(...)}, \code{thenAcceptBoth(...)}, \code{runAfterBoth(...)} \\
+	Auswahl & \code{applyToEither(...)}, \code{acceptEither(...)}, \code{runAfterEither(...)} \\
+\end{tblr}
 
 \pagebreak
 \section{\texttt{Context} vollständiges Klassendiagramm}\label{appendix:context}

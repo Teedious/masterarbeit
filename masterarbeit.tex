@@ -44,8 +44,10 @@
 
 \subsection{Design der Threading API}
 \input{chapters/DesignDerThreadingApi/Design.tex}
-\subsubsection{Renderthread und Job-API}
-\input{chapters/DesignDerThreadingApi/RenderthreadUndJobApi.tex}
+\subsubsection{Design des Renderthreads}\label{sec:desgignRenderthread}
+\input{chapters/DesignDerThreadingApi/Renderthread.tex}
+\subsubsection{Design des Jobsystems}\label{sec:desgignJobsystem}
+\input{chapters/DesignDerThreadingApi/JobApi.tex}
 
 \subsection{Implementierung der Threading API}
 \input{chapters/Implementierung/Implementierung.tex}
@@ -57,15 +59,16 @@
 \subsubsection{Implementierung des Jobsystems}
 \input{chapters/Implementierung/ImplementierungJobsystem.tex}
 
-\subsection{Performanceanalyse}
+\clearpage
+\section{Performanceanalyse}
 \input{chapters/Performance/0-performance.tex}
-\subsubsection{Szenario 1: Hexagon}
+\subsection{Szenario 1: Hexagon}
 \input{chapters/Performance/1-hexagon.tex}
-\subsubsection{Szenario 2: Halb-Würfel}
+\subsection{Szenario 2: Halb-Würfel}
 \input{chapters/Performance/2-cube.tex}
-\subsubsection{Szenario 3: Welt-Statisch}
+\subsection{Szenario 3: Welt-Statisch}
 \input{chapters/Performance/3-static.tex}
-\subsubsection{Szenario 4: Welt-Rotation}
+\subsection{Szenario 4: Welt-Rotation}
 \input{chapters/Performance/4-rotate.tex}
 %\subsubsection{Szenario 5: Welt-Gehen}
 %\input{chapters/Performance/5-walk.tex}

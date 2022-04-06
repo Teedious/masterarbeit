@@ -1,8 +1,6 @@
 Computerspiele nutzen Multithreading seit dem Aufkommen von Mehrkern-Prozessoren, um eine bessere Performance zu erreichen~\cite{Davies2006}. Es gibt verschiedene für Spiele geeignete Multithreading-Architekturen, die jeweils eigene Vor- und Nachteile mit sich bringen. Im Folgenden werden zwei weit verbreitete Multithreading Architekturen betrachtet.
 
-\subsubsection{Thread pro System}
-\todo{Entscheiden, ob auch hier gleich System on a Thread genannt}
-
+\subsubsection{\glsentrylong{sot}}
 \begin{figure}
 	\centering
 	\begin{tikzpicture}[scale=1.1]
@@ -88,7 +86,6 @@ Die Nutzung von Threads pro System bietet sich an, wenn nur für eine Plattform,
 	\end{tikzpicture}
 	\caption{Die Systeme definieren Jobs, die frei auf die vorhandenen Threads aufgeteilt werden. Sim steht für Simulation und Ren für Rendering. Die Abbildung ist schematisch, die Jobs müssen nicht exakt die gleiche Länge haben, auch wenn kurze Jobs mit ähnlichen Laufzeiten ideal sind. Im Vergleich zu Abbildung~\ref{fig:sot} lässt sich eine höhere Auslastung der Threads erkennen, was wiederum höhere FPS zur Folge hat.}\label{fig:jobt}
 \end{figure}
-\todo{Abbildung Caption}
 Eine etwas komplexere Architektur liefert die Implementierung eines sogenannten \emph{Job-} oder \emph{Task-Systems}~\cite{Davies2006,Tatarchuk2014,Genova2015,Hodgman2016}. Ein Schema der Architektur ist in Abbildung~\ref{fig:jobt} zu sehen. Anstatt Aufgaben fest auf einzelne Threads zu verteilen, gibt es \emph{Jobs} und ein System, das die Jobs auf Threads verteilt. Konzeptuell entspricht die Architektur sehr dem in Abschnitt~\ref{sec:executor} beschriebenen \class{Executor} in Java. 
 
 Die idealerweise kurzen Jobs werden an das System übergeben. Das System verwaltet die Threads, deren Anzahl idealerweise der Anzahl der Hardwarethreads entspricht, da dann die Leistung des Prozessors optimal ausgenutzt werden kann und die Anzahl der Kontextwechsel minimiert wird. Ist ein Thread im Leerlauf, wird ein Job an den Thread zur Ausführung übergeben.
@@ -116,7 +113,6 @@ Die idealerweise kurzen Jobs werden an das System übergeben. Das System verwalt
 	\end{tikzpicture}
 	\caption{Beispiel eines Job Graphen, der der Ausführung in Abbildung~\ref{fig:jobt} zugrunde liegen könnte. Die farbigen Knoten stellen Jobs dar, wobei orange Knoten Simulationsjobs und magentafarbene Knoten Renderingjobs sind. Die gerichteten Kanten zeigen die mögliche Ausführungsreihen folge an. So muss beispielsweise Sim 4 nach Sim 3 ausgeführt werden. Gibt es keinen Pfad von Job $A$ zu Job $B$ so können beide parallel ausgeführt werden.}\label{fig:jobdependencies}
 \end{figure}
-\todo{Abbildung}
 Das System kann zudem so implementiert werden, dass es Abhängigkeiten zwischen einzelnen Jobs gibt, das heißt, dass ein Job beispielsweise erst ausgeführt wird, wenn ein anderer Job abgeschlossen ist. Daraus bildet sich ein Job Graph, der die nebenläufige Ausführung der Jobs beschreibt. Es hat sich als hilfreich erwiesen, feste Synchronisationspunkte zu definieren, damit auf systemübergreifende Daten zugegriffen werden kann. Das kann im Jobsystem wie in Abbildung~\ref{fig:jobdependencies} durch Jobs repräsentiert werden, die Abhängigkeiten zu vielen vorangehenden Jobs sammeln und dann als Abhängigkeit für die folgenden Jobs dienen. Betrachten wir nun einige Vor- und Nachteile eines Jobsystems.
 \begin{itemize}
 	\item[$+$]  Da die Durchführung von Jobs nicht an bestimmte Threads gekoppelt ist, kann Hardware mit mehr Prozessoreinheiten sofort voll ausgenutzt werden. Wenn die Anzahl der Prozessoren zur Laufzeit ermittelt wird, funktioniert das sogar dynamisch. Ist eine Prozessoreinheiten vorhanden, wird diese genutzt, gibt es $100$ Prozessorkerne, werden $100$ genutzt. Durch ein Jobsystem kann also jede beliebige in Hardware vorhandene Parallelität ausgenutzt werden. Dadurch werden ohne zusätzlichen Programmieraufwand verschiedenste Plattformen unterstützt.
@@ -133,12 +129,12 @@ Entwickler von Computerspielen haben zuerst \ac{sot} genutzt, da diese Architekt
 
 Diese Entscheidung liegt vermutlich darin begründet, dass die Vorteile von \ac{sot}  und die Nachteile des Jobsystems für moderne Spiele weniger relevant sind. Entwickler sind inzwischen mit dem Jobsystem Konzept vertraut und dieses kann ebenfalls gut vor Wettkampfbedingungen schützen, wenn die Abhängigkeiten zwischen Jobs korrekt sind. Bei der Entwicklung neuer Spiele, kann die Nutzung des Jobsystems sofort berücksichtigt werden. Dadurch sind später keine tiefgreifenden Änderungen nötig, da die Integration von Anfang an stattgefunden hat. Spielentwickler nutzen statt OpenGL meist DirectX, das seit 2009 mit Version 11 Multithreading unterstützt~\cite{White2018}. Auch Vulkan, das inzwischen vermehrt in der Spielentwicklung Einzug erhält, unterstützt Multithreading~\cite{Schott2016}. Daher können auch die Aufrufe des Rendering über das Jobsystem nebenläufig geschehen.
 
-Das Spiel Destiny, das 2014 erschienen ist, besitzt beispielsweise eine Engine mit einem Jobsystem in dem das Rendering sequentiell nach der Simulation erfolgt. Abbildung~\ref{fig:destiny-jobgraph} zeigt den Job Graph des Spiels, wobei veranschaulicht wird, dass der Graph verschiedene Phasen enthält (\enquote{Game simulation}, \enquote{Extract game state}, \enquote{Prepare GPU-friendly data}, \enquote{Submit to GPU}), die durch synchronisierende Jobs sequentialisiert sind. Dadurch muss der Spielzustand nicht zwischengespeichert werden. Wie in der Abbildung zu erkennen ist, gibt es in den einzelnen Phasen große Mengen an Jobs, die nebenläufig ausgeführt werden können, sodass das Spiel von einer großen Menge an Prozessoreinheiten profitieren kann.
-
 \begin{figure}
 	\includegraphics[width=\textwidth]{Destiny.png}
 	 \caption{Darstellung eines Job Graphen für das Spiel Destiny. Die farbigen Umrahmungen zeigen die verschiedenen Stufen, in die der Graph durch Synchronisationspunkte unterteilt ist. Die Abbildung ist eine Aggregation von vier Abbildungen aus \cite[S.~39~ff.]{Tatarchuk2014}.}\label{fig:destiny-jobgraph}
 \end{figure}
 
+
+Das Spiel Destiny, das 2014 erschienen ist, besitzt beispielsweise eine Engine mit einem Jobsystem in dem das Rendering sequentiell nach der Simulation erfolgt. Abbildung~\ref{fig:destiny-jobgraph} zeigt den Job Graph des Spiels, wobei veranschaulicht wird, dass der Graph verschiedene Phasen enthält (\enquote{Game simulation}, \enquote{Extract game state}, \enquote{Prepare GPU-friendly data}, \enquote{Submit to GPU}), die durch synchronisierende Jobs sequentialisiert sind. Dadurch muss der Spielzustand nicht zwischengespeichert werden. Wie in der Abbildung zu erkennen ist, gibt es in den einzelnen Phasen große Mengen an Jobs, die nebenläufig ausgeführt werden können, sodass das Spiel von einer großen Menge an Prozessoreinheiten profitieren kann.
+
 Im folgenden Kapitel wird nun der Zustand der Blocklib analysiert, um die bereits vorhandene Nutzung von Multithreading zu verstehen und eine Grundlage für das Design der neuen nebenläufigen Architektur und die Anforderungen an diese zu bilden.
-\todo{evtl noch schönerer Übergang?}
