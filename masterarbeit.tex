@@ -35,21 +35,23 @@
 
 \pagebreak
 \section{Entwicklung einer nebenläufigen Architektur}
+\input{chapters/EntwicklungEinerNebenlaeufigen/intro.tex}
 
 \subsection{Analyse der Blocklib}\label{sec:blocklibAnalyse}
 \input{chapters/EntwicklungEinerNebenlaeufigen/AnalyseDerBlocklib.tex}
 
-\subsection{Anforderungen der Blocklib an eine Threading API}\label{sec:anforderungen}
+\subsection{Anforderungen der Blocklib an eine nebenläufige Architektur}\label{sec:anforderungen}
 \input{chapters/EntwicklungEinerNebenlaeufigen/Anforderungen.tex}
 
-\subsection{Design der Threading API}
+\subsection{Design der nebenläufigen Architektur}
 \input{chapters/DesignDerThreadingApi/Design.tex}
+\pagebreak
 \subsubsection{Design des Renderthreads}\label{sec:desgignRenderthread}
 \input{chapters/DesignDerThreadingApi/Renderthread.tex}
 \subsubsection{Design des Jobsystems}\label{sec:desgignJobsystem}
 \input{chapters/DesignDerThreadingApi/JobApi.tex}
 
-\subsection{Implementierung der Threading API}
+\subsection{Implementierung der nebenläufigen Architektur}
 \input{chapters/Implementierung/Implementierung.tex}
 \subsubsection{Implementierung des Renderthreads}
 \input{chapters/Implementierung/ImplementierungRenderthread.tex}
@@ -72,6 +74,8 @@
 \input{chapters/Performance/4-rotate.tex}
 %\subsubsection{Szenario 5: Welt-Gehen}
 %\input{chapters/Performance/5-walk.tex}
+\subsection{Zusammenfassung}
+\input{chapters/Performance/zusammenfassung.tex}
 
 \pagebreak
 \section{Fazit}
