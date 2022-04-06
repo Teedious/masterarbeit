@@ -1,5 +1,5 @@
 
-Die Blocklib nutzt OpenGL als Grafik Schnittstelle. Und da OpenGL, wie in Abschnitt~\ref{sec:gamesJobsystem} beschrieben, Multithreading nicht unterstützt, kann das Rendering selbst nicht nebenläufig durchgeführt werden.
+Die Blocklib nutzt OpenGL als Grafik Schnittstelle. Da OpenGL, wie in Abschnitt~\ref{sec:gamesJobsystem} beschrieben, Multithreading nicht unterstützt, kann das Rendering selbst nicht nebenläufig durchgeführt werden, sondern muss auf einem Renderthread ausgeführt werden.
 
 Der Renderthread kann einerseits als Teil des Jobsystems designt werden, andererseits gibt es die Möglichkeit den Renderthread von diesem zu trennen. Ist der Renderthread Teil des Jobsystems, kann dieser voll zur Bearbeitung von Jobs mitgenutzt werden. Da die Anzahl der Threads des Jobsystems üblicherweise der Anzahl der Hardwarethreads entsprechen soll, lässt sich so automatisch immer die Leistung aller Prozessorkerne nutzen. Trennt man den Thread dagegen ab, entsteht einerseits die Problematik zu entscheiden, wann welche Anzahl von Threads genutzt wird, um möglichst alle Kerne zu nutzen, aber gleichzeitig zu verhindern, dass sich die Threads in der Ausführung gegenseitig behindern. Andererseits gestaltet sich die Implementierung eines getrennten Renderthreads im Vergleich zur Jobsystemintegration als deutlich einfacher und intuitiver~\cite{Tatarchuk2014}, da beispielsweise nicht ermittelt werden muss, wann der Renderthread zur Ausführung von Jobs genutzt werden kann.
 
@@ -47,7 +47,7 @@ Da der Renderthread nebenläufig auf Daten des Spiels zugreift, um die sichtbare
 		\draw  (0.5,3) rectangle (4.5,-2);
 		\draw  (5,3) rectangle (9,-2);
 	\end{tikzpicture}
-	\caption{Darstellung des gewünschten Designs der Multithreading Architektur der Blocklib. Es existiert ein gesonderter Renderthread, der einen großen Teil der Rechenzeit während eines Frames nutzt (magenta). Die Simulation ist in Jobs (orange) aufgeteilt, die auf beliebig viele Threads aufgeteilt werden können. \enquote{Sim} kennzeichnet einen Simulationsjobs.}\label{fig:optimalArchitecture}
+	\caption{Darstellung des gewünschten Designs der Multithreading Architektur der Blocklib. Es existiert ein gesonderter Renderthread, der einen großen Teil der Rechenzeit während eines Frames nutzt (magenta). Die Simulation ist in Jobs (orange) aufgeteilt, die auf beliebig viele Threads aufgeteilt werden können. \enquote{Sim} kennzeichnet einen Simulationsjob.}\label{fig:optimalArchitecture}
 \end{figure}
 
 Somit ist eine nebenläufige Architektur, wie sie in Abbildung~\ref{fig:optimalArchitecture} dargestellt wird, erstrebenswert. Es gibt einen Renderthread, der die von der Simulation im vorherigen Frame berechneten Objekte zeichnet. Alle anderen verfügbaren Hardwarethreads können in dem Jobsystem für die Simulation genutzt werden.
