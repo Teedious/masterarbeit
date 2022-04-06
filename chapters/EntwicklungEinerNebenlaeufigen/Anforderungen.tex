@@ -1,4 +1,4 @@
-Aus der in Abschnitt~\ref{sec:blocklibAnalyse} beschriebenen Analyse lassen sich einige Anforderungen ableiten, die von der API der nebenläufigen Architektur erfüllt werden müssen. Neben den aus des Analyse erwachsenen Anforderungen, lassen sich weitere Anforderungen definieren, die für die Blocklib in Zukunft nützlich sind.
+Aus der in Abschnitt~\ref{sec:blocklibAnalyse} beschriebenen Analyse lassen sich einige Anforderungen ableiten, die von der API der nebenläufigen Architektur erfüllt werden müssen. Neben den aus der Analyse erwachsenen Anforderungen, lassen sich weitere Anforderungen definieren, die für die Blocklib in Zukunft nützlich sind.
 
 Die Threading API muss sich in das bestehende Ökosystem der Codebasis der Blocklib integrieren, sodass deren Nutzung möglichst einfach von der Hand geht und angenommen wird.
 
@@ -7,7 +7,7 @@ Um die Nutzung der API einfach zu gestalten, ist es notwendig, die Verwaltung un
 
 Zudem ist es sinnvoll, diese Verwaltung an einer Stelle zu bündeln, um den Überblick über die Anzahl der Java Threads nicht zu verlieren, damit durch die Auswahl einer geeigneten Zahl Kontextwechsel möglichst vermieden werden können. Diese Übersicht und Kontrolle lässt sich am besten an einer Stelle gebündelt verwirklichen.
 
-Des weiteren wird so Redundanz in der Codebasis verringert, da der Code zur Verwaltung der Threads nur an einer Stelle benötigt wird. Gäbe es hier mehrere Orte, würde sich beispielsweise eventuell der Code, der für die Generierung eines Java Threads zuständig ist, an mehreren Stellen wiederholen. Dies ginge dann mit den üblichen Problemen von Redundanz einher. Mit der Zeit unterscheiden sich die verschiedenen Codeteile, da vergessen wird Änderungen an allen Orten durchzuführen und Änderungen sind aufwendiger, da sie an allen Stellen durchgeführt werden müssen.
+Des Weiteren wird so Redundanz in der Codebasis verringert, da der Code zur Verwaltung der Threads nur an einer Stelle benötigt wird. Gäbe es hier mehrere Orte, würde sich beispielsweise eventuell der Code, der für die Generierung eines Java Threads zuständig ist, an mehreren Stellen wiederholen. Dies ginge dann mit den üblichen Problemen von Redundanz einher. Mit der Zeit unterscheiden sich die verschiedenen Codeteile, da vergessen wird Änderungen an allen Orten durchzuführen und Änderungen sind aufwendiger, da sie an allen Stellen durchgeführt werden müssen.
 
 \subsubsection{Verteilung von Berechnungen an Worker Threads}
 Wie in Abschnitt~\ref{sec:nutzungMultithreading} beschrieben, werden für die Generierung von Chunks Threads genutzt. Die Blocklib benötigt also eine Möglichkeit Anweisungen asynchron an einen Executor zu übergeben. Der Executor kann in Zukunft auch für Übergabe anderer asynchroner Aufgaben genutzt werden. So kann die Blocklib die vorhandene Parallelität in der Hardware voll ausnutzen.

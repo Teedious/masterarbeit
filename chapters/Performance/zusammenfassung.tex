@@ -1,0 +1,53 @@
+\begin{table}
+	\centering
+	\begin{tblr}{
+		colspec={lcrrrrr},
+		row{1} = {c,font=\bfseries},
+		}
+		\toprule
+		Szenario & System & \ac{fps} & {\ac{cpu}\\ (\si{\percent})} & {\ac{gpu}\\ (\si{\percent})} & {\ac{ram}\\ (\si{\mega\byte})} & { \ac{ram} kurz \\ (\si{\mega\byte\per\second})}\\
+		\midrule
+		\SetCell[r=3]{} 1 Hexagon				
+			& SystemA & 337& 13& 36& 576&  70\\
+			& SystemB &1133& 18& 38& 947& 274\\
+			& $\Delta$ &$+\SI{226}{\percent}$& $+\SI{38}{\percent}$& $+\SI{5}{\percent}$& $+\SI{64}{\percent}$& $+\SI{291}{\percent}$\\
+		\midrule
+		\SetCell[r=3]{}2 Halb-Würfel			
+			& SystemA & 253& 13& 60& 643&  53\\
+			& SystemB & 417& 18& 94& 941& 101\\
+			& $\Delta$ &$+\SI{65}{\percent}$& $+\SI{38}{\percent}$& $+\SI{57}{\percent}$& $+\SI{46}{\percent}$& $+\SI{91}{\percent}$\\
+		\midrule
+		\SetCell[r=3]{}3 Welt-Statisch		
+			& SystemA & 201& 13& 40&1243&  94\\
+			& SystemB & 468& 23& 71&1793& 208\\
+			& $\Delta$ &$+\SI{133}{\percent}$& $+\SI{77}{\percent}$& $+\SI{78}{\percent}$& $+\SI{44}{\percent}$& $+\SI{121}{\percent}$\\
+		\midrule
+		\SetCell[r=3]{}4 Welt-Rotation		
+			& SystemA & 134& 13& 37& 1267&101\\
+			& SystemB & 378& 23& 53& 1441&187\\
+			& $\Delta$ &$+\SI{182}{\percent}$& $+\SI{77}{\percent}$& $+\SI{43}{\percent}$& $+\SI{14}{\percent}$& $+\SI{85}{\percent}$\\
+		\midrule
+		\SetCell[r=3]{}5 Welt-Gehen (0)	
+			& SystemA & 128& 27& 34& 1215&114\\
+			& SystemB & 381& 36& 42& 1881&248\\
+			& $\Delta$ &$+\SI{198}{\percent}$& $+\SI{33}{\percent}$& $+\SI{24}{\percent}$& $+\SI{55}{\percent}$& $+\SI{118}{\percent}$\\
+		\midrule
+		\SetCell[r=3]{}6 Welt-Gehen (3)	
+			& SystemA &  72& 34& 28& 1194&85\\
+			& SystemB & 190& 42& 34& 1424&198\\
+			& $\Delta$ &$+\SI{164}{\percent}$& $+\SI{24}{\percent}$& $+\SI{21}{\percent}$& $+\SI{19}{\percent}$& $+\SI{133}{\percent}$\\
+		\midrule
+		\SetCell[r=3]{}7 Welt-Gehen (10)	
+			& SystemA & 148& 25& 32& 1125&146\\
+			& SystemB & 481& 37& 35& 1505&281\\
+			& $\Delta$ &$+\SI{225}{\percent}$& $+\SI{48}{\percent}$& $+\SI{9}{\percent}$& $+\SI{34}{\percent}$& $+\SI{92}{\percent}$\\
+		\midrule
+		\midrule
+		\SetCell[r=3]{}Gesamtdurchschnitt 
+			& SystemA & 182& 20& 38& 1038&95\\
+			& SystemB & 493& 28& 52& 1418&214\\
+			& $\Delta$ &$+\SI{170}{\percent}$& $+\SI{40}{\percent}$& $+\SI{37}{\percent}$& $+\SI{37}{\percent}$& $+\SI{115}{\percent}$\\
+			\bottomrule
+	\end{tblr}
+	\caption{Durchschnittliche Messwerte in den verschiedenen Szenarien.}
+\end{table}

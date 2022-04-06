@@ -1,4 +1,4 @@
-Neben den beiden selbst erzeugten Szenarien, werden nun Szenarien betrachtet, in denen die Terrain-Generierung der Blocklib genutzt wird. Für die Generierung nutzt die Blocklib einen Pseudo-Zufallszahlengenerator. Das ist ein Algorithmus, der ausgehend von einem übergebenen Wert, dem sogenannten \emph{Seed} Werte erzeugt, die zufällig \emph{wirken}. Der Algorithmus ist allerdings deterministisch. Mit dem selben Seed wird immer die selbe Folge von Zahlen generiert.
+Neben den beiden selbst erzeugten Szenarien, werden nun Szenarien betrachtet, in denen die Terrain-Generierung der Blocklib genutzt wird. Für die Generierung nutzt die Blocklib einen Pseudo-Zufallszahlengenerator. Das ist ein Algorithmus, der ausgehend von einem übergebenen Wert, dem sogenannten \emph{Seed} Werte erzeugt, die zufällig \emph{wirken}. Der Algorithmus ist allerdings deterministisch. Mit demselben Seed wird immer dieselbe Folge von Zahlen generiert.
 
 \begin{figure}
 	\centering
@@ -7,9 +7,9 @@ Neben den beiden selbst erzeugten Szenarien, werden nun Szenarien betrachtet, in
 	\includegraphics[width=.49\textwidth]{seed-2.png}
 	\caption{Links: Seed 0. Rechts: Seed 2}\label{fig:static}
 \end{figure}
-Damit SystemA und SystemB bei Messungen mit Terrain-Generierung vergleichbar sind, wird in beiden Systemen der selbe Seed verwendet, wodurch die selbe Welt generiert wird. Abbildung~\ref{fig:static} zeigt zwei Screenshots von generierten Welten. Das linke Bild zeigt die mit dem Seed $0$ generierte Welt, das rechte Bild nutzt als Seed $2$. Hier sieht man beispielhaft, dass bereits kleine Unterschiede im Seed völlig andere Welten erzeugen. Für die folgenden Messungen wird der Seed $0$ verwendet. 
+Damit SystemA und SystemB bei Messungen mit Terrain-Generierung vergleichbar sind, wird in beiden Systemen derselbe Seed verwendet, wodurch dieselbe Welt generiert wird. Abbildung~\ref{fig:static} zeigt zwei Screenshots von generierten Welten. Das linke Bild zeigt die mit dem Seed $0$ generierte Welt, das rechte Bild nutzt als Seed $2$. Hier sieht man beispielhaft, dass bereits kleine Unterschiede im Seed völlig andere Welten erzeugen. Für die folgenden Messungen wird der Seed $0$ verwendet. 
 
-Im Szenario Welt-Statisch bleibt die Kamera wie in den vorherigen beiden Szenarien an ein und der selben Stelle.
+Im Szenario Welt-Statisch bleibt die Kamera wie in den vorherigen beiden Szenarien an ein und derselben Stelle.
 
 
 
@@ -27,8 +27,8 @@ Unter Betrachtung der \ac{cpu}-Auslastung im Welt-Statisch Szenario, die in Abbi
 	\cpuplot{seed-0-static}
 	\caption{Seed 0 Statisch}\label{fig:seed-0-static-cpu}
 \end{figure}
-Während des Starts der Blocklib lasten beide System die \ac{cpu} bis zu \SI{97}{\percent} aus. Nach dem Start fällt die Auslastung in beiden Systemen, auf durchschnittlich \SI{13}{\percent} in SystemA und \SI{23}{\percent} in SystemB.
-SystemB führt im Vergleich zu SystemA in diesem Szenario also zu einer um \SI{77}{\percent} erhöhten Auslastung der \ac{cpu}. SystemB lastet die \ac{cpu} in diesem Szenario mehr aus als in den Szenarien ohne generierter Welt. SystemA dagegen erreicht nach dem Start eine zu den bisherigen Szenarien vergleichbare Auslastung.
+Während des Starts der Blocklib lasten beide Systeme die \ac{cpu} bis zu \SI{97}{\percent} aus. Nach dem Start fällt die Auslastung in beiden Systemen, auf durchschnittlich \SI{13}{\percent} in SystemA und \SI{23}{\percent} in SystemB.
+SystemB führt im Vergleich zu SystemA in diesem Szenario also zu einer um \SI{77}{\percent} erhöhten Auslastung der \ac{cpu}. SystemB lastet die \ac{cpu} in diesem Szenario mehr aus als in den Szenarien ohne generierte Welt. SystemA dagegen erreicht nach dem Start eine zu den bisherigen Szenarien vergleichbare Auslastung.
 
 \paragraph{\ac{gpu}}
 Der zeitliche Verlauf der \ac{gpu}-Auslastung von Szenario 3 ist in Abbildung~\ref{fig:seed-0-static-gpu} zu sehen. Die durchschnittliche Auslastung der \ac{gpu} liegt in SystemA bei \SI{40}{\percent} und in SystemB bei \SI{71}{\percent}. Die Auslastung in SystemA entspricht damit der aus dem Hexagon Szenario. SystemB dagegen erreicht eine deutlich höhere Auslastung. In beiden Systemen ist die \ac{gpu} noch nicht vollständig ausgelastet. Wie auch schon in den anderen Messungen zu Szenario 3 zu erkennen ist, zeigt die erst später ansteigende Auslastung der \ac{gpu} eine länger dauernde Startphase an. Die Auslastung beider Systeme bleibt während der Hauptphase weitgehend konstant.
