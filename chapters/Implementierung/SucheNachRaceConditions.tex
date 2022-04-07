@@ -5,7 +5,7 @@ Da Variablen zeitgleich von verschiedenen Threads bearbeitet werden, ist die Suc
 
 Eine naive Herangehensweise mittels Debugging ist nahezu unmöglich, da das Flackern zufällig auftritt. Zuerst muss also eine Möglichkeit gefunden werden, um das Auftreten des Flackerns programmatisch zu erkennen.
 
-In der \class{Configuration}-Klasse gibt es die Variable \const{SHOW_SHADOW_MAP_FRAME}. Ist diese auf \code{true} gesetzt, wird in der linken oberen Ecke des Fensters ein Feld angezeigt, das die sogenannte \class{ShadowMap} zeigt. Abbildung~\ref{fig:ShadowMap} zeigt einen Screenshot der Blocklib mit \code{SHOW_SHADOW_MAP_FRAME = true}. Die \class{ShadowMap} wird genutzt, um zu berechnen, an welchen Stellen Schatten gerendert werden.
+In der \class{Configuration}-Klasse gibt es die Variable \const{SHOW_SHADOW_MAP_FRAME}. Ist diese auf \code{true} gesetzt, wird in der linken oberen Ecke des Fensters ein Feld angezeigt, das die sogenannte \class{ShadowMap} zeigt. Abbildung~\vref{fig:ShadowMap} zeigt einen Screenshot der Blocklib mit \code{SHOW_SHADOW_MAP_FRAME = true}. Die \class{ShadowMap} wird genutzt, um zu berechnen, an welchen Stellen Schatten gerendert werden.
 \begin{figure}
 	\caption{Screenshot}\label{fig:ShadowMap}
 \end{figure}
@@ -35,4 +35,4 @@ private void updateLightPosition(float progress, boolean day) {
 	position = Vector3f.add(position, Context.getInstance().getCamera().getPosition(), new Vector3f());
 }
 \end{lstlisting}
-Wird also der Wert von \code{DayNightLighting.position} im Renderthread ausgelesen, während die Methode in Ausführung ist, beispielsweise während Zeile~\ref{lst:updateLightPosition:scale}, so enthält \code{DayNightLighting.position} einen vollkommen falschen Wert. Hier existiert also die gesuchte Wettkampfbedingung.
+Wird also der Wert von \code{DayNightLighting.position} im Renderthread ausgelesen, während die Methode in Ausführung ist, beispielsweise während Zeile~\vref{lst:updateLightPosition:scale}, so enthält \code{DayNightLighting.position} einen vollkommen falschen Wert. Hier existiert also die gesuchte Wettkampfbedingung.

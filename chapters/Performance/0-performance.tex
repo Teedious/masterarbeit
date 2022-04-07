@@ -1,4 +1,4 @@
-Um den Effekt der Implementierung der nebenläufigen Architektur quantitativ analysieren zu können, werden einige Szenarien in der Blocklib definiert. Diese Szenarien werden dann in einem Stand vor der Integration der nebenläufigen Architektur und einem Stand danach durchlaufen. Da die Blocklib unter Nutzung des Versionsverwaltungstools Git~\cite{Chacon2014} entwickelt wird, lassen sich sogenannte Hashes angeben, die genau definieren, welche Versionen der Blocklib für die Performanceanalyse genutzt werden. Diese Hashes werden auch Revisionsnummern genannt. Die genutzten Hashes sind in Tabelle~\ref{tab:perfHash} aufgelistet.
+Um den Effekt der Implementierung der nebenläufigen Architektur quantitativ analysieren zu können, werden einige Szenarien in der Blocklib definiert. Diese Szenarien werden dann in einem Stand vor der Integration der nebenläufigen Architektur und einem Stand danach durchlaufen. Da die Blocklib unter Nutzung des Versionsverwaltungstools Git~\cite{Chacon2014} entwickelt wird, lassen sich sogenannte Hashes angeben, die genau definieren, welche Versionen der Blocklib für die Performanceanalyse genutzt werden. Diese Hashes werden auch Revisionsnummern genannt. Die genutzten Hashes sind in Tabelle~\vref{tab:perfHash} aufgelistet.
 \begin{table}
 	\centering
 	\begin{tabular}{ll}
@@ -14,7 +14,7 @@ Um den Effekt der Implementierung der nebenläufigen Architektur quantitativ ana
 
 Insgesamt werden fünf verschiedene Szenarien betrachtet. In allen Szenarien werden die folgenden Messwerte ausgewertet: \si{\fps}, Auslastung der \acs{cpu}, Auslastung der \ac{gpu} und \ac{ram} Nutzung. In jedem Szenario läuft die Blocklib für \SI{60}{\second}. Ausschlaggebend hierfür ist die durch Java mit der Methode \code{System.currentTimeMillis()} bereitgestellte Zeit. Der Code, der für die Ausführung der Szenarien benötigt wird, ist der Masterarbeit beigelegt.
 
-Das System, auf dem gemessen wird, besitzt die in Tabelle~\ref{tab:spec} aufgelistete Spezifikation.
+Das System, auf dem gemessen wird, besitzt die in Tabelle~\vref{tab:spec} aufgelistete Spezifikation.
 
 \begin{table}[!h]
 	\centering

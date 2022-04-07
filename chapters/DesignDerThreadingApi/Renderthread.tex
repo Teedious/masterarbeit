@@ -50,4 +50,4 @@ Da der Renderthread nebenläufig auf Daten des Spiels zugreift, um die sichtbare
 	\caption{Darstellung des gewünschten Designs der Multithreading Architektur der Blocklib. Es existiert ein gesonderter Renderthread, der einen großen Teil der Rechenzeit während eines Frames nutzt (magenta). Die Simulation ist in Jobs (orange) aufgeteilt, die auf beliebig viele Threads aufgeteilt werden können. \enquote{Sim} kennzeichnet einen Simulationsjob.}\label{fig:optimalArchitecture}
 \end{figure}
 
-Somit ist eine nebenläufige Architektur, wie sie in Abbildung~\ref{fig:optimalArchitecture} dargestellt wird, erstrebenswert. Es gibt einen Renderthread, der die von der Simulation im vorherigen Frame berechneten Objekte zeichnet. Alle anderen verfügbaren Hardwarethreads können in dem Jobsystem für die Simulation genutzt werden.
+Somit ist eine nebenläufige Architektur, wie sie in Abbildung~\vref{fig:optimalArchitecture} dargestellt wird, erstrebenswert. Es gibt einen Renderthread, der die von der Simulation im vorherigen Frame berechneten Objekte zeichnet. Alle anderen verfügbaren Hardwarethreads können in dem Jobsystem für die Simulation genutzt werden.

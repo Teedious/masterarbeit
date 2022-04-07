@@ -1,6 +1,6 @@
 Bei der Implementierung des Jobsystems liegt die Aufgabe insbesondere darin, die Verkettung von Jobs durch \class{CompletableFuture} zu ermöglichen. Während der Implementierung ist eine weitere Anforderung zum Vorschein gekommen, die aufgrund des Zeitpunkts, zu dem sie aufgetaucht ist, nicht vollständig gelöst ist. Dabei handelt es sich um die in Abschnitt~\ref{sec:reqBackgroundTasks} beschriebene Anforderung, die Ausführung von Hintergrundtasks zu ermöglichen, ohne die Ausführung anderer Tasks zu blockieren. 
 
-Den Zugriffspunkt auf das Jobsystem bietet das neu definierte Interface \class{BlocklibExecutorService}, das von der Klasse \class{BlocklibExecutor} implementiert wird. Ein gekürztes Klassendiagramm ist in Abbildung~\ref{fig:diag-BlocklibExecutor} dargestellt.
+Den Zugriffspunkt auf das Jobsystem bietet das neu definierte Interface \class{BlocklibExecutorService}, das von der Klasse \class{BlocklibExecutor} implementiert wird. Ein gekürztes Klassendiagramm ist in Abbildung~\vref{fig:diag-BlocklibExecutor} dargestellt.
 
 \begin{figure}[!htb]
 	\centering

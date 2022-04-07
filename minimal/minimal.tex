@@ -15,7 +15,7 @@
 \begin{document}
 In Abbildung~?? ist die Struktur des Designs für das Jobsystem der Blocklib dargestellt. Es wird ein Interface \class{BlocklibExecutorService} definiert, das von dem Interface \class{ScheduledExecutorService} der Java Bibliothek abgeleitet ist. Das Interface wird so erweitert, dass die verschiedenen \code{submit(...)} Methoden jeweils Objekte des Typs \class{CompletableFuture} zurückgeben. Die \code{schedule(...)} Methoden geben jeweils ein \class{ScheduledCompletableFuture} Objekt zurück, das später noch näher erläutert wird.
 
-Das Interface \class{BlocklibExecutorService} wird durch die Klasse \class{BlocklibExecutor} implementiert. Sie nutzt zur Durchführung von Jobs den von der Java Bibliothek definierten \class{ScheduledThreadPoolExecutor}. Um die für die Rückgabewerte nötigen \class{CompletableFuture} Objekte zu erzeugen, wird eine Klasse \class{CompletableFutureWrapper} erstellt. Eine vollständige Auflistung der von den drei Interfaces bereitgestellten Methoden ist in Anhang~\ref{appendix:BlocklibExecutorService} zu finden. 
+Das Interface \class{BlocklibExecutorService} wird durch die Klasse \class{BlocklibExecutor} implementiert. Sie nutzt zur Durchführung von Jobs den von der Java Bibliothek definierten \class{ScheduledThreadPoolExecutor}. Um die für die Rückgabewerte nötigen \class{CompletableFuture} Objekte zu erzeugen, wird eine Klasse \class{CompletableFutureWrapper} erstellt. Eine vollständige Auflistung der von den drei Interfaces bereitgestellten Methoden ist in Anhang~\vref{appendix:BlocklibExecutorService} zu finden. 
 \pgfplotsset{
 	height=4cm,
 }
