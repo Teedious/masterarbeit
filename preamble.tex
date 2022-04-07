@@ -19,7 +19,7 @@
 \usepackage{wrapfig}
 % \usepackage{layouts}
 \usepackage{textcomp} 
-\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
+\usepackage{xcolor}  % Coloured text etc.
 \usepackage{svg}
 \svgsetup{inkscapelatex=false, inkscapearea=drawing}
 \usepackage[layout={margin,index},draft]{fixme}
@@ -88,6 +88,7 @@
 }
 \usepgfplotslibrary{external}
 \tikzexternalize[prefix=tikz/,optimize command away=\includepdf]
+\tikzexternaldisable
 %\tikzset{external/force remake}
 
 \newcommand{\unsim}{\mathord{\sim}}

@@ -46,8 +46,11 @@ Die (mögliche) Abhängigkeit des Verhaltens von der Reihenfolge der Updates, ze
 Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufige Anweisungen zu parallelisieren. Darunter fallen insbesondere Hintergrundaufgaben, wie das Erstellen von Chunks, und das Ausführen zeitlich gesteuerter Abläufe, wie die Updates der Flüsse von Flüssigkeiten. Insgesamt gibt es zu Beginn der Arbeit sechs Klassen, die Threads erzeugen und nutzen. Eine Auflistung der Klassen und deren Verwendung von Threads ist in Tabelle~\ref{tab:concTasksBlocklib} zu finden.
 
 \begin{table}
+	%fixup, because hyphenation of lstinline breaks width measurement
+	\newlength{\mytemp}
+	\settowidth{\mytemp}{\texttt{NioClientNetworkLayer}}
 	\renewcommand{\arraystretch}{1.5}
-	\begin{tabularx}{\textwidth}{lX}
+	\begin{tblr}{colspec={p{\mytemp}X}}
 		\toprule
 		Klasse & Bestehende Nutzung von Nebenläufigkeit \\
 		\midrule
@@ -57,8 +60,8 @@ Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufi
 		\class{NioClientNetworkLayer} & Ein Thread, der im Hintergrund mit dem Server kommuniziert, wird gestartet.\\
 		\class{NioServerNetworkLayer} & Ein Thread, der im Hintergrund mit den Clients kommuniziert, wird gestartet.\\
 		\class{Fluid} & Ein Thread wird gestartet, der den Zustand der Flüssigkeit berechnet.\\
-		\bottomrule
-	\end{tabularx}
+		\bottomrule 
+	\end{tblr}
 	\caption{Nebenläufige Anweisungen in der Blocklib}\label{tab:concTasksBlocklib}
 \end{table}
 
