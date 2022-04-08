@@ -36,11 +36,26 @@ Um den Zeichenaufwand zu verringern, implementiert die Klasse \class{ChunkManage
 Die Datenstruktur ist nun wie folgt implementiert. Die Methode \code{hide()} entfällt ersatzlos. Stattdessen wird nach dem Swap des Double Buffers der Renderables, der Buffer für die nächsten zu zeichnenden Elemente geleert, sodass Renderables automatisch nicht mehr gezeichnet werden, wenn sie nicht mehr hinzugefügt werden. Die Methode \code{show()} wird zu \code{draw()} umbenannt, um zu signalisieren, dass es sich um einen einmaligen Vorgang handelt. Alle bisherigen Aufrufe von \code{show()} werden durch \code{draw()} ersetzt. Die Update-Methoden aller Klassen, die \class{Renderable}-Objekte anzeigen lassen, nutzen die neue \code{draw()}-Methode, sodass die Objekte jeden Frame zu der Liste der zu zeichnenden Objekte hinzugefügt werden und das Verhalten zum vorherigen Stand identisch ist.
 
 \subsubsection{Zwischenspeicherung des gerenderten Spielzustands}\label{sec:saveRenderState}
-Aufbauend auf die Änderungen des vorherigen Abschnitts ist nun die Zwischenspeicherung der \class{Renderable}-Objekte vereinfacht, da diese nur für ein Bild gespeichert werden müssen. Neben den Informationen, die in den  \class{Renderable}-Objekten gespeichert ist, umfasst der für das Rendering relevante Spielzustand noch weitere Daten.
+Aufbauend auf die Änderungen des vorherigen Abschnitts ist nun die Zwischenspeicherung der \class{Renderable}-Objekte vereinfacht, da diese nur für ein Bild gespeichert werden müssen. 
 
-Die Blocklib enthält sogenannte globale \glspl{uniform}. Ein \gls{uniform} ist eine globale Variable eines \glsuseri{shaderprogram}~\cite[S.~45~ff.]{Vries2020}. Ein \gls{shaderprogram} ist ein Programm, das auf der \ac{gpu} ausgeführt wird~\cite[S.~32~f.]{Vries2020}. Die in der Blocklib als globale \glspl{uniform} bezeichneten Variablen sind \glspl{uniform}, die von vielen \glspl{shaderprogram} genutzt werden, also auch global über die \glspl{shaderprogram} hinweg sind. Da sich in den globalen \glspl{uniform} Informationen wie die Position und Blickrichtung der Kamera gespeichert sind, müssen auch diese Daten während des Renderings unverändert bleiben. Die Simulation ändert beispielsweise die Position der Kamera, wenn eine Bewegungstaste gedrückt wird. Daher müssen die globalen \glspl{uniform} ebenfalls zwischengespeichert werden.
+Neben den Informationen, die in den  \class{Renderable}-Objekten gespeichert ist, umfasst der für das Rendering relevante Spielzustand noch weitere Daten. Die Zwischenspeicherung der Renderables erfolgt auf zwei Arten. Zum einen muss gespeichert werden, welche Elemente im aktuellen Frame gezeichnet werden, zum andern muss sichergestellt werden, dass sich der Inhalt der zu zeichnenden \class{Renderable}-Objekte nicht verändert. Die \ac{gui} wird auf eine andere Weise gezeichnet, als andere Elemente, da die ihr zugrundeliegende Baumstruktur die Anordnung der Renderables bestimmt. Die Blocklib besitzt eine spezielle Klasse \class{UIRenderer}, die das Rendering der \ac{gui} durchführt. Abbildung~\vref{fig:renderDiagram} zeigt die wichtigsten Klassen für die Ausführung des Rendering und die Zwischenspeicherung des gerenderten Spielzustands.
+\begin{figure}
+	\centering
+	\includesvg{Rendering.svg}
+	\caption{Klassendiagramm Rendering}\label{fig:renderDiagram}
+\end{figure}
+Alle in der Abbildung gezeigten Klassen implementieren das Interface \class{DoubleBuffer}, wie in Abbildung~\vref{fig:renderInterfaceDiagram} dargestellt.
+\begin{figure}
+	\centering
+	\includesvg[width=\textwidth]{Rendering-Interface.svg}
+	\caption{Klassendiagramm Rendering}\label{fig:renderInterfaceDiagram}
+\end{figure}
 
-Die globalen \glspl{uniform} 
+
+
+Die Blocklib enthält sogenannte \emph{globale} \glspl{uniform}. Ein \gls{uniform}~\cite[S.~45~ff.]{Vries2020} ist eine globale Variable die in einem \gls{shaderprogram} definiert wird. Ein \gls{shaderprogram} ist ein Programm, das auf der \ac{gpu} ausgeführt wird~\cite[S.~32~f.]{Vries2020}. Die in der Blocklib als globale \glspl{uniform} bezeichneten Variablen sind \glspl{uniform}, die alle \glspl{shaderprogram} nutzen können, also auch über die \glspl{shaderprogram} hinweg global sind. Da sich in den globalen \glspl{uniform} Informationen wie die Position und Blickrichtung der Kamera gespeichert sind, müssen auch diese Daten während des Renderings unverändert bleiben. Die Simulation ändert beispielsweise die Position der Kamera, wenn eine Bewegungstaste gedrückt wird. Daher müssen die globalen \glspl{uniform} ebenfalls zwischengespeichert werden.
+
+Die globalen \glspl{uniform} sind in der Klasse \class{GlobalUniforms} als statische Attribute gespeichert.
 
 
 \subsubsection{Anpassung der Game-Loop}\label{sec:adjustGameLoop}
