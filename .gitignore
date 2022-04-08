@@ -1,7 +1,6 @@
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
-*.log
 *.lot
 *.fls
 *.out
@@ -206,8 +205,6 @@ pythontex-files-*/
 *.loe
 
 # TikZ & PGF
-*.dpth
-*.md5
 *.auxlock
 
 # todonotes
