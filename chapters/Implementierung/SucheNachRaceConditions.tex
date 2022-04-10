@@ -1,17 +1,17 @@
 \paragraph{Schattenflackern}
 \begin{figure}
 	\begin{tikzpicture}
-		\node at (0,0) {\includegraphics[width=.32\textwidth]{flackern-1.png}};
+		\node at (0,0) {\includegraphics[width=.3\textwidth]{flackern-1.png}};
 		\node[draw=red, circle, minimum size = 1.5cm] at (.25,-.5) {};
 	\end{tikzpicture}
 	\hfill
 	\begin{tikzpicture}
-		\node at (0,0) {\includegraphics[width=.32\textwidth]{flackern-2.png}};
+		\node at (0,0) {\includegraphics[width=.3\textwidth]{flackern-2.png}};
 		\node[draw=red, circle, minimum size = 1.5cm] at (.25,-.5) {};
 	\end{tikzpicture}
 	\hfill
 	\begin{tikzpicture}
-		\node at (0,0) {\includegraphics[width=.32\textwidth]{flackern-3.png}};
+		\node at (0,0) {\includegraphics[width=.3\textwidth]{flackern-3.png}};
 		\node[draw=red, circle, minimum size = 1.5cm] at (.25,-.5) {};
 	\end{tikzpicture}
 	\caption{Beispiel von flackerndem Schatten in der Blocklib. Besonders der Schatten des rechten Baums (rot eingekreist) ist auffällig. Im Ablauf der drei Bilder von links nach rechts ist er im mittleren Bild nicht zu sehen.}\label{fig:flackern}
@@ -26,7 +26,7 @@ In der \class{Configuration}-Klasse gibt es die Variable \const{SHOW_SHADOW_MAP_
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\textwidth]{shadowMap.png}
-	\caption{Ausschnitt eines Screenshots der Blocklib bei aktivierter \class{ShadowMap}-Anzeige. Die \class{ShadowMap} speichert Entfernungs-Informationen, diese werden als rote Farbe interpretiert und ausgegeben.}\label{fig:ShadowMap}
+	\caption{Ausschnitt eines Screenshots der Blocklib bei aktivierter \class{ShadowMap}-Anzeige. Die \class{ShadowMap} speichert Entfernungs-Informationen, diese werden als rote Farbe interpretiert und ausgegeben. Je weiter etwas weg ist, desto stärker ist das Rot.}\label{fig:ShadowMap}
 \end{figure}
 \textcite{Ebbinger2018} beschreibt, wie genau das Rendering von Schatten in der Blocklib umgesetzt ist. Wie der Name der Klasse \class{ShadowMap} vermuten lässt, wird für die Berechnung der Schatten das sogenannte \emph{Shadow Mapping} verwendet. Dazu wird eine zweite Kamera implementiert, die die Spielwelt aus der Sicht einer Lichtquelle, im Fall der Blocklib die Sonne, betrachtet. Die so gerenderte Sicht wird dann genutzt, um zu berechnen ob ein Fragment das erste Hindernis aus Sicht der Lichtquelle ist. Ist dies der Fall, so wird das Fragment beleuchtet, ansonsten ist etwas anderes vor dem Fragment und es befindet sich im Schatten.
 
