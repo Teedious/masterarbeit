@@ -22,76 +22,26 @@
 
 \newcommand{\LSset}[2]{\scriptsize $\begin{aligned}&\{#1\}_L\\&\{#2\}_S\end{aligned}$}
 
-\newcommand{\memplot}[1]{ 
-\begin{tikzpicture}
-	\begin{axis}[
-		ymin=0,
-		ymax=2000000000,
-		stack plots=y,
-		no markers,
-		every axis plot post/.append style={
-			% add the fill color to each `\addplot`
-			% (`.` is an abbreviation for the "current color")
-			fill=.!25,
-			draw=none,
-		},
-		axis line style={draw=none},
-		ticks=none,
-		grid=major,
-		grid style={help lines},
-	]
-		\addplot[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1} \closedcycle;
-	\end{axis}
-	\begin{axis}[
-		ymin=0,
-		ymax=2000000000,
-		stack plots=y,
-		no markers,
-		axis lines=none,
-	]
-		\addplot[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1};
-	\end{axis}
-	\begin{axis}[
-		ymin=0,
-		ymax=2000000000,
-		stack plots=y,
-    no markers,
-    every axis plot post/.append style={
-          % add the fill color to each `\addplot`
-          % (`.` is an abbreviation for the "current color")
-          fill=.!25,
-					draw=none,
-    },
-		% we don't want to draw the axis lines etc. twice
-		axis lines=none,
-	]
-			\addplot table[col sep=comma,header=true,x index=0, y index=1] {#1} \closedcycle;
-			\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1}  \closedcycle;
-			\addplot table[col sep=comma,header=true,x index=0, y index=3] {#1}  \closedcycle;
-	\end{axis}
-	\begin{axis}[
-		ymin=0,
-		ymax=2000000000,
-		stack plots=y,
-    no markers,
-		grid=none,
-	]
-			\addplot table[col sep=comma,header=true,x index=0, y index=1] {#1};
-			\addplot table[col sep=comma,header=true,x index=0, y index=2] {#1};
-			\addplot table[col sep=comma,header=true,x index=0, y index=3] {#1};
-	\end{axis}
-\end{tikzpicture}
-}
-
 
 
 \begin{document}
-
-\begin{tikzpicture}[spy using outlines={rectangle, red, magnification=5,
-	size=3.8cm, connect spies}]
-	\node{\includegraphics[width=.8\textwidth]{fps-cube.png}};
-	\spy on (-3.8,2.6) in node [right] at (-10,2);
-	\spy on (0.25,.6) in node [right] at (-10,-2);
-\end{tikzpicture}
-
+\begin{tikzpicture}
+	\usetikzlibrary{calc}
+	\node[draw, minimum size = 1cm, label ={RenderedRenderable}] at (0,2) (rr) {};
+	\node[draw, minimum size = 1cm, label ={Renderable}] at (-3,2) (r) {};
+	\node[draw, minimum size = 1cm, label ={Cache}] at (-3,0) (c) {};
+	\node[draw, minimum size = 1cm, label ={usedRenderables}]  at (3,0) (u) {};
+	\draw[->, very thick] (c) -- coordinate[pos=.67] (start)  (u);
+	\draw[dashed] (rr) -- (0,0);
+	\foreach \i in {-.1,.1,.3}{
+	\draw[->] ($(r.center)+(0,\i)$) -- ($(rr.center)+(0,\i)$);
+	}
+	\draw[->] ($(r.center)+(0,-.3)$) -- node[below] {Daten} ($(rr.center)+(0,-.3)$);
+	\node[draw,rounded rectangle,anchor=west]  at (2.5,-1.5) (omr) {(Opaque/Transparent)MasterRenderer};
+	\draw[->, very thick] (start) |- (omr.west);
+	\foreach \i in {-.3,-.1,.1,.3}{
+		\draw ($(c.center)+(-.5,\i)$) -- ($(c.center)+(.5,\i)$);
+		\draw ($(u.center)+(-.5,\i)$) -- ($(u.center)+(.5,\i)$);
+		}
+	\end{tikzpicture}
 \end{document}
