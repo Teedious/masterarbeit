@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  10 APR 2022 17:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  10 APR 2022 19:16
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
@@ -1713,4 +1713,96 @@ File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 8.
-LaTeX Fo
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+ (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+ (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
+ (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+
+{C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./img//IM_Logo.pdf>]
+Package tocbasic Info: character protrusion at toc deactivated on input line 11.
+ (masterarbeit.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 114.
+ [2
+
+])
+\tf@toc=\write6
+\openout6 = `masterarbeit.toc'.
+
+ [3] [4
+
+] (chapters/Grundlagen/PetriNetze.tex [5] [6] [7]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 167.
+) (chapters/Grundlagen/GrundlagenZuThreading.tex [8]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 19.
+ (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input line 49.
+FiXme Note: '{\color {red}Farbe anpassen}' on input line 49.
+ [9]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 53.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 54.
+\aOne=\skip118
+\aTwo=\skip119
+\aThree=\skip120
+\bOne=\skip121
+\bTwo=\skip122
+ [10] [11]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 144.
+ [12]
+FiXme Note: '{\color {red}Reccource/Datum definieren*}' on input line 148.
+ [13]
+FiXme Note: '{\color {red}Check, dass Chunk definiert ist}' on input line 200.
+ [14]) (chapters/Grundlagen/MultithreadingInJava.tex [15]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 24.
+ [16] [17]
+Overfull \hbox (0.30421pt too wide) in paragraph at lines 53--55
+[]\T1/lmr/m/n/12 (-20) Java stellt un-ter an-de-rem die Klas-sen []\T1/lmtt/m/n/12 c-B[][][]\T1/lmr/m/n/12 (-20) , []\T1/lmtt/m/n/12 c-I[][][]\T1/lmr/m/n/12 (-20) , []\T1/lmtt/m/n/12 c-L[][][] \T1/lmr/m/n/12 (-20) und []\T1/lmtt/m/n/12 c-
+ []
+
+[18]
+
+LaTeX Warning: Hyper reference `appendix:concFrameworkExecutor' on page 19 undefined on input line 79.
+
+
+LaTeX Warning: Reference `appendix:concFrameworkExecutor' on page 19 undefined on input line 79.
+
+
+LaTeX Warning: Reference `appendix:concFrameworkExecutor' on page 19 undefined on input line 79.
+
+[19]
+
+LaTeX Warning: Hyper reference `appendix:CompletionStage' on page 20 undefined on input line 85.
+
+
+LaTeX Warning: Referenc

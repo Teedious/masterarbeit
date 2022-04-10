@@ -1,4 +1,3 @@
-\paragraph{Schattenflackern}
 \begin{figure}
 	\begin{tikzpicture}
 		\node at (0,0) {\includegraphics[width=.3\textwidth]{flackern-1.png}};
@@ -14,7 +13,7 @@
 		\node at (0,0) {\includegraphics[width=.3\textwidth]{flackern-3.png}};
 		\node[draw=red, circle, minimum size = 1.5cm] at (.25,-.5) {};
 	\end{tikzpicture}
-	\caption{Beispiel von flackerndem Schatten in der Blocklib. Besonders der Schatten des rechten Baums (rot eingekreist) ist auffällig. Im Ablauf der drei Bilder von links nach rechts ist er im mittleren Bild nicht zu sehen.}\label{fig:flackern}
+	\caption{Beispiel von flackerndem Schatten in der Blocklib. Besonders der Schatten des rechten Baums (rot eingekreist) ist auffällig. Im Ablauf der drei Frames von links nach rechts ist er im mittleren Bild nicht zu sehen.}\label{fig:flackern}
 \end{figure}
 Bei der parallelen Ausführung des Renderthreads ist bei der Darstellung der Schatten ein Flackern zu erkennen, das beispielhaft in Abbildung~\vref{fig:flackern} zu sehen ist. Die Tatsache, dass das Flackern in irregulären Intervallen auftritt, lässt auf das Vorhandensein einer Race Condition schließen. Diese Vermutung kann dadurch bestätigt werden, dass das Flackern nicht mehr auftritt, sobald \code{update()} und \code{render()} sequentialisiert werden.
 
