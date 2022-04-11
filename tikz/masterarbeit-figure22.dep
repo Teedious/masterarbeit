@@ -1,2 +1,2 @@
-tikz/masterarbeit-figure22.pdf: performance/measurements/seed-0-cube-single-cpu.csv
-tikz/masterarbeit-figure22.pdf: performance/measurements/seed-0-cube-multi-cpu.csv
+tikz/masterarbeit-figure22.pdf: performance/measurements/seed-0-hexagon-single-gpu.csv
+tikz/masterarbeit-figure22.pdf: performance/measurements/seed-0-hexagon-multi-gpu.csv

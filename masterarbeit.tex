@@ -45,43 +45,43 @@
 
 \subsection{Design der nebenläufigen Architektur}
 \input{chapters/DesignDerThreadingApi/Design.tex}
-\pagebreak
 \subsubsection{Design des Renderthreads}\label{sec:desgignRenderthread}
 \input{chapters/DesignDerThreadingApi/Renderthread.tex}
 \subsubsection{Design des Jobsystems}\label{sec:desgignJobsystem}
 \input{chapters/DesignDerThreadingApi/JobApi.tex}
 
-\subsection{Implementierung der nebenläufigen Architektur}
+\pagebreak
+\section{Implementierung der nebenläufigen Architektur}
 \input{chapters/Implementierung/Implementierung.tex}
-\subsubsection{Implementierung des Renderthreads}
+\subsection{Implementierung des Renderthreads}
 \input{chapters/Implementierung/ImplementierungRenderthread.tex}
 \input{chapters/Implementierung/UmstellungRenderarchitektur.tex}
 \subsubsection{Suche nach Race Conditions}\label{sec:searchRace}
 \input{chapters/Implementierung/SucheNachRaceConditions.tex}
-\subsubsection{Implementierung des Jobsystems}
+\subsection{Implementierung des Jobsystems}
 \input{chapters/Implementierung/ImplementierungJobsystem.tex}
 
-% \clearpage
-% \section{Performanceanalyse}
-% \input{chapters/Performance/0-performance.tex}
-% \subsection{Szenario 1: Hexagon}
-% \input{chapters/Performance/1-hexagon.tex}
-% \subsection{Szenario 2: Halb-Würfel}
-% \input{chapters/Performance/2-cube.tex}
-% \subsection{Szenario 3: Welt-Statisch}
-% \input{chapters/Performance/3-static.tex}
-% \subsection{Szenario 4: Welt-Rotation}
-% \input{chapters/Performance/4-rotate.tex}
-% %\subsubsection{Szenario 5: Welt-Gehen}
-% %\input{chapters/Performance/5-walk.tex}
-% \subsection{Zusammenfassung}
-% \input{chapters/Performance/zusammenfassung.tex}
+\clearpage
+\section{Performanceanalyse}
+\input{chapters/Performance/0-performance.tex}
+\subsection{Szenario 1: Hexagon}
+\input{chapters/Performance/1-hexagon.tex}
+\subsection{Szenario 2: Halb-Würfel}
+\input{chapters/Performance/2-cube.tex}
+\subsection{Szenario 3: Welt-Statisch}
+\input{chapters/Performance/3-static.tex}
+\subsection{Szenario 4: Welt-Rotation}
+\input{chapters/Performance/4-rotate.tex}
+%\subsubsection{Szenario 5: Welt-Gehen}
+%\input{chapters/Performance/5-walk.tex}
+\subsection{Zusammenfassung}
+\input{chapters/Performance/zusammenfassung.tex}
 
 \pagebreak
 \section{Fazit}
 \pagebreak
 \section{Ausblick}
-\subsection{Etablierung einer Composition Root}
+\subsection{Etablierung einer Composition Root}\label{sec:EtablierungEinerKompositionroot}
 \input{chapters/Ausblick/EtablierungEinerKompositionroot.tex}
 \subsection{Dynamisches Rendern von Schrift}
 \subsection{Thread Affinity}

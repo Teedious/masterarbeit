@@ -182,11 +182,17 @@ Daher wird ein Double-Buffer für die \emph{Änderung} der globalen \glspl{unifo
 Die Game-Loop wird in eine Klasse \class{GameLoop} ausgelagert, um die für den Vorgang nötigen Methoden und Attribut von den restlichen Elementen der \class{Game}-Klasse zu trennen. Da diese beiden Klassen allerdings weiterhin eng miteinander gekoppelt sind, ist \class{GameLoop} als innere Klasse in \class{Game} implementiert. Ein Klassendiagramm von  \class{GameLoop} mit allen Attributen und Methoden ist in Abbildung~\vref{fig:DiagGameLoop} zu sehen.
 \begin{figure}[htbp]
 	\centering
-	\includesvg[scale=.8]{GameLoop.svg}
-	\caption{Klassendiagramm der nun für die Game-Loop zuständigen Klasse \class{GameLoop}.}\label{fig:DiagGameLoop}
+	\includesvg[width=\textwidth]{GameLoop.svg}
+	\caption{Klassendiagramm der nun für die Game-Loop zuständigen Klasse \class{GameLoop} und der neuen Rendering-Klasse \class{RenderThread}.}\label{fig:DiagGameLoop}
 \end{figure}
 Die Klasse definiert eine öffentliche Methode \code{start()}, die die Game-Loop startet. Da die Blocklib als Multiplayer- und Singleplayer-Bibliothek ausgelegt ist, kann die Software auch als Server ohne Bildausgabe genutzt werden. Das verändert den Ablauf der Game-Loop, denn dann muss keine Bild berechnet werden und es existiert kein Renderthread. Damit diese Unterscheidung während des Starts der Game-Loop durchgeführt werden kann, nutzt die neue Klasse \class{GameLoop} zur Speicherung der durchzuführenden Aktionen \class{Runnable}- und \class{Supplier}\footnote{Das Interface \class{Supplier<T>} definiert genau eine Methode \code{get()}. Siehe auch \url{https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html}.}-Objekte. Dadurch können in den unterschiedlichen Ausführungsmodi verschiedene Aktionen ausgeführt werden. Das Attribut \var{stepAction} enthält die Aktionen, die während eines Frames beziehungsweise während eines Simulationsschritts ausgeführt werden sollen. In der \code{init()}-Methode wird das Attribut auf \code{GameLoop.stepWindow} gesetzt, wenn eine Bildausgabe erfolgen soll, ansonsten wird die Variable auf \code{GameLoop.stepSimulation} gesetzt. Auch die anderen Attribute werden während der Initialisierung auf die jeweils gewünschten Werte gesetzt. Währende der Ausführung der Game-Loop muss dann nicht geprüft werden, welcher Ausführungsmodus beim Start der Blocklib festgelegt worden ist.
 
 In der Methode \code{stepWindow()} werden die Simulation und das Rendering nebenläufig ausgeführt. Dazu wird das Jobsystem genutzt, um die Methode \code{stepSimulation()} nebenläufig zu starten. 
 
-Die Anweisungen, die der Renderthread ausführt, sind in die Klasse \class{RenderThread} ausgelagert.
+Die Anweisungen, die der Renderthread ausführt, sind in die Klasse \class{RenderThread} ausgelagert. Das Klassendiagramm in Abbildung~\vref{fig:DiagGameLoop} zeigt rechts die Klasse \class{RenderThread} mit Attributen und Methoden. Der Ablauf der Methode \code{stepWindow()} in Abbildung~\vref{fig:stepWindowActivity}
+\begin{figure}
+	\centering
+	\includesvg[scale=.8]{GameLoopActivity.svg}
+	\caption{Aktivitätsdiagramm der Methode \code{stepWindow()} in \class{CameLoop}. Die Simulation und das Rendering werden nebenläufig ausgeführt, alle anderen Aktivitäten werden automatisch synchronisiert ausgeführt, indem sie außerhalb des nebenläufigen Bereichs sind.}\label{fig:stepWindowActivity}
+\end{figure}
+ruft \class{GameLoop} in der Aktivität \enquote{Tausche Puffer} die Methode \code{swapBuffer()}, in \enquote{Lade Daten auf \ac{gpu}} \code{loadGraphics()} und in \enquote{Rendering} \code{render()} auf. Wie in der Abbildung zu durch die schwarzen Nebenläufigkeitsbalken zu erkennen ist, werden die Simulation und das Rendering in \code{stepWindow()} nebenläufig ausgeführt. Die restlichen Anweisungen werden sequentiell ausgeführt, wie in den vorherigen Abschnitten beschrieben.

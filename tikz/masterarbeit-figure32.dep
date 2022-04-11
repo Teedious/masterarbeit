@@ -1,2 +1,2 @@
-tikz/masterarbeit-figure32.pdf: performance/measurements/seed-0-rotate-single-cpu.csv
-tikz/masterarbeit-figure32.pdf: performance/measurements/seed-0-rotate-multi-cpu.csv
+tikz/masterarbeit-figure32.pdf: performance/measurements/seed-0-static-single-cpu.csv
+tikz/masterarbeit-figure32.pdf: performance/measurements/seed-0-static-multi-cpu.csv
