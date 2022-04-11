@@ -28,9 +28,32 @@ Die Implementierung von priorisierten Jobs wird aktuell durch die Nutzung zweier
 
 Ziel für die Zukunft ist es, dass statt der durch Java bereitgestellten \class{ScheduledThreadPoolExecutor} Klasse ein vollkommen eigenständiger \class{ExecutorService} entwickelt wird, der das Interface \class{BlocklibExecutorService} implementiert. Dieser benötigt eine zweistufige Prioritäts-Warteschlange. Die erste Priorisierung ergibt sich aus den Anforderungen von \class{ScheduledExectutorService}. Danach werden die Tasks nach ihrem Zeitplan sortiert, Tasks die sofort ausgeführt werden sollen müssen vor Tasks einsortiert werden, die erst in einer Sekunde ausgeführt werden sollen. Bei Tasks, die den selben Zeitplan besitzen müssen dann nach ihrer Priorität (\class{TaskPriority}) sortiert werden. Bei gleicher Priorität kann eine beliebige Sortierung verwendet werden. Die Einfüge-Reihenfolge bietet sich aber an, sodass hinzugefügte Tasks auch zuerst ausgeführt werden (engl. first-in first-out (FIFO)).
 
-Bei eingehenden Tasks prüft der \class{BlocklibExecutor} die Priorität und wählt danach den entsprechenden Executor aus. Dann muss der Task noch so verpackt werden, dass eine Verkettung von Tasks möglich ist
+Bei eingehenden Tasks prüft der \class{BlocklibExecutor} die Priorität und wählt danach den entsprechenden Executor aus. Dann muss der Task noch so verpackt werden, dass eine Verkettung von Tasks möglich ist.
 
-\subsubsection{Verkettung von Tasks}\label{sec:Verkettung}
+\subsubsection{Komposition von Tasks}\label{sec:Verkettung}
+Für die Verpackung von Tasks, sodass diese komponiert werden können, ist die Klasse \class{CompletableFutureWrapper} zuständig. Wie in Abbildung~\vref{fig:wrapper} gezeigt, erzeugt die Klasse dafür Klassen, die \class{Callable} implementieren und Klassen, die von \class{CompletableFuture} abgeleitet sind.
+\begin{figure}
+	\centering
+	\includesvg[width=.9\textwidth]{Wrapper.svg}
+	\caption{}\label{fig:wrapper}
+\end{figure}
+Die Klasse \class{CompletingCallable} enthält die übergebene \class{TaskPriority} und eine Sequenznummer für eine zukünftige Prioritäts-Warteschlange. Zudem wird bei der Konstruktion der ursprüngliche Task und ein \class{CompletableFuture}-Objekt übergeben. 
+\begin{lstlisting}[caption={\code{call()}-Methode von \class{CompletingCallable}. Das enthaltene \class{Callable} wird ausgeführt und dann das \class{CompletableFuture} abgeschlossen.}, label={lst:CompletingCall},float]
+	public V call() throws Exception {
+		try {
+			var result = innerCallable.call(); (*\label{lst:CompletingCall:call}*)
+			completableFuture.complete(result); (*\label{lst:CompletingCall:complete}*)
+			return result;
+		} catch (Exception e) {
+			completableFuture.completeExceptionally(e); (*\label{lst:CompletingCall:exceptionally}*)
+			throw e;
+		}
+	}
+\end{lstlisting}
+Wie in Listing~\vref{lst:CompletingCall} zu sehen, führt das \class{CompletingCallable} in seiner \code{call()}-Methode von die \code{call()}-Methode des ihm übergebenen \class{Callable} \var{innerCallable} aus und speichert den Rückgabewert (Zeile~\ref{lst:CompletingCall:call}). Ist der Aufruf erfolgreich, wird das übergebene \class{CompletableFuture} mit dem Rückgabewert abgeschlossen (Zeile~\ref{lst:CompletingCall:complete}). Tritt ein Fehler auf, so wird das  \class{CompletableFuture} mit dem entstandenen Fehler abgeschlossen (Zeile~\ref{lst:CompletingCall:exceptionally}).
+
+Auf diese Weise kann das übergebene \class{CompletableFuture} genutzt werden, um nach Abschluss des inneren \class{Callable} weitere Tasks anzuhängen.
+Da das Interface \class{ExecutorService} die Übergabe von \class{Callable} aber auch \class{Runnable} unterstützt, werden aus \class{Runnable}-Objekten mit der Klasse \class{RunnableCallable} in \class{Callable}-Objekte verpackt.
 
 \subsubsection{Konsolidierung mit dem bestehenden System}\label{sec:Konsolidierung}
 

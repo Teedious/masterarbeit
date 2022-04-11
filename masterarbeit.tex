@@ -1,14 +1,23 @@
 % !TeX spellcheck = de_DE
 % !LuaLaTeX
-\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half,numbers=noenddot]{scrartcl}
+\documentclass[12pt,a4paper,listof=toc,parskip=half,numbers=noenddot,abstract=true]{scrartcl}
 \input{preamble}
 \input{plots}
 \input{glossary}
 \begin{document}
 \input{titelseite} 
 \null\thispagestyle{empty}\clearpage
+\markright{\abstractname}
+\begin{abstract}
+	TODO meine Zusammenfassung
+\end{abstract}
+\clearpage
 \markright{Inhaltsverzeichnis}
 \tableofcontents\clearpage
+\listoffigures\clearpage
+\markright{Tabellenverzeichnis und Listings}
+\listoftables
+\lstlistoflistings\clearpage
 
 \RedeclareSectionCommand[afterindent=no,runin=no,beforeskip=4pt,afterskip=0pt]{section}
 \RedeclareSectionCommand[afterindent=no,runin=no,beforeskip=4pt,afterskip=-2pt]{subsection}
@@ -61,21 +70,21 @@
 \subsection{Implementierung des Jobsystems}
 \input{chapters/Implementierung/ImplementierungJobsystem.tex}
 
-\clearpage
-\section{Performanceanalyse}
-\input{chapters/Performance/0-performance.tex}
-\subsection{Szenario 1: Hexagon}
-\input{chapters/Performance/1-hexagon.tex}
-\subsection{Szenario 2: Halb-Würfel}
-\input{chapters/Performance/2-cube.tex}
-\subsection{Szenario 3: Welt-Statisch}
-\input{chapters/Performance/3-static.tex}
-\subsection{Szenario 4: Welt-Rotation}
-\input{chapters/Performance/4-rotate.tex}
-%\subsubsection{Szenario 5: Welt-Gehen}
-%\input{chapters/Performance/5-walk.tex}
-\subsection{Zusammenfassung}
-\input{chapters/Performance/zusammenfassung.tex}
+% \clearpage
+% \section{Performanceanalyse}
+% \input{chapters/Performance/0-performance.tex}
+% \subsection{Szenario 1: Hexagon}
+% \input{chapters/Performance/1-hexagon.tex}
+% \subsection{Szenario 2: Halb-Würfel}
+% \input{chapters/Performance/2-cube.tex}
+% \subsection{Szenario 3: Welt-Statisch}
+% \input{chapters/Performance/3-static.tex}
+% \subsection{Szenario 4: Welt-Rotation}
+% \input{chapters/Performance/4-rotate.tex}
+% %\subsubsection{Szenario 5: Welt-Gehen}
+% %\input{chapters/Performance/5-walk.tex}
+% \subsection{Zusammenfassung}
+% \input{chapters/Performance/zusammenfassung.tex}
 
 \pagebreak
 \section{Fazit}
