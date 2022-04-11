@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  11 APR 2022 16:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  11 APR 2022 16:38
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
@@ -2231,13 +2231,56 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  [72] [73]
 
+pdfTeX warning: pdflatex (file ./img/Mastererklaerung.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<img/Mastererklaerung.pdf, id=2978, 597.45204pt x 845.1575pt>
+File: img/Mastererklaerung.pdf Graphic file (type pdf)
+<use img/Mastererklaerung.pdf>
+Package pdftex.def Info: img/Mastererklaerung.pdf  used on input line 102.
+(pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
+
+
+pdfTeX warning: pdflatex (file ./img/Mastererklaerung.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+File: img/Mastererklaerung.pdf Graphic file (type pdf)
+<use img/Mastererklaerung.pdf>
+Package pdftex.def Info: img/Mastererklaerung.pdf  used on input line 102.
+(pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
+
+
+pdfTeX warning: pdflatex (file ./img/Mastererklaerung.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./img/Mastererklaerung.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<img/Mastererklaerung.pdf, id=2981, page=1, 597.45204pt x 845.1575pt>
+File: img/Mastererklaerung.pdf Graphic file (type pdf)
+<use img/Mastererklaerung.pdf, page 1>
+Package pdftex.def Info: img/Mastererklaerung.pdf , page1 used on input line 102.
+(pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
+File: img/Mastererklaerung.pdf Graphic file (type pdf)
+<use img/Mastererklaerung.pdf, page 1>
+Package pdftex.def Info: img/Mastererklaerung.pdf , page1 used on input line 102.
+(pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
+[74]
+File: img/Mastererklaerung.pdf Graphic file (type pdf)
+<use img/Mastererklaerung.pdf, page 1>
+Package pdftex.def Info: img/Mastererklaerung.pdf , page1 used on input line 102.
+(pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
+File: img/Mastererklaerung.pdf Graphic file (type pdf)
+<use img/Mastererklaerung.pdf, page 1>
+Package pdftex.def Info: img/Mastererklaerung.pdf , page1 used on input line 102.
+(pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
+File: img/Mastererklaerung.pdf Graphic file (type pdf)
+<use img/Mastererklaerung.pdf, page 1>
+Package pdftex.def Info: img/Mastererklaerung.pdf , page1 used on input line 102.
+(pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
+ [75 <./img/Mastererklaerung.pdf>]
+
 FiXme Summary: Number of notes: 3,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
 (FiXme)        Total: 3.
 
-[74] (masterarbeit.aux)
+(masterarbeit.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2248,17 +2291,17 @@ Package logreq Info: Writing requests to 'masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71959 strings out of 478870
- 1625301 string characters out of 2847888
- 2794492 words of memory out of 3000000
- 87826 multiletter control sequences out of 15000+600000
+ 71974 strings out of 478870
+ 1625745 string characters out of 2847888
+ 2794480 words of memory out of 3000000
+ 87837 multiletter control sequences out of 15000+600000
  519741 words of font info for 280 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  115i,21n,134p,10669b,2709s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on masterarbeit.pdf (74 pages, 18069062 bytes).
+Output written on masterarbeit.pdf (75 pages, 18210798 bytes).
 PDF statistics:
- 3372 PDF objects out of 3580 (max. 8388607)
- 415 named destinations out of 1000 (max. 500000)
- 61251 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 3429 PDF objects out of 3580 (max. 8388607)
+ 416 named destinations out of 1000 (max. 500000)
+ 61271 words of extra memory for PDF output out of 61914 (max. 10000000)
 
