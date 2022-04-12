@@ -21,28 +21,23 @@ Das Interface \class{BlocklibExecutorService} wird durch die Klasse \class{Block
 }
 \si[]{\fps}\ac{cpu}\ac{gpu}\ac{ram}\\
 
+\memplot{seed-0-hexagon-single-mem.csv} 
+\fpsplot[ymax=1200,height=12cm,]{seed-0-hexagon}
+\cpuplot{seed-0-hexagon}
+\gpuplot{seed-0-hexagon}
 
-%\fpsplot[]{seed\SetCell[r=3]{}hexagon}
-%\fpsplot[]{seed\SetCell[r=3]{}cube}
-%\fpsplot[]{seed\SetCell[r=3]{}static}
-%\fpsplot[]{seed\SetCell[r=3]{}rotate}
-%\fpsplot{seed\SetCell[r=3]{}walk}
-%\fpsplot[]{seed\SetCell[r=3]{}walk}
-%\fpsplot{seed-10-walk}
-%\clearpage
-%\cpuplot[]{seed\SetCell[r=3]{}hexagon}
-%\cpuplot[]{seed\SetCell[r=3]{}cube}
-%\cpuplot[]{seed\SetCell[r=3]{}static}
-%\cpuplot[]{seed\SetCell[r=3]{}rotate}
-%\cpuplot[]{seed\SetCell[r=3]{}walk}
-%\cpuplot[]{seed\SetCell[r=3]{}walk}
-%\cpuplot{seed-10-walk}
-%\clearpage
-%\gpuplot[]{seed\SetCell[r=3]{}hexagon}
-%\gpuplot[]{seed\SetCell[r=3]{}cube}
-%\gpuplot[]{seed\SetCell[r=3]{}static}
-%\gpuplot[]{seed\SetCell[r=3]{}rotate}
-%\gpuplot[]{seed\SetCell[r=3]{}walk}
-%\gpuplot[]{seed\SetCell[r=3]{}walk}
-%\gpuplot{seed-10-walk}
+\clearpage
+\pgfplotsset{
+	height=2cm,
+	
+}
+\settowidth\mytemp{1,}
+s\\
+	\fpsplot[ytick={0,200,...,1200},xticklabels={,,},xlabel={},height=4cm,ymax=1200,y label style={at={(ticklabel cs:.5,-\mytemp)}}]{seed-0-hexagon}\\
+	\fpsplot[xticklabels={,,},xlabel={}]{seed-0-cube}\\
+	\fpsplot[xticklabels={,,},xlabel={}]{seed-0-static}\\
+	\fpsplot[xticklabels={,,},xlabel={}]{seed-0-rotate}\\
+	\fpsplot[xticklabels={,,},xlabel={}]{seed-0-walk}\\
+	\fpsplot[xticklabels={,,},xlabel={}]{seed-3-walk}\\
+	\fpsplot{seed-10-walk}
 \end{document}

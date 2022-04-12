@@ -32,7 +32,7 @@ Aufgrund des Umfangs der Blocklib und der Unübersichtlichkeit an einigen Stelle
 		\draw  (0.5,3) rectangle (4.5,-2);
 		\draw  (5,3) rectangle (9,-2);
 	\end{tikzpicture}
-	\caption{Design der tatsächlichen Threadingarchitektur der Blocklib. Statt einer Simulation, die vollständig aus Jobs besteht, gibt es einen langen Simulations-Job, der aber weitere Jobs starten kann. \enquote{Sim} kennzeichnet einen Simulationsjob.}\label{fig:plannedArchitecture}
+	\caption[Design der neuen Multithreading-Architektur der Blocklib.]{Design der neuen Multithreading-Architektur der Blocklib. Statt einer Simulation, die vollständig aus Jobs besteht, gibt es einen langen Simulations-Job, der aber weitere Jobs starten kann. \enquote{Sim} kennzeichnet einen Simulationsjob.}\label{fig:plannedArchitecture}
 \end{figure}
 
 
@@ -42,7 +42,7 @@ Java bietet mit dem Interface \class{ExecutorService} bereits eine gute und beka
 
 \begin{figure}
 	\includesvg[width=\textwidth]{GrobesDesign.svg}
-	\caption{Struktur des designten Jobsystems. Das in der Blocklib definierte Interface wird von dem Interface \class{ScheduledExecutorService} abgeleitet. Damit steht ein für Java-Entwickler bekanntes Interface bereit, das erweitert wird.}\label{fig:GrobesDesign}
+	\caption[Struktur des entwickelten Jobsystems.]{Struktur des entwickelten Jobsystems. Das in der Blocklib definierte Interface wird von dem Interface \class{ScheduledExecutorService} abgeleitet. Damit steht ein für Java-Entwickler bekanntes Interface bereit, das erweitert wird.}\label{fig:GrobesDesign}
 \end{figure}
 
 In Abbildung~\vref{fig:GrobesDesign} ist die Struktur des Designs für das Jobsystem der Blocklib dargestellt. Es wird ein Interface \class{BlocklibExecutorService} definiert, das von dem Interface \class{ScheduledExecutorService} der Java Bibliothek abgeleitet ist. Das Interface wird so erweitert, dass die verschiedenen \code{submit(...)} Methoden jeweils Objekte des Typs \class{CompletableFuture} zurückgeben. Die \code{schedule(...)} Methoden geben jeweils ein \class{ScheduledCompletableFuture} Objekt zurück, das später noch näher erläutert wird.

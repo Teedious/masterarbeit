@@ -7,8 +7,8 @@ Ein nahezu universelles Designelement von Spielen ist die sogenannte \emph{Game 
   \item (grafische) Ausgabe
   \item Verarbeitung der Eingaben
 \end{itemize}
-Die Blocklib besitzt ebenfalls eine Game Loop und führt die beschriebenen Aufgaben in der obigen Reihenfolge sequentiell aus. Eigentlich gibt es sogar zwei Game Loops, eine für die Ausführung als Server (ohne graphische Ausgabe) und eine für einen Client oder Einzelspieler. Die Game Loop der Einzelspieler-Blocklib sieht vereinfacht wie folgt aus:
-\begin{lstlisting}
+Die Blocklib besitzt ebenfalls eine Game Loop und führt die beschriebenen Aufgaben in der obigen Reihenfolge sequentiell aus. Eigentlich gibt es sogar zwei Game Loops, eine für die Ausführung als Server (ohne graphische Ausgabe) und eine für einen Client oder Einzelspieler. Die Game-Loop der Einzelspieler-Blocklib sieht vereinfacht wie in Listing~\vref{lst:oldGameLoop} gezeigt aus.
+\begin{lstlisting}[caption={Vereinfachte Version der Blocklib für Einzelspieler.},label={lst:oldGameLoop},float]
 while(!shutdown){
 	//...
 	update(delta); // Berechnung des neuen Spielzustands
@@ -19,8 +19,8 @@ while(!shutdown){
 }
 \end{lstlisting}
 
-Die Methode \code{update(delta)} ruft ihrerseits die \code{update(delta)} Methoden der einzelnen Simulationssysteme auf.
-\begin{lstlisting}
+Die Methode \code{update(delta)} ruft ihrerseits die \code{update(delta)} Methoden der einzelnen Simulationssysteme auf (siehe Listing~\vref{lst:gameUpdate}).
+\begin{lstlisting}[caption={Vereinfachte Update-Methode von \class{Game}.}, label={lst:gameUpdate},float]
 private void update(float delta) {
 	//...
 	Context con = Context.getInstance();
@@ -47,7 +47,6 @@ Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufi
 
 \begin{table}
 	%fixup, because hyphenation of lstinline breaks width measurement
-	\newlength{\mytemp}
 	\settowidth{\mytemp}{\texttt{NioClientNetworkLayer}}
 	\renewcommand{\arraystretch}{1.5}
 	\begin{tblr}{colspec={p{\mytemp}X}}

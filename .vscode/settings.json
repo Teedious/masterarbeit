@@ -18,7 +18,6 @@
 			"name": "latexmkshell",
 			"command": "latexmk",
 			"args": [
-				"-f",
 				"-synctex=1",
 				"--shell-escape",
 				"-interaction=nonstopmode",

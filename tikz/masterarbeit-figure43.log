@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  12 APR 2022 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  12 APR 2022 13:50
 entering extended mode
 **\def\tikzexternalrealjob{masterarbeit}\input{masterarbeit}
 (masterarbeit.tex
@@ -1974,7 +1974,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 7.
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-No file tikz/masterarbeit-figure41.aux.
+No file tikz/masterarbeit-figure43.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
@@ -2113,8 +2113,8 @@ l3.sty
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'tikz/masterarbeit-figure41.bbl' not found.
-No file tikz/masterarbeit-figure41.bbl.
+Package biblatex Info: ... file 'tikz/masterarbeit-figure43.bbl' not found.
+No file tikz/masterarbeit-figure43.bbl.
 Package biblatex Info: Reference section=0 on input line 7.
 Package biblatex Info: Reference segment=0 on input line 7.
 
@@ -3819,13 +3819,17 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 ) (chapters/Performance/5-walk.tex
-\openout5 = `tikz/masterarbeit-figure41.dpth'.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+\openout5 = `tikz/masterarbeit-figure43.dpth'.
 
-PGFPlots: reading {performance/measurements/seed-0-walk-single-fps.csv}
+PGFPlots: reading {performance/measurements/seed-0-walk-single-gpu.csv}
 \tikzexternal@dep@file=\write6
-\openout6 = `tikz/masterarbeit-figure41.dep'.
+\openout6 = `tikz/masterarbeit-figure43.dep'.
 
-PGFPlots: reading {performance/measurements/seed-0-walk-multi-fps.csv}
+PGFPlots: reading {performance/measurements/seed-0-walk-multi-gpu.csv}
 [60
 
 \providecommand \oddpage@label [2]{}
@@ -3834,10 +3838,6 @@ PGFPlots: reading {performance/measurements/seed-0-walk-multi-fps.csv}
 \@newglossary{acronym}{alg}{acr}{acn}
 \providecommand\@glsxtr@savepreloctag[2]{}
 {C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -3956,28 +3956,28 @@ LaTeX Warning: There were undefined references.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                tikz/masterarbeit-figure41
+(biblatex)                tikz/masterarbeit-figure43
 (biblatex)                and rerun LaTeX afterwards.
 
-Package logreq Info: Writing requests to 'tikz/masterarbeit-figure41.run.xml'.
-\openout1 = `tikz/masterarbeit-figure41.run.xml'.
+Package logreq Info: Writing requests to 'tikz/masterarbeit-figure43.run.xml'.
+\openout1 = `tikz/masterarbeit-figure43.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71794 strings out of 478870
- 1626916 string characters out of 2847888
- 2695085 words of memory out of 3000000
- 88107 multiletter control sequences out of 15000+600000
+ 71805 strings out of 478870
+ 1627195 string characters out of 2847888
+ 2695048 words of memory out of 3000000
+ 88118 multiletter control sequences out of 15000+600000
  534654 words of font info for 292 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  119i,21n,137p,10665b,2465s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{glo:fps} has been referenced but does not exist, 
+pdfTeX warning (dest): name{glo:gpu} has been referenced but does not exist, 
 replaced by a fixed one
 
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/
 Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
-Output written on tikz/masterarbeit-figure41.pdf (1 page, 34452 bytes).
+Output written on tikz/masterarbeit-figure43.pdf (1 page, 35161 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

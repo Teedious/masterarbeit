@@ -19,7 +19,7 @@ Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. 
 			W &= \{((p_1, t_1),1), ((p_2, t_2),2), ((t_1, p_2), 1)\}\\
 			m_0 &= \{(p_1, 1), (p_2, 0)\}
 		\end{aligned}$
-		\subcaption{}\label{fig:petrinet:formal}
+		\subcaption{Formale Definition des PT-Netzes.}\label{fig:petrinet:formal}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{.48\textwidth}
@@ -34,9 +34,9 @@ Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. 
 			(t1) edge[post] node[above] {2} node[below=1cm] {$N$} (p2)
 			(p2) edge[post] node[above] {1} (t2);
 		\end{tikzpicture}
-		\subcaption{}\label{fig:petrinet:graph}
+		\subcaption{Graph-Repräsentation des PT-Netzes.}\label{fig:petrinet:graph}
 	\end{subfigure}
-	\caption{}\label{fig:petrinet}
+	\caption{Beispiel eines PT-Netzes mit zwei Plätzen und zwei Transitionen.}\label{fig:petrinet}
 \end{figure}
 
 \subsubsection{Transitionsregel} Um nun das Verhalten von Programmen beschreiben zu können, kann die Markierung eines Petrinetzes anhand der folgenden sogenannten Transitions-Regel geändert werden~\cite{Murata1989}.
@@ -86,7 +86,7 @@ Mittels der Transitionsregel lassen sich in einem Petri-Netz $N$ ausgehend von d
 		(q6) edge node {$t_2$} node[below=6mm] {Graph mit gekürzten Knotenbezeichnungen}(q7)
 		(q7) edge node {$t_2$} (q8);
 		\end{tikzpicture}
-		\caption{Erreichbarkeitsgraph des Petri-Netzes aus Abbildung~\vref{fig:petrinet}. Der Graph ist zweimal dargestellt. Oben enthalten die Knoten des Graphen die vollständige Auszeichnung der Markierung, unten wird die Kurzschreibweise für die Knotenbezeichnungen genutzt, in der die Position den Platz kodiert. Der \enquote{start} Pfeil kennzeichnet die anfängliche Markierung.}\label{fig:reachability}
+		\caption[Erreichbarkeitsgraph des Beispiel PT-Netzes.]{Erreichbarkeitsgraph des Petri-Netzes aus Abbildung~\vref{fig:petrinet}. Der Graph ist zweimal dargestellt. Oben enthalten die Knoten des Graphen die vollständige Auszeichnung der Markierung, unten wird die Kurzschreibweise für die Knotenbezeichnungen genutzt, in der die Position den Platz kodiert. Der \enquote{start} Pfeil kennzeichnet die anfängliche Markierung.}\label{fig:reachability}
 \end{figure}
 In Abbildung~\vref{fig:reachability} wird der Erreichbarkeitsgraph des in Abbildung~\vref{fig:petrinet} dargestellten Petri-Netzes gezeigt. Die Knoten des Graphen sind die Markierungen des Petri-Netzes, die durch die Transitionsregel erreicht werden können. Da die Plätze des Petri-Netzes nummeriert sind, kann die Markierung verkürzt geschrieben werden, indem der Index des Tupels der Knotenbezeichnung den Platz beschreibt und die Zahl die Anzahl der Marken des Platzes kennzeichnet. In der Abbildung ist oben der Graph mit den vollständigen Markierungsbezeichnungen dargestellt. Unten wird die verkürzte Schreibweise genutzt.
 
@@ -105,7 +105,7 @@ ist die Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraph
 			(t1) edge[post] node[above] {1} (p2)
 			(p2) edge[post] node[above] {1} (t2);
 		\end{tikzpicture}
-		\subcaption{}\label{fig:1-bpetrinet:graph}
+		\subcaption{Abwandlung des Petrinetzes aus Abbildung~\ref{fig:petrinet}. Die Gewichtungsfunktion ist für jede Relation maximal 1.}\label{fig:1-bpetrinet:graph}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{.48\textwidth}
@@ -117,9 +117,9 @@ ist die Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraph
 			(q1) edge node {$t_1$} (q2)
 			(q2) edge node {$t_2$} (q3);
 		\end{tikzpicture}
-		\subcaption{}\label{fig:1-bpetrinet:reachability}
+		\subcaption{Erreichbarkeitsgraph, bei dem die Zahl(en) in den Knoten die  Indizes der Plätze beschreiben, die eine Markierung besitzen.}\label{fig:1-bpetrinet:reachability}
 	\end{subfigure}
-\caption{}\label{fig:1-bpetrinet}
+\caption{Petrinetz und zugehöriger Erreichbarkeitsgraph, in dem die Anzahl der Markierungen pro Platz stets maximal 1 ist. }\label{fig:1-bpetrinet}
 \end{figure} 
 
 \subsubsection{Weitere Definitionen}
@@ -174,5 +174,5 @@ Ein Beispiel für ein erweitertes Petri-Netz, das ansonsten identisch zu dem Pet
 			(p2) edge[post] node[above] {1} (t2);
 		\end{tikzpicture}
 	\end{minipage}
-	\caption{Beispiel eines erweiterten Petri-Netzes. Links ist die formale Definition gegeben, rechts der dazugehörige Graph. In Platz $p_2$ wird auf die Variablen $a$ und $b$ lesend zugegriffen und auf Variable $a$ schreibend.}\label{fig:augpetrinet}
+	\caption[Beispiel eines erweiterten Petri-Netzes.]{Beispiel eines erweiterten Petri-Netzes. Links ist die formale Definition gegeben, rechts der dazugehörige Graph. In Platz $p_2$ wird auf die Variablen $a$ und $b$ lesend zugegriffen und auf Variable $a$ schreibend.}\label{fig:augpetrinet}
 \end{figure}

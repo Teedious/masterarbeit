@@ -1,3 +1,5 @@
+\newlength{\mytemp}
+
 \usepackage{scrhack}
 \usepackage[ngerman]{babel,varioref}
 \usepackage[T1]{fontenc}
@@ -88,15 +90,16 @@
 \usepackage{pgfplots}
 \pgfplotsset{
 	grid=major,
-	width=\textwidth,
-	height=5cm,
+	width=.88\textwidth,
+	height=2cm,
 	compat=1.18,
 	no markers,
   table/search path={performance/measurements},
+	scale only axis=true,
 }
 \usepgfplotslibrary{external}
 \tikzexternalize[prefix=tikz/,optimize command away=\includepdf]
-\tikzexternaldisable
+%\tikzexternaldisable
 %\tikzset{external/force remake}
 
 \newcommand{\unsim}{\mathord{\sim}}

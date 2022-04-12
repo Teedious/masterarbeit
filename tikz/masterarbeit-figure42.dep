@@ -1,2 +1,2 @@
-tikz/masterarbeit-figure42.pdf: performance/measurements/seed-10-walk-single-fps.csv
-tikz/masterarbeit-figure42.pdf: performance/measurements/seed-10-walk-multi-fps.csv
+tikz/masterarbeit-figure42.pdf: performance/measurements/seed-0-walk-single-cpu.csv
+tikz/masterarbeit-figure42.pdf: performance/measurements/seed-0-walk-multi-cpu.csv

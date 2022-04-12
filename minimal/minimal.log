@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  7 APR 2022 17:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  12 APR 2022 18:40
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex
@@ -116,7 +116,9 @@ Package tocbasic Info: babel extension for `lot' omitted
 \c@table=\count190
 Class scrartcl Info: Redefining `\numberline' on input line 6251.
 \bibindent=\dimen138
-) (../preamble.tex (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrhack.sty
+) (../preamble.tex
+\mytemp=\skip63
+ (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrhack.sty
 Package: scrhack 2021/06/25 v3.34 KOMA-Script package (hacking other packages)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2021-07-12 L3 programming layer (loader) 
@@ -208,7 +210,7 @@ LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
 File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 915.
 LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip63
+\MT@outer@space=\skip64
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
@@ -235,12 +237,12 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-Package scrhack Info: loading setspace hack on input line 10.
+Package scrhack Info: loading setspace hack on input line 12.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\setspace.hak
 File: setspace.hak 2021/06/25 v3.34 KOMA-Script scrhack part (hacking package setspace)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/04/20 v2.17j AMS math features
-\@mathmargin=\skip64
+\@mathmargin=\skip65
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -287,8 +289,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \totwidth@=\dimen156
 \lineht@=\dimen157
 \@envbody=\toks24
-\multlinegap=\skip65
-\multlinetaggap=\skip66
+\multlinegap=\skip66
+\multlinetaggap=\skip67
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
@@ -308,9 +310,9 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headfont=\toks28
 \thm@notefont=\toks29
 \thm@headpunct=\toks30
-\thm@preskip=\skip67
-\thm@postskip=\skip68
-\thm@headsep=\skip69
+\thm@preskip=\skip68
+\thm@postskip=\skip69
+\thm@headsep=\skip70
 \dth@everypar=\toks31
 )
 Class scrartcl Info: amsthm's \deferred@thm@head patched.
@@ -593,8 +595,8 @@ Package tocbasic Info: setting babel extension for `lox' on input line 711.
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \c@r@tfl@t=\count328
-\rotFPtop=\skip70
-\rotFPbot=\skip71
+\rotFPtop=\skip71
+\rotFPbot=\skip72
 \rot@float@box=\box84
 \rot@mess@toks=\toks45
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
@@ -631,8 +633,8 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \ar@mcellbox=\box92
 \extrarowheight=\dimen289
 \NC@list=\toks46
-\extratabsurround=\skip72
-\backup@length=\skip73
+\extratabsurround=\skip73
+\backup@length=\skip74
 \ar@cellbox=\box93
 )) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
@@ -691,14 +693,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@sectionciteorder@0=\count378
 \blx@entrysetcounter=\count379
 \blx@biblioinstance=\count380
-\labelnumberwidth=\skip74
-\labelalphawidth=\skip75
-\biblabelsep=\skip76
-\bibitemsep=\skip77
-\bibnamesep=\skip78
-\bibinitsep=\skip79
-\bibparsep=\skip80
-\bibhang=\skip81
+\labelnumberwidth=\skip75
+\labelalphawidth=\skip76
+\biblabelsep=\skip77
+\bibitemsep=\skip78
+\bibnamesep=\skip79
+\bibinitsep=\skip80
+\bibparsep=\skip81
+\bibhang=\skip82
 \blx@bcfin=\read6
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
@@ -782,20 +784,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count449
 \c@pageref=\count450
 \c@savedpageref=\count451
-\shorthandwidth=\skip82
-\shortjournalwidth=\skip83
-\shortserieswidth=\skip84
-\shorttitlewidth=\skip85
-\shortauthorwidth=\skip86
-\shorteditorwidth=\skip87
-\locallabelnumberwidth=\skip88
-\locallabelalphawidth=\skip89
-\localshorthandwidth=\skip90
-\localshortjournalwidth=\skip91
-\localshortserieswidth=\skip92
-\localshorttitlewidth=\skip93
-\localshortauthorwidth=\skip94
-\localshorteditorwidth=\skip95
+\shorthandwidth=\skip83
+\shortjournalwidth=\skip84
+\shortserieswidth=\skip85
+\shorttitlewidth=\skip86
+\shortauthorwidth=\skip87
+\shorteditorwidth=\skip88
+\locallabelnumberwidth=\skip89
+\locallabelalphawidth=\skip90
+\localshorthandwidth=\skip91
+\localshortjournalwidth=\skip92
+\localshortserieswidth=\skip93
+\localshorttitlewidth=\skip94
+\localshortauthorwidth=\skip95
+\localshorteditorwidth=\skip96
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
@@ -849,57 +851,69 @@ Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
 File: biblatex.cfg 
-)) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+)) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count463
+\calc@Bcount=\count464
+\calc@Adimen=\dimen290
+\calc@Bdimen=\dimen291
+\calc@Askip=\skip97
+\calc@Bskip=\skip98
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count465
+\calc@Cskip=\skip99
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
 Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen290
-\pgfmath@count=\count463
+\pgfmath@dimen=\dimen292
+\pgfmath@count=\count466
 \pgfmath@box=\box94
 \pgfmath@toks=\toks47
 \pgfmath@stack@operand=\toks48
 \pgfmath@stack@operation=\toks49
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex))) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count464
+\c@pgfmathroundto@lastzeros=\count467
 )) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen291
-\pgf@picmaxx=\dimen292
-\pgf@picminy=\dimen293
-\pgf@picmaxy=\dimen294
-\pgf@pathminx=\dimen295
-\pgf@pathmaxx=\dimen296
-\pgf@pathminy=\dimen297
-\pgf@pathmaxy=\dimen298
-\pgf@xx=\dimen299
-\pgf@xy=\dimen300
-\pgf@yx=\dimen301
-\pgf@yy=\dimen302
-\pgf@zx=\dimen303
-\pgf@zy=\dimen304
+\pgf@picminx=\dimen293
+\pgf@picmaxx=\dimen294
+\pgf@picminy=\dimen295
+\pgf@picmaxy=\dimen296
+\pgf@pathminx=\dimen297
+\pgf@pathmaxx=\dimen298
+\pgf@pathminy=\dimen299
+\pgf@pathmaxy=\dimen300
+\pgf@xx=\dimen301
+\pgf@xy=\dimen302
+\pgf@yx=\dimen303
+\pgf@yy=\dimen304
+\pgf@zx=\dimen305
+\pgf@zy=\dimen306
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen305
-\pgf@path@lasty=\dimen306
+\pgf@path@lastx=\dimen307
+\pgf@path@lasty=\dimen308
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen307
-\pgf@shorten@start@additional=\dimen308
+\pgf@shorten@end@additional=\dimen309
+\pgf@shorten@start@additional=\dimen310
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box95
 \pgf@hbox=\box96
 \pgf@layerbox@main=\box97
-\pgf@picture@serial@count=\count465
+\pgf@picture@serial@count=\count468
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen309
+\pgflinewidth=\dimen311
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen310
-\pgf@pt@y=\dimen311
-\pgf@pt@temp=\dimen312
+\pgf@pt@x=\dimen312
+\pgf@pt@y=\dimen313
+\pgf@pt@temp=\dimen314
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -908,12 +922,12 @@ File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen313
+\pgfarrowsep=\dimen315
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen314
-\pgf@sys@shading@range@num=\count466
-\pgf@shadingcount=\count467
+\pgf@max=\dimen316
+\pgf@sys@shading@range@num=\count469
+\pgf@shadingcount=\count470
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
@@ -934,48 +948,47 @@ File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen315
-\pgf@nodesepend=\dimen316
-)
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+\pgf@nodesepstart=\dimen317
+\pgf@nodesepend=\dimen318
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 )) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)
-\pgffor@iter=\dimen317
-\pgffor@skip=\dimen318
+\pgffor@iter=\dimen319
+\pgffor@skip=\dimen320
 \pgffor@stack=\toks50
 \pgffor@toks=\toks51
 )) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count468
-\pgfplotmarksize=\dimen319
+\pgf@plot@mark@count=\count471
+\pgfplotmarksize=\dimen321
 )
-\tikz@lastx=\dimen320
-\tikz@lasty=\dimen321
-\tikz@lastxsaved=\dimen322
-\tikz@lastysaved=\dimen323
-\tikz@lastmovetox=\dimen324
-\tikz@lastmovetoy=\dimen325
-\tikzleveldistance=\dimen326
-\tikzsiblingdistance=\dimen327
+\tikz@lastx=\dimen322
+\tikz@lasty=\dimen323
+\tikz@lastxsaved=\dimen324
+\tikz@lastysaved=\dimen325
+\tikz@lastmovetox=\dimen326
+\tikz@lastmovetoy=\dimen327
+\tikzleveldistance=\dimen328
+\tikzsiblingdistance=\dimen329
 \tikz@figbox=\box100
 \tikz@figbox@bg=\box101
 \tikz@tempbox=\box102
 \tikz@tempbox@bg=\box103
-\tikztreelevel=\count469
-\tikznumberofchildren=\count470
-\tikznumberofcurrentchild=\count471
-\tikz@fig@count=\count472
+\tikztreelevel=\count472
+\tikznumberofchildren=\count473
+\tikznumberofcurrentchild=\count474
+\tikz@fig@count=\count475
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count473
-\pgfmatrixcurrentcolumn=\count474
-\pgf@matrix@numberofcolumns=\count475
+\pgfmatrixcurrentrow=\count476
+\pgfmatrixcurrentcolumn=\count477
+\pgf@matrix@numberofcolumns=\count478
 )
-\tikz@expandcount=\count476
+\tikz@expandcount=\count479
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
@@ -1036,19 +1049,7 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
 with kernel methods
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzexternalshared.code.tex)) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
 Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count477
-\calc@Bcount=\count478
-\calc@Adimen=\dimen328
-\calc@Bdimen=\dimen329
-\calc@Askip=\skip96
-\calc@Bskip=\skip97
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count479
-\calc@Cskip=\skip98
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+ (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \ESO@tempdima=\dimen330
 \ESO@tempdimb=\dimen331
@@ -1145,9 +1146,9 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times (expandable; minimal)
 )) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip99
+\multirow@colwidth=\skip100
 \multirow@cntb=\count490
-\multirow@dima=\skip100
+\multirow@dima=\skip101
 \bigstrutjot=\dimen356
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
@@ -1165,7 +1166,7 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 63.
+(scrhack)             need that hack, on input line 73.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
@@ -1242,7 +1243,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
-\Hy@SectionHShift=\skip101
+\Hy@SectionHShift=\skip102
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-extra\glossaries-extra.sty
 Package: glossaries-extra 2021/11/22 v1.48 (NLCT)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/base\glossaries.sty
@@ -1300,7 +1301,7 @@ Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks57
 \@dtl@tmpcount=\count514
-\dtl@tmplength=\skip102
+\dtl@tmplength=\skip103
 \dtl@sortresult=\count515
 \@dtl@numgrpsepcount=\count516
 \@dtl@datatype=\count517
@@ -1316,7 +1317,7 @@ File: glossaries-german.ldf 2014/11/23 v1.0
 )
 \gls@level=\count521
 \@gls@tmpb=\toks58
-\gls@tmplen=\skip103
+\gls@tmplen=\skip104
 \glskeylisttok=\toks59
 \glslabeltok=\toks60
 \glsshorttok=\toks61
@@ -1325,15 +1326,15 @@ File: glossaries-german.ldf 2014/11/23 v1.0
 Package: glossary-hypernav 2021/09/20 v4.47 (NLCT)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-list.sty
 Package: glossary-list 2021/09/20 v4.47 (NLCT)
-\glslistdottedwidth=\skip104
+\glslistdottedwidth=\skip105
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-long.sty
 Package: glossary-long 2021/09/20 v4.47 (NLCT)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
-\LTleft=\skip105
-\LTright=\skip106
-\LTpre=\skip107
-\LTpost=\skip108
+\LTleft=\skip106
+\LTright=\skip107
+\LTpre=\skip108
+\LTpost=\skip109
 \LTchunksize=\count522
 \LTcapwidth=\dimen366
 \LT@head=\box130
@@ -1348,17 +1349,17 @@ Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LT@p@ftn=\toks63
 )
 Class scrartcl Info: longtable captions redefined on input line 43.
-\glsdescwidth=\skip109
-\glspagelistwidth=\skip110
+\glsdescwidth=\skip110
+\glspagelistwidth=\skip111
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-super.sty
 Package: glossary-super 2021/09/20 v4.47 (NLCT)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/supertabular\supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
 \c@tracingst=\count527
 \ST@wd=\dimen367
-\ST@rightskip=\skip111
-\ST@leftskip=\skip112
-\ST@parfillskip=\skip113
+\ST@rightskip=\skip112
+\ST@leftskip=\skip113
+\ST@parfillskip=\skip114
 \ST@pageleft=\dimen368
 \ST@headht=\dimen369
 \ST@tailht=\dimen370
@@ -1371,7 +1372,7 @@ Package: supertabular 2020/02/02 v4.1g the supertabular environment
 \ST@pbox=\box135
 )) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-tree.sty
 Package: glossary-tree 2021/09/20 v4.47 (NLCT)
-\glstreeindent=\skip114
+\glstreeindent=\skip115
 ))
 \@glsxtr@leveloffset=\count528
 \glsxtrresourcecount=\count529
@@ -1390,7 +1391,7 @@ LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \g_MT_multlinerow_int=\count532
 \l_MT_multwidth_dim=\dimen377
-\origjot=\skip115
+\origjot=\skip116
 \l_MT_shortvdotswithinadjustabove_dim=\dimen378
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen379
 \l_MT_above_intertext_sep=\dimen380
@@ -1399,10 +1400,10 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \l_MT_below_shortintertext_sep=\dimen383
 \xmathstrut@box=\box136
 \xmathstrut@dim=\dimen384
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
+
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
 \t@pgfplots@toka=\toks66
 \t@pgfplots@tokb=\toks67
 \t@pgfplots@tokc=\toks68
@@ -1463,7 +1464,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 126.
+Package scrhack Info: loading listings hack on input line 137.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\listings.hak
 File: listings.hak 2021/06/25 v3.34 KOMA-Script scrhack part (hacking package listings)
 Package tocbasic Info: setting babel extension for `lol' on input line 143.
@@ -1473,7 +1474,7 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-\wrapfigwidth=\skip116
+\wrapfigwidth=\skip117
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-scrpage.sty
 Package: scrlayer-scrpage 2021/06/25 v3.34 KOMA-Script package (end user interface for scrlayer)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer.sty
@@ -1618,12 +1619,11 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 \openout4 = `minimal.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'minimal.bbl' not found.
-
-No file minimal.bbl.
+Package biblatex Info: ... file 'minimal.bbl' found.
+ (minimal.bbl)
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+ (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
@@ -1632,7 +1632,7 @@ Package scrhack Info: loading lscape hack on input line 77.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\lscape.hak
 File: lscape.hak 2021/06/25 v3.34 KOMA-Script scrhack part (hacking package lscape)
 Package scrhack Info: \landscape patched to make \textheight change optional on input line 90.
-\scrh@LT@textheight=\skip117
+\scrh@LT@textheight=\skip118
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
@@ -1742,6 +1742,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
  []
 
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-cpu.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-cpu.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-gpu.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-gpu.csv}
+
+Overfull \hbox (64.61423pt too wide) in paragraph at lines 24--28
+[][]
+ []
+
+
+Overfull \hbox (60.9982pt too wide) in paragraph at lines 24--28
+[]
+ []
+
+
+Overfull \hbox (55.47537pt too wide) in paragraph at lines 24--28
+[]
+ []
+
+
+Overfull \hbox (55.47537pt too wide) in paragraph at lines 24--28
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--28
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 28.
+[1
+
+{C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-cube-single-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-cube-multi-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-static-single-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-static-multi-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-rotate-single-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-rotate-multi-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-walk-single-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-0-walk-multi-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-3-walk-single-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-3-walk-multi-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-10-walk-single-fps.csv}
+PGFPlots: reading {../performance/measurements/seed-10-walk-multi-fps.csv}
+
+Overfull \hbox (8.17886pt too wide) in paragraph at lines 35--43
+[]  
+ []
+
 
 FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
@@ -1754,11 +1824,9 @@ Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
  found. (Remove \makenoidxglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 48.
-[1
+[4
 
-{C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (minimal.aux)
+] (minimal.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1769,11 +1837,11 @@ Package logreq Info: Writing requests to 'minimal.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 69132 strings out of 478870
- 1563907 string characters out of 2847888
- 2697072 words of memory out of 3000000
- 85877 multiletter control sequences out of 15000+600000
- 452393 words of font info for 93 fonts, out of 8000000 for 9000
+ 69958 strings out of 478870
+ 1584914 string characters out of 2847888
+ 2776634 words of memory out of 3000000
+ 86664 multiletter control sequences out of 15000+600000
+ 452082 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  115i,20n,134p,10679b,2331s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:ram} has been referenced but does not exist, replaced by a fixed one
@@ -1784,10 +1852,10 @@ pdfTeX warning (dest): name{glo:cpu} has been referenced but does not exist, rep
 
 pdfTeX warning (dest): name{glo:fps} has been referenced but does not exist, replaced by a fixed one
 
-{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on minimal.pdf (1 page, 129661 bytes).
+{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on minimal.pdf (4 pages, 161633 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
  25101 words of extra memory for PDF output out of 29859 (max. 10000000)
 

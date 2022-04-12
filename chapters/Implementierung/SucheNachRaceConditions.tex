@@ -13,7 +13,7 @@
 		\node at (0,0) {\includegraphics[width=.3\textwidth]{flackern-3.png}};
 		\node[draw=red, circle, minimum size = 1.5cm] at (.25,-.5) {};
 	\end{tikzpicture}
-	\caption{Beispiel von flackerndem Schatten in der Blocklib. Besonders der Schatten des rechten Baums (rot eingekreist) ist auffällig. Im Ablauf der drei Frames von links nach rechts ist er im mittleren Bild nicht zu sehen.}\label{fig:flackern}
+	\caption[Beispiel von flackerndem Schatten in der Blocklib.]{Beispiel von flackerndem Schatten in der Blocklib. Besonders der Schatten des rechten Baums (rot eingekreist) ist auffällig. Im Ablauf der drei Frames von links nach rechts ist er im mittleren Bild nicht zu sehen.}\label{fig:flackern}
 \end{figure}
 Das folgenden Beispiel zeigt, warum die Zwischenspeicherung des für das Rendering relevanten Spielzustands nötig ist. Dazu wird das Auftreten einer speziellen Wettkampfbedingung vor der Implementierung der Zwischenspeicherung beschrieben. 
 
@@ -27,7 +27,7 @@ In der \class{Configuration}-Klasse gibt es die Variable \const{SHOW_SHADOW_MAP_
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\textwidth]{shadowMap.png}
-	\caption{Ausschnitt eines Screenshots der Blocklib bei aktivierter \class{ShadowMap}-Anzeige. Die \class{ShadowMap} speichert Entfernungs-Informationen, diese werden als rote Farbe interpretiert und ausgegeben. Je weiter etwas weg ist, desto intensiver ist das Rot.}\label{fig:ShadowMap}
+	\caption[Ausschnitt eines Screenshots der Blocklib bei aktivierter \class{ShadowMap}-Anzeige.]{Ausschnitt eines Screenshots der Blocklib bei aktivierter \class{ShadowMap}-Anzeige. Die \class{ShadowMap} speichert Entfernungs-Informationen, diese werden als rote Farbe interpretiert und ausgegeben. Je weiter etwas weg ist, desto intensiver ist das Rot.}\label{fig:ShadowMap}
 \end{figure}
 \textcite{Ebbinger2018} beschreibt, wie genau das Rendering von Schatten in der Blocklib umgesetzt ist. Wie der Name der Klasse \class{ShadowMap} vermuten lässt, wird für die Berechnung der Schatten das sogenannte \emph{Shadow Mapping} verwendet. Dazu wird eine zweite Kamera implementiert, die die Spielwelt aus der Sicht einer Lichtquelle, im Fall der Blocklib die Sonne, betrachtet. Die so gerenderte Sicht wird dann genutzt, um zu berechnen ob ein Fragment das erste Hindernis aus Sicht der Lichtquelle ist. Ist dies der Fall, so wird das Fragment beleuchtet, ansonsten ist etwas anderes vor dem Fragment und es befindet sich im Schatten.
 
@@ -45,8 +45,8 @@ Nun gilt es die Ursache der Positionsänderung ausfindig zu machen. Die Position
 	& $\to$ \code{DayNightLightig.updateLightPosition(float, boolean)}
 \end{tabular}
 
-\code{DayNightLightig.updateLightPosition(float, boolean)} wird nicht im Renderthread ausgeführt, sondern während \code{update()} in einem anderen Thread. Der relevante Abschnitt der Methode ist 
-\begin{lstlisting}[]
+\code{DayNightLightig.updateLightPosition(float, boolean)} wird nicht im Renderthread ausgeführt, sondern während \code{update()} in einem anderen Thread. Der relevante Abschnitt der Methode ist in Listing~\ref{lst:raceLight} dargestellt.
+\begin{lstlisting}[caption={Wettkampfbedingung in \code{updateLightPosition(...)}.},label={lst:raceLight}]
 private void updateLightPosition(float progress, boolean day) {
 	// ...
 	position = new Vector3f(direction.x, direction.y, direction.z);
