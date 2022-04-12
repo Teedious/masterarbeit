@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  12 APR 2022 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  12 APR 2022 20:05
 entering extended mode
 **\def\tikzexternalrealjob{masterarbeit}\input{masterarbeit}
 (masterarbeit.tex
@@ -142,6 +142,8 @@ Package tocbasic Info: babel extension for `lot' omitted
 Class scrartcl Info: Redefining `\numberline' on input line 6251.
 \bibindent=\dimen138
 ) (preamble.tex
+\mytemp=\skip63
+
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrhack.s
 ty
 Package: scrhack 2021/06/25 v3.34 KOMA-Script package (hacking other packages)
@@ -253,7 +255,7 @@ File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
 LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip63
+\MT@outer@space=\skip64
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -286,7 +288,7 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-Package scrhack Info: loading setspace hack on input line 10.
+Package scrhack Info: loading setspace hack on input line 12.
 
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\setspace.
 hak
@@ -294,7 +296,7 @@ File: setspace.hak 2021/06/25 v3.34 KOMA-Script scrhack part (hacking package s
 etspace)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/04/20 v2.17j AMS math features
-\@mathmargin=\skip64
+\@mathmargin=\skip65
 For additional information on amsmath, use the `?' option.
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
@@ -340,8 +342,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \totwidth@=\dimen156
 \lineht@=\dimen157
 \@envbody=\toks24
-\multlinegap=\skip65
-\multlinetaggap=\skip66
+\multlinegap=\skip66
+\multlinetaggap=\skip67
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
@@ -363,9 +365,9 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headfont=\toks28
 \thm@notefont=\toks29
 \thm@headpunct=\toks30
-\thm@preskip=\skip67
-\thm@postskip=\skip68
-\thm@headsep=\skip69
+\thm@preskip=\skip68
+\thm@postskip=\skip69
+\thm@headsep=\skip70
 \dth@everypar=\toks31
 )
 Class scrartcl Info: amsthm's \deferred@thm@head patched.
@@ -716,8 +718,8 @@ Package tocbasic Info: setting babel extension for `lox' on input line 711.
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \c@r@tfl@t=\count328
-\rotFPtop=\skip70
-\rotFPbot=\skip71
+\rotFPtop=\skip71
+\rotFPbot=\skip72
 \rot@float@box=\box84
 \rot@mess@toks=\toks45
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
@@ -759,8 +761,8 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \ar@mcellbox=\box92
 \extrarowheight=\dimen289
 \NC@list=\toks46
-\extratabsurround=\skip72
-\backup@length=\skip73
+\extratabsurround=\skip73
+\backup@length=\skip74
 \ar@cellbox=\box93
 ))
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
@@ -824,14 +826,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@sectionciteorder@0=\count378
 \blx@entrysetcounter=\count379
 \blx@biblioinstance=\count380
-\labelnumberwidth=\skip74
-\labelalphawidth=\skip75
-\biblabelsep=\skip76
-\bibitemsep=\skip77
-\bibnamesep=\skip78
-\bibinitsep=\skip79
-\bibparsep=\skip80
-\bibhang=\skip81
+\labelnumberwidth=\skip75
+\labelalphawidth=\skip76
+\biblabelsep=\skip77
+\bibitemsep=\skip78
+\bibnamesep=\skip79
+\bibinitsep=\skip80
+\bibparsep=\skip81
+\bibhang=\skip82
 \blx@bcfin=\read6
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
@@ -915,20 +917,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count449
 \c@pageref=\count450
 \c@savedpageref=\count451
-\shorthandwidth=\skip82
-\shortjournalwidth=\skip83
-\shortserieswidth=\skip84
-\shorttitlewidth=\skip85
-\shortauthorwidth=\skip86
-\shorteditorwidth=\skip87
-\locallabelnumberwidth=\skip88
-\locallabelalphawidth=\skip89
-\localshorthandwidth=\skip90
-\localshortjournalwidth=\skip91
-\localshortserieswidth=\skip92
-\localshorttitlewidth=\skip93
-\localshortauthorwidth=\skip94
-\localshorteditorwidth=\skip95
+\shorthandwidth=\skip83
+\shortjournalwidth=\skip84
+\shortserieswidth=\skip85
+\shorttitlewidth=\skip86
+\shortauthorwidth=\skip87
+\shorteditorwidth=\skip88
+\locallabelnumberwidth=\skip89
+\locallabelalphawidth=\skip90
+\localshorthandwidth=\skip91
+\localshortjournalwidth=\skip92
+\localshortserieswidth=\skip93
+\localshorttitlewidth=\skip94
+\localshortauthorwidth=\skip95
+\localshorteditorwidth=\skip96
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -998,12 +1000,12 @@ Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count464
 \calc@Adimen=\dimen290
 \calc@Bdimen=\dimen291
-\calc@Askip=\skip96
-\calc@Bskip=\skip97
+\calc@Askip=\skip97
+\calc@Bskip=\skip98
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count465
-\calc@Cskip=\skip98
+\calc@Cskip=\skip99
 )
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tik
 z.sty
@@ -1466,9 +1468,9 @@ Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
 ))
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip99
+\multirow@colwidth=\skip100
 \multirow@cntb=\count490
-\multirow@dima=\skip100
+\multirow@dima=\skip101
 \bigstrutjot=\dimen356
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
@@ -1486,7 +1488,7 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 71.
+(scrhack)             need that hack, on input line 73.
 
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
@@ -1583,7 +1585,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip101
+\Hy@SectionHShift=\skip102
 )
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-extra\glos
 saries-extra.sty
@@ -1652,7 +1654,7 @@ Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks57
 \@dtl@tmpcount=\count514
-\dtl@tmplength=\skip102
+\dtl@tmplength=\skip103
 \dtl@sortresult=\count515
 \@dtl@numgrpsepcount=\count516
 \@dtl@datatype=\count517
@@ -1676,7 +1678,7 @@ File: glossaries-german.ldf 2014/11/23 v1.0
 )
 \gls@level=\count521
 \@gls@tmpb=\toks58
-\gls@tmplen=\skip103
+\gls@tmplen=\skip104
 \glskeylisttok=\toks59
 \glslabeltok=\toks60
 \glsshorttok=\toks61
@@ -1689,17 +1691,17 @@ Package: glossary-hypernav 2021/09/20 v4.47 (NLCT)
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
 ssary-list.sty
 Package: glossary-list 2021/09/20 v4.47 (NLCT)
-\glslistdottedwidth=\skip104
+\glslistdottedwidth=\skip105
 )
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
 ssary-long.sty
 Package: glossary-long 2021/09/20 v4.47 (NLCT)
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
-\LTleft=\skip105
-\LTright=\skip106
-\LTpre=\skip107
-\LTpost=\skip108
+\LTleft=\skip106
+\LTright=\skip107
+\LTpre=\skip108
+\LTpost=\skip109
 \LTchunksize=\count522
 \LTcapwidth=\dimen366
 \LT@head=\box130
@@ -1714,8 +1716,8 @@ Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LT@p@ftn=\toks63
 )
 Class scrartcl Info: longtable captions redefined on input line 43.
-\glsdescwidth=\skip109
-\glspagelistwidth=\skip110
+\glsdescwidth=\skip110
+\glspagelistwidth=\skip111
 )
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
 ssary-super.sty
@@ -1726,9 +1728,9 @@ ular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
 \c@tracingst=\count527
 \ST@wd=\dimen367
-\ST@rightskip=\skip111
-\ST@leftskip=\skip112
-\ST@parfillskip=\skip113
+\ST@rightskip=\skip112
+\ST@leftskip=\skip113
+\ST@parfillskip=\skip114
 \ST@pageleft=\dimen368
 \ST@headht=\dimen369
 \ST@tailht=\dimen370
@@ -1743,7 +1745,7 @@ Package: supertabular 2020/02/02 v4.1g the supertabular environment
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
 ssary-tree.sty
 Package: glossary-tree 2021/09/20 v4.47 (NLCT)
-\glstreeindent=\skip114
+\glstreeindent=\skip115
 ))
 \@glsxtr@leveloffset=\count528
 \glsxtrresourcecount=\count529
@@ -1765,7 +1767,7 @@ LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \g_MT_multlinerow_int=\count532
 \l_MT_multwidth_dim=\dimen377
-\origjot=\skip115
+\origjot=\skip116
 \l_MT_shortvdotswithinadjustabove_dim=\dimen378
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen379
 \l_MT_above_intertext_sep=\dimen380
@@ -1927,7 +1929,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 134.
+Package scrhack Info: loading listings hack on input line 137.
 
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\listings.
 hak
@@ -1941,7 +1943,7 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-\wrapfigwidth=\skip116
+\wrapfigwidth=\skip117
 
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-
 scrpage.sty
@@ -2132,7 +2134,7 @@ File: lscape.hak 2021/06/25 v3.34 KOMA-Script scrhack part (hacking package lsc
 ape)
 Package scrhack Info: \landscape patched to make \textheight change optional on
  input line 90.
-\scrh@LT@textheight=\skip117
+\scrh@LT@textheight=\skip118
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
@@ -2388,6 +2390,12 @@ LaTeX Warning: Reference `fig:petrinet' on page 8 undefined on input line 93.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
+
+LaTeX Warning: Reference `fig:petrinet' on page 8 undefined on input line 108.
+
+
+LaTeX Warning: Reference `fig:petrinet' on page 8 undefined on input line 108.
+
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
@@ -2439,19 +2447,17 @@ LaTeX Warning: Citation 'Goel1990' on page 11 undefined on input line 14.
 LaTeX Warning: Citation 'Goel1990' on page 11 undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `fig:supnetifelse' on page 11 undefined on input
- line 14.
-
-
-LaTeX Warning: Reference `fig:supnetifelse' on page 11 undefined on input line 
-14.
-
-
 LaTeX Warning: Reference `fig:supnetifelse' on page 11 undefined on input line 
 14.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
+
+LaTeX Warning: Citation 'Goel1990' on page 11 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'Goel1990' on page 11 undefined on input line 46.
+
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
 9.
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
@@ -2465,15 +2471,15 @@ Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input
 line 49.
 FiXme Note: '{\color {red}Farbe anpassen}' on input line 49.
 
-LaTeX Warning: Hyper reference `lst:squareSeqEx' on page 11 undefined on input 
+LaTeX Warning: Hyper reference `lst:squareSeqEx' on page 12 undefined on input 
 line 52.
 
 
-LaTeX Warning: Reference `lst:squareSeqEx' on page 11 undefined on input line 5
+LaTeX Warning: Reference `lst:squareSeqEx' on page 12 undefined on input line 5
 2.
 
 
-LaTeX Warning: Reference `lst:squareSeqEx' on page 11 undefined on input line 5
+LaTeX Warning: Reference `lst:squareSeqEx' on page 12 undefined on input line 5
 2.
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
@@ -2516,111 +2522,119 @@ ne 62.
 LaTeX Warning: Reference `fig:concAnweisungen' on page 12 undefined on input li
 ne 62.
 
-\aOne=\skip118
-\aTwo=\skip119
-\aThree=\skip120
-\bOne=\skip121
-\bTwo=\skip122
+\aOne=\skip119
+\aTwo=\skip120
+\aThree=\skip121
+\bOne=\skip122
+\bTwo=\skip123
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
+
+LaTeX Warning: Citation 'Herrtwich1989' on page 12 undefined on input line 120.
+
+
+
+LaTeX Warning: Citation 'Herrtwich1989' on page 12 undefined on input line 120.
+
+
 
 LaTeX Warning: Hyper reference `lst:squareConcEx' on page 12 undefined on input
- line 122.
+ line 123.
 
 
 LaTeX Warning: Reference `lst:squareConcEx' on page 12 undefined on input line 
-122.
+123.
 
 
 LaTeX Warning: Reference `lst:squareConcEx' on page 12 undefined on input line 
-122.
+123.
 
 
-LaTeX Warning: Citation 'Herrtwich1989' on page 12 undefined on input line 122.
+LaTeX Warning: Citation 'Herrtwich1989' on page 12 undefined on input line 123.
 
 
 
-LaTeX Warning: Citation 'Pike2012' on page 13 undefined on input line 132.
+LaTeX Warning: Citation 'Pike2012' on page 13 undefined on input line 133.
 
 
-LaTeX Warning: Citation 'Hettel2016' on page 13 undefined on input line 132.
+LaTeX Warning: Citation 'Hettel2016' on page 13 undefined on input line 133.
 
 
 LaTeX Warning: Hyper reference `lst:squareSeqEx' on page 13 undefined on input 
-line 132.
+line 133.
 
 
 LaTeX Warning: Reference `lst:squareSeqEx' on page 13 undefined on input line 1
-32.
+33.
 
 
 LaTeX Warning: Reference `lst:squareSeqEx' on page 13 undefined on input line 1
-32.
+33.
 
 
-LaTeX Warning: Reference `sec:nebenl' on page 13 undefined on input line 142.
+LaTeX Warning: Reference `sec:nebenl' on page 14 undefined on input line 143.
 
 
-LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 144.
+LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 145.
 
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 144.
+(Font)              <7> on input line 145.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 144.
+(Font)              <5> on input line 145.
 
-LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 144.
-
-
-
-LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 146.
+LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 145.
 
 
 
-LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 146.
+LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 147.
 
 
 
-LaTeX Warning: Citation 'Hettel2016' on page 14 undefined on input line 148.
+LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 147.
+
+
+
+LaTeX Warning: Citation 'Hettel2016' on page 14 undefined on input line 149.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Hyper reference `fig:wettkampfpetri' on page 15 undefined on inp
-ut line 191.
+ut line 192.
 
 
 LaTeX Warning: Reference `fig:wettkampfpetri' on page 15 undefined on input lin
-e 191.
+e 192.
 
 
 LaTeX Warning: Reference `fig:wettkampfpetri' on page 15 undefined on input lin
-e 191.
+e 192.
 
 
-LaTeX Warning: Citation 'Maurer2019' on page 15 undefined on input line 198.
+LaTeX Warning: Citation 'Maurer2019' on page 15 undefined on input line 199.
 
 
-LaTeX Warning: Citation 'Herrtwich1989' on page 15 undefined on input line 200.
+LaTeX Warning: Citation 'Herrtwich1989' on page 16 undefined on input line 201.
 
 
-FiXme Note: '{\color {red}Check, dass Chunk definiert ist}' on input line 200.
+FiXme Note: '{\color {red}Check, dass Chunk definiert ist}' on input line 201.
 
-LaTeX Warning: Citation 'Michael1996' on page 16 undefined on input line 202.
-
-
-LaTeX Warning: Citation 'Michael1996' on page 16 undefined on input line 202.
+LaTeX Warning: Citation 'Michael1996' on page 16 undefined on input line 203.
 
 
-LaTeX Warning: Citation 'Herlihy1991' on page 16 undefined on input line 204.
+LaTeX Warning: Citation 'Michael1996' on page 16 undefined on input line 203.
+
+
+LaTeX Warning: Citation 'Herlihy1991' on page 16 undefined on input line 205.
 
 ) (chapters/Grundlagen/MultithreadingInJava.tex
 
-LaTeX Warning: Citation 'Friesen2015' on page 16 undefined on input line 1.
+LaTeX Warning: Citation 'Friesen2015' on page 17 undefined on input line 1.
 
 
 LaTeX Warning: Citation 'Friesen2015' on page 17 undefined on input line 3.
@@ -2629,16 +2643,28 @@ LaTeX Warning: Citation 'Friesen2015' on page 17 undefined on input line 3.
 LaTeX Warning: Citation 'Friesen2015' on page 17 undefined on input line 3.
 
 
-LaTeX Warning: Citation 'Rauber2006' on page 17 undefined on input line 17.
+LaTeX Warning: Hyper reference `lst:simpleThreadExample' on page 17 undefined o
+n input line 3.
+
+
+LaTeX Warning: Reference `lst:simpleThreadExample' on page 17 undefined on inpu
+t line 3.
+
+
+LaTeX Warning: Reference `lst:simpleThreadExample' on page 17 undefined on inpu
+t line 3.
 
 
 LaTeX Warning: Citation 'Rauber2006' on page 17 undefined on input line 17.
 
 
-LaTeX Warning: Citation 'Friesen2015' on page 17 undefined on input line 22.
+LaTeX Warning: Citation 'Rauber2006' on page 17 undefined on input line 17.
 
 
-LaTeX Warning: Citation 'Hettel2016' on page 17 undefined on input line 22.
+LaTeX Warning: Citation 'Friesen2015' on page 18 undefined on input line 22.
+
+
+LaTeX Warning: Citation 'Hettel2016' on page 18 undefined on input line 22.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 24.
@@ -2646,10 +2672,22 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 LaTeX Warning: Citation 'Rauber2006' on page 18 undefined on input line 24.
 
 
+LaTeX Warning: Hyper reference `lst:synchronizedExample' on page 18 undefined o
+n input line 24.
+
+
+LaTeX Warning: Reference `lst:synchronizedExample' on page 18 undefined on inpu
+t line 24.
+
+
+LaTeX Warning: Reference `lst:synchronizedExample' on page 18 undefined on inpu
+t line 24.
+
+
 LaTeX Warning: Citation 'Friesen2015' on page 18 undefined on input line 43.
 
 
-LaTeX Warning: Citation 'Friesen2015' on page 18 undefined on input line 47.
+LaTeX Warning: Citation 'Friesen2015' on page 19 undefined on input line 47.
 
 
 LaTeX Warning: Citation 'Friesen2015' on page 19 undefined on input line 49.
@@ -2679,6 +2717,18 @@ Overfull \hbox (0.30421pt too wide) in paragraph at lines 53--55
  []
 
 
+LaTeX Warning: Hyper reference `lst:LocalSingleton' on page 19 undefined on inp
+ut line 71.
+
+
+LaTeX Warning: Reference `lst:LocalSingleton' on page 19 undefined on input lin
+e 71.
+
+
+LaTeX Warning: Reference `lst:LocalSingleton' on page 19 undefined on input lin
+e 71.
+
+
 LaTeX Warning: Citation 'Friesen2015' on page 20 undefined on input line 73.
 
 
@@ -2691,15 +2741,15 @@ LaTeX Warning: Citation 'Friesen2015' on page 20 undefined on input line 75.
 LaTeX Warning: Citation 'Friesen2015' on page 20 undefined on input line 77.
 
 
-LaTeX Warning: Hyper reference `appendix:concFrameworkExecutor' on page 20 unde
+LaTeX Warning: Hyper reference `appendix:concFrameworkExecutor' on page 21 unde
 fined on input line 79.
 
 
-LaTeX Warning: Reference `appendix:concFrameworkExecutor' on page 20 undefined 
+LaTeX Warning: Reference `appendix:concFrameworkExecutor' on page 21 undefined 
 on input line 79.
 
 
-LaTeX Warning: Reference `appendix:concFrameworkExecutor' on page 20 undefined 
+LaTeX Warning: Reference `appendix:concFrameworkExecutor' on page 21 undefined 
 on input line 79.
 
 
@@ -2903,8 +2953,8 @@ LaTeX Warning: Citation 'White2018' on page 24 undefined on input line 130.
 
 LaTeX Warning: Citation 'Schott2016' on page 24 undefined on input line 130.
 
-The command '\includegraphics [width=\textwidth ]{Destiny.png}' has been optimi
-zed away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=.8\textwidth ]{Destiny.png}' has been opti
+mized away. Use '/tikz/external/optimize=false' to disable this.
 
 LaTeX Warning: Citation 'Tatarchuk2014' on page 25 undefined on input line 134.
 
@@ -2950,8 +3000,32 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
+LaTeX Warning: Hyper reference `lst:oldGameLoop' on page 26 undefined on input 
+line 10.
+
+
+LaTeX Warning: Reference `lst:oldGameLoop' on page 26 undefined on input line 1
+0.
+
+
+LaTeX Warning: Reference `lst:oldGameLoop' on page 26 undefined on input line 1
+0.
+
+
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 13.
+
+
+LaTeX Warning: Hyper reference `lst:gameUpdate' on page 26 undefined on input l
+ine 22.
+
+
+LaTeX Warning: Reference `lst:gameUpdate' on page 26 undefined on input line 22
+.
+
+
+LaTeX Warning: Reference `lst:gameUpdate' on page 26 undefined on input line 22
+.
 
 
 LaTeX Warning: Hyper reference `tab:concTasksBlocklib' on page 27 undefined on 
@@ -2965,7 +3039,6 @@ line 46.
 LaTeX Warning: Reference `tab:concTasksBlocklib' on page 27 undefined on input 
 line 46.
 
-\mytemp=\skip123
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -3003,7 +3076,7 @@ durch schwie-ri-ger nach-voll-zieh-bar [[]].
  []
 
 
-LaTeX Warning: Reference `sec:anforderungen' on page 31 undefined on input line
+LaTeX Warning: Reference `sec:anforderungen' on page 30 undefined on input line
  10.
 
 ) (chapters/DesignDerThreadingApi/Renderthread.tex
@@ -3342,6 +3415,10 @@ timized away. Use '/tikz/external/optimize=false' to disable this.
 LaTeX Warning: Citation 'Ebbinger2018' on page 43 undefined on input line 32.
 
 
+LaTeX Warning: Reference `lst:raceLight' on page 44 undefined on input line 48.
+
+
+
 LaTeX Warning: Hyper reference `lst:updateLightPosition:scale' on page 44 undef
 ined on input line 58.
 
@@ -3529,43 +3606,43 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Hyper reference `fig:seed-0-hexagon-fps' on page 52 undefined on
- input line 15.
+ input line 16.
 
 
 LaTeX Warning: Reference `fig:seed-0-hexagon-fps' on page 52 undefined on input
- line 15.
+ line 16.
 
 
 LaTeX Warning: Reference `fig:seed-0-hexagon-fps' on page 52 undefined on input
- line 15.
+ line 16.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Hyper reference `fig:seed-0-hexagon-cpu' on page 52 undefined on
- input line 22.
+ input line 23.
 
 
 LaTeX Warning: Reference `fig:seed-0-hexagon-cpu' on page 52 undefined on input
- line 22.
+ line 23.
 
 
 LaTeX Warning: Reference `fig:seed-0-hexagon-cpu' on page 52 undefined on input
- line 22.
+ line 23.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Hyper reference `fig:seed-0-hexagon-gpu' on page 53 undefined on
- input line 28.
+ input line 29.
 
 
 LaTeX Warning: Reference `fig:seed-0-hexagon-gpu' on page 53 undefined on input
- line 28.
+ line 29.
 
 
 LaTeX Warning: Reference `fig:seed-0-hexagon-gpu' on page 53 undefined on input
- line 28.
+ line 29.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
@@ -3573,15 +3650,15 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Hyper reference `fig:seed-0-hexagon-mem' on page 53 undefined on
- input line 39.
+ input line 40.
 
 
 LaTeX Warning: Reference `fig:seed-0-hexagon-mem' on page 53 undefined on input
- line 39.
+ line 40.
 
 
 LaTeX Warning: Reference `fig:seed-0-hexagon-mem' on page 53 undefined on input
- line 39.
+ line 40.
 
 ) (chapters/Performance/2-cube.tex
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -3819,6 +3896,28 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 ) (chapters/Performance/5-walk.tex
+
+LaTeX Warning: Reference `fig:walk' on page 60 undefined on input line 1.
+
+The command '\includegraphics [width=.32\textwidth ]{walk-1.png}' has been opti
+mized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=.32\textwidth ]{walk-2.png}' has been opti
+mized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=.32\textwidth ]{walk-3.png}' has been opti
+mized away. Use '/tikz/external/optimize=false' to disable this.
+FiXme Note: '{\color {red}Anhänge}' on input line 10.
+
+LaTeX Warning: Hyper reference `fig:seed-0-walk-fps' on page 60 undefined on in
+put line 13.
+
+
+LaTeX Warning: Reference `fig:seed-0-walk-fps' on page 60 undefined on input li
+ne 13.
+
+
+LaTeX Warning: Reference `fig:seed-0-walk-fps' on page 60 undefined on input li
+ne 13.
+
 \openout5 = `tikz/masterarbeit-figure41.dpth'.
 
 PGFPlots: reading {performance/measurements/seed-0-walk-single-fps.csv}
@@ -3834,26 +3933,7 @@ PGFPlots: reading {performance/measurements/seed-0-walk-multi-fps.csv}
 \@newglossary{acronym}{alg}{acr}{acn}
 \providecommand\@glsxtr@savepreloctag[2]{}
 {C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
+FiXme Note: '{\color {red}anhang}' on input line 18.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -3876,43 +3956,43 @@ The command '\includegraphics [draft=false,scale=1,keepaspectratio]{\svg@tempa
 }' has been optimized away. Use '/tikz/external/optimize=false' to disable this
 .
 
-LaTeX Warning: Citation 'Seemann2012' on page 63 undefined on input line 7.
+LaTeX Warning: Citation 'Seemann2012' on page 64 undefined on input line 7.
 
 
-LaTeX Warning: Citation 'Nystrom2015' on page 63 undefined on input line 10.
+LaTeX Warning: Citation 'Nystrom2015' on page 64 undefined on input line 10.
 
 
-LaTeX Warning: Citation 'Nystrom2015' on page 63 undefined on input line 10.
+LaTeX Warning: Citation 'Nystrom2015' on page 64 undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `fig:diagContext' on page 63 undefined on input 
+LaTeX Warning: Hyper reference `fig:diagContext' on page 64 undefined on input 
 line 10.
 
 
-LaTeX Warning: Reference `fig:diagContext' on page 63 undefined on input line 1
+LaTeX Warning: Reference `fig:diagContext' on page 64 undefined on input line 1
 0.
 
 
-LaTeX Warning: Reference `fig:diagContext' on page 63 undefined on input line 1
+LaTeX Warning: Reference `fig:diagContext' on page 64 undefined on input line 1
 0.
 
 
-LaTeX Warning: Citation 'Gamma2016' on page 63 undefined on input line 12.
+LaTeX Warning: Citation 'Gamma2016' on page 64 undefined on input line 12.
 
 
-LaTeX Warning: Citation 'Nystrom2015' on page 63 undefined on input line 12.
+LaTeX Warning: Citation 'Nystrom2015' on page 64 undefined on input line 12.
 
 
-LaTeX Warning: Citation 'Seemann2012' on page 63 undefined on input line 12.
+LaTeX Warning: Citation 'Seemann2012' on page 64 undefined on input line 12.
 
 
-LaTeX Warning: Citation 'Seemann2012' on page 64 undefined on input line 24.
+LaTeX Warning: Citation 'Seemann2012' on page 65 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Martin17' on page 64 undefined on input line 31.
+LaTeX Warning: Citation 'Martin17' on page 65 undefined on input line 31.
 
 
-LaTeX Warning: Citation 'Seemann2012' on page 64 undefined on input line 31.
+LaTeX Warning: Citation 'Seemann2012' on page 65 undefined on input line 31.
 
 )
 
@@ -3934,14 +4014,44 @@ Package biblatex Warning: Keyword 'online' not found on input line 107.
 
 LaTeX Warning: Empty bibliography on input line 107.
 
+(chapters/Anhang/anhang.tex
+The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
+687pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 11.
+The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
+687pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+
+LaTeX Warning: Reference `sec:CompletableFuture' on page I undefined on input l
+ine 13.
+
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+The command '\includegraphics [draft=false,scale=1,keepaspectratio,height=468.0
+4579pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
+FiXme Note: '{\color {red}Caption}' on input line 30.
+The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
+687pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
+e' to disable this.
+FiXme Note: '{\color {red}Caption}' on input line 38.
+)
 The command '\includepdf []{img/Mastererklaerung.pdf}' has been optimized away.
  Use '/tikz/external/optimize=false' to disable this.
 
-FiXme Summary: Number of notes: 2,
+FiXme Summary: Number of notes: 6,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 2.
+(FiXme)        Total: 6.
 
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\provideco
 mmand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
@@ -3964,22 +4074,22 @@ Package logreq Info: Writing requests to 'tikz/masterarbeit-figure41.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71794 strings out of 478870
- 1626916 string characters out of 2847888
- 2695085 words of memory out of 3000000
- 88107 multiletter control sequences out of 15000+600000
- 534654 words of font info for 292 fonts, out of 8000000 for 9000
+ 71887 strings out of 478870
+ 1628854 string characters out of 2847888
+ 2690963 words of memory out of 3000000
+ 88179 multiletter control sequences out of 15000+600000
+ 539695 words of font info for 302 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 119i,21n,137p,10665b,2465s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,22n,137p,10665b,2463s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:fps} has been referenced but does not exist, 
 replaced by a fixed one
 
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/
 Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
-Output written on tikz/masterarbeit-figure41.pdf (1 page, 34452 bytes).
+Output written on tikz/masterarbeit-figure41.pdf (1 page, 35817 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
+ 239 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
- 70669 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 73741 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -4,5 +4,3 @@ tikz/masterarbeit-figure44.pdf: performance/measurements/seed-0-walk-single-mem.
 tikz/masterarbeit-figure44.pdf: performance/measurements/seed-0-walk-single-mem.csv
 tikz/masterarbeit-figure44.pdf: performance/measurements/seed-0-walk-single-mem.csv
 tikz/masterarbeit-figure44.pdf: performance/measurements/seed-0-walk-single-mem.csv
-tikz/masterarbeit-figure44.pdf: performance/measurements/seed-0-walk-single-mem.csv
-tikz/masterarbeit-figure44.pdf: performance/measurements/seed-0-walk-single-mem.csv

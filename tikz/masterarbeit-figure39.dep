@@ -4,5 +4,3 @@ tikz/masterarbeit-figure39.pdf: performance/measurements/seed-0-rotate-single-me
 tikz/masterarbeit-figure39.pdf: performance/measurements/seed-0-rotate-single-mem.csv
 tikz/masterarbeit-figure39.pdf: performance/measurements/seed-0-rotate-single-mem.csv
 tikz/masterarbeit-figure39.pdf: performance/measurements/seed-0-rotate-single-mem.csv
-tikz/masterarbeit-figure39.pdf: performance/measurements/seed-0-rotate-single-mem.csv
-tikz/masterarbeit-figure39.pdf: performance/measurements/seed-0-rotate-single-mem.csv

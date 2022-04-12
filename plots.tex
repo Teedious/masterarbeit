@@ -32,7 +32,7 @@
 		xlabel={Zeit (\si{\second})},
 		ylabel={\ac{ram} (\si{\mega\byte})},
 		legend entries = {Gesamt,Tenured,Eden},
-		legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=1}},
+		legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
 		]
 			\addplot+[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1};
 			\addplot+[blue,stack plots=y] table[col sep=comma,header=true,x index=0, y index=1] {#1};
@@ -52,7 +52,7 @@
 			ymax=600,
 			ylabel={\si{\fps}},
 			legend entries = {SystemA,SystemB},
-			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=1}},
+			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
 			#1
 		]
 				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#2-single-fps.csv};
@@ -72,7 +72,7 @@
 			ymax=100,
 			ylabel={\ac{cpu} (\si{\percent})},
 			legend entries = {SystemA,SystemB},
-			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=1}},
+			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
 			#1
 		]
 				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#2-single-cpu.csv};
@@ -92,7 +92,7 @@
 			ymax=100,
 			ylabel={\ac{gpu} (\si{\percent})},
 			legend entries = {SystemA,SystemB},
-			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=1}},
+			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
 			#1
 		]
 				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#2-single-gpu.csv};

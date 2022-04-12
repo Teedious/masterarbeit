@@ -4,5 +4,3 @@ tikz/masterarbeit-figure29.pdf: performance/measurements/seed-0-cube-single-mem.
 tikz/masterarbeit-figure29.pdf: performance/measurements/seed-0-cube-single-mem.csv
 tikz/masterarbeit-figure29.pdf: performance/measurements/seed-0-cube-single-mem.csv
 tikz/masterarbeit-figure29.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure29.pdf: performance/measurements/seed-0-cube-single-mem.csv
-tikz/masterarbeit-figure29.pdf: performance/measurements/seed-0-cube-single-mem.csv

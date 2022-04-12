@@ -4,5 +4,3 @@ tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-hexagon-single-m
 tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-hexagon-single-mem.csv
 tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-hexagon-single-mem.csv
 tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-hexagon-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-hexagon-single-mem.csv
-tikz/masterarbeit-figure23.pdf: performance/measurements/seed-0-hexagon-single-mem.csv
