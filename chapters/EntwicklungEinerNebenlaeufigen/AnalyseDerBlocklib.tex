@@ -7,7 +7,7 @@ Ein nahezu universelles Designelement von Spielen ist die sogenannte \emph{Game 
   \item (grafische) Ausgabe
   \item Verarbeitung der Eingaben
 \end{itemize}
-Die Blocklib besitzt ebenfalls eine Game Loop und führt die beschriebenen Aufgaben in der obigen Reihenfolge sequenziell aus. Eigentlich gibt es sogar zwei Game Loops, eine für die Ausführung als Server (ohne graphische Ausgabe) und eine für einen Client oder Einzelspieler. Die Game Loop der Einzelspieler-Blocklib sieht vereinfacht wie folgt aus:
+Die Blocklib besitzt ebenfalls eine Game Loop und führt die beschriebenen Aufgaben in der obigen Reihenfolge sequentiell aus. Eigentlich gibt es sogar zwei Game Loops, eine für die Ausführung als Server (ohne graphische Ausgabe) und eine für einen Client oder Einzelspieler. Die Game Loop der Einzelspieler-Blocklib sieht vereinfacht wie folgt aus:
 \begin{lstlisting}
 while(!shutdown){
 	//...
@@ -60,6 +60,7 @@ Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufi
 		\class{NioClientNetworkLayer} & Ein Thread, der im Hintergrund mit dem Server kommuniziert, wird gestartet.\\
 		\class{NioServerNetworkLayer} & Ein Thread, der im Hintergrund mit den Clients kommuniziert, wird gestartet.\\
 		\class{Fluid} & Ein Thread wird gestartet, der den Zustand der Flüssigkeit berechnet.\\
+		\class{AudioManager} & Die Klasse \class{Timer} wird verwendet, Hintergrundmusik abzuspielen.
 		\bottomrule 
 	\end{tblr}
 	\caption{Nebenläufige Anweisungen in der Blocklib}\label{tab:concTasksBlocklib}
