@@ -30,16 +30,14 @@
 \pagebreak
 \pagenumbering{arabic}
 \setcounter{page}{1}
-\section{Einleitung}
-
 \setstretch{1.15}
 
-\subsection{Blocklib}
-\subsection{Nebenläufige Programmierung}
-\subsection{Testen und Testframeworks}
+\section{Einleitung}
+\input{chapters/Einleitung.tex}
+
 
 \pagebreak
-\section{Grundlagen}
+\section{Grundlagen}\label{kap:grundlagen}
 \input{chapters/Grundlagen/PetriNetze.tex}
 \input{chapters/Grundlagen/GrundlagenZuThreading.tex}
 \subsection{Multithreading in Java}
@@ -48,7 +46,7 @@
 \input{chapters/Grundlagen/MultithreadingInSpielen.tex}
 
 \pagebreak
-\section{Entwicklung einer nebenläufigen Architektur}
+\section{Entwurf einer nebenläufigen Architektur}\label{kap:entwurf}
 \input{chapters/EntwicklungEinerNebenlaeufigen/intro.tex}
 
 \subsection{Analyse der Blocklib}\label{sec:blocklibAnalyse}
@@ -65,7 +63,7 @@
 \input{chapters/DesignDerThreadingApi/JobApi.tex}
 
 \pagebreak
-\section{Implementierung der nebenläufigen Architektur}
+\section{Implementierung der nebenläufigen Architektur}\label{kap:Implementierung}
 \input{chapters/Implementierung/Implementierung.tex}
 \subsection{Implementierung des Renderthreads}
 \input{chapters/Implementierung/ImplementierungRenderthread.tex}
@@ -76,7 +74,7 @@
 \input{chapters/Implementierung/ImplementierungJobsystem.tex}
 
 \clearpage
-\section{Performanceanalyse}
+\section{Performanceanalyse}\label{kap:performance}
 \input{chapters/Performance/0-performance.tex}
 \subsection{Szenario 1: Hexagon}
 \input{chapters/Performance/1-hexagon.tex}
@@ -92,9 +90,10 @@
 \input{chapters/Performance/zusammenfassung.tex}
 
 \pagebreak
-\section{Fazit}
+\section{Fazit}\label{kap:Fazit}
+\input{chapters/Fazit.tex}
 \pagebreak
-\section{Ausblick}
+\section{Ausblick}\label{kap:ausblick}
 \subsection{Etablierung einer Composition Root}\label{sec:EtablierungEinerKompositionroot}
 \input{chapters/Ausblick/EtablierungEinerKompositionroot.tex}
 \subsection{Dynamisches Rendern von Schrift}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  10 APR 2022 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  13 APR 2022 16:46
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/tikztest/tikztest.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/tikztest/tikztest.tex
@@ -583,26 +583,21 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
  on input line 27.
 
-<../img//flackern-1.png, id=4, 1204.5pt x 803.0pt>
-File: ../img//flackern-1.png Graphic file (type png)
-<use ../img//flackern-1.png>
-Package pdftex.def Info: ../img//flackern-1.png  used on input line 29.
-(pdftex.def)             Requested size: 133.84483pt x 89.22472pt.
 [1
 
-{C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../img//flackern-1.png (PNG copy)>] (tikztest.aux) ) 
+{C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (tikztest.aux) ) 
 Here is how much of TeX's memory you used:
- 28816 strings out of 478870
- 746851 string characters out of 2847888
+ 28777 strings out of 478870
+ 745990 string characters out of 2847888
  1316761 words of memory out of 3000000
- 46292 multiletter control sequences out of 15000+600000
+ 46256 multiletter control sequences out of 15000+600000
  403730 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,7n,108p,10675b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 110i,7n,108p,10675b,636s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on tikztest.pdf (1 page, 1619101 bytes).
+Output written on tikztest.pdf (1 page, 9844 bytes).
 PDF statistics:
- 15 PDF objects out of 1000 (max. 8388607)
+ 14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -24,7 +24,7 @@ Aufgrund der Anordnung wären allerdings nur wenige Blöcke sichtbar. Daher wird
 	\caption{Seed 0 Halb-Würfel}\label{fig:seed-0-cube-cpu}
 \end{figure}
 \paragraph{\ac{cpu}} Die Auslastung der \ac{cpu} in Szenario 2, zu sehen in Abbildung~\vref{fig:seed-0-cube-cpu}, gestaltet sich vergleichbar zu der in Szenario 1. Die Mittelwerte sind mit \SI{13}{\percent} in SystemA und \SI{18}{\percent} in SystemB nach Rundung identisch zu Szenario 1.
-Auffällig ist, dass SystemB wie in Szenario 1 in den ersten Sekunden, während des Starts der Blocklib, zwei Auslastungsspitzen besitzt (\SI{32}{\percent} und \SI{50}{\percent}). SystemA dagegen besitzt nur eine (\SI{46}{\percent}). Eine mögliche Erklärung dafür ist die Trennung von Simulation und Rendering in verschiedene Threads. Dadurch könnte es passieren, die \ac{cpu} zeitweise dadurch entlastet ist, dass die \ac{gpu} Zeit benötigt, um übergebene Anweisungen auszuführen, beispielsweise wenn Texturen zum Start auf die \ac{gpu} geladen werden.
+Auffällig ist, dass SystemB wie in Szenario 1 in den ersten Sekunden, während des Starts der Blocklib, zwei Auslastungsspitzen besitzt (\SI{32}{\percent} und \SI{50}{\percent}). SystemA dagegen besitzt nur eine (\SI{46}{\percent}). Eine mögliche Erklärung dafür ist die Trennung von Simulation und Rendering in verschiedene Threads. Dadurch könnte es passieren, die \ac{cpu} zeitweise dadurch entlastet ist, dass die \ac{gpu} Zeit benötigt, um übergebene \glspl{Anweisung} auszuführen, beispielsweise wenn Texturen zum Start auf die \ac{gpu} geladen werden.
 
 \begin{figure}[!htb]
 	\gpuplot{seed-0-cube}
