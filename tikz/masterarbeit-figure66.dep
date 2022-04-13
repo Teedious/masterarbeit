@@ -1,0 +1,2 @@
+tikz/masterarbeit-figure66.pdf: performance/measurements/seed-3-walk-single-gpu.csv
+tikz/masterarbeit-figure66.pdf: performance/measurements/seed-3-walk-multi-gpu.csv

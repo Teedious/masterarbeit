@@ -7,6 +7,9 @@
 \begin{document}
 \input{titelseite} 
 \null\thispagestyle{empty}\clearpage
+\includepdf{img/Mastererklaerung.pdf}
+\pagenumbering{roman}
+\setcounter{page}{1}
 \markright{\abstractname}
 \begin{abstract}
 	TODO meine Zusammenfassung
@@ -14,7 +17,7 @@
 \clearpage
 \markright{Inhaltsverzeichnis}
 \tableofcontents\clearpage
-\listoffigures\clearpage
+\listoffigures
 \markright{Tabellenverzeichnis und Listings}
 \listoftables
 \lstlistoflistings\clearpage
@@ -25,6 +28,8 @@
 \RedeclareSectionCommand[afterindent=no,beforeskip=4pt]{paragraph}
 
 \pagebreak
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \section{Einleitung}
 
 \setstretch{1.15}
@@ -108,5 +113,4 @@
 
 
 \input{chapters/Anhang/anhang.tex}
-\includepdf{img/Mastererklaerung.pdf}
 \end{document}

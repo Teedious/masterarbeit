@@ -1,0 +1,2 @@
+tikz/masterarbeit-figure64.pdf: performance/measurements/seed-0-rotate-single-gpu.csv
+tikz/masterarbeit-figure64.pdf: performance/measurements/seed-0-rotate-multi-gpu.csv

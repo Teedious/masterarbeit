@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  12 APR 2022 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  13 APR 2022 12:07
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex
@@ -1464,7 +1464,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 137.
+Package scrhack Info: loading listings hack on input line 147.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\listings.hak
 File: listings.hak 2021/06/25 v3.34 KOMA-Script scrhack part (hacking package listings)
 Package tocbasic Info: setting babel extension for `lol' on input line 143.
@@ -1490,43 +1490,52 @@ Package scrlayer-scrpage Info: deactivating warning for font element
 (scrlayer-scrpage)             `pagefoot' on input line 1109.
 )
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
-) (../plots.tex) (../glossary.tex)
+) (../plots.tex) (../glossary.tex) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/csvsimple\csvsimple.sty
+Package: csvsimple 2022/02/01 v2.3.0 LaTeX CSV file processing
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/csvsimple\csvsimple-legacy.sty
+Package: csvsimple-legacy 2022/02/01 version 2.3.0 LaTeX2e CSV file processing
+\csv@file=\read7
+\c@csvinputline=\count548
+\c@csvrow=\count549
+\c@csvcol=\count550
+\csv@out=\write5
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 16.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (minimal.aux)
 \openout1 = `minimal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Info: Redefining \microtypecontext on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Info: Redefining \microtypecontext on input line 16.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 15.
+LaTeX Info: Redefining \showhyphens on input line 16.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1571,16 +1580,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 Package: ninecolors 2022-02-13 vv2022D Select colors with proper color contrast
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count548
+\scratchcounter=\count551
 \scratchdimen=\dimen403
 \scratchbox=\box140
-\nofMPsegments=\count549
-\nofMParguments=\count550
+\nofMPsegments=\count552
+\nofMParguments=\count553
 \everyMPshowfont=\toks71
-\MPscratchCnt=\count551
+\MPscratchCnt=\count554
 \MPscratchDim=\dimen404
-\MPnumerator=\count552
-\makeMPintoPDFobject=\count553
+\MPnumerator=\count555
+\makeMPintoPDFobject=\count556
 \everyMPtoPDFconversion=\toks72
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1590,7 +1599,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 )) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
 File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 15.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 16.
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lbx
@@ -1621,8 +1630,8 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'minimal.bbl' found.
  (minimal.bbl)
-Package biblatex Info: Reference section=0 on input line 15.
-Package biblatex Info: Reference segment=0 on input line 15.
+Package biblatex Info: Reference section=0 on input line 16.
+Package biblatex Info: Reference segment=0 on input line 16.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
@@ -1645,7 +1654,7 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 16.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -1653,17 +1662,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count554
+\c@section@level=\count557
 LaTeX Info: Redefining \Ref on input line 520.
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
  (minimal.out) (minimal.out)
-\@outlinefile=\write5
-\openout5 = `minimal.out'.
+\@outlinefile=\write6
+\openout6 = `minimal.out'.
 
-LaTeX Info: Redefining \Ref on input line 15.
+LaTeX Info: Redefining \Ref on input line 16.
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
 (scrartcl)           because of handling of possible bookmark level gaps.
@@ -1671,191 +1680,57 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 15.
+(scrartcl)           before \begin{document} on input line 16.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count555
+\BKM@id=\count558
 ))
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\c@lstlisting=\count556
-Package scrhack Info: undefining \float@addtolists on input line 15.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 16.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+\c@lstlisting=\count559
+Package scrhack Info: undefining \float@addtolists on input line 16.
+f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex:18: Missing \endcsname inserted.
+<to be read again> 
+                   \%
+l.18 ...ce/measurements/seed-0-cube-multi-cpu.csv}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex:18: Extra \endcsname.
+\pgfkeyslet ...ter \let \csname pgfk@#1\endcsname 
+                                                  #2
+l.18 ...ce/measurements/seed-0-cube-multi-cpu.csv}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
 )
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+Runaway argument?
+\pgfkeyssetvalue {/csv head/System (\%)/.@body}{\gdef ##1{\csvcolii }\ETC.
+! File ended while scanning use of \pgfkeys@temp.
+<inserted text> 
+                \par 
+<*> ...Master/MI4/Masterarbeit/minimal/minimal.tex
+                                                  
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
+! Emergency stop.
+<*> ...Master/MI4/Masterarbeit/minimal/minimal.tex
+                                                  
+*** (job aborted, no legal \end found)
 
-LaTeX Warning: Hyper reference `appendix:BlocklibExecutorService' on page 1 undefined on input line 18.
-
-
-LaTeX Warning: Reference `appendix:BlocklibExecutorService' on page 1 undefined on input line 18.
-
-
-LaTeX Warning: Reference `appendix:BlocklibExecutorService' on page 1 undefined on input line 18.
-
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 22.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 22.
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 22.
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 22.
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 22.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 22.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 22.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 22.
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-Underfull \hbox (badness 10000) in paragraph at lines 18--23
-
- []
-
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
-Missing character: There is no ! in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ! in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ! in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-cpu.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-cpu.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-gpu.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-gpu.csv}
-
-Overfull \hbox (64.61423pt too wide) in paragraph at lines 24--28
-[][]
- []
-
-
-Overfull \hbox (60.9982pt too wide) in paragraph at lines 24--28
-[]
- []
-
-
-Overfull \hbox (55.47537pt too wide) in paragraph at lines 24--28
-[]
- []
-
-
-Overfull \hbox (55.47537pt too wide) in paragraph at lines 24--28
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
-
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 28.
-[1
-
-{C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-cube-single-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-cube-multi-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-static-single-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-static-multi-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-rotate-single-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-rotate-multi-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-walk-single-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-0-walk-multi-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-3-walk-single-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-3-walk-multi-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-10-walk-single-fps.csv}
-PGFPlots: reading {../performance/measurements/seed-10-walk-multi-fps.csv}
-
-Overfull \hbox (8.17886pt too wide) in paragraph at lines 35--43
-[]  
- []
-
-
-FiXme Summary: Number of notes: 0,
-(FiXme)        Number of warnings: 0,
-(FiXme)        Number of errors: 0,
-(FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 0.
-
-
-Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
- found. (Remove \makenoidxglossaries if you don't want any glossaries.)
-This document will not have a glossary.
-
-[4
-
-] (minimal.aux)
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `minimal.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package logreq Info: Writing requests to 'minimal.run.xml'.
-\openout1 = `minimal.run.xml'.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 69958 strings out of 478870
- 1584914 string characters out of 2847888
- 2776634 words of memory out of 3000000
- 86664 multiletter control sequences out of 15000+600000
- 452082 words of font info for 90 fonts, out of 8000000 for 9000
+ 68413 strings out of 478870
+ 1564726 string characters out of 2847888
+ 2697503 words of memory out of 3000000
+ 85277 multiletter control sequences out of 15000+600000
+ 407673 words of font info for 32 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 115i,20n,134p,10679b,2331s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{glo:ram} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:gpu} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:cpu} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:fps} has been referenced but does not exist, replaced by a fixed one
-
-{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on minimal.pdf (4 pages, 161633 bytes).
-PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 25101 words of extra memory for PDF output out of 29859 (max. 10000000)
-
+ 115i,1n,134p,10679b,2331s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

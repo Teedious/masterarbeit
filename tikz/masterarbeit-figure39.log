@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  12 APR 2022 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  13 APR 2022 12:00
 entering extended mode
 **\def\tikzexternalrealjob{masterarbeit}\input{masterarbeit}
 (masterarbeit.tex
@@ -1929,7 +1929,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 137.
+Package scrhack Info: loading listings hack on input line 147.
 
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\listings.
 hak
@@ -2189,14 +2189,61 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 \c@lstlisting=\count556
 Package scrhack Info: undefining \float@addtolists on input line 7.
-(titelseite.tex)
-The command '\includegraphics [height=2cm]{IM_Logo.pdf}' has been optimized awa
-y. Use '/tikz/external/optimize=false' to disable this.
+(titelseite.tex
+The command '\includegraphics [scale=0.2]{IM_Logo.pdf}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 8
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+5.
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+5.
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+25.
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+25.
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 25.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 25.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cf
+g
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cf
+g
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 25
 .
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+))
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+1.
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -2204,57 +2251,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-8.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-8.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 8.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 8.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 8.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cf
-g
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cf
-g
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
-
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 14.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 14.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 14.
 Package tocbasic Info: character protrusion at toc deactivated on input line 16
 .
 Package tocbasic Info: character protrusion at lof deactivated on input line 17
@@ -2582,6 +2580,8 @@ LaTeX Warning: Reference `sec:nebenl' on page 14 undefined on input line 143.
 LaTeX Warning: Citation 'Herrtwich1989' on page 14 undefined on input line 145.
 
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 145.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 145.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -3737,13 +3737,6 @@ mized away. Use '/tikz/external/optimize=false' to disable this.
 The command '\includegraphics [width=.49\textwidth ]{seed-2.png}' has been opti
 mized away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Hyper reference `fig:static' on page 56 undefined on input line 
-10.
-
-
-LaTeX Warning: Reference `fig:static' on page 56 undefined on input line 10.
-
-
 LaTeX Warning: Reference `fig:static' on page 56 undefined on input line 10.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -3947,15 +3940,39 @@ ne 13.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 FiXme Note: '{\color {red}anhang}' on input line 18.
+
+LaTeX Warning: Reference `fig:seed-0-walk-cpu' on page 61 undefined on input li
+ne 21.
+
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
+FiXme Note: '{\color {red}Andere Seeds vergleichen}' on input line 26.
+
+LaTeX Warning: Reference `fig:seed-0-walk-gpu' on page 61 undefined on input li
+ne 31.
+
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
+FiXme Note: '{\color {red}vergleichen}' on input line 38.
+
+LaTeX Warning: Reference `fig:seed-0-walk-mem' on page 61 undefined on input li
+ne 41.
+
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 ) (chapters/Performance/zusammenfassung.tex
+
+LaTeX Warning: Hyper reference `tab:zusammen' on page 62 undefined on input lin
+e 1.
+
+
+LaTeX Warning: Reference `tab:zusammen' on page 62 undefined on input line 1.
+
+
+LaTeX Warning: Reference `tab:zusammen' on page 62 undefined on input line 1.
+
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -3964,48 +3981,54 @@ isable this.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
+
+LaTeX Warning: Reference `fig:Scatterplot' on page 64 undefined on input line 6
+3.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 ) (chapters/Ausblick/EtablierungEinerKompositionroot.tex
 The command '\includegraphics [draft=false,scale=1,keepaspectratio]{\svg@tempa 
 }' has been optimized away. Use '/tikz/external/optimize=false' to disable this
 .
 
-LaTeX Warning: Citation 'Seemann2012' on page 64 undefined on input line 7.
+LaTeX Warning: Citation 'Seemann2012' on page 66 undefined on input line 7.
 
 
-LaTeX Warning: Citation 'Nystrom2015' on page 64 undefined on input line 10.
+LaTeX Warning: Citation 'Nystrom2015' on page 66 undefined on input line 10.
 
 
-LaTeX Warning: Citation 'Nystrom2015' on page 64 undefined on input line 10.
+LaTeX Warning: Citation 'Nystrom2015' on page 66 undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `fig:diagContext' on page 64 undefined on input 
+LaTeX Warning: Hyper reference `fig:diagContext' on page 66 undefined on input 
 line 10.
 
 
-LaTeX Warning: Reference `fig:diagContext' on page 64 undefined on input line 1
+LaTeX Warning: Reference `fig:diagContext' on page 66 undefined on input line 1
 0.
 
 
-LaTeX Warning: Reference `fig:diagContext' on page 64 undefined on input line 1
+LaTeX Warning: Reference `fig:diagContext' on page 66 undefined on input line 1
 0.
 
 
-LaTeX Warning: Citation 'Gamma2016' on page 64 undefined on input line 12.
+LaTeX Warning: Citation 'Gamma2016' on page 66 undefined on input line 12.
 
 
-LaTeX Warning: Citation 'Nystrom2015' on page 64 undefined on input line 12.
+LaTeX Warning: Citation 'Nystrom2015' on page 66 undefined on input line 12.
 
 
-LaTeX Warning: Citation 'Seemann2012' on page 64 undefined on input line 12.
+LaTeX Warning: Citation 'Seemann2012' on page 66 undefined on input line 12.
 
 
-LaTeX Warning: Citation 'Seemann2012' on page 65 undefined on input line 24.
+LaTeX Warning: Citation 'Seemann2012' on page 67 undefined on input line 24.
 
 
-LaTeX Warning: Citation 'Martin17' on page 65 undefined on input line 31.
+LaTeX Warning: Citation 'Martin17' on page 67 undefined on input line 31.
 
 
-LaTeX Warning: Citation 'Seemann2012' on page 65 undefined on input line 31.
+LaTeX Warning: Citation 'Seemann2012' on page 67 undefined on input line 31.
 
 )
 
@@ -4056,15 +4079,100 @@ The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
 687pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
 e' to disable this.
 FiXme Note: '{\color {red}Caption}' on input line 38.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--55
+
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--69
+
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--79
+
+ []
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 )
 The command '\includepdf []{img/Mastererklaerung.pdf}' has been optimized away.
  Use '/tikz/external/optimize=false' to disable this.
 
-FiXme Summary: Number of notes: 6,
+FiXme Summary: Number of notes: 8,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 6.
+(FiXme)        Total: 8.
 
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\provideco
 mmand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
@@ -4087,11 +4195,11 @@ Package logreq Info: Writing requests to 'tikz/masterarbeit-figure39.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71910 strings out of 478870
- 1629522 string characters out of 2847888
- 2690405 words of memory out of 3000000
- 88204 multiletter control sequences out of 15000+600000
- 539695 words of font info for 302 fonts, out of 8000000 for 9000
+ 71929 strings out of 478870
+ 1630111 string characters out of 2847888
+ 2691047 words of memory out of 3000000
+ 88228 multiletter control sequences out of 15000+600000
+ 528162 words of font info for 292 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  119i,22n,137p,10665b,2463s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:ram} has been referenced but does not exist, 
@@ -4103,9 +4211,9 @@ replaced by a fixed one
 :/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb>
 <C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb
 >
-Output written on tikz/masterarbeit-figure39.pdf (1 page, 41180 bytes).
+Output written on tikz/masterarbeit-figure39.pdf (1 page, 41578 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
+ 265 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
- 73741 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 67597 words of extra memory for PDF output out of 74296 (max. 10000000)
 

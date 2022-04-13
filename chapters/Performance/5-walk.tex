@@ -28,7 +28,7 @@ Im Gegensatz zu Szenario 4: Welt-Rotation, scheint die Messung in diesem Szenari
 Zum ersten Mal steigt in diesem Szenario die Auslastung der \ac{cpu} auch während der Hauptphase In beiden Systemen immer wieder merklich an. SystemA hat eine durchschnittliche Auslastung von \SI{27}{\percent} und SystemB zeigt eine Durchschnittsauslastung \SI{36}{\percent}. Dieser Anstieg ist auf die während der Hauptphase zu ladenden Chunks zurückzuführen. Hierfür werden in beiden Systemen alle Hardware-Threads genutzt, wie in den vorherigen Kapiteln beschrieben. Damit erhöht sich auch die Gesamtauslastung der \ac{cpu}. Dass in dem Graphen in der Hauptphase keine Auslastungsspitzen nahe \SI{100}{\percent} zu sehen sind, liegt vermutlich an einer zu geringen zeitlichen Auflösung der Messung.
 
 \paragraph{\ac{gpu}}
-Auch in \ac{gpu} erfährt in diesem Szenario eine variable Auslastung. Die Ausschläge sind, wie Abbildung~\ref{fig:seed-0-walk-gpu} zeigt, zwar nicht so groß wie in Szenario Welt-Rotation, dafür allerdings deutlich häufiger und nicht so regelmäßig.
+Auch die \ac{gpu} erfährt in diesem Szenario eine variable Auslastung. Die Ausschläge sind, wie Abbildung~\ref{fig:seed-0-walk-gpu} zeigt, zwar nicht so groß wie in Szenario Welt-Rotation, dafür allerdings deutlich häufiger und nicht so regelmäßig.
 \begin{figure}[!htbp]
 	\gpuplot{seed-0-walk}
 	\caption{Seed 0 Walk}\label{fig:seed-0-walk-gpu}
@@ -38,10 +38,12 @@ In SystemA lässt sich eine durchschnittliche Auslastung von \SI{34}{\percent} m
 Auffällig ist, dass entgegen der Framerate die Auslastung der \ac{gpu} in SystemB während der Messung tendenziell sinkt.\todo{vergleichen}
 
 \paragraph{\ac{ram}}
+Abschließend wird nun noch der in Abbildung~\ref{fig:seed-0-walk-mem} dargestellte Speicherverbrauch betrachtet. In beiden Systemen steigt der dauerhaft genutzte Speicher steigt an, während der Gesamtverbrauch über die gemessene Zeit in der Hauptphase konstant ist.
 \begin{figure}[!htbp]
 	\memplot{seed-0-walk-single-mem.csv}
 	\memplot{seed-0-walk-multi-mem.csv}
 	\caption{Seed 0 Walk}\label{fig:seed-0-walk-mem}
 \end{figure} 
-
+SystemA besitzt einen Speicherverbrauch von \SI{1215}{\mega\byte} und SystemB nutzt mit \SI{1881}{\mega\byte} durchschnittlich \SI{55}{\percent} mehr. Der kurzfristige Speicherverbrauch liegt bei \SI{114}{\mega\byte\per\second} in SystemA. Das ist das Maximum des Systems über alle Szenarien hinweg. In SystemB wird ein Speicherbedarf von \SI{248}{\mega\byte\per\second} für die Erzeugung kurzfristig genutzter Objekte gemessen. Damit ergibt sich in diesem Szenario ein Anstieg von \SI{118}{\percent}. Besonders interessant ist in diesem Szenario der Speicherverbrauch der langlebigen Objekte (Tenured). In allen anderen Szenarien ist diese Menge über den Großteil der Messung konstant.
+In Szenario 5: Welt-Gehen steigt dieser zum ersten Mal während der Hauptphase stetig. In SystemA wird ein Anstieg von \SI{401}{\mega\byte} in Sekunde 25 zu \SI{705}{\mega\byte} in Sekunde 54 gemessen. In SystemB steigt die Nutzung von \SI{585}{\mega\byte} auf \SI{800}{\mega\byte}. Das ist ein dauerhafter Anstieg von \SI{10}{\mega\byte\per\second} in SystemA und ein Anstieg von \SI{7}{\mega\byte\per\second} in SystemB. Diese Tatsache liefert ein Indiz für die Existenz von Speicherlecks in der Blocklib. Um diesen Anschein zu bestätigen beziehungsweise zu entkräften, wäre es sinnvoll in der Zukunft auch längere Messungen durchzuführen. Eine mögliche Erklärung für den steten Anstieg wäre nämlich auch, dass in der Messung während der Hauptphase keine Garbage-Collection stattfindet und so nur scheinbar ein stetig steigender Speicherbedarf entsteht.
 

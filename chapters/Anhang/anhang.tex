@@ -39,13 +39,57 @@ Klassendiagramm des Interface \class{CompletionStage}, auf das auf Seite~\pagere
 }
 \pagebreak
 \section{Messungen}
+\subsection{\glsentryshort{fps} Verläufe gesammelt}
 \pgfplotsset{
-	height=3cm,
+	height=1.5cm,
+	every axis title/.append style={fill=white,at={(.0,1)},yshift=-.2cm,draw=black,anchor=south west,nodes={scale=.7}},
 }
-%\fpsplot[xticklabels={,,},xlabel={}]{seed-0-hexagon}
-%\fpsplot[xticklabels={,,},xlabel={}]{seed-0-cube}
-%\fpsplot[xticklabels={,,},xlabel={}]{seed-0-static}
-%\fpsplot[xticklabels={,,},xlabel={}]{seed-0-rotate}
-%\fpsplot[xticklabels={,,},xlabel={}]{seed-0-walk}
-%\fpsplot[xticklabels={,,},xlabel={}]{seed-3-walk}
-%\fpsplot{seed-10-walk}
+\settowidth\mytemp{1,}
+\fpsplot[title={Szenario 1: Hexagon (0)},ytick={0,200,...,1200},height=3cm,ymax=1200,y label style={at={(ticklabel cs:.5,-\mytemp)}},xticklabels={,,},xlabel={}]{seed-0-hexagon}
+\\\fpsplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\\fpsplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
+\\\fpsplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
+\\\fpsplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
+\\\fpsplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
+\\\fpsplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
+
+\pagebreak
+\subsection{\glsentryshort{cpu}-Auslastung Verläufe gesammelt}
+\pgfplotsset{
+	height=1.9cm,
+}
+
+\cpuplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon}
+\\\cpuplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\\cpuplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
+\\\cpuplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
+\\\cpuplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
+\\\cpuplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
+\\\cpuplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
+
+\pagebreak
+\subsection{\glsentryshort{gpu}-Auslastung Verläufe gesammelt}
+\gpuplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon}
+\\\gpuplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\\gpuplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
+\\\gpuplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
+\\\gpuplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
+\\\gpuplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
+\\\gpuplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
+
+\pagebreak
+\subsection{\glsentryshort{ram}-Auslastung Verläufe gesammelt}
+  				\memplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon-single-mem.csv}
+\\[-1.5em]\memplot[xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}
+\\[-1.5em]\memplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube-single-mem.csv}
+\\[-1.5em]\memplot[xticklabels={,,},xlabel={}]{seed-0-cube-multi-mem.csv}
+\\[-1.5em]\memplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static-single-mem.csv}
+\\[-1.5em]\memplot[xticklabels={,,},xlabel={}]{seed-0-static-multi-mem.csv}
+\\[-1.5em]\memplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate-single-mem.csv}
+\\[-1.5em]\memplot[]{seed-0-rotate-multi-mem.csv}
+\\[-1.5em]\memplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk-single-mem.csv}
+\\[-1.5em]\memplot[xticklabels={,,},xlabel={}]{seed-0-walk-multi-mem.csv}
+\\[-1.5em]\memplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk-single-mem.csv}
+\\[-1.5em]\memplot[xticklabels={,,},xlabel={}]{seed-3-walk-multi-mem.csv}
+\\[-1.5em]\memplot[title={Szenario 5: Welt-Gehen (10)},xticklabels={,,},xlabel={}]{seed-10-walk-single-mem.csv}
+\\[-1.5em]\memplot[]{seed-10-walk-multi-mem.csv}\\[-.5em]

@@ -2,10 +2,11 @@
 \input{../preamble.tex}
 \input{../plots}
 \input{../glossary}
+\usepackage{csvsimple}
 \pgfplotsset{
 	grid=major,
-	width=\textwidth,
-	height=3.5cm,
+	width=.88\textwidth,
+	height=2cm,
 	compat=1.18,
   table/search path={../performance/measurements},
 }
@@ -13,31 +14,7 @@
 \tikzexternaldisable
 
 \begin{document}
-In Abbildung~?? ist die Struktur des Designs für das Jobsystem der Blocklib dargestellt. Es wird ein Interface \class{BlocklibExecutorService} definiert, das von dem Interface \class{ScheduledExecutorService} der Java Bibliothek abgeleitet ist. Das Interface wird so erweitert, dass die verschiedenen \code{submit(...)} Methoden jeweils Objekte des Typs \class{CompletableFuture} zurückgeben. Die \code{schedule(...)} Methoden geben jeweils ein \class{ScheduledCompletableFuture} Objekt zurück, das später noch näher erläutert wird.
 
-Das Interface \class{BlocklibExecutorService} wird durch die Klasse \class{BlocklibExecutor} implementiert. Sie nutzt zur Durchführung von Jobs den von der Java Bibliothek definierten \class{ScheduledThreadPoolExecutor}. Um die für die Rückgabewerte nötigen \class{CompletableFuture} Objekte zu erzeugen, wird eine Klasse \class{CompletableFutureWrapper} erstellt. Eine vollständige Auflistung der von den drei Interfaces bereitgestellten Methoden ist in Anhang~\vref{appendix:BlocklibExecutorService} zu finden. 
-\pgfplotsset{
-	height=4cm,
-}
-\si[]{\fps}\ac{cpu}\ac{gpu}\ac{ram}\\
+\csvautotabular{../performance/measurements/seed-0-cube-multi-cpu.csv}
 
-\memplot{seed-0-hexagon-single-mem.csv} 
-\fpsplot[ymax=1200,height=12cm,]{seed-0-hexagon}
-\cpuplot{seed-0-hexagon}
-\gpuplot{seed-0-hexagon}
-
-\clearpage
-\pgfplotsset{
-	height=2cm,
-	
-}
-\settowidth\mytemp{1,}
-s\\
-	\fpsplot[ytick={0,200,...,1200},xticklabels={,,},xlabel={},height=4cm,ymax=1200,y label style={at={(ticklabel cs:.5,-\mytemp)}}]{seed-0-hexagon}\\
-	\fpsplot[xticklabels={,,},xlabel={}]{seed-0-cube}\\
-	\fpsplot[xticklabels={,,},xlabel={}]{seed-0-static}\\
-	\fpsplot[xticklabels={,,},xlabel={}]{seed-0-rotate}\\
-	\fpsplot[xticklabels={,,},xlabel={}]{seed-0-walk}\\
-	\fpsplot[xticklabels={,,},xlabel={}]{seed-3-walk}\\
-	\fpsplot{seed-10-walk}
 \end{document}

@@ -1,4 +1,4 @@
-\newcommand{\memplot}[1]{ 
+\newcommand{\memplot}[2][]{ 
 \begin{tikzpicture}
 	\begin{axis}[
 		xmin=0,
@@ -17,10 +17,11 @@
 		ticks=none,
 		grid=major,
 		grid style={help lines},
+		#1
 	]
-			\addplot+[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1} \closedcycle;
-			\addplot+[blue,stack plots=y] table[col sep=comma,header=true,x index=0, y index=1] {#1} \closedcycle;
-			\addplot+[red,stack plots=y] table[col sep=comma,header=true,x index=0, y index=2] {#1}  \closedcycle;
+			\addplot+[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#2} \closedcycle;
+			\addplot+[blue,stack plots=y] table[col sep=comma,header=true,x index=0, y index=1] {#2} \closedcycle;
+			\addplot+[red,stack plots=y] table[col sep=comma,header=true,x index=0, y index=2] {#2}  \closedcycle;
 	\end{axis}
 	\begin{axis}[
 		xmin=0,
@@ -33,10 +34,11 @@
 		ylabel={\ac{ram} (\si{\mega\byte})},
 		legend entries = {Gesamt,Tenured,Eden},
 		legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
+		#1
 		]
-			\addplot+[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#1};
-			\addplot+[blue,stack plots=y] table[col sep=comma,header=true,x index=0, y index=1] {#1};
-			\addplot+[red,stack plots=y] table[col sep=comma,header=true,x index=0, y index=2] {#1};
+			\addplot+[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#2};
+			\addplot+[blue,stack plots=y] table[col sep=comma,header=true,x index=0, y index=1] {#2};
+			\addplot+[red,stack plots=y] table[col sep=comma,header=true,x index=0, y index=2] {#2};
 	\end{axis}
 \end{tikzpicture}
 }
