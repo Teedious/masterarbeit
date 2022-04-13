@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  13 APR 2022 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  13 APR 2022 23:06
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
@@ -1799,9 +1799,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 214.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 212.
 
-Overfull \hbox (3.96545pt too wide) detected at line 228
+Overfull \hbox (3.96545pt too wide) detected at line 226
  []\T1/lmr/m/n/12 VIII
  []
 
@@ -1827,7 +1827,7 @@ Package tocbasic Info: character protrusion at lol deactivated on input line 23.
 \tf@lol=\write9
 \openout9 = `masterarbeit.lol'.
 
- [5] (chapters/Einleitung.tex
+ [5] [6] (chapters/Einleitung.tex
 <./img//unreal-5.png, id=413, 1927.2pt x 1084.05pt>
 File: ./img//unreal-5.png Graphic file (type png)
 <use ./img//unreal-5.png>
@@ -1892,4 +1892,652 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 ===== Image 'tikz/masterarbeit-figure8' is up-to-date. ======
 [10 <./tikz/masterarbeit-figure6.pdf> <./tikz/masterarbeit-figure7.pdf> <./tikz/masterarbeit-figure8.pdf>] [11] [12]
 ===== Image 'tikz/masterarbeit-figure9' is up-to-date. ======
-[13 <./tikz/ma
+[13 <./tikz/masterarbeit-figure9.pdf>]
+FiXme Note: '{\color {red}Check, dass Chunk definiert ist}' on input line 201.
+) [14] (chapters/Grundlagen/MultithreadingInJava.tex [15] [16]
+Overfull \hbox (0.30421pt too wide) in paragraph at lines 53--55
+[]\T1/lmr/m/n/12 (-20) Java stellt un-ter an-de-rem die Klas-sen []\T1/lmtt/m/n/12 c-B[][][]\T1/lmr/m/n/12 (-20) , []\T1/lmtt/m/n/12 c-I[][][]\T1/lmr/m/n/12 (-20) , []\T1/lmtt/m/n/12 c-L[][][] \T1/lmr/m/n/12 (-20) und []\T1/lmtt/m/n/12 c-
+ []
+
+[17] [18])
+Overfull \hbox (1.51039pt too wide) in paragraph at lines 85--45
+[]\T1/lmtt/m/n/12 n-S[][][]\T1/lmr/m/n/12 (-20) . Sie über-nimmt al-so die Ver-wal-tung der Kom-po-si-ti-on asyn-chro-ner Tasks [[]HT16[],
+ []
+
+(chapters/Grundlagen/MultithreadingInSpielen.tex [19]
+===== Image 'tikz/masterarbeit-figure10' is up-to-date. ======
+[20 <./tikz/masterarbeit-figure10.pdf>]
+===== Image 'tikz/masterarbeit-figure11' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure12' is up-to-date. ======
+[21 <./tikz/masterarbeit-figure11.pdf>] [22 <./tikz/masterarbeit-figure12.pdf>]
+<./img//Destiny.png, id=1153, 481.3182pt x 271.0125pt>
+File: ./img//Destiny.png Graphic file (type png)
+<use ./img//Destiny.png>
+Package pdftex.def Info: ./img//Destiny.png  used on input line 133.
+(pdftex.def)             Requested size: 386.95897pt x 217.88133pt.
+ [23]) [24 <./img//Destiny.png>] (chapters/EntwicklungEinerNebenlaeufigen/intro.tex) (chapters/EntwicklungEinerNebenlaeufigen/AnalyseDerBlocklib.tex
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6.
+ (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 13.
+
+[25] [26]
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+) (chapters/EntwicklungEinerNebenlaeufigen/Anforderungen.tex [27]) [28] (chapters/DesignDerThreadingApi/Design.tex
+Overfull \hbox (6.3454pt too wide) in paragraph at lines 7--9
+[]\T1/lmr/m/n/12 (-20) Die Block-lib ent-hält bei-spiels-wei-se ei-ne Klas-se [][][], die als ei-ne Art [][][]Single-ton[][]-Implementierung
+ []
+
+[29]) (chapters/DesignDerThreadingApi/Renderthread.tex [30]
+===== Image 'tikz/masterarbeit-figure13' is up-to-date. ======
+) (chapters/DesignDerThreadingApi/JobApi.tex
+===== Image 'tikz/masterarbeit-figure14' is up-to-date. ======
+[31 <./tikz/masterarbeit-figure13.pdf>]
+<./svg-inkscape/GrobesDesign_svg-raw.pdf, id=1284, 702.37407pt x 242.40562pt>
+File: ./svg-inkscape/GrobesDesign_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/GrobesDesign_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/GrobesDesign_svg-raw.pdf  used on input line 44.
+(pdftex.def)             Requested size: 702.37236pt x 242.40501pt.
+) [32 <./tikz/masterarbeit-figure14.pdf>] [33 <./svg-inkscape/GrobesDesign_svg-raw.pdf>] (chapters/Implementierung/Implementierung.tex) (chapters/Implementierung/ImplementierungRenderthread.tex [34]
+<./svg-inkscape/Loader_svg-raw.pdf, id=1518, 502.87875pt x 183.68625pt>
+File: ./svg-inkscape/Loader_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Loader_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/Loader_svg-raw.pdf  used on input line 12.
+(pdftex.def)             Requested size: 502.87752pt x 183.68578pt.
+ [35 <./svg-inkscape/Loader_svg-raw.pdf>]
+<./img//player.png, id=1735, 276.28218pt x 356.83313pt>
+File: ./img//player.png Graphic file (type png)
+<use ./img//player.png>
+Package pdftex.def Info: ./img//player.png  used on input line 25.
+(pdftex.def)             Requested size: 99.13268pt x 128.0374pt.
+ [36 <./img//player.png>] [37]
+<./svg-inkscape/Rendering_svg-raw.pdf, id=1746, 427.5975pt x 201.75375pt>
+File: ./svg-inkscape/Rendering_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Rendering_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/Rendering_svg-raw.pdf  used on input line 55.
+(pdftex.def)             Requested size: 427.59645pt x 201.75325pt.
+<./svg-inkscape/Rendering-Interface_svg-raw.pdf, id=1755, 548.80031pt x 202.50656pt>
+File: ./svg-inkscape/Rendering-Interface_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Rendering-Interface_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/Rendering-Interface_svg-raw.pdf  used on input line 66.
+(pdftex.def)             Requested size: 548.79895pt x 202.50604pt.
+ [38 <./svg-inkscape/Rendering_svg-raw.pdf>]
+===== Image 'tikz/masterarbeit-figure15' is up-to-date. ======
+[39 <./svg-inkscape/Rendering-Interface_svg-raw.pdf>]
+===== Image 'tikz/masterarbeit-figure16' is up-to-date. ======
+[40 <./tikz/masterarbeit-figure15.pdf>]
+Overfull \hbox (8.68764pt too wide) in paragraph at lines 168--170
+[] []\T1/lmss/bx/n/12 (-20) Zwischenspeicherung in der GUI[][] \T1/lmr/m/n/12 (-20) Die [][][]GUI[][]-Elemente wer-den da-ge-gen von der Klas-se [][][]
+ []
+
+[41 <./tikz/masterarbeit-figure16.pdf>]
+<./svg-inkscape/GameLoop_svg-raw.pdf, id=2185, 630.10406pt x 365.11406pt>
+File: ./svg-inkscape/GameLoop_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/GameLoop_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/GameLoop_svg-raw.pdf  used on input line 185.
+(pdftex.def)             Requested size: 630.10252pt x 365.11316pt.
+ [42]
+<./svg-inkscape/GameLoopActivity_svg-raw.pdf, id=2201, 454.69875pt x 167.12437pt>
+File: ./svg-inkscape/GameLoopActivity_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/GameLoopActivity_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/GameLoopActivity_svg-raw.pdf  used on input line 195.
+(pdftex.def)             Requested size: 363.75949pt x 133.69966pt.
+) (chapters/Implementierung/UmstellungRenderarchitektur.tex [43 <./svg-inkscape/GameLoop_svg-raw.pdf>]) (chapters/Implementierung/SucheNachRaceConditions.tex
+===== Image 'tikz/masterarbeit-figure17' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure18' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure19' is up-to-date. ======
+[44 <./svg-inkscape/GameLoopActivity_svg-raw.pdf> <./tikz/masterarbeit-figure17.pdf> <./tikz/masterarbeit-figure18.pdf> <./tikz/masterarbeit-figure19.pdf>]
+<./img//shadowMap.png, id=2605, 724.95844pt x 348.55219pt>
+File: ./img//shadowMap.png Graphic file (type png)
+<use ./img//shadowMap.png>
+Package pdftex.def Info: ./img//shadowMap.png  used on input line 29.
+(pdftex.def)             Requested size: 435.32422pt x 209.3031pt.
+ [45 <./img//shadowMap.png>] [46]) (chapters/Implementierung/ImplementierungJobsystem.tex
+<./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf, id=2628, 563.85657pt x 198.7425pt>
+File: ./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf  used on input line 9.
+(pdftex.def)             Requested size: 563.8552pt x 198.742pt.
+ [47 <./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf>] [48] [49]
+<./svg-inkscape/Wrapper_svg-raw.pdf, id=2710, 575.14874pt x 325.215pt>
+File: ./svg-inkscape/Wrapper_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Wrapper_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/Wrapper_svg-raw.pdf  used on input line 59.
+(pdftex.def)             Requested size: 575.14734pt x 325.2142pt.
+ [50] [51 <./svg-inkscape/Wrapper_svg-raw.pdf>]
+Overfull \hbox (7.83438pt too wide) in paragraph at lines 81--82
+[]\T1/lmr/m/n/12 (-20) Die Klas-se []\T1/lmtt/m/n/12 d-M[][][] \T1/lmr/m/n/12 (-20) über-gibt den []\T1/lmtt/m/n/12 b-E[][][] \T1/lmr/m/n/12 (-20) an [][][]-Objekte, de-ren Ausbreitungs-
+ []
+
+[52]) [53] (chapters/Performance/0-performance.tex) [54
+
+] (chapters/Performance/1-hexagon.tex
+<./img//fps-hexagon.png, id=3044, 1204.5pt x 803.0pt>
+File: ./img//fps-hexagon.png Graphic file (type png)
+<use ./img//fps-hexagon.png>
+Package pdftex.def Info: ./img//fps-hexagon.png  used on input line 6.
+(pdftex.def)             Requested size: 386.95897pt x 257.96997pt.
+
+===== Image 'tikz/masterarbeit-figure20' is up-to-date. ======
+[55 <./img//fps-hexagon.png (PNG copy)>]
+===== Image 'tikz/masterarbeit-figure21' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+===== Image 'tikz/masterarbeit-figure22' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+[56 <./tikz/masterarbeit-figure20.pdf> <./tikz/masterarbeit-figure21.pdf>]
+===== Image 'tikz/masterarbeit-figure23' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure24' is up-to-date. ======
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 36--38
+[][]
+ []
+
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 36--38
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+) [57 <./tikz/masterarbeit-figure22.pdf>] (chapters/Performance/2-cube.tex
+===== Image 'tikz/masterarbeit-figure25' is up-to-date. ======
+[58 <./tikz/masterarbeit-figure23.pdf> <./tikz/masterarbeit-figure24.pdf>]
+===== Image 'tikz/masterarbeit-figure26' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure27' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+[59 <./tikz/masterarbeit-figure25.pdf> <./tikz/masterarbeit-figure26.pdf>]
+===== Image 'tikz/masterarbeit-figure28' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+===== Image 'tikz/masterarbeit-figure29' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure30' is up-to-date. ======
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 36--38
+[][]
+ []
+
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 36--38
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+[60 <./tikz/masterarbeit-figure27.pdf> <./tikz/masterarbeit-figure28.pdf>]) (chapters/Performance/3-static.tex
+<./img//seed-0.png, id=3225, 1204.5pt x 803.0pt>
+File: ./img//seed-0.png Graphic file (type png)
+<use ./img//seed-0.png>
+Package pdftex.def Info: ./img//seed-0.png  used on input line 5.
+(pdftex.def)             Requested size: 237.01411pt x 157.99956pt.
+<./img//seed-2.png, id=3226, 1204.5pt x 803.0pt>
+File: ./img//seed-2.png Graphic file (type png)
+<use ./img//seed-2.png>
+Package pdftex.def Info: ./img//seed-2.png  used on input line 7.
+(pdftex.def)             Requested size: 237.01411pt x 157.99956pt.
+ [61 <./tikz/masterarbeit-figure29.pdf> <./tikz/masterarbeit-figure30.pdf>]
+===== Image 'tikz/masterarbeit-figure31' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure32' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+[62 <./img//seed-0.png (PNG copy)> <./img//seed-2.png (PNG copy)> <./tikz/masterarbeit-figure31.pdf>]
+===== Image 'tikz/masterarbeit-figure33' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+===== Image 'tikz/masterarbeit-figure34' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure35' is up-to-date. ======
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 43--45
+[][]
+ []
+
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 43--45
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+
+ []
+
+) [63 <./tikz/masterarbeit-figure32.pdf> <./tikz/masterarbeit-figure33.pdf>] (chapters/Performance/4-rotate.tex
+File: ./img//rotate-1.png Graphic file (type png)
+<use ./img//rotate-1.png>
+Package pdftex.def Info: ./img//rotate-1.png  used on input line 4.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+<./img//rotate-2.png, id=3328, 1204.5pt x 803.0pt>
+File: ./img//rotate-2.png Graphic file (type png)
+<use ./img//rotate-2.png>
+Package pdftex.def Info: ./img//rotate-2.png  used on input line 5.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+<./img//rotate-3.png, id=3329, 1204.5pt x 803.0pt>
+File: ./img//rotate-3.png Graphic file (type png)
+<use ./img//rotate-3.png>
+Package pdftex.def Info: ./img//rotate-3.png  used on input line 6.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+<./img//rotate-4.png, id=3330, 1204.5pt x 803.0pt>
+File: ./img//rotate-4.png Graphic file (type png)
+<use ./img//rotate-4.png>
+Package pdftex.def Info: ./img//rotate-4.png  used on input line 7.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+<./img//rotate-5.png, id=3331, 1204.5pt x 803.0pt>
+File: ./img//rotate-5.png Graphic file (type png)
+<use ./img//rotate-5.png>
+Package pdftex.def Info: ./img//rotate-5.png  used on input line 8.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+<./img//rotate-6.png, id=3332, 1204.5pt x 803.0pt>
+File: ./img//rotate-6.png Graphic file (type png)
+<use ./img//rotate-6.png>
+Package pdftex.def Info: ./img//rotate-6.png  used on input line 9.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+
+===== Image 'tikz/masterarbeit-figure36' is up-to-date. ======
+[64 <./tikz/masterarbeit-figure34.pdf> <./tikz/masterarbeit-figure35.pdf>]
+===== Image 'tikz/masterarbeit-figure37' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[65 <./img//rotate-2.png (PNG copy)> <./img//rotate-3.png (PNG copy)> <./img//rotate-4.png (PNG copy)> <./img//rotate-5.png (PNG copy)> <./img//rotate-6.png (PNG copy)> <./tikz/masterarbeit-figure36.pdf>]
+===== Image 'tikz/masterarbeit-figure38' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+[66 <./tikz/masterarbeit-figure37.pdf> <./tikz/masterarbeit-figure38.pdf>]
+===== Image 'tikz/masterarbeit-figure39' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure40' is up-to-date. ======
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 51--53
+[][]
+ []
+
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 51--53
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
+ []
+
+) (chapters/Performance/5-walk.tex
+<./img//walk-1.png, id=3450, 1204.5pt x 803.0pt>
+File: ./img//walk-1.png Graphic file (type png)
+<use ./img//walk-1.png>
+Package pdftex.def Info: ./img//walk-1.png  used on input line 4.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+<./img//walk-2.png, id=3451, 1204.5pt x 803.0pt>
+File: ./img//walk-2.png Graphic file (type png)
+<use ./img//walk-2.png>
+Package pdftex.def Info: ./img//walk-2.png  used on input line 5.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+<./img//walk-3.png, id=3452, 1204.5pt x 803.0pt>
+File: ./img//walk-3.png Graphic file (type png)
+<use ./img//walk-3.png>
+Package pdftex.def Info: ./img//walk-3.png  used on input line 6.
+(pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
+FiXme Note: '{\color {red}AnhÃ¤nge}' on input line 10.
+
+===== Image 'tikz/masterarbeit-figure41' is up-to-date. ======
+FiXme Note: '{\color {red}anhang}' on input line 18.
+[67 <./tikz/masterarbeit-figure39.pdf> <./tikz/masterarbeit-figure40.pdf>]
+===== Image 'tikz/masterarbeit-figure42' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+FiXme Note: '{\color {red}Andere Seeds vergleichen}' on input line 26.
+[68 <./img//walk-1.png (PNG copy)> <./img//walk-2.png (PNG copy)> <./img//walk-3.png (PNG copy)> <./tikz/masterarbeit-figure41.pdf>]
+===== Image 'tikz/masterarbeit-figure43' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+FiXme Note: '{\color {red}vergleichen}' on input line 38.
+===== Image 'tikz/masterarbeit-figure44' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure45' is up-to-date. ======
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 43--45
+[][]
+ []
+
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 43--45
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+
+ []
+
+[69 <./tikz/masterarbeit-figure42.pdf> <./tikz/masterarbeit-figure43.pdf>]) (chapters/Performance/zusammenfassung.tex
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+ [70 <./tikz/masterarbeit-figure44.pdf> <./tikz/masterarbeit-figure45.pdf>] [71]
+===== Image 'tikz/masterarbeit-figure46' is up-to-date. ======
+) [72 <./tikz/masterarbeit-figure46.pdf>] (chapters/Fazit.tex) [73] (chapters/Ausblick/EtablierungEinerKompositionroot.tex
+<./svg-inkscape/Context-shortened_svg-raw.pdf, id=3658, 455.45157pt x 243.91125pt>
+File: ./svg-inkscape/Context-shortened_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Context-shortened_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/Context-shortened_svg-raw.pdf  used on input line 3.
+(pdftex.def)             Requested size: 455.45045pt x 243.91064pt.
+ [74 <./svg-inkscape/Context-shortened_svg-raw.pdf>] [75]) [76]
+<./img//ExportedFont.png, id=3790, 513.92pt x 128.48pt>
+File: ./img//ExportedFont.png Graphic file (type png)
+<use ./img//ExportedFont.png>
+Package pdftex.def Info: ./img//ExportedFont.png  used on input line 103.
+(pdftex.def)             Requested size: 386.95897pt x 96.74203pt.
+ [77 <./img//ExportedFont.png>] [78] [79]
+Using TeX to sort glossary entries---this may take a while
+Using TeX to sort glossary entries---this may take a while
+[80] [81]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+ [82] [83]
+Overfull \hbox (12.64574pt too wide) in paragraph at lines 139--139
+[]\T1/lmr/m/n/12 (-20) Sven Kal-le.   Im-ple-men-ta-ti-on of en-vi-ron-men-tal fea-tu-res in-to an exis-ting 3D-Framework.
+ []
+
+[84] (chapters/Anhang/anhang.tex [85]
+<./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf, id=4077, 551.05875pt x 551.81157pt>
+File: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf  used on input line 9.
+(pdftex.def)             Requested size: 551.05739pt x 551.81023pt.
+
+Overfull \hbox (11.76692pt too wide) in paragraph at lines 9--10
+[] 
+ []
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 11.
+<./svg-inkscape/CompletionStage_svg-raw.pdf, id=4078, 742.27313pt x 666.99188pt>
+File: ./svg-inkscape/CompletionStage_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/CompletionStage_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/CompletionStage_svg-raw.pdf  used on input line 12.
+(pdftex.def)             Requested size: 742.27133pt x 666.99025pt.
+[1
+
+ <./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf>]
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+ [2 <./svg-inkscape/CompletionStage_svg-raw.pdf>]
+<./svg-inkscape/Context_svg-raw.pdf, id=4416, 455.45157pt x 774.64406pt>
+File: ./svg-inkscape/Context_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/Context_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/Context_svg-raw.pdf  used on input line 29.
+(pdftex.def)             Requested size: 455.45045pt x 774.64217pt.
+FiXme Note: '{\color {red}Caption}' on input line 30.
+ [3 <./svg-inkscape/Context_svg-raw.pdf>]
+<./svg-inkscape/ExecuterInterfaces_svg-raw.pdf, id=4586, 751.30687pt x 680.5425pt>
+File: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf  used on input line 37.
+(pdftex.def)             Requested size: 751.30502pt x 680.54083pt.
+FiXme Note: '{\color {red}Caption}' on input line 38.
+ [4 <./svg-inkscape/ExecuterInterfaces_svg-raw.pdf>]
+===== Image 'tikz/masterarbeit-figure47' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure48' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure49' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure50' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure51' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure52' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure53' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--55
+
+ []
+
+[5 <./tikz/masterarbeit-figure47.pdf> <./tikz/masterarbeit-figure48.pdf> <./tikz/masterarbeit-figure49.pdf> <./tikz/masterarbeit-figure50.pdf> <./tikz/masterarbeit-figure51.pdf> <./tikz/masterarbeit-figure52.pdf> <./tikz/masterarbeit-figure53.pdf>]
+===== Image 'tikz/masterarbeit-figure54' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure55' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure56' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure57' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure58' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure59' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure60' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--69
+
+ []
+
+[6 <./tikz/masterarbeit-figure54.pdf> <./tikz/masterarbeit-figure55.pdf> <./tikz/masterarbeit-figure56.pdf> <./tikz/masterarbeit-figure57.pdf> <./tikz/masterarbeit-figure58.pdf> <./tikz/masterarbeit-figure59.pdf> <./tikz/masterarbeit-figure60.pdf>]
+===== Image 'tikz/masterarbeit-figure61' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure62' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure63' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure64' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure65' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure66' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure67' is up-to-date. ======
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--79
+
+ []
+
+[7 <./tikz/masterarbeit-figure61.pdf> <./tikz/masterarbeit-figure62.pdf> <./tikz/masterarbeit-figure63.pdf> <./tikz/masterarbeit-figure64.pdf> <./tikz/masterarbeit-figure65.pdf> <./tikz/masterarbeit-figure66.pdf> <./tikz/masterarbeit-figure67.pdf>]
+===== Image 'tikz/masterarbeit-figure68' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure69' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure70' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure71' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure72' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure73' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure74' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure75' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure76' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure77' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure78' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure79' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure80' is up-to-date. ======
+===== Image 'tikz/masterarbeit-figure81' is up-to-date. ======
+)
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (0.69781pt too wide) in paragraph at lines 82--143
+[]
+ []
+
+
+Overfull \hbox (6.57277pt too wide) in paragraph at lines 82--143
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--143
+
+ []
+
+[8 <./tikz/masterarbeit-figure68.pdf> <./tikz/masterarbeit-figure69.pdf> <./tikz/masterarbeit-figure70.pdf> <./tikz/masterarbeit-figure71.pdf> <./tikz/masterarbeit-figure72.pdf> <./tikz/masterarbeit-figure73.pdf> <./tikz/masterarbeit-figure74.pdf> <./tikz/masterarbeit-figure75.pdf>]
+
+FiXme Summary: Number of notes: 8,
+(FiXme)        Number of warnings: 0,
+(FiXme)        Number of errors: 0,
+(FiXme)        Number of fatal errors: 0,
+(FiXme)        Total: 8.
+
+[9 <./tikz/masterarbeit-figure76.pdf> <./tikz/masterarbeit-figure77.pdf> <./tikz/masterarbeit-figure78.pdf> <./tikz/masterarbeit-figure79.pdf> <./tikz/masterarbeit-figure80.pdf> <./tikz/masterarbeit-figure81.pdf>] (masterarbeit.aux)
+Package rerunfilecheck Info: File `masterarbeit.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'masterarbeit.run.xml'.
+\openout1 = `masterarbeit.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 72554 strings out of 478870
+ 1638256 string characters out of 2847888
+ 2821753 words of memory out of 3000000
+ 88228 multiletter control sequences out of 15000+600000
+ 516635 words of font info for 291 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 115i,21n,134p,10669b,3851s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on masterarbeit.pdf (103 pages, 28030975 bytes).
+PDF statistics:
+ 5594 PDF objects out of 6186 (max. 8388607)
+ 510 named destinations out of 1000 (max. 500000)
+ 60571 words of extra memory for PDF output out of 61914 (max. 10000000)
+
