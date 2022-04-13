@@ -117,7 +117,7 @@ Die offensichtlichste Möglichkeit, die nebenläufige Architektur weiter voranzu
 Die Lösung dafür ist die Implementierung eines Jobsystems mit einer funktionierenden Priorisierung über eine Prioritäts-Warteschlange für die Tasks. Damit wird eine tatsächliche Priorisierung von Tasks ermöglicht. Weiter können einfach mehr als nur zwei verschiedene Prioritäten festgelegt werden und die Anzahl der Threads lässt sich wieder exakt abstimmen, sodass die Konkurrenz über die Hardware-Threads möglichst gering ist.
 
 Eine weitere Möglichkeit die nebenläufige Architektur der Blocklib zu verbessern ist, die bestehende Simulation so anzupassen, dass mehr Aufgaben in Jobs ausgelagert werden, sodass die verfügbaren Hardware-Threads besser ausgenutzt werden können. Damit in Verbindung steht die Möglichkeit, verstärkt sogenanntes Batching einzusetzen. Das bedeutet, dass Methoden nicht so tief geschachtelt sind, dass beispielsweise die \code{hit(...)} Methode eines NPCs die \code{checkDefense(...)} Methode des Spielers auslöst und sich eine Methoden-Kaskade \code{decreaseHealth(...)} $\to$ \code{setHealth(...)} $\to$ \code{checkDamageThreshold(...)} $\to$ \code{setBleeding(...)} $\to$ \code{addBloodTexture(...)} $\to$ \code{startHitSound(...)} ergibt, die verschiedenste Systeme betrifft. Stattdessen könnte der Methodenaufruf auch so aussehen \code{hit(...)} $\to$ \code{addToHitlist(...)}. Dann könnten erst alle 
-\code{hit(...)}-Methoden sogar nebenläufig abgearbeitet werden und eine Liste erzeugen, die dann im nächsten Schritt wiederum nebenläufig abgearbeitet werden könnte. 
+\code{hit(...)}-Methoden, sogar nebenläufig, abgearbeitet werden und eine Liste erzeugen, die dann im nächsten Schritt, wiederum nebenläufig, abgearbeitet werden könnte. 
 
 \paragraph{Thread Affinity}
 Ein Thema, das in der Arbeit bisher nicht behandelt worden ist, ist die Frage, auf welchem Hardware-Thread ein Java-Thread schlussendlich ausgeführt wird. Spielentwickler in der Spielindustrie beschäftigen sich aber sehr wohl damit, da dies die Leistung der Software beeinflussen kann~\cite{Gyrling2015}. \emph{Thread Affinity} bezeichnet das Konzept der Zuordnung von Anwendungs-Threads (im Fall der Blocklib Java-Threads) zu Hardware-Threads. Ein bestimmter Java-Thread soll dann beispielsweise immer nur auf Hardware-Thread 1 ausgeführt werden. Thread Affinity kann die Leistung einer Software wie der Blocklib erhöhen, da sie unnötige Kontextwechsel verhindert. Dies lässt sich wie folgt veranschaulichen.
@@ -131,6 +131,7 @@ Die Implementierung von Thread Affinity ist in Java allerdings nicht trivial, da
 \pagebreak
 \markright{Glossar}
 \printnoidxglossary[type=main,style=longheader]
+\pagebreak
 \markright{Akronyme}
 \printnoidxglossary[type=acronym,style=longheader]
 
