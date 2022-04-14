@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  13 APR 2022 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  14 APR 2022 08:56
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/tikztest/tikztest.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/tikztest/tikztest.tex
@@ -587,15 +587,15 @@ Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
 
 {C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (tikztest.aux) ) 
 Here is how much of TeX's memory you used:
- 28777 strings out of 478870
- 745990 string characters out of 2847888
+ 28776 strings out of 478870
+ 745971 string characters out of 2847888
  1316761 words of memory out of 3000000
- 46256 multiletter control sequences out of 15000+600000
+ 46255 multiletter control sequences out of 15000+600000
  403730 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,7n,108p,10675b,636s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 110i,7n,108p,10675b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on tikztest.pdf (1 page, 9844 bytes).
+Output written on tikztest.pdf (1 page, 9535 bytes).
 PDF statistics:
  14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -26,7 +26,7 @@
 {??.??.\the\year}				% Abgabedatum
 
 \thispagestyle{empty}
-~\pagebreak
+~\clearpage
 
 \setcounter{page}{1} 
 
@@ -45,7 +45,7 @@
 % Inhaltsverzeichnis
 % ----------------------------------------------------------------------------------------------------------
 \tableofcontents
-\pagebreak
+\clearpage
 
 % ----------------------------------------------------------------------------------------------------------
 % Abbildungsverzeichnis
@@ -53,7 +53,7 @@
 \lhead{}
 \rhead{Abbildungsverzeichnis}
 \listoffigures
-\pagebreak
+\clearpage
 
 % ----------------------------------------------------------------------------------------------------------
 % Tabellenverzeichnis (optional)
@@ -61,7 +61,7 @@
 \lhead{}
 \rhead{Tabellenverzeichnis}
 \listoftables
-\pagebreak
+\clearpage
 
 % ----------------------------------------------------------------------------------------------------------
 % Listingsverzeichnis (optional; Code nur, wenn wirklich sinnvoll und wichtig)
@@ -69,7 +69,7 @@
 %\lhead{}
 %\rhead{Quellcodeverzeichnis}
 %\lstlistoflistings
-%\pagebreak
+%\clearpage
 
 % ----------------------------------------------------------------------------------------------------------
 % Abkürzungsverzeichnis (optional)
@@ -82,7 +82,7 @@
 \acro{BA}[BA]{Bachelorarbeit}
 \acro{MA}[MA]{Masterarbeit}
 \end{acronym}
-\pagebreak
+\clearpage
 
 
 % ----------------------------------------------------------------------------------------------------------
@@ -116,7 +116,7 @@ Sie können dieses \LaTeX-Template als Vorlage für Ihre Abschlussarbeit (\ac{BA
 
 
 
-\pagebreak
+\clearpage
 % ----------------------------------------------------------------------------------
 % Kapitel: ???
 % ----------------------------------------------------------------------------------
@@ -131,7 +131,7 @@ Sie können dieses \LaTeX-Template als Vorlage für Ihre Abschlussarbeit (\ac{BA
 
 
 
-\pagebreak
+\clearpage
 % ----------------------------------------------------------------------------------
 % Kleine Einführung in LaTeX-Elemente
 % ----------------------------------------------------------------------------------
@@ -229,7 +229,7 @@ Die Literaturreferenzen (Bücher, Paper und Journals) und Internetquellen (Webse
 
 Literatur und Quellen werden in zwei getrennte Verzeichnisse aufgeteilt. Als Unterscheidungsmerkmal dient bei den Quellen der Zusatz: \texttt{keywords = \{online\}}.
 
-\pagebreak
+\clearpage
 
 % ----------------------------------------------------------------------------------------------------------
 % Filter fuer Literatur und Quellen definieren
@@ -250,7 +250,7 @@ Literatur und Quellen werden in zwei getrennte Verzeichnisse aufgeteilt. Als Unt
 
 \printbibliography[heading=Literatur,filter=Literatur] 
 
-\pagebreak
+\clearpage
 
 
 % ---------------------------------------------------------------------------------------------------------- 
@@ -261,7 +261,7 @@ Literatur und Quellen werden in zwei getrennte Verzeichnisse aufgeteilt. Als Unt
 
 \printbibliography[title = {Quellenverzeichnis}, heading=Quellen,filter=Quellen] 
 
-\pagebreak 
+\clearpage 
 
 % ----------------------------------------------------------------------------------------------------------
 % Anhang
@@ -292,7 +292,7 @@ Unterkategorie, die nicht im Inhaltsverzeichnis auftaucht.
 \end{appendix}
 
 
-\pagebreak
+\clearpage
 
 
 

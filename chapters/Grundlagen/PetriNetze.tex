@@ -1,5 +1,4 @@
-\subsection{Petri-Netze}\label{sec:petri}
-Es gibt einige Ansätze zur Modellierung verteilter oder nebenläufiger \glspl{Programm}. Darunter finden sich auch Petri-Netze~\cite{Murata1989}. Mit einem Petrinetz kann ein modelliertes \gls{Programm} mathematisch formal definiert und analysiert werden. Der Begriff Petri-Netz beschreibt auch eine Familie von verwandten Modellen. Das hier im Folgenden beschriebene Petri-Netz Modell wird auch Platz-Transitions-Netz (PT-Netz) genannt. Formal lässt sich ein PT-Netz $N$ als 5-Tupel $ N=(P,T,F,W,m_0)$ beschreiben. Dabei sind 
+Es gibt einige Ansätze zur Modellierung verteilter oder nebenläufiger \glsplural{Programm}. Darunter finden sich auch Petri-Netze~\cite{Murata1989}. Mit einem Petri-Netz kann ein modelliertes \glstext{Programm} mathematisch formal definiert und analysiert werden. Der Begriff Petri-Netz beschreibt eine Familie von verwandten Modellen. Das hier im Folgenden beschriebene Petri-Netz Modell wird auch Platz-Transitions-Netz (PT-Netz) genannt. Formal lässt sich ein PT-Netz $N$ als 5-Tupel $ N=(P,T,F,W,m_0)$ beschreiben. Dabei sind 
 \begin{align*}
 	&P  \quad \text{eine endliche Menge von Plätzen,}\\
 	&T  \quad \text{eine endliche Menge von Transitionen,}\\
@@ -7,7 +6,7 @@ Es gibt einige Ansätze zur Modellierung verteilter oder nebenläufiger \glspl{P
 	&W: F \mapsto \N  \quad \text{eine Gewichtungsfunktion der Relationen und}\\
 	&m_0: P \mapsto \N_0   \quad \text{die anfängliche Markierung der Plätze~\cite{Murata1989}.}\\
 \end{align*}
-Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. Die Plätze $p \in P$ werden dabei als Kreise dargestellt, die Transitionen $ t \in T$ durch schwarz gefüllte Rechtecke, die Relationen $ f \in F$ durch gerichtete Kanten zwischen den Kreisen und Rechtecken, wobei die Elemente der Gewichtungsfunktion $W$ an die jeweiligen Kanten gesetzt werden. Die Markierung wird durch schwarze Punkte in den Plätzen dargestellt. Abbildung~\vref{fig:petrinet} zeigt ein simples Beispiel eines PT-Netzes  formal beschrieben (Abbildung~\vref{fig:petrinet:formal}) und seine grafische Repräsentation (Abbildung~\vref{fig:petrinet:graph}).
+Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. Die Plätze $p \in P$ werden dabei als Kreise dargestellt, die Transitionen $ t \in T$ durch schwarz gefüllte Rechtecke, die Relationen $ f \in F$ durch gerichtete Kanten zwischen den Kreisen und Rechtecken, wobei die Elemente der Gewichtungsfunktion $W$ an die jeweiligen Kanten gesetzt werden. Die Markierung wird durch schwarze Punkte in den Plätzen dargestellt. Abbildung~\ref{fig:petrinet} zeigt ein simples Beispiel eines PT-Netzes  formal beschrieben (Abbildung~\ref{fig:petrinet:formal}) und seine grafische Repräsentation (Abbildung~\ref{fig:petrinet:graph}).
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{.48\textwidth}
@@ -39,7 +38,7 @@ Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. 
 	\caption{Beispiel eines PT-Netzes mit zwei Plätzen und zwei Transitionen.}\label{fig:petrinet}
 \end{figure}
 
-\subsubsection{Transitionsregel} Um nun das Verhalten von Programmen beschreiben zu können, kann die Markierung eines Petrinetzes anhand der folgenden sogenannten Transitions-Regel geändert werden~\cite{Murata1989}.
+\subsubsection{Transitionsregel} Um nun das Verhalten von \glsuserii{Programm} beschreiben zu können, kann die Markierung eines Petri-Netzes anhand der folgenden sogenannten Transitions-Regel geändert werden~\cite{Murata1989}.
 \begin{enumerate}
 	\item Eine Transition $t_i \in T$ heißt \emph{aktiviert}, wenn für alle $(p,t_i) \in F $ gilt $ W((p,t_i)) \leq M(p)$ wobei $M$ die aktuelle Markierung ist. Es müssen also in allen Plätzen mit eingehenden Kanten genügend Marken bezüglich der Gewichtungsfunktion existieren. Diese Plätze werden auch \emph{Vorbedingungen} für die Transition genannt. Wenn ein Platz genügend Marken für eine Transition enthält, nennt man die Vorbedingungen (bezüglich dieser Transition) \emph{erfüllt}.
 	\item Eine aktivierte Transition kann, muss aber nicht \emph{feuern}.
@@ -62,7 +61,7 @@ Der durch ein PT-Netz beschriebene Graph kann auch grafisch dargestellt werden. 
 		$
 	\end{enumerate}
 \end{enumerate}
-Betrachtet man Abbildung~\vref{fig:petrinet} erneut, lässt sich erkennen, dass Transition $t_1$ aktiviert ist und Transition $t_2$ nicht, da in $p_2$ keine Marken sind.
+Betrachtet man Abbildung~\ref{fig:petrinet} erneut, lässt sich erkennen, dass Transition $t_1$ aktiviert ist und Transition $t_2$ nicht, da in $p_2$ keine Marken sind.
 
 \subsubsection{Erreichbarkeitsgraph}
 Mittels der Transitionsregel lassen sich in einem Petri-Netz $N$ ausgehend von der Anfangsmarkierung $m_0$ gegebenenfalls weitere Markierungen erzeugen. Durch die wiederholte Anwendung der Transitionsregel auf alle daraus entstehenden Markierungen lässt sich ein Graph erstellen, der alle von der Anfangsmarkierung aus erreichbaren Markierungen erhält, den \emph{Erreichbarkeitsgraph} $\E{N}$ des Petri-Netzes.
@@ -86,11 +85,11 @@ Mittels der Transitionsregel lassen sich in einem Petri-Netz $N$ ausgehend von d
 		(q6) edge node {$t_2$} node[below=6mm] {Graph mit gekürzten Knotenbezeichnungen}(q7)
 		(q7) edge node {$t_2$} (q8);
 		\end{tikzpicture}
-		\caption[Erreichbarkeitsgraph des Beispiel PT-Netzes.]{Erreichbarkeitsgraph des Petri-Netzes aus Abbildung~\vref{fig:petrinet}. Der Graph ist zweimal dargestellt. Oben enthalten die Knoten des Graphen die vollständige Auszeichnung der Markierung, unten wird die Kurzschreibweise für die Knotenbezeichnungen genutzt, in der die Position den Platz kodiert. Der \enquote{start} Pfeil kennzeichnet die anfängliche Markierung.}\label{fig:reachability}
+		\caption[Erreichbarkeitsgraph des Beispiel PT-Netzes.]{Erreichbarkeitsgraph des Petri-Netzes aus Abbildung~\ref{fig:petrinet}. Der Graph ist zweimal dargestellt. Oben enthalten die Knoten des Graphen die vollständige Auszeichnung der Markierung, unten wird die Kurzschreibweise für die Knotenbezeichnungen genutzt, in der die Position den Platz kodiert. Der \enquote{start} Pfeil kennzeichnet die anfängliche Markierung.}\label{fig:reachability}
 \end{figure}
-In Abbildung~\vref{fig:reachability} wird der Erreichbarkeitsgraph des in Abbildung~\vref{fig:petrinet} dargestellten Petri-Netzes gezeigt. Die Knoten des Graphen sind die Markierungen des Petri-Netzes, die durch die Transitionsregel erreicht werden können. Da die Plätze des Petri-Netzes nummeriert sind, kann die Markierung verkürzt geschrieben werden, indem der Index des Tupels der Knotenbezeichnung den Platz beschreibt und die Zahl die Anzahl der Marken des Platzes kennzeichnet. In der Abbildung ist oben der Graph mit den vollständigen Markierungsbezeichnungen dargestellt. Unten wird die verkürzte Schreibweise genutzt.
+In Abbildung~\ref{fig:reachability} wird der Erreichbarkeitsgraph des in Abbildung~\ref{fig:petrinet} dargestellten Petri-Netzes gezeigt. Die Knoten des Graphen sind die Markierungen des Petri-Netzes, die durch die Transitionsregel erreicht werden können. Da die Plätze des Petri-Netzes nummeriert sind, kann die Markierung verkürzt geschrieben werden, indem der Index des Tupels der Knotenbezeichnung den Platz beschreibt und die Zahl die Anzahl der Marken des Platzes kennzeichnet. In der Abbildung ist oben der Graph mit den vollständigen Markierungsbezeichnungen dargestellt. Unten wird die verkürzte Schreibweise genutzt.
 
-ist die Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraphen maximal $1$, kann die Schreibweise weiter verkürzt werden, indem nur die Plätze beziehungsweise die Indizes der Plätze, die eine Marke enthalten genannt werden. Abbildung~\vref{fig:1-bpetrinet} zeigt eine Abwandlung des Petri-Netzes aus Abbildung~\vref{fig:petrinet}, das der gerade beschriebenen Eigenschaft entspricht, und den zugehörigen Erreichbarkeitsgraphen in verkürzter Schreibweise.
+ist die Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraphen maximal $1$, kann die Schreibweise weiter verkürzt werden, indem nur die Plätze beziehungsweise die Indizes der Plätze, die eine Marke enthalten genannt werden. Abbildung~\ref{fig:1-bpetrinet} zeigt eine Abwandlung des Petri-Netzes aus Abbildung~\ref{fig:petrinet}, das der gerade beschriebenen Eigenschaft entspricht, und den zugehörigen Erreichbarkeitsgraphen in verkürzter Schreibweise.
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{.48\textwidth}
@@ -105,7 +104,7 @@ ist die Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraph
 			(t1) edge[post] node[above] {1} (p2)
 			(p2) edge[post] node[above] {1} (t2);
 		\end{tikzpicture}
-		\subcaption{Abwandlung des Petrinetzes aus Abbildung~\ref{fig:petrinet}. Die Gewichtungsfunktion ist für jede Relation maximal 1.}\label{fig:1-bpetrinet:graph}
+		\subcaption{Abwandlung des Petri-Netzes aus Abbildung~\ref{fig:petrinet}. Die Gewichtungsfunktion ist für jede Relation maximal 1.}\label{fig:1-bpetrinet:graph}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{.48\textwidth}
@@ -119,9 +118,8 @@ ist die Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraph
 		\end{tikzpicture}
 		\subcaption{Erreichbarkeitsgraph, bei dem die Zahl(en) in den Knoten die  Indizes der Plätze beschreiben, die eine Markierung besitzen.}\label{fig:1-bpetrinet:reachability}
 	\end{subfigure}
-\caption{Petrinetz und zugehöriger Erreichbarkeitsgraph, in dem die Anzahl der Markierungen pro Platz stets maximal 1 ist. }\label{fig:1-bpetrinet}
+\caption{Petri-Netz und zugehöriger Erreichbarkeitsgraph, in dem die Anzahl der Markierungen pro Platz stets maximal 1 ist. }\label{fig:1-bpetrinet}
 \end{figure} 
-
 \subsubsection{Weitere Definitionen}
 Um die Arbeit mit Petri-Netzen zu vereinfachen, werden nun noch einige weitere Definitionen eingeführt.
 
@@ -144,7 +142,7 @@ Um das Konzept von Variablenzugriffen einfacher zu modellieren, führen \textcit
 	\item eine Funktion $S: T \mapsto \Pot(V)$, die \emph{schreibenden Zugriff} auf die Variablen modelliert.
 \end{enumerate}
 $\Pot(V)$ ist dabei die Potenzmenge von $V$, also die Menge aller Teilmengen von $V$.
-Ein Beispiel für ein erweitertes Petri-Netz, das ansonsten identisch zu dem Petri-Netz in Abbildung~\vref{fig:petrinet} ist, ist in Abbildung~\vref{fig:augpetrinet} gegeben. Die Formale Definition zeigt die neuen Mengen 
+Ein Beispiel für ein erweitertes Petri-Netz, das ansonsten identisch zu dem Petri-Netz in Abbildung~\ref{fig:petrinet} ist, ist in Abbildung~\ref{fig:augpetrinet} gegeben. Die Formale Definition zeigt die neuen Mengen 
 \begin{figure}
 \centering
 	\begin{minipage}[c]{.49\textwidth}

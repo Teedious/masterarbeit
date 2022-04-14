@@ -1,12 +1,12 @@
-Um den Effekt der Implementierung der nebenläufigen Architektur quantitativ analysieren zu können, werden einige Szenarien in der Blocklib definiert. Diese Szenarien werden dann in einem Stand vor der Integration der nebenläufigen Architektur und einem Stand danach durchlaufen. Da die Blocklib unter Nutzung des Versionsverwaltungstools Git~\cite{Chacon2014} entwickelt wird, lassen sich sogenannte Hashes angeben, die genau definieren, welche Versionen der Blocklib für die Performanceanalyse genutzt werden. Diese Hashes werden auch Revisionsnummern genannt. Die genutzten Hashes sind in Tabelle~\vref{tab:perfHash} aufgelistet.
+Um den Effekt der Implementierung der nebenläufigen Architektur quantitativ analysieren zu können, werden einige Szenarien in der Blocklib definiert. Diese Szenarien werden dann in einem Stand vor der Integration der nebenläufigen Architektur und einem Stand danach durchlaufen. Da die Blocklib unter Nutzung des Versionsverwaltungstools Git~\cite{Chacon2014} entwickelt wird, lassen sich sogenannte Hashes angeben, die genau definieren, welche Versionen der Blocklib für die Performanceanalyse genutzt werden. Diese Hashes werden auch Revisionsnummern genannt. Die genutzten Hashes sind in Tabelle~\ref{tab:perfHash} aufgelistet.
 \begin{table}[!htbp]
 	\centering
 	\begin{tabular}{ll}
 		\toprule
 		Stand & Hash / Revisionsnummer \\
 		\midrule
-		Nebenläufige Architektur & \texttt{110d0f9c227cb85d131c4f04fdf83b07ee218f39}\\
-		Ursprüngliche Architektur & \texttt{d392933e558a9864ad71e7e3ccf8561f2c16b1b3} \\
+		Ursprüngliche Architektur (SystemA) & \texttt{d392933e558a9864ad71e7e3ccf8561f2c16b1b3} \\
+		Nebenläufige Architektur (SystemB)& \texttt{110d0f9c227cb85d131c4f04fdf83b07ee218f39}\\
 		\bottomrule
 	\end{tabular}
 	\caption{Revisionsnummern des Versionsverwaltungstools der Blocklib, die für die Performanceanalyse genutzt werden.}\label{tab:perfHash}
@@ -14,7 +14,7 @@ Um den Effekt der Implementierung der nebenläufigen Architektur quantitativ ana
 
 Insgesamt werden fünf verschiedene Szenarien betrachtet. In allen Szenarien werden die folgenden Messwerte ausgewertet: \si{\fps}, Auslastung der \acs{cpu}, Auslastung der \ac{gpu} und \ac{ram} Nutzung. In jedem Szenario läuft die Blocklib für \SI{60}{\second}. Ausschlaggebend hierfür ist die durch Java mit der Methode \code{System.currentTimeMillis()} bereitgestellte Zeit. Der Code, der für die Ausführung der Szenarien benötigt wird, ist der Masterarbeit beigelegt.
 
-Das System, auf dem gemessen wird, besitzt die in Tabelle~\vref{tab:spec} aufgelistete Spezifikation.
+Das System, auf dem gemessen wird, besitzt die in Tabelle~\ref{tab:spec} aufgelistete Spezifikation.
 
 \begin{table}[!h]
 	\centering
@@ -29,3 +29,5 @@ Das System, auf dem gemessen wird, besitzt die in Tabelle~\vref{tab:spec} aufgel
 Die Messung der \si{\fps} wird im Code, der die Szenarien ausführt, durchgeführt. Die Messung der \ac{cpu}-Auslastung und Speichernutzung wird mittels der Software \emph{YourKit Java Profiler}~\cite{YourKitGmbH} in der Version 2022.3-b96 realisiert. Die Auslastung der \ac{gpu} wird mit der Software \emph{GPUProfiler}~\cite{Main2021} Version 1.07a3 gemessen. 
 
 Wie in der Auswertung der Szenarien erkennbar sein wird, lassen sich die Messungen in zwei Phasen einteilen, den Start der Blocklib und die Phase der normalen Ausführung nach dem Start. Diese werden im Folgenden auch \emph{Startphase} und \emph{Hauptphase} genannt. In den Messungen wird die Zeit zwischen Sekunde 25 und Sekunde 55 (exklusive) als Hauptphase interpretiert, da nach Sekunde 25 in allen Messungen die während des Starts auftretenden Unregelmäßigkeiten beendet sind. Durch den Stopp vor Sekunde 55 werden unterschiedliche Messungs-Endzeiten aus der Analyse entfernt. Wird im Folgenden von einem durchschnittlichen Wert gesprochen, so bezieht sich das auf den Durchschnitt während der Hauptphase.
+
+Im folgenden wird häufig abwechselnd auf die nebenläufige Architektur und die ursprüngliche Architektur verwiesen. Damit dieser Verweis jeweils nicht zu lang ist, wird die ursprüngliche Architektur von nun an \emph{SystemA} genannt und die nebenläufige Architektur \emph{SystemB}.

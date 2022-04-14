@@ -1,4 +1,14 @@
 {
+	"editor.bracketPairColorization.enabled": true,
+	"workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#8f5183",
+    "editorBracketHighlight.foreground2": "#617c49",
+    "editorBracketHighlight.foreground3": "#da9100",
+    "editorBracketHighlight.foreground4": "#834837",
+    "editorBracketHighlight.foreground5": "#0a65b1",
+    "editorBracketHighlight.foreground6": "#abb2c0",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0008"
+},
 	"latex-workshop.latex.recipe.default": "lastUsed",
 	"latex-workshop.latex.tools": [
 		{

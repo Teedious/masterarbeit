@@ -4,13 +4,36 @@
 \pagenumbering{Roman}
 \setcounter{page}{1}
 
+\section*{Anhang}
+\phantomsection
+\addcontentsline{toc}{section}{Anhang}
 
-\section{Executor im Concurrency Framework}\label{appendix:concFrameworkExecutor}
+Der beigelegte Datenträger enthält die folgenden Dateien.
+
+\begin{itemize}
+	\item PDF dieser Masterarbeit,
+	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \code{latex} (Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \code{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnote{\url{https://inkscape.org/}} mit \code{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \code{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig),
+	\item UML-Modelle als \code{.asta}-Dateien im Ordner \code{astah},
+	\item den Source-Code im Verzeichnis \code{src}
+	\item die Source-Code-Dokumentation im Ordner \code{doc},
+	\item die bei den Messungen erstellten Rohdaten und verarbeitete Daten in den Ordnern\\ \code{latex(-precompiled)/performance/measurements},
+	\item Skripte zur Verarbeitung der Daten in den Ordnern\\ \code{latex(-precompiled)/performance/measurements/python},
+	\item Kopien von referenzierter Lieteratur und Quellen, die als PDF vorliegen im Ordner \code{recherche}.
+\end{itemize}
+
+\clearpage
+\section{Klassendiagramme}
+Dieser Abschnitt enthält einige Klassendiagramme, die detailliertere Informationen bereitstellen, als die in der Arbeit gezeigten.
+\subsection{Executor im Concurrency Framework}\label{appendix:concFrameworkExecutor}
 \includesvg[width=\textwidth]{ConcurrencyFrameworkExecutor.svg}
 
-\section{\texttt{CompletionStage} im Concurrency Framework}\label{appendix:CompletionStage}
+Wie in Abschnitt~\vref{sec:executor} beschrieben, erweitert das Interface \class{ExecutorService} das Interface \class{Executor} um eine Reihe von Methoden. Zum einen wird die Möglichkeit geboten den \code{submit(...)}-Methoden \class{Runnable}- oder auch \class{Callable}-Objekte zu übergeben, zum anderen bietet das Interface auch Methoden zur Verwaltung des Lebenszyklus des \class{ExecutorService}.
+
+\clearpage
+\subsection{\texttt{CompletionStage} im Concurrency Framework}\label{appendix:CompletionStage}
 \includesvg[width=\textwidth]{CompletionStage.svg}
-Klassendiagramm des Interface \class{CompletionStage}, auf das auf Seite~\pageref{sec:CompletableFuture} verwiesen wird. Die definierten Methoden bieten verschiedene Möglichkeiten der Komposition.
+
+Klassendiagramm des Interface \class{CompletionStage}, auf das in Abschnitt~\vref{sec:CompletableFuture} verwiesen wird. Die definierten Methoden bieten verschiedene Möglichkeiten der Komposition.
 
 \begin{tblr}{
 	colspec={ll},
@@ -22,63 +45,75 @@ Klassendiagramm des Interface \class{CompletionStage}, auf das auf Seite~\pagere
 	Auswahl & \code{applyToEither(...)}, \code{acceptEither(...)}, \code{runAfterEither(...)} \\
 \end{tblr}
 
-\pagebreak
-\section{\texttt{Context} vollständiges Klassendiagramm}\label{appendix:context}
+\clearpage
+\subsection{\texttt{Context}}\label{appendix:context}
 {
 	\centering
 	\includesvg[height=.7\textheight]{Context.svg}
-	\todo{Caption}
+	\par
 }
+Die Klasse \class{Context} besitzt, wie in Abschnitt~\vref{sec:EtablierungEinerKompositionroot} beschrieben, Methoden, um beinahe jedes System der Blocklib global für alle anderen Systeme verfügbar zu machen. 
 
-\pagebreak
-\section{\texttt{BlocklibExecutorService} Klassendiagramm}\label{appendix:BlocklibExecutorService}
+Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zugegriffen werden kann. Allerdings sind dadurch Abhängigkeiten zwischen Systemen schwieriger zu finden und Änderungen können unvorhergesehene Folgen haben, da beispielsweise irgendein anderes System die ursprüngliche Funktionalität genau so benötigt, wie sie davor war. 
+\clearpage
+\subsection{\texttt{BlocklibExecutorService}}\label{appendix:BlocklibExecutorService}
 {
 	\centering
 	\includesvg[width=\textwidth]{ExecuterInterfaces.svg}
 	\todo{Caption}
 }
-\pagebreak
-\section{Messungen}
-\subsection{\glsentryshort{fps} Verläufe gesammelt}
+
+\vref{sec:designJobsystem}
+\clearpage
+\section{Messungen}\label{appendix:plots}
+\small
+Dieser Abschnitt enthält die Graphen aller Messungen der Performanceanalyse (Kapitel~\ref{kap:performance}). Zur besseren Vergleichbarkeit sind diese nach der gemessenen Metrik gruppiert.
+\vspace*{-.3em}\subsection{\glsentryshort{fps} Verläufe gesammelt}\label{appendix:fpsplots}
 \pgfplotsset{
 	height=1.5cm,
 	every axis title/.append style={fill=white,at={(.0,1)},yshift=-.2cm,draw=black,anchor=south west,nodes={scale=.7}},
 }
 \settowidth\mytemp{1,}
 \fpsplot[title={Szenario 1: Hexagon (0)},ytick={0,200,...,1200},height=3cm,ymax=1200,y label style={at={(ticklabel cs:.5,-\mytemp)}},xticklabels={,,},xlabel={}]{seed-0-hexagon}
-\\\fpsplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
-\\\fpsplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
-\\\fpsplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
-\\\fpsplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
-\\\fpsplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
-\\\fpsplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
+\\[-.2em]\fpsplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\[-.2em]\fpsplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
+\\[-.2em]\fpsplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
+\\[-.2em]\fpsplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
+\\[-.2em]\fpsplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
+\\[-.2em]\fpsplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
 
-\pagebreak
-\subsection{\glsentryshort{cpu}-Auslastung Verläufe gesammelt}
+Dies ist die Darstellung aller Framerate-Verläufe. Das Szenario ist jeweils links oben am Graphen zu erkennen.
+
+\clearpage
+\subsection{\glsentryshort{cpu}-Auslastungs-Verläufe gesammelt}\label{appendix:cpuplots}
 \pgfplotsset{
 	height=1.9cm,
 }
 
 \cpuplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon}
-\\\cpuplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
-\\\cpuplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
-\\\cpuplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
-\\\cpuplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
-\\\cpuplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
-\\\cpuplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
+\\[-.2em]\cpuplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\[-.2em]\cpuplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
+\\[-.2em]\cpuplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
+\\[-.2em]\cpuplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
+\\[-.2em]\cpuplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
+\\[-.2em]\cpuplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
 
-\pagebreak
-\subsection{\glsentryshort{gpu}-Auslastung Verläufe gesammelt}
+Dies ist die Darstellung aller \glsentryshort{cpu}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben am Graphen zu erkennen.
+
+\clearpage
+\subsection{\glsentryshort{gpu}-Auslastungs-Verläufe gesammelt}\label{appendix:gpuplots}
 \gpuplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon}
-\\\gpuplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
-\\\gpuplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
-\\\gpuplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
-\\\gpuplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
-\\\gpuplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
-\\\gpuplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
+\\[-.2em]\gpuplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\[-.2em]\gpuplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
+\\[-.2em]\gpuplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
+\\[-.2em]\gpuplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
+\\[-.2em]\gpuplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
+\\[-.2em]\gpuplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.5em]
 
-\pagebreak
-\subsection{\glsentryshort{ram}-Auslastung Verläufe gesammelt}
+Dies ist die Darstellung aller \glsentryshort{gpu}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben am Graphen zu erkennen.
+
+\clearpage
+\subsection{\glsentryshort{ram}-Auslastungs-Verläufe gesammelt}\label{appendix:memplots}
   				\memplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon-single-mem.csv}
 \\[-1.5em]\memplot[xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}
 \\[-1.5em]\memplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube-single-mem.csv}
@@ -93,3 +128,5 @@ Klassendiagramm des Interface \class{CompletionStage}, auf das auf Seite~\pagere
 \\[-1.5em]\memplot[xticklabels={,,},xlabel={}]{seed-3-walk-multi-mem.csv}
 \\[-1.5em]\memplot[title={Szenario 5: Welt-Gehen (10)},xticklabels={,,},xlabel={}]{seed-10-walk-single-mem.csv}
 \\[-1.5em]\memplot[]{seed-10-walk-multi-mem.csv}\\[-.5em]
+
+Dies ist die Darstellung aller \glsentryshort{ram}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben am Graphen zu erkennen.

@@ -4,8 +4,6 @@ Double Buffer
 Hardwarethread
 FPS
 OpenGL
-Chunk
 API
-
-
+Multithreading
 

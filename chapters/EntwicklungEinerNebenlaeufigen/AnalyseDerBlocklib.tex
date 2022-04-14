@@ -7,7 +7,7 @@ Ein nahezu universelles Designelement von Spielen ist die sogenannte \emph{Game 
   \item (grafische) Ausgabe
   \item Verarbeitung der Eingaben
 \end{itemize}
-Die Blocklib besitzt ebenfalls eine Game Loop und führt die beschriebenen Aufgaben in der obigen Reihenfolge sequentiell aus. Eigentlich gibt es sogar zwei Game Loops, eine für die Ausführung als Server (ohne graphische Ausgabe) und eine für einen Client oder Einzelspieler. Die Game-Loop der Einzelspieler-Blocklib sieht vereinfacht wie in Listing~\vref{lst:oldGameLoop} gezeigt aus.
+Die Blocklib besitzt ebenfalls eine Game Loop und führt die beschriebenen Aufgaben in der obigen Reihenfolge sequentiell aus. Eigentlich gibt es sogar zwei Game Loops, eine für die Ausführung als Server (ohne graphische Ausgabe) und eine für einen Client oder Einzelspieler. Die Game-Loop der Einzelspieler-Blocklib sieht vereinfacht wie in Listing~\ref{lst:oldGameLoop} gezeigt aus.
 \begin{lstlisting}[caption={Vereinfachte Version der Blocklib für Einzelspieler.},label={lst:oldGameLoop},float]
 while(!shutdown){
 	//...
@@ -19,7 +19,7 @@ while(!shutdown){
 }
 \end{lstlisting}
 
-Die Methode \code{update(delta)} ruft ihrerseits die \code{update(delta)} Methoden der einzelnen Simulationssysteme auf (siehe Listing~\vref{lst:gameUpdate}).
+Die Methode \code{update(delta)} ruft ihrerseits die \code{update(delta)} Methoden der einzelnen Simulationssysteme auf (siehe Listing~\ref{lst:gameUpdate}).
 \begin{lstlisting}[caption={Vereinfachte Update-Methode von \class{Game}.}, label={lst:gameUpdate},float]
 private void update(float delta) {
 	//...
@@ -43,7 +43,7 @@ Die (mögliche) Abhängigkeit des Verhaltens von der Reihenfolge der Updates, ze
 
 
 \subsubsection{Nutzung von Multithreading}\label{sec:nutzungMultithreading}
-Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufige \glspl{Anweisung} zu parallelisieren. Darunter fallen insbesondere Hintergrundaufgaben, wie das Erstellen von Chunks, und das Ausführen zeitlich gesteuerter Abläufe, wie die Updates der Flüsse von Flüssigkeiten. Insgesamt gibt es zu Beginn der Arbeit sechs Klassen, die Threads erzeugen und nutzen. Eine Auflistung der Klassen und deren Verwendung von Threads ist in Tabelle~\vref{tab:concTasksBlocklib} zu finden.
+Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufige \glspl{Anweisung} zu parallelisieren. Darunter fallen insbesondere Hintergrundaufgaben, wie das Erstellen von Chunks, und das Ausführen zeitlich gesteuerter Abläufe, wie die Updates der Flüsse von Flüssigkeiten. Insgesamt gibt es zu Beginn der Arbeit sechs Klassen, die Threads erzeugen und nutzen. Eine Auflistung der Klassen und deren Verwendung von Threads ist in Tabelle~\ref{tab:concTasksBlocklib} zu finden.
 
 \begin{table}
 	%fixup, because hyphenation of lstinline breaks width measurement
@@ -62,7 +62,7 @@ Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufi
 		\class{AudioManager} & Die Klasse \class{Timer} wird verwendet, Hintergrundmusik abzuspielen.
 		\bottomrule 
 	\end{tblr}
-	\caption{Nebenläufige \glspl{Anweisung} in der Blocklib}\label{tab:concTasksBlocklib}
+	\caption[Nebenläufige \glsentryplural{Anweisung} in der Blocklib.]{Nebenläufige \glspl{Anweisung} in der Blocklib.}\label{tab:concTasksBlocklib}
 \end{table}
 
 Es gibt keine zentrale Stelle, an der die Erstellung von Threads verwaltet wird. Jede Klasse kümmert sich selbst darum Threads zu erzeugen und zu beenden. Dadurch ist die Anzahl der genutzten Threads nicht leicht zu überblicken. Dadurch lässt sich zum einen schwierig sicherstellen, dass die Anzahl der genutzten Threads die Anzahl der Prozessoren nicht überschreitet, was zu unnötigen Kontextwechseln führt und somit die Performance verschlechtert, zum anderen können die bestehenden Threads möglicherweise nicht voll ausgelastet werden, da nur einzelne Klassen auf diese Zugriff haben.
