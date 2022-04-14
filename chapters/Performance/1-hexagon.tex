@@ -33,8 +33,8 @@ Da der \ac{gpu} Profiler manuell gestartet werden muss, lassen sich die Auslastu
 Auch in der Auslastung der \ac{gpu} ist zu erkennen, dass der Start der Blocklib mit SystemA schneller ist als mit SystemB. Während in SystemA bereits nach \SI{7}{\second} eine Auslastungsspitze von \SI{27}{\percent} gemessen wird, ist der erste markante Anstieg der Auslastung (auf \SI{27}{\percent}) in SystemB  erst nach \SI{12}{\second} zu sehen. Die durchschnittliche Auslastung ist in beiden Systemen mit \SI{38}{\percent} in SystemA und \SI{36}{\percent} in SystemB fast identisch (Anstieg von \SI{1}{\percent} in SystemB). Während in SystemB nach \SI{20}{\second} und dem Abschluss der Startphase die Auslastung fast konstant knapp unter \SI{40}{\percent} liegt, oszilliert die Auslastung in SystemA lange zwischen \SI{30}{\percent} und \SI{40}{\percent}, bis sie schließlich nach etwa \SI{50}{\second} ebenfalls konstant bei knapp \SI{40}{\percent} liegt.
 
 \begin{figure}[!htbp]
-	\memplot{seed-0-hexagon-single-mem.csv}
-	\memplot{seed-0-hexagon-multi-mem.csv}
+	\memplot[xticklabels={,,},xlabel={}]{seed-0-hexagon-single-mem.csv}
+	\\\memplot{seed-0-hexagon-multi-mem.csv}
 	\caption{Graph des Verlaufs der Speichernutzung in Szenario 1: Hexagon.}\label{fig:seed-0-hexagon-mem}
 \end{figure} 
 \paragraph{\ac{ram}} Betrachtet man den in Abbildung~\ref{fig:seed-0-hexagon-mem} gezeigten Vergleich der Speichernutzung zwischen SystemA und SystemB, lässt sich erkennen, dass SystemB sowohl während des Starts der Blocklib, als auch allgemein mehr Speicher benötigt als SystemA. Der gelbe Bereich zeigt den von Java insgesamt angeforderten Speicher. Zum Beginn ist das bei SystemB \SI{1730}{\mega\byte} und während des Großteils der Messung \SI{947}{\mega\byte}. SystemA benötigt die ersten \SI{37}{\second} \SI{644}{\mega\byte} Speicher, was sich bis zum Ende der Messung auf \SI{382}{\mega\byte} verringert. Durchschnittlich benötigt SystemB mit \SI{947}{\mega\byte} \SI{64}{\percent} mehr Speicher als SystemA mit durchschnittlich \SI{576}{\mega\byte} Speicherbedarf.

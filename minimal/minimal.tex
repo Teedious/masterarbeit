@@ -1,8 +1,7 @@
-\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half]{scrartcl}
+\documentclass[12pt,a4paper,listof=totocnumbered,parskip=half, abstract=yes]{scrartcl}
 \input{../preamble.tex}
 \input{../plots}
 \input{../glossary}
-\usepackage{csvsimple}
 \pgfplotsset{
 	grid=major,
 	width=.88\textwidth,
@@ -14,7 +13,7 @@
 \tikzexternaldisable
 
 \begin{document}
+\begin{abstract}
 
-\csvautotabular{../performance/measurements/seed-0-cube-multi-cpu.csv}
-
+\end{abstract}
 \end{document}

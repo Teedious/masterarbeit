@@ -40,8 +40,8 @@ Auffällig ist, dass entgegen der Framerate die Auslastung der \ac{gpu} in Syste
 \paragraph{\ac{ram}}
 Abschließend wird nun noch der in Abbildung~\ref{fig:seed-0-walk-mem} dargestellte Speicherverbrauch betrachtet. In beiden Systemen steigt der dauerhaft genutzte Speicher steigt an, während der Gesamtverbrauch über die gemessene Zeit in der Hauptphase konstant ist.
 \begin{figure}[!htbp]
-	\memplot{seed-0-walk-single-mem.csv}
-	\memplot{seed-0-walk-multi-mem.csv}
+	\memplot[xticklabels={,,},xlabel={}]{seed-0-walk-single-mem.csv}
+	\\\memplot{seed-0-walk-multi-mem.csv}
 	\caption{Graph des Verlaufs der Speichernutzung in Szenario 5: Welt-Gehen mit Seed 0.}\label{fig:seed-0-walk-mem}
 \end{figure} 
 SystemA besitzt einen Speicherverbrauch von \SI{1215}{\mega\byte} und SystemB nutzt mit \SI{1881}{\mega\byte} durchschnittlich \SI{55}{\percent} mehr. Der kurzfristige Speicherverbrauch liegt bei \SI{114}{\mega\byte\per\second} in SystemA. Das ist das Maximum des Systems über alle Szenarien hinweg. In SystemB wird ein Speicherbedarf von \SI{248}{\mega\byte\per\second} für die Erzeugung kurzfristig genutzter Objekte gemessen. Damit ergibt sich in diesem Szenario ein Anstieg von \SI{118}{\percent}. Besonders interessant ist in diesem Szenario der Speicherverbrauch der langlebigen Objekte (Tenured). In allen anderen Szenarien ist diese Menge über den Großteil der Messung konstant.

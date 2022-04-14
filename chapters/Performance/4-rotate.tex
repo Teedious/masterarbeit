@@ -48,8 +48,8 @@ Durchschnittlich liegt die Auslastung der \ac{gpu} in SystemA bei \SI{37}{\perce
 \paragraph{\ac{ram}}
 Die Nutzung des Hauptspeichers, zu sehen in Abbildung~\ref{fig:seed-0-rotate-mem}, ist in Szenario Welt-Rotation grob vergleichbar mit Szenario Welt-Statisch.
 \begin{figure}[!htbp]
-	\memplot{seed-0-rotate-single-mem.csv}
-	\memplot{seed-0-rotate-multi-mem.csv}
+	\memplot[xticklabels={,,},xlabel={}]{seed-0-rotate-single-mem.csv}
+	\\\memplot{seed-0-rotate-multi-mem.csv}
 	\caption{Graph des Verlaufs der Speichernutzung in Szenario 4: Welt-Rotation.}\label{fig:seed-0-rotate-mem}	
 \end{figure} 
 SystemA nutzt mit durchschnittlich \SI{1267}{\mega\byte} etwas mehr Speicher, SystemB mit \SI{1441}{\mega\byte} aber weniger. Somit ergibt sich in diesem Szenario ein Anstieg von \SI{14}{\percent} statt \SI{44}{\percent}. 

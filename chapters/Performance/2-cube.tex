@@ -36,8 +36,8 @@ Auffällig ist, dass SystemB wie in Szenario 1 in den ersten Sekunden, während 
 Anders als in Szenario 1 ist in beiden Systemen der Unterschied in der Auslastung unübersehbar. SystemB nutzt nach dem Start durchschnittlich \SI{94}{\percent} der Leistung der \ac{gpu}, während SystemA nur \SI{60}{\percent} Auslastung erzeugt. Über die gesamte Messdauer liegt SystemB damit bei \SI{70}{\percent} Auslastung und SystemA bei \SI{45}{\percent}. Betrachtet man nur die Auslastung nach dem Start lässt sich eine Steigerung der Auslastung um \SI{57}{\percent} errechnen.
 
 \begin{figure}[!htb]
-	\memplot{seed-0-cube-single-mem.csv}
-	\memplot{seed-0-cube-multi-mem.csv}
+	\memplot[xticklabels={,,},xlabel={}]{seed-0-cube-single-mem.csv}
+	\\\memplot{seed-0-cube-multi-mem.csv}
 	\caption{Graph des Verlaufs der Speichernutzung in Szenario 2: Halb-Würfel.}\label{fig:seed-0-cube-mem}
 \end{figure} 
 \paragraph{\ac{ram}} Die Speichernutzung in Szenario 2 wird in Abbildung~\ref{fig:seed-0-cube-mem} gezeigt. Der Ge\-samt-Spei\-cher\-ver\-brauch von SystemA steigt im Vergleich zum Hexagon-Szenario leicht während der Speicherverbrauch von SystemB beinahe identisch bleibt. SystemA benötigt durchschnittlich \SI{643}{\mega\byte} und SystemB \SI{941}{\mega\byte}. Das ist ein Anstieg von \SI{12}{\percent} in SystemA und eine leichte Verringerung um \SI{1}{\percent} in SystemB. Weiterhin zeigt SystemB einen großen Speicherverbrauch während des Starts der Blocklib (\SI{1732}{\mega\byte}).

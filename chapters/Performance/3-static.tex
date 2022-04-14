@@ -40,8 +40,8 @@ Der zeitliche Verlauf der \ac{gpu}-Auslastung von Szenario 3 ist in Abbildung~\r
 \paragraph{\ac{ram}}
 Die Speichernutzung im Welt-Statisch Szenario ist in beiden Systemen höher als in den vorherigen Szenarien. Abbildung~\ref{fig:seed-0-static-mem} beschreibt deren Verlauf. 
 \begin{figure}[!htbp]
-	\memplot{seed-0-static-single-mem.csv}
-	\memplot{seed-0-static-multi-mem.csv}
+	\memplot[xticklabels={,,},xlabel={}]{seed-0-static-single-mem.csv}
+	\\\memplot{seed-0-static-multi-mem.csv}
 	\caption{Graph des Verlaufs der Speichernutzung in Szenario 3: Welt-Statisch.}\label{fig:seed-0-static-mem}
 \end{figure} 
 Wie in Szenario 2 ist die Geschwindigkeit, mit der Speicher für die Erzeugung kurzlebiger Objekten verbraucht wird, in SystemB mit \SI{208}{\mega\byte\per\second} etwa doppelt so hoch wie in SystemA mit \SI{94}{\mega\byte\per\second}. Allerdings ist die Geschwindigkeit beider Systeme damit in Szenario 3 wiederum etwa doppelt so hoch wie im Halb-Würfel Szenario.

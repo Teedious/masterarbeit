@@ -1,5 +1,4 @@
 % !TeX spellcheck = de_DE
-% !LuaLaTeX
 \documentclass[12pt,a4paper,listof=toc,parskip=half,numbers=noenddot,abstract=true]{scrartcl}
 \input{preamble}
 \input{plots}
@@ -12,9 +11,7 @@
 \pagenumbering{roman}
 \setcounter{page}{1}
 \markright{\abstractname}
-\begin{abstract}
-	TODO meine Zusammenfassung
-\end{abstract}
+\input{chapters/abstract.tex}
 \clearpage
 \markright{Inhaltsverzeichnis}
 \tableofcontents\clearpage
