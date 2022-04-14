@@ -19,7 +19,7 @@ while(!shutdown){
 }
 \end{lstlisting}
 
-Die Methode \code{update(delta)} ruft ihrerseits die \code{update(delta)} Methoden der einzelnen Simulationssysteme auf (siehe Listing~\ref{lst:gameUpdate}).
+Die Methode \code{update(...)} ruft ihrerseits die \code{update(...)}-Methoden der einzelnen Simulationssysteme auf (siehe Listing~\ref{lst:gameUpdate}).
 \begin{lstlisting}[caption={Vereinfachte Update-Methode von \class{Game}.}, label={lst:gameUpdate},float]
 private void update(float delta) {
 	//...
@@ -35,7 +35,7 @@ private void update(float delta) {
 	//...
 }
 \end{lstlisting}
-Bei der Berechnung des neuen Spielzustands gibt es in der Blocklib kein zentrales System, das den Zustand des letzten Loopdurchlaufs vorhält. Somit ist es möglich, dass das Verhalten der Blocklib von der Reihenfolge der \code{update(...)} abhängt, da der Zustand, auf den bei der Berechnung zugegriffen wird zeitgleich verändert wird. Das lässt sich einfach mit einem Beispiel veranschaulichen. 
+Bei der Berechnung des neuen Spielzustands gibt es in der Blocklib kein zentrales System, das den Zustand des letzten Loopdurchlaufs vorhält. Somit ist es möglich, dass das Verhalten der Blocklib von der Reihenfolge der \code{update(...)} abhängt, da der Zustand, auf den bei der Berechnung zugegriffen wird, zeitgleich verändert wird. Das lässt sich einfach mit einem Beispiel veranschaulichen. 
 
 Man nehme an, dass der \class{EntityManager} prüft, welche Chunks geladen sind, um zu ermitteln, wo ein neuer Gegner erschaffen werden soll. Der \class{ChunkManager} ist dafür zuständig, abhängig von der aktuellen Kameraposition zu bestimmen, welche Chunks geladen werden. Wird nun ein Chunks entfernt, auf dem der EntityManager einen Gegner erschaffen hat, könnte das zu unvorhergesehenem Verhalten führen, da der \class{EntityManager} erwartet, dass der erschaffene Gegner auf einem existenten Chunk erstellt wurde.
 

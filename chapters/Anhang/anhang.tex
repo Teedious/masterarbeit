@@ -19,7 +19,7 @@ Der beigelegte Datenträger enthält die folgenden Dateien.
 	\item die Source-Code-Dokumentation im Ordner \code{doc},
 	\item die bei den Messungen erstellten Rohdaten und verarbeitete Daten in den Ordnern\\ \code{latex(-precompiled)/performance/measurements},
 	\item Skripte zur Verarbeitung der Daten in den Ordnern\\ \code{latex(-precompiled)/performance/measurements/python},
-	\item Kopien von referenzierter Lieteratur und Quellen, die als PDF vorliegen im Ordner \code{recherche}.
+	\item Kopien von referenzierter Literatur und Quellen, die als PDF vorliegen im Ordner \code{recherche}.
 \end{itemize}
 
 \clearpage
@@ -64,7 +64,7 @@ Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zug
 	\includesvg[width=\textwidth]{ExecuterInterfaces.svg}
 	\par
 }
-In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie die jedes Interface die Schnittstelle, von der es abgeleitet ist, erweitert. Der \class{ScheduledExecutorService} Möglichkeiten des Scheduling hinzu und der neu definierte \class{BlocklibExecutorService} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zudem Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} vom Typ \class{TaskPriority}.
+In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie die jedes Interface die Schnittstelle, von der es abgeleitet ist, erweitert. Der \class{ScheduledExecutorService} Möglichkeiten des Scheduling hinzu und der neu definierte \class{BlocklibExecutorService} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zudem Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \class{TaskPriority}.
 
 \clearpage
 \section{Messungen}\label{appendix:plots}
