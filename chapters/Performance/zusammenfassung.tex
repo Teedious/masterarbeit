@@ -1,4 +1,4 @@
-Zum Schluss werden die gemessenen Ergebnisse aller Szenarien noch einmal gesammelt zusammengefasst. Dabei werden auch die Ergebnisse von Szenario 5 mit den Seeds 3 und 10 eingeschlossen. Tabelle~\ref{tab:zusammen} listet alle gemessenen Durchschnittswerte auf.
+In diesem Abschnitt werden die gemessenen Ergebnisse aller Szenarien noch einmal gesammelt zusammengefasst. Dabei werden auch die Ergebnisse von Szenario 5 mit den Seeds 3 und 10 eingeschlossen. Tabelle~\ref{tab:zusammen} listet alle gemessenen Durchschnittswerte auf.
 \begin{table}[!htbp]
 	\centering\small
 	\begin{tblr}{
@@ -52,7 +52,9 @@ Zum Schluss werden die gemessenen Ergebnisse aller Szenarien noch einmal gesamme
 	\end{tblr}
 	\caption{Durchschnittliche Messwerte in den allen Szenarien der Performanceanalyse.}\label{tab:zusammen}
 \end{table}
-Die Zeilen, die durch $\Delta$ gekennzeichnet sind, enthalten die relative Veränderung von SystemB im Vergleich zu SystemA. Betrachtet man diese Veränderung, ist zu erkennen, dass die Werte von SystemB ausnahmslos in allen Messbereichen gestiegen sind. Das schließt die Framerate aber auch den Speicherverbrauch ein. Der größte relative und absolute Zuwachs in der Bildwiederholrate ist in Szenario 1: Hexagon zu beobachten. In allen Szenarien ist der Zuwachs größer als \SI{100}{\fps}. Leider ist aus den Messungen nicht zu erkennen, welcher Teil der gestiegenen Auslastung von \ac{cpu} und \ac{gpu} aus der besseren Nutzung durch Multithreading hervorgeht und welchen Anteil der für die Implementierung notwendige Overhead beispielsweise durch die Zwischenspeicherung der Renderables ausmacht. Die stark gestiegene Framerate stellt allerdings sicher, dass ohne Zweifel eine bessere Nutzung der zur Verfügung stehenden Leistung durch die neue nebenläufige Architektur von SystemB ermöglicht wird.
+Die Zeilen, die durch $\Delta$ gekennzeichnet sind, enthalten die relative Veränderung von SystemB im Vergleich zu SystemA. Betrachtet man diese Veränderung, ist zu erkennen, dass die Werte in SystemB ausnahmslos in allen Messbereichen gestiegen sind. Das schließt die Framerate ein, aber auch den Speicherverbrauch. Der größte relative und absolute Zuwachs in der Bildwiederholrate ist in Szenario 1: Hexagon zu beobachten. In allen Szenarien ist der Zuwachs größer als \SI{100}{\fps}.
+
+Leider ist aus den Messungen nicht zu erkennen, welcher Teil der gestiegenen Auslastung von \ac{cpu} und \ac{gpu} aus der besseren Nutzung durch Multithreading hervorgeht und welchen Anteil der für die Implementierung notwendige Overhead beispielsweise durch die Zwischenspeicherung der Renderables ausmacht. Die stark gestiegene Framerate zeigt allerdings, dass ohne Zweifel eine bessere Nutzung der zur Verfügung stehenden Leistung durch die neue nebenläufige Architektur von SystemB ermöglicht wird.
 
 Die Betrachtung der Messungen von Szenario 5: Welt-Gehen mit unterschiedlichen Seeds zeigt, dass diese einen erheblichen Einfluss auf die Framerate haben. Das lässt sich leicht durch die Anzahl der zu zeichnenden Objekte erklären. In Seed 3 ist die Startposition der Kamera unterirdisch in einer Berglandschaft. Dadurch enthält beinahe das gesamte Sichtfeld Chunks, die verarbeitet werden müssen. Das sorgt für eine besonders hohe Auslastung der \ac{cpu}, die all diese Chunks verarbeiten muss. Hier zeigt sich auch, dass weiterhin die \ac{cpu} in diesem Testsystem den Flaschenhals für die Leistung darstellt. Die \ac{gpu} hat in diesem Szenario mit dem Seed 3 die niedrigste Auslastung über alle Szenarien hinweg.
 
@@ -91,3 +93,4 @@ Weiterhin wird mit einem Plus von \SI{115}{\percent} etwa doppelt so viel Speich
 \end{figure}
 
 Es ist nicht verwunderlich, dass der Gesamtspeicherverbrauch in der Blocklib von SystemA zu SystemB gestiegen ist, da beispielsweise für die Zwischenspeicherung der Renderables viele Daten doppelt gespeichert werden. 
+Dieser zusätzliche Aufwand könnte auch für die längere Startphase der Blocklib in SystemB verantwortlich sein. Das müssen zukünftige Messungen allerdings noch überprüfen.

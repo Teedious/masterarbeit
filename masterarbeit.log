@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  15 APR 2022 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  15 APR 2022 21:11
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
@@ -2212,79 +2212,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
+[62 <./tikz/masterarbeit-figure26.pdf> <./tikz/masterarbeit-figure27.pdf> <./tikz/masterarbeit-figure28.pdf>]
 ===== Image 'tikz/masterarbeit-figure29' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure30' is up-to-date. ======
-[62 <./tikz/masterarbeit-figure26.pdf> <./tikz/masterarbeit-figure27.pdf> <./tikz/masterarbeit-figure28.pdf>]) (chapters/Performance/3-static.tex
-<./img//seed-0.png, id=3277, 1204.5pt x 803.0pt>
+) [63 <./tikz/masterarbeit-figure29.pdf> <./tikz/masterarbeit-figure30.pdf>] (chapters/Performance/3-static.tex
+<./img//seed-0.png, id=3313, 1204.5pt x 803.0pt>
 File: ./img//seed-0.png Graphic file (type png)
 <use ./img//seed-0.png>
 Package pdftex.def Info: ./img//seed-0.png  used on input line 5.
 (pdftex.def)             Requested size: 237.01411pt x 157.99956pt.
-<./img//seed-2.png, id=3278, 1204.5pt x 803.0pt>
+<./img//seed-2.png, id=3314, 1204.5pt x 803.0pt>
 File: ./img//seed-2.png Graphic file (type png)
 <use ./img//seed-2.png>
 Package pdftex.def Info: ./img//seed-2.png  used on input line 7.
 (pdftex.def)             Requested size: 237.01411pt x 157.99956pt.
- [63 <./tikz/masterarbeit-figure29.pdf> <./tikz/masterarbeit-figure30.pdf>]
+
 ===== Image 'tikz/masterarbeit-figure31' is up-to-date. ======
+[64 <./img//seed-0.png (PNG copy)> <./img//seed-2.png (PNG copy)>]
 ===== Image 'tikz/masterarbeit-figure32' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-[64 <./img//seed-0.png (PNG copy)> <./img//seed-2.png (PNG copy)> <./tikz/masterarbeit-figure31.pdf>]
 ===== Image 'tikz/masterarbeit-figure33' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 ===== Image 'tikz/masterarbeit-figure34' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure35' is up-to-date. ======
-) [65 <./tikz/masterarbeit-figure32.pdf> <./tikz/masterarbeit-figure33.pdf>] (chapters/Performance/4-rotate.tex
+) [65 <./tikz/masterarbeit-figure31.pdf> <./tikz/masterarbeit-figure32.pdf>] (chapters/Performance/4-rotate.tex
 File: ./img//rotate-1.png Graphic file (type png)
 <use ./img//rotate-1.png>
 Package pdftex.def Info: ./img//rotate-1.png  used on input line 4.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-2.png, id=3386, 1204.5pt x 803.0pt>
+<./img//rotate-2.png, id=3379, 1204.5pt x 803.0pt>
 File: ./img//rotate-2.png Graphic file (type png)
 <use ./img//rotate-2.png>
 Package pdftex.def Info: ./img//rotate-2.png  used on input line 5.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-3.png, id=3387, 1204.5pt x 803.0pt>
+<./img//rotate-3.png, id=3380, 1204.5pt x 803.0pt>
 File: ./img//rotate-3.png Graphic file (type png)
 <use ./img//rotate-3.png>
 Package pdftex.def Info: ./img//rotate-3.png  used on input line 6.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-4.png, id=3388, 1204.5pt x 803.0pt>
+<./img//rotate-4.png, id=3381, 1204.5pt x 803.0pt>
 File: ./img//rotate-4.png Graphic file (type png)
 <use ./img//rotate-4.png>
 Package pdftex.def Info: ./img//rotate-4.png  used on input line 7.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-5.png, id=3389, 1204.5pt x 803.0pt>
+<./img//rotate-5.png, id=3382, 1204.5pt x 803.0pt>
 File: ./img//rotate-5.png Graphic file (type png)
 <use ./img//rotate-5.png>
 Package pdftex.def Info: ./img//rotate-5.png  used on input line 8.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-6.png, id=3390, 1204.5pt x 803.0pt>
+<./img//rotate-6.png, id=3383, 1204.5pt x 803.0pt>
 File: ./img//rotate-6.png Graphic file (type png)
 <use ./img//rotate-6.png>
 Package pdftex.def Info: ./img//rotate-6.png  used on input line 9.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-
+ [66 <./tikz/masterarbeit-figure33.pdf> <./tikz/masterarbeit-figure34.pdf> <./tikz/masterarbeit-figure35.pdf>]
 ===== Image 'tikz/masterarbeit-figure36' is up-to-date. ======
-[66 <./tikz/masterarbeit-figure34.pdf> <./tikz/masterarbeit-figure35.pdf>]
+[67 <./img//rotate-2.png (PNG copy)> <./img//rotate-3.png (PNG copy)> <./img//rotate-4.png (PNG copy)> <./img//rotate-5.png (PNG copy)> <./img//rotate-6.png (PNG copy)> <./tikz/masterarbeit-figure36.pdf>]
 ===== Image 'tikz/masterarbeit-figure37' is up-to-date. ======
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
@@ -2296,7 +2297,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[67 <./img//rotate-2.png (PNG copy)> <./img//rotate-3.png (PNG copy)> <./img//rotate-4.png (PNG copy)> <./img//rotate-5.png (PNG copy)> <./img//rotate-6.png (PNG copy)> <./tikz/masterarbeit-figure36.pdf>]
 ===== Image 'tikz/masterarbeit-figure38' is up-to-date. ======
 
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
@@ -2308,29 +2308,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-[68 <./tikz/masterarbeit-figure37.pdf> <./tikz/masterarbeit-figure38.pdf>]
+[68 <./tikz/masterarbeit-figure37.pdf>]
 ===== Image 'tikz/masterarbeit-figure39' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure40' is up-to-date. ======
-) (chapters/Performance/5-walk.tex
-<./img//walk-1.png, id=3508, 1204.5pt x 803.0pt>
+) [69 <./tikz/masterarbeit-figure38.pdf> <./tikz/masterarbeit-figure39.pdf> <./tikz/masterarbeit-figure40.pdf>] (chapters/Performance/5-walk.tex
+<./img//walk-1.png, id=3544, 1204.5pt x 803.0pt>
 File: ./img//walk-1.png Graphic file (type png)
 <use ./img//walk-1.png>
 Package pdftex.def Info: ./img//walk-1.png  used on input line 4.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//walk-2.png, id=3509, 1204.5pt x 803.0pt>
+<./img//walk-2.png, id=3545, 1204.5pt x 803.0pt>
 File: ./img//walk-2.png Graphic file (type png)
 <use ./img//walk-2.png>
 Package pdftex.def Info: ./img//walk-2.png  used on input line 5.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//walk-3.png, id=3510, 1204.5pt x 803.0pt>
+<./img//walk-3.png, id=3546, 1204.5pt x 803.0pt>
 File: ./img//walk-3.png Graphic file (type png)
 <use ./img//walk-3.png>
 Package pdftex.def Info: ./img//walk-3.png  used on input line 6.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-FiXme Note: '{\color {red}Anhänge}' on input line 10.
 
 ===== Image 'tikz/masterarbeit-figure41' is up-to-date. ======
-[69 <./tikz/masterarbeit-figure39.pdf> <./tikz/masterarbeit-figure40.pdf>]
+[70 <./img//walk-1.png (PNG copy)> <./img//walk-2.png (PNG copy)> <./img//walk-3.png (PNG copy)> <./tikz/masterarbeit-figure41.pdf>]
 ===== Image 'tikz/masterarbeit-figure42' is up-to-date. ======
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
@@ -2342,7 +2341,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-[70 <./img//walk-1.png (PNG copy)> <./img//walk-2.png (PNG copy)> <./img//walk-3.png (PNG copy)> <./tikz/masterarbeit-figure41.pdf>]
 ===== Image 'tikz/masterarbeit-figure43' is up-to-date. ======
 
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
@@ -2354,9 +2352,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
+[71 <./tikz/masterarbeit-figure42.pdf>]
 ===== Image 'tikz/masterarbeit-figure44' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure45' is up-to-date. ======
-[71 <./tikz/masterarbeit-figure42.pdf> <./tikz/masterarbeit-figure43.pdf>]) (chapters/Performance/zusammenfassung.tex
+[72 <./tikz/masterarbeit-figure43.pdf> <./tikz/masterarbeit-figure44.pdf> <./tikz/masterarbeit-figure45.pdf>]) (chapters/Performance/zusammenfassung.tex
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -2365,45 +2364,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
- [72 <./tikz/masterarbeit-figure44.pdf> <./tikz/masterarbeit-figure45.pdf>] [73]
+
 ===== Image 'tikz/masterarbeit-figure46' is up-to-date. ======
-) [74 <./tikz/masterarbeit-figure46.pdf>] (chapters/Fazit.tex) [75
+[73]) [74] [75 <./tikz/masterarbeit-figure46.pdf>] (chapters/Fazit.tex) [76
 
 ] (chapters/Ausblick/ausblick.tex) (chapters/Ausblick/EtablierungEinerKompositionroot.tex
-<./svg-inkscape/Context-shortened_svg-raw.pdf, id=3739, 455.45157pt x 243.91125pt>
+<./svg-inkscape/Context-shortened_svg-raw.pdf, id=3749, 455.45157pt x 243.91125pt>
 File: ./svg-inkscape/Context-shortened_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Context-shortened_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Context-shortened_svg-raw.pdf  used on input line 8.
 (pdftex.def)             Requested size: 455.45045pt x 243.91064pt.
- [76
+ [77
 
-] [77 <./svg-inkscape/Context-shortened_svg-raw.pdf>] [78]) (chapters/Ausblick/schrift.tex
-<./img//ExportedFont.png, id=3859, 513.92pt x 128.48pt>
+] [78 <./svg-inkscape/Context-shortened_svg-raw.pdf>] [79]) (chapters/Ausblick/schrift.tex
+<./img//ExportedFont.png, id=3869, 513.92pt x 128.48pt>
 File: ./img//ExportedFont.png Graphic file (type png)
 <use ./img//ExportedFont.png>
 Package pdftex.def Info: ./img//ExportedFont.png  used on input line 4.
 (pdftex.def)             Requested size: 386.95897pt x 96.74203pt.
- [79 <./img//ExportedFont.png>]) (chapters/Ausblick/jobsystem.tex [80] [81]) [82] (masterarbeit.gls) [83
+ [80 <./img//ExportedFont.png>]) (chapters/Ausblick/jobsystem.tex [81] [82]) [83] (masterarbeit.gls) [84
 
-] (masterarbeit.acr) [84
+] (masterarbeit.acr) [85
 
 ]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [85
+ [86
 
-] [86]
+] [87]
 Overfull \hbox (12.64574pt too wide) in paragraph at lines 120--120
 []\T1/lmr/m/n/12 (-20) Sven Kal-le.   Im-ple-men-ta-ti-on of en-vi-ron-men-tal fea-tu-res in-to an exis-ting 3D-Framework.
  []
 
-[87
+[88
 
-] [88] (chapters/Anhang/anhang.tex [89] [1
+] [89] (chapters/Anhang/anhang.tex [90] [1
 
 ]
-<./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf, id=4117, 551.05875pt x 551.81157pt>
+<./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf, id=4124, 551.05875pt x 551.81157pt>
 File: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf  used on input line 29.
@@ -2418,7 +2417,7 @@ Overfull \hbox (11.76692pt too wide) in paragraph at lines 29--30
  <./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 34.
-<./svg-inkscape/CompletionStage_svg-raw.pdf, id=4305, 742.27313pt x 666.99188pt>
+<./svg-inkscape/CompletionStage_svg-raw.pdf, id=4312, 742.27313pt x 666.99188pt>
 File: ./svg-inkscape/CompletionStage_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/CompletionStage_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/CompletionStage_svg-raw.pdf  used on input line 35.
@@ -2439,7 +2438,7 @@ Overfull \hbox (11.75934pt too wide) in paragraph at lines 35--36
 [3
 
  <./svg-inkscape/CompletionStage_svg-raw.pdf>]
-<./svg-inkscape/Context_svg-raw.pdf, id=4457, 455.45157pt x 774.64406pt>
+<./svg-inkscape/Context_svg-raw.pdf, id=4464, 455.45157pt x 774.64406pt>
 File: ./svg-inkscape/Context_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Context_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Context_svg-raw.pdf  used on input line 53.
@@ -2447,7 +2446,7 @@ Package pdftex.def Info: ./svg-inkscape/Context_svg-raw.pdf  used on input line 
  [4
 
  <./svg-inkscape/Context_svg-raw.pdf>]
-<./svg-inkscape/ExecuterInterfaces_svg-raw.pdf, id=4627, 751.30687pt x 680.5425pt>
+<./svg-inkscape/ExecuterInterfaces_svg-raw.pdf, id=4634, 751.30687pt x 680.5425pt>
 File: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf  used on input line 64.
@@ -2503,11 +2502,11 @@ Package pdftex.def Info: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf  used on 
 
  <./tikz/masterarbeit-figure68.pdf> <./tikz/masterarbeit-figure69.pdf> <./tikz/masterarbeit-figure70.pdf> <./tikz/masterarbeit-figure71.pdf> <./tikz/masterarbeit-figure72.pdf> <./tikz/masterarbeit-figure73.pdf> <./tikz/masterarbeit-figure74.pdf> <./tikz/masterarbeit-figure75.pdf>]
 
-FiXme Summary: Number of notes: 2,
+FiXme Summary: Number of notes: 1,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 2.
+(FiXme)        Total: 1.
 
 [10
 runsystem(makeindex -s masterarbeit.ist -t masterarbeit.glg -o masterarbeit.gls masterarbeit.glo)...executed (allowed).
@@ -2522,17 +2521,17 @@ Package logreq Info: Writing requests to 'masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 73359 strings out of 478870
- 1656381 string characters out of 2847888
- 2850740 words of memory out of 3000000
- 88932 multiletter control sequences out of 15000+600000
- 529497 words of font info for 307 fonts, out of 8000000 for 9000
+ 73361 strings out of 478870
+ 1656400 string characters out of 2847888
+ 2850749 words of memory out of 3000000
+ 88935 multiletter control sequences out of 15000+600000
+ 529368 words of font info for 306 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  115i,21n,134p,10669b,3778s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on masterarbeit.pdf (107 pages, 28086220 bytes).
+Output written on masterarbeit.pdf (108 pages, 28088498 bytes).
 PDF statistics:
- 5655 PDF objects out of 6186 (max. 8388607)
- 525 named destinations out of 1000 (max. 500000)
+ 5662 PDF objects out of 6186 (max. 8388607)
+ 526 named destinations out of 1000 (max. 500000)
  66731 words of extra memory for PDF output out of 74296 (max. 10000000)
 
