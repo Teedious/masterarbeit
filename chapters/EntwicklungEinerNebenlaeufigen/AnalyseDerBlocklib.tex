@@ -1,25 +1,31 @@
-Bei tiefgreifenden Änderungen in einer Codebasis, wie es die Entwicklung einer nebenläufigen Architektur ist, unabhängig davon, ob die Architektur auf \ac{sot} oder einem Jobsystem basiert, ist es ein Verständnis für die bestehende Architektur der Codebasis nötig. Interessant ist dabei insbesondere wie die Game Loop, beschrieben in Abschnitt~\ref{sec:gameLoop}, gestaltet ist und an welchen Stellen bereits von Multithreading Gebrauch gemacht wird, was in Abschnitt~\ref{sec:nutzungMultithreading} erläutert wird.
+Bei tiefgreifenden Änderungen in einer Codebasis, wie es die Entwicklung einer nebenläufigen Architektur ist, unabhängig davon, ob die Architektur auf \ac{sot} oder einem Jobsystem basiert, ist es ein Verständnis für die bestehende Architektur der Codebasis nötig. Interessant ist dabei insbesondere wie die Game-Loop, beschrieben in Abschnitt~\ref{sec:gameLoop}, gestaltet ist und an welchen Stellen bereits von Multithreading Gebrauch gemacht wird, was in Abschnitt~\ref{sec:nutzungMultithreading} erläutert wird.
 
-\subsubsection{Game Loop}\label{sec:gameLoop}
-Ein nahezu universelles Designelement von Spielen ist die sogenannte \emph{Game Loop}~\cite[S.~161~ff.]{Nystrom2015}. Sie ist für die Aktualisierung des Spiels zuständig und umfasst typischerweise die Aufgaben 
+\subsubsection{Game-Loop}\label{sec:gameLoop}
+Ein nahezu universelles Designelement von Spielen ist die sogenannte \emph{Game-Loop}~\cite[S.~161~ff.]{Nystrom2015}. Sie ist für die Aktualisierung des Spiels zuständig und umfasst typischerweise die Aufgaben 
 \begin{itemize}
+  \item Verarbeitung der Eingaben
   \item Berechnung des neuen Spielzustands
   \item (grafische) Ausgabe
-  \item Verarbeitung der Eingaben
 \end{itemize}
-Die Blocklib besitzt ebenfalls eine Game Loop und führt die beschriebenen Aufgaben in der obigen Reihenfolge sequentiell aus. Eigentlich gibt es sogar zwei Game Loops, eine für die Ausführung als Server (ohne graphische Ausgabe) und eine für einen Client oder Einzelspieler. Die Game-Loop der Einzelspieler-Blocklib sieht vereinfacht wie in Listing~\ref{lst:oldGameLoop} gezeigt aus.
+Die Blocklib besitzt ebenfalls eine Game-Loop und führt die beschriebenen Aufgaben in der obigen Reihenfolge sequentiell aus. Eigentlich gibt es sogar zwei Game-Loops, eine für die Ausführung als Server (ohne graphische Ausgabe) und eine für einen Client oder Einzelspieler. Die Game-Loop der Einzelspieler-Blocklib sieht vereinfacht wie in Listing~\ref{lst:oldGameLoop} gezeigt aus. Die typischen Elemente der Game-Loop sind vorhanden, aber ein wenig verteilt.
+
 \begin{lstlisting}[caption={Vereinfachte Version der Blocklib für Einzelspieler.},label={lst:oldGameLoop},float]
 while(!shutdown){
+	//...
+	processInput(delta); // Verarbeitung der Eingaben
 	//...
 	update(delta); // Berechnung des neuen Spielzustands
 	//...
 	render(); // grafische Ausgabe
 	//...
-	window.update(); // Verarbeitung der Eingaben
+	window.update(); // Verarbeitung der Eingaben und grafische Ausgabe
 }
 \end{lstlisting}
 
 Die Methode \code{update(...)} ruft ihrerseits die \code{update(...)}-Methoden der einzelnen Simulationssysteme auf (siehe Listing~\ref{lst:gameUpdate}).
+Bei der Berechnung des neuen Spielzustands gibt es in der Blocklib kein zentrales System, das den Zustand des letzten Loopdurchlaufs vorhält. Somit ist es möglich, dass das Verhalten der Blocklib von der Reihenfolge der \code{update(...)} abhängt, da der Zustand, auf den bei der Berechnung zugegriffen wird, zeitgleich verändert wird. Das lässt sich einfach mit einem Beispiel veranschaulichen. 
+
+
 \begin{lstlisting}[caption={Vereinfachte Update-Methode von \class{Game}.}, label={lst:gameUpdate},float]
 private void update(float delta) {
 	//...
@@ -35,7 +41,6 @@ private void update(float delta) {
 	//...
 }
 \end{lstlisting}
-Bei der Berechnung des neuen Spielzustands gibt es in der Blocklib kein zentrales System, das den Zustand des letzten Loopdurchlaufs vorhält. Somit ist es möglich, dass das Verhalten der Blocklib von der Reihenfolge der \code{update(...)} abhängt, da der Zustand, auf den bei der Berechnung zugegriffen wird, zeitgleich verändert wird. Das lässt sich einfach mit einem Beispiel veranschaulichen. 
 
 Man nehme an, dass der \class{EntityManager} prüft, welche Chunks geladen sind, um zu ermitteln, wo ein neuer Gegner erschaffen werden soll. Der \class{ChunkManager} ist dafür zuständig, abhängig von der aktuellen Kameraposition zu bestimmen, welche Chunks geladen werden. Wird nun ein Chunks entfernt, auf dem der EntityManager einen Gegner erschaffen hat, könnte das zu unvorhergesehenem Verhalten führen, da der \class{EntityManager} erwartet, dass der erschaffene Gegner auf einem existenten Chunk erstellt wurde.
 
@@ -43,7 +48,7 @@ Die (mögliche) Abhängigkeit des Verhaltens von der Reihenfolge der Updates, ze
 
 
 \subsubsection{Nutzung von Multithreading}\label{sec:nutzungMultithreading}
-Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufige \glspl{Anweisung} zu parallelisieren. Darunter fallen insbesondere Hintergrundaufgaben, wie das Erstellen von Chunks, und das Ausführen zeitlich gesteuerter Abläufe, wie die Updates der Flüsse von Flüssigkeiten. Insgesamt gibt es zu Beginn der Arbeit sechs Klassen, die Threads erzeugen und nutzen. Eine Auflistung der Klassen und deren Verwendung von Threads ist in Tabelle~\ref{tab:concTasksBlocklib} zu finden.
+Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufige \glspl{Anweisung} zu parallelisieren. Darunter fallen insbesondere Hintergrundaufgaben, wie das Erstellen von Chunks, und das Ausführen zeitlich gesteuerter Abläufe, wie die Updates der Flüsse von Flüssigkeiten. Insgesamt gibt es zu Beginn der Arbeit sieben Klassen, die Threads erzeugen und nutzen. Eine Auflistung der Klassen und kurzer Beschreibungen, wie diese Nebenläufigkeit nutzen, ist in Tabelle~\ref{tab:concTasksBlocklib} zu finden.
 
 \begin{table}
 	%fixup, because hyphenation of lstinline breaks width measurement
@@ -65,4 +70,4 @@ Bereits vor dieser Arbeit werden in der Blocklib Threads genutzt, um nebenläufi
 	\caption[Nebenläufige \glsentryplural{Anweisung} in der Blocklib.]{Nebenläufige \glspl{Anweisung} in der Blocklib.}\label{tab:concTasksBlocklib}
 \end{table}
 
-Es gibt keine zentrale Stelle, an der die Erstellung von Threads verwaltet wird. Jede Klasse kümmert sich selbst darum Threads zu erzeugen und zu beenden. Dadurch ist die Anzahl der genutzten Threads nicht leicht zu überblicken. Dadurch lässt sich zum einen schwierig sicherstellen, dass die Anzahl der genutzten Threads die Anzahl der Prozessoren nicht überschreitet, was zu unnötigen Kontextwechseln führt und somit die Performance verschlechtert, zum anderen können die bestehenden Threads möglicherweise nicht voll ausgelastet werden, da nur einzelne Klassen auf diese Zugriff haben.
+Es gibt keine zentrale Stelle, an der die Erstellung von Threads verwaltet wird. Jede Klasse kümmert sich selbst darum, Threads zu erzeugen und zu beenden und die Anzahl der genutzten Threads ist nicht leicht zu überblicken. Dadurch lässt sich zum einen schwierig sicherstellen, dass die Anzahl der genutzten Threads die Anzahl der Prozessoren nicht überschreitet, was zu unnötigen Kontextwechseln führt und somit die Performance verschlechtert. Zum anderen können die bestehenden Threads möglicherweise nicht voll ausgelastet werden, da nur einzelne Klassen auf diese Zugriff haben.

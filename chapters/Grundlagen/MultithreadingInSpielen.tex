@@ -1,4 +1,4 @@
-Computerspiele nutzen Multithreading seit dem Aufkommen von Mehrkern-Prozessoren, um eine bessere Performance zu erreichen~\cite{Davies2006}. Es gibt verschiedene für Spiele geeignete Multithreading-Architekturen, die jeweils eigene Vor- und Nachteile mit sich bringen. Im Folgenden werden zwei weit verbreitete Multithreading Architekturen betrachtet.
+Computerspiele nutzen Nebenläufigkeit und Multithreading seit dem Aufkommen von Mehrkern-Prozessoren, um eine bessere Performance zu erreichen~\cite{Davies2006}. Es gibt verschiedene für Spiele geeignete Multithreading-Architekturen, die jeweils eigene Vor- und Nachteile mit sich bringen. Im Folgenden werden zwei in der Computerspielindustrie weit verbreitete Multithreading-Architekturen betrachtet.
 
 \subsubsection{\glsentrylong{sot}}
 \begin{figure}
@@ -34,17 +34,21 @@ Computerspiele nutzen Multithreading seit dem Aufkommen von Mehrkern-Prozessoren
 			\node at (2.5,-1) {?};
 			\node at (7,-1) {?};
 	\end{tikzpicture}
-	\caption[Darstellung der Nutzung von Multithreading in \glsentrylong{sot}.]{Darstellung der Nutzung von Multithreading in \glsentrylong{sot}. Systeme laufen auf eigenen Threads. Es wird die Auslastung während zwei Frames $n$ und $n+$ gezeigt. Einige Threads sind dadurch nicht zu \SI{100}{\percent} ausgelastet, was durch Fragezeichen (?) gekennzeichnet ist. In diesem Fall kann Thread 3 gar nicht genutzt werden. Thread 2 übernimmt das Rendering, durch Pipelining wird dabei immer der Zustand der Simulation des letzten Frames dargestellt. Die Abbildung ist von einer Grafik aus \cite[S.~14]{Tatarchuk2014} inspiriert.}\label{fig:sot}
+	\caption[Darstellung der Nutzung von Multithreading in \glsentrylong{sot}.]{Darstellung der Nutzung von Multithreading in \glsentrylong{sot}. Systeme laufen auf eigenen Threads. Es wird die Auslastung während zwei Frames $n$ und $n+1$ gezeigt. Einige Threads sind dadurch nicht zu \SI{100}{\percent} ausgelastet, was durch Fragezeichen (?) gekennzeichnet ist. In diesem Fall kann Thread 3 gar nicht genutzt werden. Thread 2 übernimmt das Rendering, durch Pipelining wird dabei immer der Zustand der Simulation des letzten Frames dargestellt. Die Abbildung ist von einer Grafik aus \cite[S.~14]{Tatarchuk2014} inspiriert.}\label{fig:sot}
 \end{figure}
-Eine einfache Architektur vergibt, wie in Abbildung~\ref{fig:sot} gezeigt, für einzelne Systeme (wie Simulation oder Rendering) eigene Threads, die diese exklusiv nutzen~\cite{Davies2006,Tatarchuk2014,Genova2015,Hodgman2016}. \textcite{Tatarchuk2014} bezeichnet diese Architektur als \ac{sot}. Durch Pipelining kann das Rendering System dann beispielsweise auf den Spielzustand des vorherigen Frames für die Darstellung zugreifen. Diese Architektur bietet einige Vor- und Nachteile, die nun erörtert werden.
+Eine einfache Architektur vergibt, wie in Abbildung~\ref{fig:sot} gezeigt, für einzelne Systeme (wie Simulation oder Rendering) eigene Threads, die diese exklusiv nutzen~\cite{Davies2006,Tatarchuk2014,Genova2015,Hodgman2016}. \textcite{Tatarchuk2014} bezeichnet diese Architektur als \ac{sot}. Diese Architektur bietet einige Vor- und Nachteile, die nun erörtert werden.
 \begin{itemize}
 	\item[$+$] Die Architektur bietet den Vorteil, dass die Ausführung innerhalb der Systeme seriell ist, was die Entwicklung wie in Abschnitt~\ref{sec:nebenl-folgen} beschrieben einfacher macht als nebenläufige Entwicklung.
 	\item[$+$] Solange die Systeme voneinander separiert sind, gibt es keine Probleme die mit Nebenläufigkeit einhergehen, da beispielsweise Wettkampfbedingungen nur auftreten können, wenn nebenläufig auf geteilte Daten zugegriffen wird. Da keine Wettkampfbedingungen verhindert werden müssen, entfällt blockierende Synchronisierung und Deadlocks sind ausgeschlossen.
 	\item[$-$] Auf heterogenen Plattformen, die beispielsweise unterschiedliche Prozessoreinheiten besitzen, kann es zu Performance Problemen kommen. Die Architektur muss eventuell für jede Plattform anders aufgebaut sein. Es gibt also eine gewisse Abhängigkeit von der Hardware.
-	\item[$-$] Synchronisierung der Systeme erfordert einen großen Speicheraufwand, da alle Daten (beispielsweise mit einem Double Buffer) zwischengespeichert werden müssen.
+	\item[$-$] Da immer Systeme existieren, die auf Daten anderer Systeme zugreifen, muss zur Synchronisierung der Systeme Pipelining betrieben werden. Das erfordert einen großen Speicheraufwand, da alle Daten zwischengespeichert werden müssen. Dann können Systeme auf die Daten anderer Systeme zugreifen, ohne dass Wettkampfbedingungen befürchtet werden müssen.
 \end{itemize}
 
-Die Nutzung von Threads pro System bietet sich an, wenn nur für eine Plattform, beispielsweise PC, entwickelt wird und es keine starken Speicherplatzrestriktionen gibt. Zudem ist die Implementierung einfacher als die der folgenden Architektur.
+Die Zwischenspeicherung wird insbesondere dann wichtig, wenn wie in Abbildung~\ref{fig:sot} sogenanntes \emph{Pipelining} betrieben werden soll. Das heißt, dass zwar Systeme wie hier die Simulation und das Rendering nacheinander ausgeführt werden, nachdem der erste Schritt fertig ist, beginnt er allerdings gleich mit der nächsten Ausführung. Damit ergibt sich bei zwei Systemen ein Bild wie in Abbildung~\ref{fig:sot}. Betrachtet man einen Zeitpunkt, in einem Spiel also ein Bild (engl. Frame), so arbeiten alle Systeme gleichzeitig, aber an unterschiedlichen Daten. Während die Simulation die Daten für Frame $n$ berechnet, nutzt das Rendering-System die Daten von Thread $n-1$.
+
+Für die Zwischenspeicherung kann ein sogenannter \emph{Double-Buffer}~\cite[S.~143]{Nystrom2015} genutzt werden. Das ist ein Puffer, der zwei Speicherstellen verwendet. So kann ein System Daten berechnen und in die eine Speicherstelle einfügen, während nebenläufig die andere Speicherstelle von anderen Systemen ausgelesen werden kann, ohne dass dort Daten verändert werden. Zu einem bestimmten Zeitpunkt werden dann die Speicherstellen getauscht, sodass immer eine Speicherstelle unverändert ist, während die andere Stelle beschrieben wird.
+
+Die Nutzung von Threads pro System bietet sich an, wenn nur für eine Plattform, beispielsweise eine Spielekonsole, entwickelt wird und es keine starken Speicherplatzrestriktionen gibt. Zudem ist die Implementierung einfacher als die der folgenden Architektur.
 
 \subsubsection{Jobsystem}\label{sec:gamesJobsystem}
 
@@ -86,7 +90,7 @@ Die Nutzung von Threads pro System bietet sich an, wenn nur für eine Plattform,
 	\end{tikzpicture}
 	\caption[Darstellung der Nutzung von Multithreading mit einem Jobsystem.]{Darstellung der Nutzung von Multithreading mit einem Jobsystem. Die Systeme definieren Jobs, die frei auf die vorhandenen Threads aufgeteilt werden. Sim steht für Simulation und Ren für Rendering. Die Abbildung ist schematisch, die Jobs müssen nicht exakt die gleiche Länge haben, auch wenn kurze Jobs mit ähnlichen Laufzeiten ideal sind. Im Vergleich zu Abbildung~\ref{fig:sot} lässt sich eine höhere Auslastung der Threads erkennen, was wiederum höhere FPS zur Folge hat.}\label{fig:jobt}
 \end{figure}
-Eine etwas komplexere Architektur liefert die Implementierung eines sogenannten \emph{Job-} oder \emph{Task-Systems}~\cite{Davies2006,Tatarchuk2014,Genova2015,Hodgman2016}. Ein Schema der Architektur ist in Abbildung~\ref{fig:jobt} zu sehen. Anstatt Aufgaben fest auf einzelne Threads zu verteilen, gibt es \emph{Jobs} und ein System, das die Jobs auf Threads verteilt. Konzeptuell entspricht die Architektur sehr dem in Abschnitt~\ref{sec:executor} beschriebenen \class{Executor} in Java. 
+Eine etwas komplexere Architektur liefert die Implementierung eines sogenannten \emph{Job-} oder \emph{Task-Systems}~\cite{Davies2006,Tatarchuk2014,Genova2015,Hodgman2016}. Ein Schema der Architektur ist in Abbildung~\ref{fig:jobt} zu sehen. Anstatt Aufgaben fest auf einzelne Threads zu verteilen, gibt es \emph{Jobs} (beziehungsweise Tasks) und ein System, das die Jobs auf Threads verteilt. Konzeptuell entspricht die Architektur sehr dem in Abschnitt~\ref{sec:executor} beschriebenen \class{Executor} in Java. 
 
 Die idealerweise kurzen Jobs werden an das System übergeben. Das System verwaltet die Threads, deren Anzahl idealerweise der Anzahl der Hardware-Threads entspricht, da dann die Leistung des Prozessors optimal ausgenutzt werden kann und die Anzahl der Kontextwechsel minimiert wird. Ist ein Thread im Leerlauf, wird ein Job an den Thread zur Ausführung übergeben.
 
@@ -125,15 +129,17 @@ Das System kann zudem so implementiert werden, dass es Abhängigkeiten zwischen 
 	\item[$-$] Typischerweise haben die Nutzer des Jobsystems keine Möglichkeit zu entscheiden, auf welchem Thread ein Job ausgeführt werden soll. Das ist zum einen so gewollt und zum anderen für gewöhnlich kein Problem. Insbesondere beim Rendering mittels der Grafikschnittstelle OpenGL führt das allerdings zu Problemen, da die OpenGL API nur von einem speziellen Thread aus aufgerufen werden darf. Unter der Nutzung von OpenGL ist es also nicht möglich, das Rendering nebenläufig durchzuführen.
 \end{itemize}
 
+Auch in einem Jobsystem lässt sich Pipelining nutzen, es ist allerdings nicht so essentiell wie bei \ac{sot}. Unter der Nutzung von Pipelining könnten beispielsweise auch noch die Lücken in der Auslastung der Threads in Abbildung~\ref{fig:jobt} geschlossen werden.
+
 Entwickler von Computerspielen haben zuerst \ac{sot} genutzt, da diese Architektur einfach ist~\cite{Genova2015,Tatarchuk2014} und Computer zu der Zeit ihrer Nutzung noch wenige Kerne hatten. Vor über 15 Jahren hat die Jobsystem Architektur begonnen an Gewicht gewinnen~\cite{Davies2006} und Entwickler nutzen seither vermehrt diese Architektur in ihren neuen Spielen~\cite{Tatarchuk2014,Genova2015,Gyrling2015,Hodgman2016}.
 
 Diese Entscheidung liegt vermutlich darin begründet, dass die Vorteile von \ac{sot}  und die Nachteile des Jobsystems für moderne Spiele weniger relevant sind. Entwickler sind inzwischen mit dem Jobsystem Konzept vertraut und dieses kann ebenfalls gut vor Wettkampfbedingungen schützen, wenn die Abhängigkeiten zwischen Jobs korrekt sind. Bei der Entwicklung neuer Spiele, kann die Nutzung des Jobsystems sofort berücksichtigt werden. Dadurch sind später keine tiefgreifenden Änderungen nötig, da die Integration von Anfang an stattgefunden hat. Spielentwickler nutzen statt OpenGL meist DirectX, das seit 2009 mit Version 11 Multithreading unterstützt~\cite{White2018}. Auch Vulkan, das inzwischen vermehrt in der Spielentwicklung Einzug erhält, unterstützt Multithreading~\cite{Schott2016}. Daher können auch die Aufrufe des Rendering über das Jobsystem nebenläufig geschehen.
 
 \begin{figure}
+	\centering
 	\includegraphics[width=.8\textwidth]{Destiny.png}
 	 \caption[Darstellung eines Job Graphen für das Spiel Destiny.]{Darstellung eines Job Graphen für das Spiel Destiny. Die farbigen Umrahmungen zeigen die verschiedenen Stufen, in die der Graph durch Synchronisationspunkte unterteilt ist. Die Abbildung ist eine Aggregation von vier Abbildungen aus \cite[S.~39~ff.]{Tatarchuk2014}.}\label{fig:destiny-jobgraph}
 \end{figure}
-
 
 Das Spiel Destiny, das 2014 erschienen ist, besitzt beispielsweise eine Engine mit einem Jobsystem in dem das Rendering sequentiell nach der Simulation erfolgt. Abbildung~\ref{fig:destiny-jobgraph} zeigt den Job Graph des Spiels, wobei veranschaulicht wird, dass der Graph verschiedene Phasen enthält (\enquote{Game simulation}, \enquote{Extract game state}, \enquote{Prepare GPU-friendly data}, \enquote{Submit to GPU}), die durch synchronisierende Jobs sequentialisiert sind. Dadurch muss der Spielzustand nicht zwischengespeichert werden. Wie in der Abbildung zu erkennen ist, gibt es in den einzelnen Phasen große Mengen an Jobs, die nebenläufig ausgeführt werden können, sodass das Spiel von einer großen Menge an Prozessoreinheiten profitieren kann.
 

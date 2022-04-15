@@ -1,5 +1,4 @@
-Aufgrund des Umfangs der Blocklib und der Unübersichtlichkeit an einigen Stellen kann das Jobsystem nicht, wie in Abbildung~\ref{fig:optimalArchitecture} gezeigt, umfassend integriert werden. Um die Anforderungen von Kapitel~\ref{sec:anforderungen} zu erfüllen, wird daher ein Jobsystem implementiert, das nur an ausgewählten Stellen mit der Blocklib konsolidiert wird und ansonsten für die zukünftige Nutzung bereitsteht.
-
+Aufgrund des Umfangs der Blocklib und der Unübersichtlichkeit an einigen Stellen kann das Jobsystem nicht, wie in Abbildung~\ref{fig:optimalArchitecture} gezeigt, umfassend integriert werden. Um die Anforderungen von Kapitel~\ref{sec:anforderungen} zu erfüllen, wird daher ein Jobsystem implementiert, das nur an Stellen mit der Blocklib konsolidiert wird, die bereits zuvor Multithreading genutzt haben, und ansonsten für die zukünftige Nutzung bereitsteht.
 
 \begin{figure}
 	\centering
@@ -32,11 +31,10 @@ Aufgrund des Umfangs der Blocklib und der Unübersichtlichkeit an einigen Stelle
 		\draw  (0.5,3) rectangle (4.5,-2);
 		\draw  (5,3) rectangle (9,-2);
 	\end{tikzpicture}
-	\caption[Design der neuen Multithreading-Architektur der Blocklib.]{Design der neuen Multithreading-Architektur der Blocklib. Statt einer Simulation, die vollständig aus Jobs besteht, gibt es einen langen Simulations-Job, der aber weitere Jobs starten kann. \enquote{Sim} kennzeichnet einen Simulationsjob.}\label{fig:plannedArchitecture}
+	\caption[Design der neuen Multithreading-Architektur der Blocklib.]{Design der neuen Multithreading-Architektur der Blocklib. Statt einer Simulation, die vollständig aus Jobs besteht, gibt es einen langen Simulations-Job, der die meisten Anweisungen sequentialisiert ausführt, aber weitere Jobs starten kann, die Teile der Simulation nebenläufig ausführen. \enquote{Sim} kennzeichnet einen solchen nebenläufigen Simulations-Job.}\label{fig:plannedArchitecture}
 \end{figure}
 
-
-Da das Jobsystem keine vollständige Integration in die Blocklib erfährt, verändert sich die Architektur konzeptuell leicht. Diese Änderung ist in Abbildung~\ref{fig:plannedArchitecture} zu sehen. Anstatt die gesamte Simulation in viele kleine Jobs zu zerlegen, bleibt eine sequentialisierte Simulation bestehen, die dann aber die Möglichkeit besitzt, weitere nebenläufige Jobs zu starten. Mit dieser Architektur ist es möglich, die Blocklib inkrementell zu der in Abbildung~\ref{fig:optimalArchitecture} gezeigten Architektur umzuwandeln, indem in zukünftigen Arbeiten immer mehr pseudo-sequentialisierte \glspl{Anweisung} der Simulation als nebenläufige Jobs definiert werden, bis sie vollständig aus Jobs besteht.
+Da die Blocklib nicht vollständig umstrukturiert wird, um ein Jobsystem zu nutzen, verändert sich die Architektur konzeptuell leicht. Diese Änderung ist in Abbildung~\ref{fig:plannedArchitecture} zu sehen. Anstatt die gesamte Simulation in viele kleine Jobs zu zerlegen, bleibt ein langer sequentialisierter Simulation-Job bestehen, der dann aber die Möglichkeit besitzt, weitere nebenläufige Jobs zu starten. Mit dieser Architektur ist es möglich, die Blocklib inkrementell zu der in Abbildung~\ref{fig:optimalArchitecture} gezeigten Architektur umzuwandeln, indem in zukünftigen Arbeiten immer mehr pseudo-sequentialisierte \glspl{Anweisung} der Simulation als nebenläufige Jobs definiert werden, bis sie vollständig aus Jobs besteht.
 
 Java bietet mit dem Interface \class{ExecutorService} bereits eine gute und bekannte Schnittstellendefinition, die für ein Jobsystem genutzt werden kann. Daher baut das Design des Jobsystems der Blocklib auf diesem Interface auf. 
 
