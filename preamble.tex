@@ -24,7 +24,19 @@
 \usepackage{wrapfig}
 % \usepackage{layouts}
 \usepackage{textcomp} 
+\usepackage{mdframed}
 \usepackage{xcolor}  % Coloured text etc.
+
+\newmdenv[ % Define mdframe settings and store as leftrule
+  linecolor=lightgray,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  %skipabove=\topsep,
+  %skipbelow=\topsep
+]{leftrule}
+
+
 \usepackage{svg}
 \svgsetup{inkscapelatex=false, inkscapearea=drawing}
 \usepackage[layout={margin,index},draft]{fixme}
