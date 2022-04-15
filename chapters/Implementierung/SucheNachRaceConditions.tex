@@ -29,9 +29,9 @@ In der \class{Configuration}-Klasse gibt es die Variable \const{SHOW_SHADOW_MAP_
 	\includegraphics[width=.9\textwidth]{shadowMap.png}
 	\caption[Ausschnitt eines Screenshots der Blocklib bei aktivierter \class{ShadowMap}-Anzeige.]{Ausschnitt eines Screenshots der Blocklib bei aktivierter \class{ShadowMap}-Anzeige. Die \class{ShadowMap} speichert Entfernungs-Informationen, diese werden als rote Farbe interpretiert und ausgegeben. Je weiter etwas weg ist, desto intensiver ist das Rot.}\label{fig:ShadowMap}
 \end{figure}
-\textcite{Ebbinger2018} beschreibt, wie genau das Rendering von Schatten in der Blocklib umgesetzt ist. Wie der Name der Klasse \class{ShadowMap} vermuten lässt, wird für die Berechnung der Schatten das sogenannte \emph{Shadow Mapping} verwendet. Dazu wird eine zweite Kamera implementiert, die die Spielwelt aus der Sicht einer Lichtquelle, im Fall der Blocklib die Sonne, betrachtet. Die so gerenderte Sicht wird dann genutzt, um zu berechnen ob ein Fragment das erste Hindernis aus Sicht der Lichtquelle ist. Ist dies der Fall, so wird das Fragment beleuchtet, ansonsten ist etwas anderes vor dem Fragment und es befindet sich im Schatten.
+\textcite{Ebbinger2018} beschreibt, wie das Rendering von Schatten in der Blocklib genau umgesetzt ist. Wie der Name der Klasse \class{ShadowMap} vermuten lässt, wird für die Berechnung der Schatten das sogenannte \emph{Shadow-Mapping} verwendet. Dazu wird eine zweite Kamera implementiert, die die Spielwelt aus der Sicht einer Lichtquelle, im Fall der Blocklib der Sonne, betrachtet. Die so gerenderte Sicht wird dann genutzt, um zu berechnen ob ein Fragment, das heißt ein zu zeichnender Punkt auf dem Bildschirm, das erste Hindernis aus Sicht der Lichtquelle ist. Ist dies der Fall, so wird das Fragment beleuchtet, ansonsten ist etwas anderes vor dem Fragment und es befindet sich im Schatten.
 
-Wird die \class{ShadowMap} mitangezeigt, so kann man erkennen, dass diese sich zeitgleich mit dem Flackern verschiebt. Die Position der \class{ShadowMap} wird über die Klasse \class{ShadowBounds} bestimmt. Die Position muss in zwei Fällen geändert werden, zum einen, wenn die Sonne sich bewegt, also, wenn der Tag-Nacht-Zyklus aktiv ist, zum anderen, wenn sich die Spielerkamera bewegt, da die Darstellung von Schatten immer mit dem Sichtfeld des Spielers übereinstimmen muss.
+Wird die \class{ShadowMap} mit angezeigt, so kann man erkennen, dass diese sich zeitgleich mit dem Flackern verschiebt. Die Position der \class{ShadowMap} wird über die Klasse \class{ShadowBounds} bestimmt. Die Position muss in zwei Fällen geändert werden, zum einen, wenn die Sonne sich bewegt, also, wenn der Tag-Nacht-Zyklus aktiv ist, zum anderen, wenn sich die Spielerkamera bewegt, da die Darstellung von Schatten immer mit dem Sichtfeld des Spielers übereinstimmen muss.
 
 Die Ausgabe der Position der \class{ShadowBounds} während des Spiels bei deaktiviertem Tag-Nacht-Zyklus und stillstehender Spielerkamera bestätigt, dass diese Position sich tatsächlich zeitgleich mit dem Auftreten des Flackerns verändert. Das Auftreten der Wettkampfbedingung lässt sich also erkennen, indem eine Änderung der Position der \class{ShadowBounds} in aufeinanderfolgenden Frames erkannt wird.
 
@@ -42,11 +42,11 @@ Nun gilt es die Ursache der Positionsänderung ausfindig zu machen. Die Position
 	& $\to$ \class{LightViewMatrix}\\
 	& $\to$ \code{DayNightLighting.getSunUp()} \\
 	& $\to$ \code{DayNightLighting.position}\\
-	& $\to$ \code{DayNightLightig.updateLightPosition(float, boolean)}
+	& $\to$ \code{DayNightLightig.updateLightPosition(...)}
 \end{tabular}
 
-\code{DayNightLightig.updateLightPosition(float, boolean)} wird nicht im Render-Thread ausgeführt, sondern während \code{update()} in einem anderen Thread. Der relevante Abschnitt der Methode ist in Listing~\ref{lst:raceLight} dargestellt.
-\begin{lstlisting}[caption={Wettkampfbedingung in \code{updateLightPosition(...)}.},label={lst:raceLight}]
+\code{DayNightLightig.updateLightPosition(...)} wird nicht im Render-Thread ausgeführt, sondern während \code{update()} in einem anderen Thread. Der relevante Abschnitt der Methode ist in Listing~\ref{lst:raceLight} dargestellt.
+\begin{lstlisting}[caption={Wettkampfbedingung in \code{updateLightPosition(...)}.},label={lst:raceLight},float]
 private void updateLightPosition(float progress, boolean day) {
 	// ...
 	position = new Vector3f(direction.x, direction.y, direction.z);
@@ -59,4 +59,4 @@ Wird also der Wert von \code{DayNightLighting.position} im Render-Thread ausgele
 
 Diese Wettkampfbedingung ließe sich nun auch ohne eine Zwischenspeicherung des zu rendernden Spielzustands ansatzweise lösen, indem beispielsweise das Update der Position zu einer atomaren \gls{Anweisung} geändert wird. Um das zu implementieren, müsste das Attribut \var{position} als \code{volatile} deklariert werden. Dann kann die Berechnung der neuen Position auf einer temporären Variablen \var{newPosition} durchgeführt werden, setzt man nun \code{position = newPosition;} garantiert die Nutzung von \code{volatile} in Java, dass das Update atomar ist und sofort für alle anderen Threads sichtbar ist. Das Problem, dass nicht festgelegt ist, ob die Simulation vor der Nutzung der Variablen beendet ist, bleibt bestehen. Aber das führt dann zu Verzögerungen der Bewegung der Sonne um maximal einen Frame, was unbemerkbar ist.
 
-Allerdings ist die Variable \var{position} nicht die einzige, bei der es zu Wettkampfbedingungen kommt. Für jedes einzelne Modul müsste nachverfolgt werden, ob und wo es zu Wettkampfbedingungen kommen kann. Dann müsste an jeder Stelle individuell festgestellt werden, wie die Race Condition zufriedenstellend beseitigt werden kann. Das ist ein zu großer Aufwand und birgt die Gefahr, dass Stellen übersehen werden. Daher ist die Zwischenspeicherung des zu rendernden Zustands unumgänglich.
+Allerdings ist die Variable \var{position} nicht die einzige, bei der es zu Wettkampfbedingungen kommt. Für jedes einzelne Modul müsste nachverfolgt werden, ob und wo es zu Wettkampfbedingungen kommen kann. Dann müsste an jeder Stelle individuell festgestellt werden, wie die Race Condition zufriedenstellend beseitigt werden kann. Das ist ein zu großer Aufwand und birgt die Gefahr, dass Stellen übersehen werden. Daher ist die Zwischenspeicherung des zu rendernden Zustands notwendig.

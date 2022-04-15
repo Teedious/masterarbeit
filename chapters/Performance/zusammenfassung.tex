@@ -11,7 +11,7 @@ Zum Schluss werden die gemessenen Ergebnisse aller Szenarien noch einmal gesamme
 		\SetCell[r=3]{} 1 Hexagon				
 			& SystemA & 337& 13& 36& 576&  70\\
 			& SystemB &1133& 18& 38& 947& 274\\
-			& $\Delta$ &$+\SI{226}{\percent}$& $+\SI{38}{\percent}$& $+\SI{5}{\percent}$& $+\SI{64}{\percent}$& $+\SI{291}{\percent}$\\
+			& $\Delta$ &$+\SI{236}{\percent}$& $+\SI{38}{\percent}$& $+\SI{5}{\percent}$& $+\SI{64}{\percent}$& $+\SI{291}{\percent}$\\
 		\midrule
 		\SetCell[r=3]{}2 Halb-Würfel			
 			& SystemA & 253& 13& 60& 643&  53\\
@@ -47,7 +47,7 @@ Zum Schluss werden die gemessenen Ergebnisse aller Szenarien noch einmal gesamme
 		\SetCell[r=3]{}Gesamtdurchschnitt 
 			& SystemA & 182& 20& 38& 1038&95\\
 			& SystemB & 493& 28& 52& 1418&214\\
-			& $\Delta$ &$+\SI{170}{\percent}$& $+\SI{40}{\percent}$& $+\SI{37}{\percent}$& $+\SI{37}{\percent}$& $+\SI{115}{\percent}$\\
+			& $\Delta$ &$+\SI{172}{\percent}$& $+\SI{40}{\percent}$& $+\SI{37}{\percent}$& $+\SI{37}{\percent}$& $+\SI{115}{\percent}$\\
 			\bottomrule
 	\end{tblr}
 	\caption{Durchschnittliche Messwerte in den allen Szenarien der Performanceanalyse.}\label{tab:zusammen}
@@ -56,7 +56,7 @@ Die Zeilen, die durch $\Delta$ gekennzeichnet sind, enthalten die relative Verä
 
 Die Betrachtung der Messungen von Szenario 5: Welt-Gehen mit unterschiedlichen Seeds zeigt, dass diese einen erheblichen Einfluss auf die Framerate haben. Das lässt sich leicht durch die Anzahl der zu zeichnenden Objekte erklären. In Seed 3 ist die Startposition der Kamera unterirdisch in einer Berglandschaft. Dadurch enthält beinahe das gesamte Sichtfeld Chunks, die verarbeitet werden müssen. Das sorgt für eine besonders hohe Auslastung der \ac{cpu}, die all diese Chunks verarbeiten muss. Hier zeigt sich auch, dass weiterhin die \ac{cpu} in diesem Testsystem den Flaschenhals für die Leistung darstellt. Die \ac{gpu} hat in diesem Szenario mit dem Seed 3 die niedrigste Auslastung über alle Szenarien hinweg.
 
-Durchschnittlich kann eine Gesamtsteigerung von \SI{170}{\percent} in der Framerate beobachtet werden, in absoluten Werten ist das eine Steigerung von \SI{311}{\fps}.
+Durchschnittlich kann eine Gesamtsteigerung von \SI{172}{\percent} in der Framerate beobachtet werden, in absoluten Werten ist das eine Steigerung von \SI{311}{\fps}.
 
 Weiterhin wird mit einem Plus von \SI{115}{\percent} etwa doppelt so viel Speicher für die kurzfristige Erzeugung von Objekten genutzt. Da die Erzeugung von Objekten relativ zeitaufwändig ist, kann hier in Zukunft unter geschickter Nutzung von Objekt-Caches eine weitere Leistungssteigerung erreicht werden. Es ist zu beachten, dass mit einer höheren Framerate die Codestellen, in denen Objekte erzeugt werden, häufiger aufgerufen werden. Daher lässt sich bei gestiegener Bildwiederholrate auch ein gestiegener Speicherverbrauch erwarten. In den Messungen lässt sich hierfür allerdings keine Korrelation erkennen, wie Abbildung~\ref{fig:Scatterplot} zeigt. In der Abbildung sind ist der durchschnittliche Zuwachs der \ac{fps} gegen den durchschnittlichen Zuwachs des Speicherverbrauchs für die Erzeugung kurzfristig genutzter Objekte (\ac{ram} kurz) aufgetragen. 
 \begin{figure}
