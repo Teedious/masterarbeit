@@ -15,7 +15,7 @@ Im Folgenden wird häufig abwechselnd auf die nebenläufige Architektur und die 
 	\caption{Revisionsnummern des Versionsverwaltungstools der Blocklib, die für die Performanceanalyse genutzt werden.}\label{tab:perfHash}
 \end{table}
 
-Insgesamt werden fünf verschiedene Szenarien betrachtet. In allen Szenarien werden die folgenden Metriken ausgewertet: \si{\fps}, Auslastung der \acs{cpu}, Auslastung der \ac{gpu} und \ac{ram}-Nutzung. In jedem Szenario wird die Blocklib für \SI{60}{\second} ausgeführt. Hierfür ist die durch Java mit der Methode \code{System.currentTimeMillis()} bereitgestellte Zeit ausschlaggebend. Der Code, der für die Ausführung der Szenarien benötigt wird, ist in der Klasse \class{ThreadingProgram} enthalten.
+Insgesamt werden fünf verschiedene Szenarien betrachtet. In allen Szenarien werden die folgenden Metriken ausgewertet: \si{\fps}, Auslastung der \acs{cpu}, Auslastung der \ac{gpu} und \ac{ram}-Nutzung. In jedem Szenario wird die Blocklib für \SI{60}{\second} ausgeführt. Hierfür ist die durch Java mit der Methode \code{System.currentTimeMillis()} bereitgestellte Zeit ausschlaggebend. Der Code, der für die Ausführung der Szenarien benötigt wird, ist in der Klasse \classThreadingProgram{} enthalten.
 
 Das System, auf dem gemessen wird, besitzt die in Tabelle~\ref{tab:spec} aufgelistete Spezifikation.
 

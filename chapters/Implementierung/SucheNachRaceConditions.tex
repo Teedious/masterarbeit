@@ -23,23 +23,23 @@ Da Variablen zeitgleich von verschiedenen Threads bearbeitet werden, ist die Suc
 
 Eine naive Herangehensweise mittels Debugging ist nahezu unmöglich, da das Flackern zufällig auftritt. Zuerst muss also eine Möglichkeit gefunden werden, um das Auftreten des Flackerns programmatisch zu erkennen.
 
-In der \class{Configuration}-Klasse existiert die Variable \const{SHOW_SHADOW_MAP_FRAME}. Ist diese auf \code{true} gesetzt, wird in der linken oberen Ecke des Fensters ein Feld angezeigt, das die sogenannte \class{ShadowMap} zeigt. Abbildung~\ref{fig:ShadowMap} zeigt einen Bildschirmfoto der Blocklib mit \code{SHOW_SHADOW_MAP_FRAME = true}. Die \class{ShadowMap} wird genutzt, um zu berechnen, an welchen Stellen Schatten gerendert werden.
+In der \classConfiguration{}-Klasse existiert die Variable \const{SHOW_SHADOW_MAP_FRAME}. Ist diese auf \code{true} gesetzt, wird in der linken oberen Ecke des Fensters ein Feld angezeigt, das die sogenannte \classShadowMap{} zeigt. Abbildung~\ref{fig:ShadowMap} zeigt einen Bildschirmfoto der Blocklib mit \code{SHOW_SHADOW_MAP_FRAME = true}. Die \classShadowMap{} wird genutzt, um zu berechnen, an welchen Stellen Schatten gerendert werden.
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\textwidth]{shadowMap.png}
-	\caption[Ausschnitt eines Bildschirmfotos der Blocklib bei aktivierter \class{ShadowMap}-Anzeige.]{Ausschnitt eines Bildschirmfotos der Blocklib bei aktivierter \class{ShadowMap}-Anzeige. Die \class{ShadowMap} speichert Entfernungs-Informationen, diese werden als rote Farbe interpretiert und ausgegeben, je größer die Entfernung, desto intensiver ist das Rot.}\label{fig:ShadowMap}
+	\caption[Ausschnitt eines Bildschirmfotos der Blocklib bei aktivierter \classShadowMap{}-Anzeige.]{Ausschnitt eines Bildschirmfotos der Blocklib bei aktivierter \classShadowMap{}-Anzeige. Die \classShadowMap{} speichert Entfernungs-Informationen, diese werden als rote Farbe interpretiert und ausgegeben, je größer die Entfernung, desto intensiver ist das Rot.}\label{fig:ShadowMap}
 \end{figure}
-\textcite{Ebbinger2018} beschreibt, wie das Rendering von Schatten in der Blocklib genau umgesetzt ist. Wie der Name der Klasse \class{ShadowMap} vermuten lässt, wird für die Berechnung der Schatten das sogenannte \emph{Shadow-Mapping} verwendet. Dazu wird eine zweite Kamera implementiert, die die Spielwelt aus der Sicht einer Lichtquelle, im Fall der Blocklib der Sonne, betrachtet. Die so gerenderte Sicht wird dann genutzt, um zu berechnen ob ein Fragment, das heißt ein zu zeichnender Punkt auf dem Bildschirm, das erste Hindernis aus Sicht der Lichtquelle ist. Ist dies der Fall, so wird das Fragment beleuchtet, ansonsten ist etwas anderes vor dem Fragment und es befindet sich im Schatten.
+\textcite{Ebbinger2018} beschreibt, wie das Rendering von Schatten in der Blocklib genau umgesetzt ist. Wie der Name der Klasse \classShadowMap{} vermuten lässt, wird für die Berechnung der Schatten das sogenannte \emph{Shadow-Mapping} verwendet. Dazu wird eine zweite Kamera implementiert, die die Spielwelt aus der Sicht einer Lichtquelle, im Fall der Blocklib der Sonne, betrachtet. Die so gerenderte Sicht wird dann genutzt, um zu berechnen ob ein Fragment, das heißt ein zu zeichnender Punkt auf dem Bildschirm, das erste Hindernis aus Sicht der Lichtquelle ist. Ist dies der Fall, so wird das Fragment beleuchtet, ansonsten ist etwas anderes vor dem Fragment und es befindet sich im Schatten.
 
-Wird die \class{ShadowMap} mit angezeigt, so kann man erkennen, dass diese sich zeitgleich mit dem Flackern verschiebt. Die Position der \class{ShadowMap} wird über die Klasse \class{ShadowBounds} bestimmt. Die Position muss in zwei Fällen geändert werden, zum einen, wenn die Sonne sich bewegt, also, wenn der Tag-Nacht-Zyklus aktiv ist, zum anderen, wenn sich die Spielerkamera bewegt, da das in der \class{ShadowMap} gerenderte Bild immer der Position und dem Blickwinkel der Kamera angepasst werden muss.
+Wird die \classShadowMap{} mit angezeigt, so kann man erkennen, dass diese sich zeitgleich mit dem Flackern verschiebt. Die Position der \classShadowMap{} wird über die Klasse \classShadowBounds{} bestimmt. Die Position muss in zwei Fällen geändert werden, zum einen, wenn die Sonne sich bewegt, also, wenn der Tag-Nacht-Zyklus aktiv ist, zum anderen, wenn sich die Spielerkamera bewegt, da das in der \classShadowMap{} gerenderte Bild immer der Position und dem Blickwinkel der Kamera angepasst werden muss.
 
-Die Ausgabe der Position der \class{ShadowBounds} während des Spiels bei deaktiviertem Tag-Nacht-Zyklus und stillstehender Spielerkamera bestätigt, dass diese Position sich tatsächlich zeitgleich mit dem Auftreten des Flackerns verändert. Das Auftreten der Wettkampfbedingung lässt sich also erkennen, indem eine Änderung der Position der \class{ShadowBounds} in aufeinanderfolgenden Frames erkannt wird.
+Die Ausgabe der Position der \classShadowBounds{} während des Spiels bei deaktiviertem Tag-Nacht-Zyklus und stillstehender Spielerkamera bestätigt, dass diese Position sich tatsächlich zeitgleich mit dem Auftreten des Flackerns verändert. Das Auftreten der Wettkampfbedingung lässt sich also erkennen, indem eine Änderung der Position der \classShadowBounds{} in aufeinanderfolgenden Frames erkannt wird.
 
-Nun gilt es die Ursache der Positionsänderung ausfindig zu machen. Die Position der \class{ShadowBounds} hängt selbst von mehreren Variablen ab. Verfolgt man den Verlauf der Änderungen, finden sich die folgenden Abhängigkeiten:
+Nun gilt es die Ursache der Positionsänderung ausfindig zu machen. Die Position der \classShadowBounds{} hängt selbst von mehreren Variablen ab. Verfolgt man den Verlauf der Änderungen, finden sich die folgenden Abhängigkeiten:
 
 \begin{tabular}{ll}
-	\class{ShadowMap} &$\to$ \code{ShadowBounds.update}\\
-	& $\to$ \class{LightViewMatrix}\\
+	\classShadowMap{} &$\to$ \code{ShadowBounds.update}\\
+	& $\to$ \classLightViewMatrix{}\\
 	& $\to$ \code{DayNightLighting.getSunUp()} \\
 	& $\to$ \code{DayNightLighting.position}\\
 	& $\to$ \code{DayNightLightig.updateLightPosition(...)}

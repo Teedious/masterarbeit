@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  16 APR 2022 22:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  16 APR 2022 23:30
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
@@ -2024,7 +2024,12 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 [14 <./tikz/masterarbeit-figure9.pdf>]) [15] (chapters/Grundlagen/MultithreadingInJava.tex [16]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 22.
- [17] [18] [19]) (chapters/Grundlagen/MultithreadingInSpielen.tex [20]
+ [17] [18] [19])
+Overfull \hbox (3.03781pt too wide) in paragraph at lines 82--49
+\T1/lmr/m/n/12 (-20) face []\T1/lmtt/m/n/12 n-S[][][] \T1/lmr/m/n/12 (-20) und über-nimmt die Ver-wal-tung der Kom-po-si-ti-on asyn-chro-ner Tasks [[]HT16[],
+ []
+
+(chapters/Grundlagen/MultithreadingInSpielen.tex [20]
 ===== Image 'tikz/masterarbeit-figure10' is up-to-date. ======
 [21 <./tikz/masterarbeit-figure10.pdf>]
 ===== Image 'tikz/masterarbeit-figure11' is up-to-date. ======
@@ -2536,17 +2541,17 @@ Package logreq Info: Writing requests to 'masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 73535 strings out of 478870
- 1659366 string characters out of 2847888
- 2855115 words of memory out of 3000000
- 89077 multiletter control sequences out of 15000+600000
- 530515 words of font info for 318 fonts, out of 8000000 for 9000
+ 73605 strings out of 478870
+ 1660776 string characters out of 2847888
+ 2856390 words of memory out of 3000000
+ 89147 multiletter control sequences out of 15000+600000
+ 530561 words of font info for 318 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  115i,21n,134p,10669b,3776s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist, replaced by a fixed one
 
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on masterarbeit.pdf (109 pages, 29169208 bytes).
+Output written on masterarbeit.pdf (109 pages, 29169653 bytes).
 PDF statistics:
  5708 PDF objects out of 6186 (max. 8388607)
  531 named destinations out of 1000 (max. 500000)

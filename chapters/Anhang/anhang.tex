@@ -28,13 +28,13 @@ Dieser Abschnitt enthält einige Klassendiagramme, die detailliertere Informatio
 \subsection{Executor im Concurrency Framework}\label{appendix:concFrameworkExecutor}
 \includesvg[width=\textwidth]{ConcurrencyFrameworkExecutor.svg}
 
-Wie in Abschnitt~\vref{sec:executor} beschrieben, erweitert das Interface \class{ExecutorService} das Interface \class{Executor} um eine Reihe von Methoden. Zum einen wird die Möglichkeit geboten den \code{submit(...)}-Methoden \class{Runnable}- oder auch \class{Callable}-Objekte zu übergeben, zum anderen bietet das Interface auch Methoden zur Verwaltung des Lebenszyklus des \class{ExecutorService}.
+Wie in Abschnitt~\vref{sec:executor} beschrieben, erweitert das Interface \classExecutorService{} das Interface \classExecutor{} um eine Reihe von Methoden. Zum einen wird die Möglichkeit geboten den \code{submit(...)}-Methoden \classRunnable{}- oder auch \classCallable{}-Objekte zu übergeben, zum anderen bietet das Interface auch Methoden zur Verwaltung des Lebenszyklus des \classExecutorService{}.
 
 \clearpage
 \subsection{\texttt{CompletionStage} im Concurrency Framework}\label{appendix:CompletionStage}
 \includesvg[width=\textwidth]{CompletionStage.svg}
 
-Klassendiagramm des Interface \class{CompletionStage}, auf das in Abschnitt~\vref{sec:CompletableFuture} verwiesen wird. Die definierten Methoden bieten verschiedene Möglichkeiten der Komposition.
+Klassendiagramm des Interface \classCompletionStage{}, auf das in Abschnitt~\vref{sec:CompletableFuture} verwiesen wird. Die definierten Methoden bieten verschiedene Möglichkeiten der Komposition.
 
 \begin{tblr}{
 	colspec={ll},
@@ -53,7 +53,7 @@ Klassendiagramm des Interface \class{CompletionStage}, auf das in Abschnitt~\vre
 	\includesvg[height=.7\textheight]{Context.svg}
 	\par
 }
-Die Klasse \class{Context} besitzt, wie in Abschnitt~\vref{sec:EtablierungEinerKompositionroot} beschrieben, Methoden, um beinahe jedes System der Blocklib global für alle anderen Systeme verfügbar zu machen. 
+Die Klasse \classContext{} besitzt, wie in Abschnitt~\vref{sec:EtablierungEinerKompositionroot} beschrieben, Methoden, um beinahe jedes System der Blocklib global für alle anderen Systeme verfügbar zu machen. 
 
 Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zugegriffen werden kann. Allerdings sind dadurch Abhängigkeiten zwischen Systemen schwieriger zu finden und Änderungen können unvorhergesehene Folgen haben, da beispielsweise ein System die ursprüngliche Funktionalität genau so benötigt, wie sie davor war. 
 
@@ -64,7 +64,7 @@ Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zug
 	\includesvg[width=\textwidth]{ExecuterInterfaces.svg}
 	\par
 }
-In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie die jedes Interface die Schnittstelle, von der es abgeleitet ist, erweitert. Der \class{ScheduledExecutorService} Möglichkeiten des Scheduling hinzu und der neu definierte \class{BlocklibExecutorService} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zudem Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \class{TaskPriority}.
+In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie die jedes Interface die Schnittstelle, von der es abgeleitet ist, erweitert. Der \classScheduledExecutorService{} Möglichkeiten des Scheduling hinzu und der neu definierte \classBlocklibExecutorService{} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zudem Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \classTaskPriority{}.
 
 \clearpage
 \section{Messungen}\label{appendix:plots}
