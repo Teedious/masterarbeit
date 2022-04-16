@@ -51,7 +51,7 @@ Das gilt insbesondere auch für 64-bit Variablen. Obwohl einige Quellen davor wa
 Java stellt dafür unter anderem die Klassen \class{AtomicBoolean}, \class{AtomicInteger}, \class{AtomicLong} und \class{AtomicReference}
 bereit~\cite[S.~131]{Friesen2015}. Klassen für die Datentypen \code{byte}, \code{short}, \code{float} und \code{double} gibt es nicht. Die Java Dokumentation erklärt dies damit, dass diese über \class{AtomicInteger} und im Fall von \code{double} über \class{AtomicLong} dargestellt werden können~\cite{Java7DocAtomic}.
 
-Eine nützliche Anwendung von Atomics ist die threadsichere Beschränkung einer Klasse auf eine Objektinstanz, ohne globalen Zugriff auf diese bereitstellen zu müssen wie es bei der Standardimplementierung eines \gls{singleton} der Fall wäre. Allerdings ermöglicht diese Implementierung keine Prüfung während des Kompiliervorgangs, sondern erst zur Laufzeit.
+Eine nützliche Anwendung von Atomics ist die threadsichere Beschränkung einer Klasse auf eine Objekt-Instanz, ohne globalen Zugriff auf diese bereitstellen zu müssen wie es bei der Standardimplementierung eines \gls{singleton} der Fall wäre (das \gls{singleton} ist ein Entwurfsmuster, das die zwei Aufgaben, nur eine Objekt-Instanz und globaler Zugriff, gemeinsam löst). Allerdings ermöglicht diese Implementierung keine Prüfung während des Kompiliervorgangs, sondern erst zur Laufzeit.
 \begin{lstlisting}[caption={Implementierung einer Klasse, die nur einmal instanziiert werden kann.}, label={lst:LocalSingleton},float]
 public class LocalSingleton {
 private static AtomicBoolean instanced = new AtomicBoolean(false);
