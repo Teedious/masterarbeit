@@ -1,2 +1,2 @@
-tikz/masterarbeit-figure38.pdf: performance/measurements/seed-0-rotate-single-gpu.csv
-tikz/masterarbeit-figure38.pdf: performance/measurements/seed-0-rotate-multi-gpu.csv
+tikz/masterarbeit-figure38.pdf: performance/measurements/seed-0-rotate-single-cpu.csv
+tikz/masterarbeit-figure38.pdf: performance/measurements/seed-0-rotate-multi-cpu.csv

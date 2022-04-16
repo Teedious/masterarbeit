@@ -2,6 +2,7 @@
 
 \usepackage{scrhack}
 \usepackage[ngerman]{babel,varioref}
+\usepackage{nameref}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -26,15 +27,19 @@
 \usepackage{textcomp} 
 \usepackage{mdframed}
 \usepackage{xcolor}  % Coloured text etc.
+\usepackage{xparse}
 
 \newmdenv[ % Define mdframe settings and store as leftrule
-  linecolor=lightgray,
+	backgroundcolor=black!5,
+	leftline=false,
   topline=false,
   bottomline=false,
   rightline=false,
-  %skipabove=\topsep,
-  %skipbelow=\topsep
 ]{leftrule}
+
+\NewDocumentEnvironment{example}{O{Beispiel:}} % Define example environment
+{\begin{leftrule}\noindent{\textbf{#1}}\\[.3em]}
+{\end{leftrule}}
 
 
 \usepackage{svg}

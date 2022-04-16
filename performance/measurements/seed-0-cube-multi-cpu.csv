@@ -1,4 +1,4 @@
-Uptime (s),System (\%),Time spent in GC (\%),Process (kernel) (\%),Process (user + kernel) (\%)
+Uptime (s),System (%),Time spent in GC (%),Process (kernel) (%),Process (user + kernel) (%)
 10.5,0,0,0,0
 11.5,36,0,6,32
 12.5,20,0,7,17

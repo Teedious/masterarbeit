@@ -1,2 +1,2 @@
-tikz/masterarbeit-figure63.pdf: performance/measurements/seed-0-static-single-gpu.csv
-tikz/masterarbeit-figure63.pdf: performance/measurements/seed-0-static-multi-gpu.csv
+tikz/masterarbeit-figure63.pdf: performance/measurements/seed-0-cube-single-gpu.csv
+tikz/masterarbeit-figure63.pdf: performance/measurements/seed-0-cube-multi-gpu.csv

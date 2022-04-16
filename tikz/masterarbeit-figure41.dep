@@ -1,2 +1,6 @@
-tikz/masterarbeit-figure41.pdf: performance/measurements/seed-0-walk-single-fps.csv
-tikz/masterarbeit-figure41.pdf: performance/measurements/seed-0-walk-multi-fps.csv
+tikz/masterarbeit-figure41.pdf: performance/measurements/seed-0-rotate-multi-mem.csv
+tikz/masterarbeit-figure41.pdf: performance/measurements/seed-0-rotate-multi-mem.csv
+tikz/masterarbeit-figure41.pdf: performance/measurements/seed-0-rotate-multi-mem.csv
+tikz/masterarbeit-figure41.pdf: performance/measurements/seed-0-rotate-multi-mem.csv
+tikz/masterarbeit-figure41.pdf: performance/measurements/seed-0-rotate-multi-mem.csv
+tikz/masterarbeit-figure41.pdf: performance/measurements/seed-0-rotate-multi-mem.csv

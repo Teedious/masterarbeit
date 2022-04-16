@@ -1,8 +1,6 @@
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
-tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-cube-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-hexagon-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-hexagon-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-hexagon-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-hexagon-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-hexagon-multi-mem.csv
+tikz/masterarbeit-figure25.pdf: performance/measurements/seed-0-hexagon-multi-mem.csv

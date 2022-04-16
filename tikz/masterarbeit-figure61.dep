@@ -1,2 +1,2 @@
-tikz/masterarbeit-figure61.pdf: performance/measurements/seed-0-hexagon-single-gpu.csv
-tikz/masterarbeit-figure61.pdf: performance/measurements/seed-0-hexagon-multi-gpu.csv
+tikz/masterarbeit-figure61.pdf: performance/measurements/seed-10-walk-single-cpu.csv
+tikz/masterarbeit-figure61.pdf: performance/measurements/seed-10-walk-multi-cpu.csv

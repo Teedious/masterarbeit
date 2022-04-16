@@ -13,7 +13,7 @@ Der beigelegte Datenträger enthält die folgenden Dateien.
 
 \begin{itemize}
 	\item PDF dieser Masterarbeit,
-	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \code{latex} (Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \code{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnote{\url{https://inkscape.org/}} mit \code{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \code{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig),
+	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \code{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \code{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnote{\url{https://inkscape.org/}} mit \code{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \code{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig},
 	\item UML-Modelle als \code{.asta}-Dateien im Ordner \code{astah},
 	\item den Source-Code im Verzeichnis \code{src}
 	\item die Source-Code-Dokumentation im Ordner \code{doc},
@@ -24,7 +24,7 @@ Der beigelegte Datenträger enthält die folgenden Dateien.
 
 \clearpage
 \section{Klassendiagramme}
-Dieser Abschnitt enthält einige Klassendiagramme, die detailliertere Informationen bereitstellen, als die in der Arbeit gezeigten.
+Dieser Abschnitt enthält einige Klassendiagramme, die detailliertere Informationen bereitstellen als die in der Arbeit gezeigten.
 \subsection{Executor im Concurrency Framework}\label{appendix:concFrameworkExecutor}
 \includesvg[width=\textwidth]{ConcurrencyFrameworkExecutor.svg}
 
@@ -55,7 +55,7 @@ Klassendiagramm des Interface \class{CompletionStage}, auf das in Abschnitt~\vre
 }
 Die Klasse \class{Context} besitzt, wie in Abschnitt~\vref{sec:EtablierungEinerKompositionroot} beschrieben, Methoden, um beinahe jedes System der Blocklib global für alle anderen Systeme verfügbar zu machen. 
 
-Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zugegriffen werden kann. Allerdings sind dadurch Abhängigkeiten zwischen Systemen schwieriger zu finden und Änderungen können unvorhergesehene Folgen haben, da beispielsweise irgendein anderes System die ursprüngliche Funktionalität genau so benötigt, wie sie davor war. 
+Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zugegriffen werden kann. Allerdings sind dadurch Abhängigkeiten zwischen Systemen schwieriger zu finden und Änderungen können unvorhergesehene Folgen haben, da beispielsweise ein System die ursprüngliche Funktionalität genau so benötigt, wie sie davor war. 
 
 \clearpage
 \subsection{\texttt{BlocklibExecutorService}}\label{appendix:BlocklibExecutorService}

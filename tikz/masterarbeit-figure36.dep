@@ -1,2 +1,6 @@
-tikz/masterarbeit-figure36.pdf: performance/measurements/seed-0-rotate-single-fps.csv
-tikz/masterarbeit-figure36.pdf: performance/measurements/seed-0-rotate-multi-fps.csv
+tikz/masterarbeit-figure36.pdf: performance/measurements/seed-0-static-multi-mem.csv
+tikz/masterarbeit-figure36.pdf: performance/measurements/seed-0-static-multi-mem.csv
+tikz/masterarbeit-figure36.pdf: performance/measurements/seed-0-static-multi-mem.csv
+tikz/masterarbeit-figure36.pdf: performance/measurements/seed-0-static-multi-mem.csv
+tikz/masterarbeit-figure36.pdf: performance/measurements/seed-0-static-multi-mem.csv
+tikz/masterarbeit-figure36.pdf: performance/measurements/seed-0-static-multi-mem.csv

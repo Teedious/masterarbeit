@@ -1,4 +1,4 @@
-Die bisherigen Szenarien nutzen eine statische Kamera. Das erlaubt zwar konstante Messungen, entspricht allerdings keiner realistischen Situation. Normalerweise wird die Kamera bewegt und rotiert. Die folgenden Szenarien stellen dynamische Situationen dar, in denen die Kamera bewegt wird. In diesem Szenario wird die Kamera dauerhaft rotiert mit einer Winkelgeschwindigkeit von \SI{45}{\degree\per\second}. Eine Reihe von Screenshots, die die Rotation zeigt, ist in Abbildung~\ref{fig:rotate} zu sehen.
+Die bisherigen Szenarien nutzen eine statische Kamera. Das erlaubt zwar konstante Messungen, entspricht allerdings keiner realistischen Situation. Normalerweise wird die Kamera bewegt und rotiert. Die folgenden Szenarien stellen dynamische Situationen dar, in denen die Kamera bewegt wird. In diesem Szenario wird die Kamera dauerhaft rotiert mit einer Winkelgeschwindigkeit von \SI{45}{\degree\per\second}. Eine Reihe von Bildschirmfotos, die die Rotation zeigt, ist in Abbildung~\ref{fig:rotate} zu sehen.
 \begin{figure}
 	\centering
 	\includegraphics[width=.32\textwidth]{rotate-1.png}
@@ -9,9 +9,9 @@ Die bisherigen Szenarien nutzen eine statische Kamera. Das erlaubt zwar konstant
 	\includegraphics[width=.32\textwidth]{rotate-6.png}
 	%\includegraphics[width=.24\textwidth]{rotate-7.png}
 	%\includegraphics[width=.24\textwidth]{rotate-8.png}
-	\caption{Reihe von Screenshots, die die Rotation in Szenario 4 zeigt. Die Rotationsrichtung ist gegen den Uhrzeigersinn. Die Screenshots haben einen Zeitabstand von \SI{500}{\milli\second}.}\label{fig:rotate}
+	\caption{Reihe von Bildschirmfotos, die die Rotation in Szenario 4 zeigt. Die Rotationsrichtung ist gegen den Uhrzeigersinn. Die Bildschirmfotos haben einen Zeitabstand von \SI{500}{\milli\second}.}\label{fig:rotate}
 \end{figure}
-Wie an den Screenshots zu erkennen ist, wird auch für dieses Szenario der Seed 0 genutzt.
+Wie an den Bildschirmfotos zu erkennen ist, wird auch für dieses Szenario der Seed 0 genutzt.
 
 \paragraph{\ac{fps}}
 Betrachtet man den Verlauf der \ac{fps} in diesem Szenario, ergibt sich ein zu den vorherigen Szenarien sehr verschiedenes Muster. Zu sehen ist das in Abbildung~\ref{fig:seed-0-rotate-fps}.
@@ -19,7 +19,7 @@ Betrachtet man den Verlauf der \ac{fps} in diesem Szenario, ergibt sich ein zu d
 	\fpsplot{seed-0-rotate}
 	\caption{Graph des Verlaufs der Framerate in Szenario 4: Welt-Rotation.}\label{fig:seed-0-rotate-fps}
 \end{figure}
- Zwar ist wieder zu erkennen, dass SystemB ein paar Sekunden später mit der Erzeugung von Bildern beginnt, das Verhalten der Framerate über die Zeit ist danach aber in den Szenarien einzigartig. In SystemA und viel mehr noch in SystemB ist eine zyklische Schwankung der \ac{fps} zu erkennen. Die Periode der Schwankungen beträgt in beiden Systemen \SI{8}{\second}. Das entspricht exakt der Periode der Rotation ($8\cdot45 = 360$). Unter Betrachtung der Screenshots in Abbildung~\ref{fig:rotate} lässt sich eine Hypothese aufstellen, woher diese Schwankungen kommen. In Seed 0 startet der Spielercharakter in der Nähe eines Berges. Ist die Kamera dem Tal zugewandt, müssen deutlich mehr Elemente gezeichnet werden, als wenn die Kamera dem Berg zugewandt ist. Durch die Rotation ändert sich also die Arbeitslast für die \ac{gpu} periodisch.
+ Zwar ist wieder zu erkennen, dass SystemB ein paar Sekunden später mit der Erzeugung von Bildern beginnt, das Verhalten der Framerate über die Zeit ist danach aber in den Szenarien einzigartig. In SystemA und viel mehr noch in SystemB ist eine zyklische Schwankung der \ac{fps} zu erkennen. Die Periode der Schwankungen beträgt in beiden Systemen \SI{8}{\second}. Das entspricht exakt der Periode der Rotation ($8\cdot45 = 360$). Unter Betrachtung der Bildschirmfotos in Abbildung~\ref{fig:rotate} lässt sich eine Hypothese aufstellen, woher diese Schwankungen kommen. In Seed 0 startet der Spielercharakter in der Nähe eines Berges. Ist die Kamera dem Tal zugewandt, müssen deutlich mehr Elemente gezeichnet werden, als wenn die Kamera dem Berg zugewandt ist. Durch die Rotation ändert sich also die Arbeitslast für die \ac{gpu} periodisch.
 
 Durchschnittlich steigt die Bildwiederholrate von \SI{134}{\fps} in SystemA auf \SI{378}{\fps} in SystemB. Das ist eine Steigerung von \SI{182}{\percent}. In beiden Systemen ist die Framerate geringer als im Szenario Welt-Statisch. Der Anstieg der Framerate von SystemA zu SystemB ist allerdings höher. SystemA erreicht ein Maximum von \SI{152}{\fps} und ein Minimum von \SI{113}{\fps}, ein Unterschied von \SI{39}{\fps}. SystemB erreicht maximal \SI{474}{\fps} und singt auf bis zu \SI{287}{\fps}, das ist eine Schwankung von \SI{187}{\fps}.
 
