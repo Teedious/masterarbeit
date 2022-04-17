@@ -1,4 +1,4 @@
-Die bisherigen Szenarien nutzen eine statische Kamera. Das erlaubt zwar konstante Messungen, entspricht allerdings keiner realistischen Situation. Normalerweise wird die Kamera bewegt und rotiert. Die folgenden Szenarien stellen dynamische Situationen dar, in denen die Kamera bewegt wird. In diesem Szenario wird die Kamera dauerhaft rotiert mit einer Winkelgeschwindigkeit von \SI{45}{\degree\per\second}. Eine Reihe von Bildschirmfotos, die die Rotation zeigt, ist in Abbildung~\ref{fig:rotate} zu sehen.
+Die bisherigen Szenarien nutzen eine statische Kamera. Das erlaubt zwar konstante Messungen, entspricht allerdings keiner realistischen Situation. Normalerweise wird die Kamera bewegt und rotiert. Die folgenden Szenarien stellen dynamische Situationen dar, in denen die Kamera bewegt wird. In diesem Szenario wird die Kamera dauerhaft rotiert mit einer Winkelgeschwindigkeit von \SI{45}{\degree\per\second}. Eine Reihe von Bildschirmfotos, die die Rotation zeigt, ist in Abbildung~\vref{fig:rotate} zu sehen.
 \begin{figure}
 	\centering
 	\includegraphics[width=.32\textwidth]{rotate-1.png}
@@ -14,17 +14,17 @@ Die bisherigen Szenarien nutzen eine statische Kamera. Das erlaubt zwar konstant
 Wie an den Bildschirmfotos zu erkennen ist, wird auch für dieses Szenario der Seed 0 genutzt.
 
 \paragraph{\ac{fps}}
-Betrachtet man den Verlauf der \ac{fps} in diesem Szenario, ergibt sich ein zu den vorherigen Szenarien deutlich abweichendes Muster. Dies ist in Abbildung in Abbildung~\ref{fig:seed-0-rotate-fps} zu sehen.
+Betrachtet man den Verlauf der \ac{fps} in diesem Szenario, ergibt sich ein zu den vorherigen Szenarien deutlich abweichendes Muster. Dies ist in Abbildung in Abbildung~\vref{fig:seed-0-rotate-fps} zu sehen.
 \begin{figure}[!htbp]
 	\fpsplot{seed-0-rotate}
 	\caption{Graph des Verlaufs der Framerate in Szenario 4: Welt-Rotation.}\label{fig:seed-0-rotate-fps}
 \end{figure}
-\sysB{} beginnt 5 Sekunden später mit der Erzeugung von Bildern als \sysA{}. Zwar stimmt diese Beobachtung mit denen der anderen Szenarien überein, aber das Verhalten der Framerate in der Hauptphase ist verglichen mit den anderen Szenarien einzigartig. In \sysA{} und in \sysB{} noch deutlicher sind zyklische Schwankungen der \ac{fps} zu erkennen. Die Periode der Schwankungen beträgt in beiden Systemen 8 Sekunden. Das entspricht exakt der Periode der Rotation ($8\cdot \SI{45}{\degree} = \SI{360}{\degree}$). Unter Betrachtung der Bildschirmfotos in Abbildung~\ref{fig:rotate} lässt sich eine Hypothese aufstellen, woher diese Schwankungen kommen. In Seed 0 startet der Spielercharakter in der Nähe eines Berges. Ist die Kamera dem Tal zugewandt, müssen deutlich mehr Elemente gezeichnet werden, als wenn die Kamera dem Berg zugewandt ist. Durch die Rotation ändert sich also die Arbeitslast für die \ac{gpu} periodisch.
+\sysB{} beginnt 5 Sekunden später mit der Erzeugung von Bildern als \sysA{}. Zwar stimmt diese Beobachtung mit denen der anderen Szenarien überein, aber das Verhalten der Framerate in der Hauptphase ist verglichen mit den anderen Szenarien einzigartig. In \sysA{} und in \sysB{} noch deutlicher sind zyklische Schwankungen der \ac{fps} zu erkennen. Die Periode der Schwankungen beträgt in beiden Systemen 8 Sekunden. Das entspricht exakt der Periode der Rotation ($8\cdot \SI{45}{\degree} = \SI{360}{\degree}$). Unter Betrachtung der Bildschirmfotos in Abbildung~\vref{fig:rotate} lässt sich eine Hypothese aufstellen, woher diese Schwankungen kommen. In Seed 0 startet der Spielercharakter in der Nähe eines Berges. Ist die Kamera dem Tal zugewandt, müssen deutlich mehr Elemente gezeichnet werden, als wenn die Kamera dem Berg zugewandt ist. Durch die Rotation ändert sich also die Arbeitslast für die \ac{gpu} periodisch.
 
 Durchschnittlich steigt die Bildwiederholrate von \SI{134}{\fps} in \sysA{} auf \SI{378}{\fps} in \sysB{}. Das ist eine Steigerung von \SI{182}{\percent}. In beiden Systemen ist die Framerate geringer als im Szenario Welt-Statisch. Der Anstieg der Framerate von \sysA{} zu \sysB{} ist allerdings höher. \sysA{} erreicht ein Maximum von \SI{152}{\fps} und ein Minimum von \SI{113}{\fps}, was einen Unterschied von \SI{39}{\fps} darstellt. \sysB{} erreicht maximal \SI{474}{\fps} und sinkt auf bis zu \SI{287}{\fps}, das ist eine Schwankung von \SI{187}{\fps}.
 
 \paragraph{\ac{cpu}}
-Im Gegensatz zu der Bildwiederholrate ist in der Auslastung der \ac{cpu} beinahe keine Schwankung zu erkennen. Insbesondere ist keine Periode von 8 Sekunden zu erkennen, wie Abbildung~\ref{fig:seed-0-rotate-cpu} erkennen lässt.
+Im Gegensatz zu der Bildwiederholrate ist in der Auslastung der \ac{cpu} beinahe keine Schwankung zu erkennen. Insbesondere ist keine Periode von 8 Sekunden zu erkennen, wie Abbildung~\vref{fig:seed-0-rotate-cpu} erkennen lässt.
 \begin{figure}[!htbp]
 	\cpuplot{seed-0-rotate}
 	\caption[Graph des Verlaufs der \glsentryshort{cpu}-Auslastung in Szenario 4: Welt-Rotation.]{Graph des Verlaufs der \ac{cpu}-Auslastung in Szenario 3: Welt-Statisch.}\label{fig:seed-0-rotate-cpu}
@@ -34,7 +34,7 @@ Tatsächlich ist der Graph \ac{cpu}-Last beinahe nicht von dem in Szenario 3 zu 
 Die Tatsache, dass die Auslastungsmessung in \sysB{} zwei Sekunden früher endet als in \sysA{}, ist ein Indiz dafür, dass die Messungen aus einem unbekannten Grund zeitlich verschoben sind. Das würde auch erklären, warum die Startphase in der \ac{cpu}-Auslastung zum ersten Mal in \sysB{} schneller endet als in \sysA{}. Zusätzlich ist die Startphase in der Messung der \ac{fps} in Gegensatz dazu weiterhin mit den vorherigen Szenarien konsistent. 
 
 \paragraph{\ac{gpu}}
-Auch der Auslastungsgraph der \ac{gpu} (siehe Abbildung~\ref{fig:seed-0-rotate-gpu}) unterstützt die Hypothese, dass die Startphase in der \ac{cpu}-Last in diesem Szenario aufgrund eines Messfehlers in \sysA{} länger als in \sysB{} ist. Abbildung~\ref{fig:seed-0-rotate-gpu} ist wieder eine längere Startphase von einigen Sekunden in \sysB{} zu erkennen. Durchschnittlich liegt die Auslastung der \ac{gpu} in \sysA{} bei \SI{37}{\percent} und in \sysB{} bei \SI{53}{\percent}. 
+Auch der Auslastungsgraph der \ac{gpu} (siehe Abbildung~\vref{fig:seed-0-rotate-gpu}) unterstützt die Hypothese, dass die Startphase in der \ac{cpu}-Last in diesem Szenario aufgrund eines Messfehlers in \sysA{} länger als in \sysB{} ist. Abbildung~\vref{fig:seed-0-rotate-gpu} ist wieder eine längere Startphase von einigen Sekunden in \sysB{} zu erkennen. Durchschnittlich liegt die Auslastung der \ac{gpu} in \sysA{} bei \SI{37}{\percent} und in \sysB{} bei \SI{53}{\percent}. 
 
 Weiter lässt sich die Aussage scheinbar festigen, dass die Schwankungen der Framerate mit der Last der \ac{gpu} zusammenhängen. Auch hier lässt sich eine periodische Schwankung von 8 Sekunden erkennen. 
 \begin{figure}[!htbp]
@@ -46,10 +46,10 @@ Die Tatsache, dass diese Schwankung in \sysA{} wie bei der Framerate kleiner ist
 Diese Vermutungen ließen sich weiter untersuchen, indem die Auslastung der einzelnen Hardware-Threads gemessen wird. Die nötigen Messungen lassen sich im Rahmen dieser Arbeit aber nicht mehr durchführen. 
 
 \paragraph{\ac{ram}}
-Die Nutzung des Hauptspeichers, zu sehen in Abbildung~\ref{fig:seed-0-rotate-mem}, entwickelt sich in Szenario Welt-Rotation anders als in Szenario Welt-Statisch.
+Die Nutzung des Hauptspeichers, zu sehen in Abbildung~\vref{fig:seed-0-rotate-mem}, entwickelt sich in Szenario Welt-Rotation anders als in Szenario Welt-Statisch.
 \begin{figure}[!htbp]
-	\memplot[xticklabels={,,},xlabel={}]{seed-0-rotate-multi-mem.csv}{\sysA}
-	\\\memplot{seed-0-rotate-multi-mem.csv}{\sysB}
+	\memplot[xticklabels={,,},xlabel={}]{seed-0-rotate-multi-mem.csv}{\sysA{}}
+	\\\memplot{seed-0-rotate-multi-mem.csv}{\sysB{}}
 	\caption{Graph des Verlaufs der Speichernutzung in Szenario 4: Welt-Rotation.}\label{fig:seed-0-rotate-mem}	
 \end{figure} 
 \sysA{} nutzt mit durchschnittlich \SI{1267}{\mega\byte} etwas mehr Speicher als im letzten Szenario, \sysB{} mit \SI{1441}{\mega\byte} statt \SI{1793}{\mega\byte} weniger als zuvor. Somit ergibt sich in diesem Szenario ein Anstieg von \SI{14}{\percent} statt \SI{44}{\percent}. 

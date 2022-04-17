@@ -58,7 +58,7 @@
 			ymax=600,
 			ylabel={\si{\fps}},
 			legend entries = {\sysA{},\sysB{}},
-			legend style={cells={anchor=west},at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
+			legend style={cells={anchor=west},at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.8}},
 			#1
 		]
 				\addplot+[very thick, ] table[col sep=comma,header=true,x index=0, y index=2] {#2-single-fps.csv};
@@ -78,7 +78,7 @@
 			ymax=100,
 			ylabel={\ac{cpu}-Last [\si{\percent}]},
 			legend entries = {\sysA{},\sysB{}},
-			legend style={cells={anchor=west},at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
+			legend style={cells={anchor=west},at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.8}},
 			#1
 		]
 				\addplot+[very thick, ] table[col sep=comma,header=true,x index=0, y index=4] {#2-single-cpu.csv};
@@ -97,8 +97,8 @@
 			ymin=0,
 			ymax=100,
 			ylabel={\ac{gpu}-Last [\si{\percent}]},
-			legend entries = {cells={anchor=west},\sysA{},\sysB{}},
-			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
+			legend entries = {\sysA{},\sysB{}},
+			legend style={cells={anchor=west},at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.8}},
 			#1
 		]
 				\addplot+[very thick, ]table[col sep=comma,header=true,x index=0, y index=7] {#2-single-gpu.csv};

@@ -83,6 +83,13 @@
 \usetikzlibrary{external}
 \usepackage{pdfpages}
 \usepackage{subcaption}
+
+%% Adds the brackets of subcaptions to their referrals.
+\renewcommand*{\thesubfigure}{(\alph{subfigure})} % Add brackets
+%remove double brackets in figure
+\DeclareCaptionLabelFormat{r-parens}{#2} %No brackets
+\captionsetup[sub]{labelformat=r-parens} %Set format
+
 \usepackage{standalone}
 \usepackage{multirow,tabularx}
 \usepackage{xifthen}
@@ -91,8 +98,8 @@
 %\usepackage{glossary-longbooktabs}
 \setabbreviationstyle[acronym]{long-short} 
 
-\renewcommand{\glsxtrregularfont}[1]{\textcolor{violet}{\glsxtrifwasfirstuse{\emph{#1}}{#1}}}
-\renewcommand{\glsxtrabbreviationfont}[1]{\textcolor{teal}{\glsxtrifwasfirstuse{\emph{#1}}{#1}}}
+\renewcommand{\glsxtrregularfont}[1]{\glsxtrifwasfirstuse{\emph{#1}}{#1}}
+\renewcommand{\glsxtrabbreviationfont}[1]{\glsxtrifwasfirstuse{\emph{#1}}{#1}}
 % or
 %\renewcommand{\glsxtrregularfont}[1]{\textcolor{violet}{\ifglsused{\glslabel}{#1}{\emph{#1}}}}
 %\renewcommand{\glsxtrabbreviationfont}[1]{\textcolor{teal}{\ifglsused{\glslabel}{#1}{\emph{#1}}}}

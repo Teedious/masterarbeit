@@ -2,7 +2,7 @@ Bei der Implementierung des Jobsystems liegt die Aufgabe insbesondere darin, die
 
 Während der Implementierung ist eine weitere Anforderung zum Vorschein gekommen, die nicht vollständig gelöst wird. Dabei handelt es sich um die in Abschnitt~\vref{sec:reqBackgroundTasks} beschriebene Anforderung, die Ausführung von Hintergrundtasks zu ermöglichen, ohne die Ausführung anderer Tasks zu blockieren. 
 
-Den zentralen Zugriffspunkt auf das Jobsystem bietet das neu definierte Interface \classBlocklibExecutorService{}, das von der Klasse \classBlocklibExecutor{} implementiert wird. Ein gekürztes Klassendiagramm ist in Abbildung~\ref{fig:diag-BlocklibExecutor} dargestellt.
+Den zentralen Zugriffspunkt auf das Jobsystem bietet das neu definierte Interface \classBlocklibExecutorService{}, das von der Klasse \classBlocklibExecutor{} implementiert wird. Ein gekürztes Klassendiagramm ist in Abbildung~\vref{fig:diag-BlocklibExecutor} dargestellt.
 
 \begin{figure}[!htb]
 	\centering
@@ -18,7 +18,7 @@ In den folgenden Abschnitten wird die Implementierung des Jobsystems erläutert,
 
 \subsubsection{Koordinierung durch \texttt{BlocklibExecutor}}\label{sec:Koordinierung}
 
-Wie bereits beschrieben dient die Klasse \classBlocklibExecutor{} als Zugriffspunktpunkt auf das neu implementierte Jobsystem, indem sie das Interface \classBlocklibExecutorService{} implementiert. Um der Bibliothek möglichst früh zur Verfügung zu stehen, wird \classBlocklibExecutor{} im Konstruktor der \classGame{}-Klasse instanziiert, die als Einstiegspunkt für die Blocklib dient. Wie die Abbildung~\ref{fig:diag-BlocklibExecutor} zeigt, besitzt die Klasse \classBlocklibExecutor{} eine statische Methode \code{defaultConfig()}, die eine \classBlocklibExecutor{}-Instanz in einer Standardkonfiguration erzeugt.
+Wie bereits beschrieben dient die Klasse \classBlocklibExecutor{} als Zugriffspunktpunkt auf das neu implementierte Jobsystem, indem sie das Interface \classBlocklibExecutorService{} implementiert. Um der Bibliothek möglichst früh zur Verfügung zu stehen, wird \classBlocklibExecutor{} im Konstruktor der \classGame{}-Klasse instanziiert, die als Einstiegspunkt für die Blocklib dient. Wie die Abbildung~\vref{fig:diag-BlocklibExecutor} zeigt, besitzt die Klasse \classBlocklibExecutor{} eine statische Methode \code{defaultConfig()}, die eine \classBlocklibExecutor{}-Instanz in einer Standardkonfiguration erzeugt.
 
 Aktuell bedeutet das, dass die oben erwähnten \classScheduledThreadPoolExecutor{} erzeugt werden und jeweils $\text{Anzahl(Hardware-Threads)} - 1$ Java-Threads besitzen. Um die Threads beispielsweise beim Debugging zuordnen zu können, werden sie über die neue Klasse \classNamedThreadFactory{} erzeugt, die es ermöglicht den erzeugten Threads ein Namenspräfix zu geben. Dadurch besitzen alle Job-Threads den Namen \emph{Jobs-thread-\{x\}} und alle Hintergrund-Threads den Namen \emph{Background-thread-\{x\}}, wobei \{x\} jeweils durch eine Zahl von 1 bis $\text{Anzahl(Hardware-Threads)} - 1$ ersetzt wird.
 
@@ -31,7 +31,7 @@ Ziel für die Zukunft ist es, dass statt der Nutzung der durch Java bereitgestel
 Bei eingehenden Tasks prüft der \classBlocklibExecutor{} die Priorität und wählt danach den entsprechenden Executor aus. Dann muss der Task noch so verarbeitet werden, dass eine Verkettung möglich ist.
 
 \subsubsection{Komposition von Tasks}\label{sec:Verkettung}
-Die Klasse \classCompletableFutureWrapper{} ist dafür zuständig, die Tasks so zu verändern, dass diese komponiert werden können. Abbildung~\ref{fig:wrapper} zeigt ein Klassendiagramm der Klassen, die nötig sind, um die Komposition von Tasks zu implementieren. 
+Die Klasse \classCompletableFutureWrapper{} ist dafür zuständig, die Tasks so zu verändern, dass diese komponiert werden können. Abbildung~\vref{fig:wrapper} zeigt ein Klassendiagramm der Klassen, die nötig sind, um die Komposition von Tasks zu implementieren. 
 
 \begin{figure}[htbp]
 	\centering
