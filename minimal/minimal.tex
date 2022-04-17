@@ -13,13 +13,38 @@
 \tikzexternaldisable
 
 \begin{document}
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{.48\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\node[place, label=$p_1$, tokens=1] (p1) at (0,0) {};
+			\node[transV,label=$t_1$, right = of p1] (t1){};
+			\node[place, label=$p_2$, right = of t1] (p2) {};
+			\node[transV,label=$t_2$, right = of p2] (t2){};
 
-\ac{fps} \ac{ram}\\
-
-\begin{figure}[!htbp]
-	\memplot[xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}{\sysA}
-	\\\memplot{seed-0-hexagon-multi-mem.csv}{\sysB}
-	\caption{Graph des Verlaufs der Speichernutzung in Szenario 1: Hexagon.}\label{fig:seed-0-hexagon-mem}
+			\draw 
+			(p1) edge[post] node[above] {1} (t1)
+			(t1) edge[post] node[above] {1} (p2)
+			(p2) edge[post] node[above] {1} (t2);
+		\end{tikzpicture}
+		\subcaption{Abwandlung des Petri-Netzes aus Abbildung~\vref{fig:petrinet}. Die Gewichtungsfunktion ist für jede Relation maximal 1.}\label{fig:1-bpetrinet:graph}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{.48\textwidth}
+		\centering
+		\begin{tikzpicture}[node distance=5mm,auto,state/.append style={rounded rectangle}]
+			\node[state, initial] (q1) {$1$};
+			\node[state] (q2) [right=of q1] {$2$};
+			\node[state] (q3) [right=of q2] {};
+			\path[->] 
+			(q1) edge node {$t_1$} (q2)
+			(q2) edge node {$t_2$} (q3);
+		\end{tikzpicture}
+		\subcaption{Erreichbarkeitsgraph, bei dem die Zahl(en) in den Knoten die  Indizes der Plätze beschreiben, die eine Markierung besitzen.}\label{fig:1-bpetrinet:reachability}
+	\end{subfigure}
+\caption{Petri-Netz und zugehöriger Erreichbarkeitsgraph, in dem die Anzahl der Markierungen pro Platz stets maximal 1 ist. }\label{fig:1-bpetrinet}
 \end{figure} 
 
+Abb~\ref{fig:1-bpetrinet:graph}
 \end{document}
