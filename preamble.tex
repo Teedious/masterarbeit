@@ -46,9 +46,9 @@
 \svgsetup{inkscapelatex=false, inkscapearea=drawing}
 \usepackage[layout={margin,index},draft]{fixme}
 \usepackage{rotating}
-\usepackage{siunitx}
+\usepackage[locale = DE]{siunitx}
 
-\usepackage[backend=biber,minbibnames=2,maxbibnames=2,maxcitenames=1,mincitenames=1,style=alphabetic,doi=false,eprint=false]{biblatex}
+\usepackage[backend=biber,minbibnames=2,maxbibnames=2,maxcitenames=1,mincitenames=1,style=alphabetic,doi=false,eprint=false,url=false]{biblatex}
 \setcounter{biburlnumpenalty}{9000}
 \setcounter{biburlucpenalty}{9000}
 \setcounter{biburllcpenalty}{9000}
@@ -990,3 +990,6 @@
 \newcommand{\classUnsupportedOperationException}{\class{UnsupportedOperationException}}
 \newcommand{\classVAOTransmitter}{\class{VAOTransmitter}}
 \newcommand{\classWorldInteraction}{\class{WorldInteraction}}
+
+\newcommand{\sysA}{System~A}
+\newcommand{\sysB}{System~B}

@@ -1,4 +1,4 @@
-\newcommand{\memplot}[2][]{ 
+\newcommand{\memplot}[3][]{ 
 \begin{tikzpicture}
 	\begin{axis}[
 		xmin=0,
@@ -32,15 +32,17 @@
     no markers,
 		width=.85\textwidth,
 		grid=none,
-		xlabel={Zeit (\si{\second})},
-		ylabel={\ac{ram} (\si{\mega\byte})},
+		xlabel={Zeit [\si{\second}]},
+		ylabel={\ac{ram} [\si{\mega\byte}]},
 		legend entries = {Gesamt,Tenured,Eden},
-		legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
+		legend style={cells={anchor=west},at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.8}},
 		#1
 		]
-			\addplot+[yellow] table[col sep=comma,header=true,x index=0, y index=4] {#2};
-			\addplot+[blue,stack plots=y] table[col sep=comma,header=true,x index=0, y index=1] {#2};
-			\addplot+[red,stack plots=y] table[col sep=comma,header=true,x index=0, y index=2] {#2};
+			\addplot+[very thick, yellow] table[col sep=comma,header=true,x index=0, y index=4] {#2};
+			\addplot+[very thick, blue,stack plots=y] table[col sep=comma,header=true,x index=0, y index=1] {#2};
+			\addplot+[very thick, red,stack plots=y] table[col sep=comma,header=true,x index=0, y index=2] {#2};
+
+			\node[draw,fill=white,anchor=north east,xshift=-.1cm,yshift=-.1cm,scale=.8] at (rel axis cs: 1,1) {#3};
 	\end{axis}
 \end{tikzpicture}
 }
@@ -49,18 +51,18 @@
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
 			\begin{axis}[
-			xlabel={Zeit (\si{\second})},
+			xlabel={Zeit [\si{\second}]},
 			xmin=0,
 			ymin=0,
 			xmax=65,
 			ymax=600,
 			ylabel={\si{\fps}},
-			legend entries = {SystemA,SystemB},
-			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
+			legend entries = {\sysA{},\sysB{}},
+			legend style={cells={anchor=west},at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
 			#1
 		]
-				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#2-single-fps.csv};
-				\addplot table[col sep=comma,header=true,x index=0, y index=2] {#2-multi-fps.csv};
+				\addplot+[very thick, ] table[col sep=comma,header=true,x index=0, y index=2] {#2-single-fps.csv};
+				\addplot+[very thick, ] table[col sep=comma,header=true,x index=0, y index=2] {#2-multi-fps.csv};
 		\end{axis}
 	\end{tikzpicture}
 }
@@ -69,18 +71,18 @@
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
 			\begin{axis}[
-			xlabel={Zeit (\si{\second})},
+			xlabel={Zeit [\si{\second}]},
 			xmin=0,
 			xmax=65,
 			ymin=0,
 			ymax=100,
-			ylabel={\ac{cpu} (\si{\percent})},
-			legend entries = {SystemA,SystemB},
-			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
+			ylabel={\ac{cpu}-Last [\si{\percent}]},
+			legend entries = {\sysA{},\sysB{}},
+			legend style={cells={anchor=west},at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
 			#1
 		]
-				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#2-single-cpu.csv};
-				\addplot table[col sep=comma,header=true,x index=0, y index=4] {#2-multi-cpu.csv};
+				\addplot+[very thick, ] table[col sep=comma,header=true,x index=0, y index=4] {#2-single-cpu.csv};
+				\addplot+[very thick, ] table[col sep=comma,header=true,x index=0, y index=4] {#2-multi-cpu.csv};
 		\end{axis}
 	\end{tikzpicture}
 }
@@ -89,18 +91,18 @@
 	%\tikzset{external/remake next}
 	\begin{tikzpicture}
 			\begin{axis}[
-			xlabel={Zeit (\si{\second})},
+			xlabel={Zeit [\si{\second}]},
 			xmin=0,
 			xmax=65,
 			ymin=0,
 			ymax=100,
-			ylabel={\ac{gpu} (\si{\percent})},
-			legend entries = {SystemA,SystemB},
+			ylabel={\ac{gpu}-Last [\si{\percent}]},
+			legend entries = {cells={anchor=west},\sysA{},\sysB{}},
 			legend style={at={(0,1)},anchor=north west,xshift=.1cm,yshift=-.1cm,nodes={scale=.9}},
 			#1
 		]
-				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#2-single-gpu.csv};
-				\addplot table[col sep=comma,header=true,x index=0, y index=7] {#2-multi-gpu.csv};
+				\addplot+[very thick, ]table[col sep=comma,header=true,x index=0, y index=7] {#2-single-gpu.csv};
+				\addplot+[very thick, ]table[col sep=comma,header=true,x index=0, y index=7] {#2-multi-gpu.csv};
 		\end{axis}
 	\end{tikzpicture}
 }

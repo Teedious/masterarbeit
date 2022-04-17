@@ -13,14 +13,16 @@ Der beigelegte Datenträger enthält die folgenden Dateien.
 
 \begin{itemize}
 	\item PDF dieser Masterarbeit,
-	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \code{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \code{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnote{\url{https://inkscape.org/}} mit \code{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \code{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig},
+	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \code{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \code{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnotemark mit \code{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \code{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig.},
 	\item UML-Modelle als \code{.asta}-Dateien im Ordner \code{astah},
 	\item den Source-Code im Verzeichnis \code{src}
 	\item die Source-Code-Dokumentation im Ordner \code{doc},
 	\item die bei den Messungen erstellten Rohdaten und verarbeitete Daten in den Ordnern\\ \code{latex(-precompiled)/performance/measurements},
 	\item Skripte zur Verarbeitung der Daten in den Ordnern\\ \code{latex(-precompiled)/performance/measurements/python},
-	\item Kopien von referenzierter Literatur und Quellen, die als PDF vorliegen im Ordner \code{recherche}.
+	\item Kopien von referenzierter Literatur und Quellen, die als PDF vorliegen, im Ordner \code{recherche}.
 \end{itemize}
+
+\footnotetext{{\url{https://inkscape.org/}}}
 
 \clearpage
 \section{Klassendiagramme}
@@ -64,7 +66,7 @@ Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zug
 	\includesvg[width=\textwidth]{ExecuterInterfaces.svg}
 	\par
 }
-In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie die jedes Interface die Schnittstelle, von der es abgeleitet ist, erweitert. Der \classScheduledExecutorService{} Möglichkeiten des Scheduling hinzu und der neu definierte \classBlocklibExecutorService{} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zudem Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \classTaskPriority{}.
+In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie die jedes Interface die Schnittstelle, von der es abgeleitet ist, erweitert. Der \classScheduledExecutorService{} Möglichkeiten des Scheduling hinzu und der neu entworfene \classBlocklibExecutorService{} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zum anderen Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \classTaskPriority{}.
 
 \clearpage
 \section{Messungen}\label{appendix:plots}
@@ -77,13 +79,13 @@ Dieser Abschnitt enthält die Graphen aller Messungen der Performanceanalyse (Ka
 }
 \settowidth\mytemp{1,}
 \fpsplot[title={Szenario 1: Hexagon (0)},ytick={0,200,...,1200},height=2.8cm,ymax=1200,y label style={at={(ticklabel cs:.5,-\mytemp)}},xticklabels={,,},xlabel={}]{seed-0-hexagon}
-\\[-.3em]\fpsplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\[-.3em]\fpsplot[title={Szenario 2: Halbwürfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
 \\[-.3em]\fpsplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
 \\[-.3em]\fpsplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
 \\[-.3em]\fpsplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
 \\[-.3em]\fpsplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
 \\[-.3em]\fpsplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.3em]
-Dies ist die Darstellung aller Framerate-Verläufe. Das Szenario ist jeweils links oben am Graphen zu erkennen.
+Dies ist die Darstellung aller Framerate-Verläufe. Das Szenario ist jeweils links oben an dem Graphen zu erkennen.
 
 \clearpage
 \subsection{\glsentryshort{cpu}-Auslastungs-Verläufe gesammelt}\label{appendix:cpuplots}
@@ -92,39 +94,39 @@ Dies ist die Darstellung aller Framerate-Verläufe. Das Szenario ist jeweils lin
 }
 
 \cpuplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon}
-\\[-.2em]\cpuplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\[-.2em]\cpuplot[title={Szenario 2: Halbwürfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
 \\[-.2em]\cpuplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
 \\[-.2em]\cpuplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
 \\[-.2em]\cpuplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
 \\[-.2em]\cpuplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
 \\[-.2em]\cpuplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.3em]
-Dies ist die Darstellung aller \glsentryshort{cpu}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben am Graphen zu erkennen.
+Dies ist die Darstellung aller \glsentryshort{cpu}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben an dem Graphen zu erkennen.
 
 \clearpage
 \subsection{\glsentryshort{gpu}-Auslastungs-Verläufe gesammelt}\label{appendix:gpuplots}
 \gpuplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon}
-\\[-.2em]\gpuplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
+\\[-.2em]\gpuplot[title={Szenario 2: Halbwürfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube}
 \\[-.2em]\gpuplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static}
 \\[-.2em]\gpuplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate}
 \\[-.2em]\gpuplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
 \\[-.2em]\gpuplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
 \\[-.2em]\gpuplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.3em]
-Dies ist die Darstellung aller \glsentryshort{gpu}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben am Graphen zu erkennen.
+Dies ist die Darstellung aller \glsentryshort{gpu}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben an dem Graphen zu erkennen.
 
 \clearpage
 \subsection{\glsentryshort{ram}-Auslastungs-Verläufe gesammelt}\label{appendix:memplots}
-  				\memplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon-single-mem.csv}
-\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}
-\\[-.1em]\memplot[title={Szenario 2: Halb-Würfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube-single-mem.csv}
-\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-cube-multi-mem.csv}
-\\[-.1em]\memplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static-single-mem.csv}
-\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-static-multi-mem.csv}
-\\[-.1em]\memplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate-single-mem.csv}
-\\[-.2em]\memplot[]{seed-0-rotate-multi-mem.csv}
-\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk-single-mem.csv}
-\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-walk-multi-mem.csv}
-\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk-single-mem.csv}
-\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-3-walk-multi-mem.csv}
-\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (10)},xticklabels={,,},xlabel={}]{seed-10-walk-single-mem.csv}
-\\[-.2em]\memplot[]{seed-10-walk-multi-mem.csv}\\[-.3em]
-Dies ist die Darstellung aller \glsentryshort{ram}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben am Graphen zu erkennen.
+  				\memplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}{\sysA}
+\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}{\sysB}
+\\[-.1em]\memplot[title={Szenario 2: Halbwürfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube-multi-mem.csv}{\sysA}
+\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-cube-multi-mem.csv}{\sysB}
+\\[-.1em]\memplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static-multi-mem.csv}{\sysA}
+\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-static-multi-mem.csv}{\sysB}
+\\[-.1em]\memplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate-multi-mem.csv}{\sysA}
+\\[-.2em]\memplot[]{seed-0-rotate-multi-mem.csv}{\sysB}
+\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk-multi-mem.csv}{\sysA}
+\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-walk-multi-mem.csv}{\sysB}
+\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk-multi-mem.csv}{\sysA}
+\\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-3-walk-multi-mem.csv}{\sysB}
+\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (10)},xticklabels={,,},xlabel={}]{seed-10-walk-multi-mem.csv}{\sysA}
+\\[-.2em]\memplot[]{seed-10-walk-multi-mem.csv}{\sysB}\\[-.3em]
+Dies ist die Darstellung aller \glsentryshort{ram}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben an dem Graphen zu erkennen.

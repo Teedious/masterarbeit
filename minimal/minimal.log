@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  16 APR 2022 20:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  17 APR 2022 09:25
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex
@@ -1802,44 +1802,80 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 
 \c@lstlisting=\count564
 Package scrhack Info: undefining \float@addtolists on input line 15.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 17.
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-single-mem.csv}
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 20.
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 17.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 20.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 17.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 20.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 17.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 20.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 20.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 20.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 17.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+(Font)              <6> on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 17.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-mem.csv}
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ! in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-mem.csv}
+PGFPlots: reading {../performance/measurements/seed-0-hexagon-multi-mem.csv}
+
 
 FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
@@ -1853,7 +1889,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 19.
+(Font)              <10.95> on input line 25.
 [1
 
 \openout5 = `minimal.ist'.
@@ -1879,17 +1915,21 @@ Package logreq Info: Writing requests to 'minimal.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 69091 strings out of 478870
- 1576139 string characters out of 2847888
- 2728779 words of memory out of 3000000
- 85856 multiletter control sequences out of 15000+600000
- 428409 words of font info for 68 fonts, out of 8000000 for 9000
+ 69698 strings out of 478870
+ 1592414 string characters out of 2847888
+ 2771651 words of memory out of 3000000
+ 86449 multiletter control sequences out of 15000+600000
+ 432929 words of font info for 71 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 115i,20n,134p,10679b,2331s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on minimal.pdf (1 page, 65801 bytes).
+ 115i,20n,134p,10679b,2406s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{glo:ram} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:fps} has been referenced but does not exist, replaced by a fixed one
+
+{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
+Output written on minimal.pdf (1 page, 91232 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
- 12301 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 48 PDF objects out of 1000 (max. 8388607)
+ 5 named destinations out of 1000 (max. 500000)
+ 14349 words of extra memory for PDF output out of 14400 (max. 10000000)
 

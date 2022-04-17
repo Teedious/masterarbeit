@@ -21,7 +21,7 @@ Bei der parallelen Ausführung des Render-Threads ist bei der Darstellung der Sc
 
 Da Variablen zeitgleich von verschiedenen Threads bearbeitet werden, ist die Suche nach dem Ursprung des Flackerns schwierig. Da der Fehler nur bei nebenläufiger Ausführung auftritt, müssen die problematischen Stellen auf \code{update()} und \code{render()} verteilt sein. Da der Fehler visuell sichtbar ist, lässt sich das Problem über die \glspl{Anweisung} in \code{render()} nachverfolgen. 
 
-Eine naive Herangehensweise mittels Debugging ist nahezu unmöglich, da das Flackern zufällig auftritt. Zuerst muss also eine Möglichkeit gefunden werden, um das Auftreten des Flackerns programmatisch zu erkennen.
+Eine naive Herangehensweise mittels Debugging ist nahezu unmöglich, da das Flackern unvorhersehbar auftritt. Zuerst muss also eine Möglichkeit gefunden werden, um das Auftreten des Flackerns programmatisch zu erkennen.
 
 In der \classConfiguration{}-Klasse existiert die Variable \const{SHOW_SHADOW_MAP_FRAME}. Ist diese auf \code{true} gesetzt, wird in der linken oberen Ecke des Fensters ein Feld angezeigt, das die sogenannte \classShadowMap{} zeigt. Abbildung~\ref{fig:ShadowMap} zeigt einen Bildschirmfoto der Blocklib mit \code{SHOW_SHADOW_MAP_FRAME = true}. Die \classShadowMap{} wird genutzt, um zu berechnen, an welchen Stellen Schatten gerendert werden.
 \begin{figure}

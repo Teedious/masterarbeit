@@ -13,5 +13,13 @@
 \tikzexternaldisable
 
 \begin{document}
- 
+
+\ac{fps} \ac{ram}\\
+
+\begin{figure}[!htbp]
+	\memplot[xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}{\sysA}
+	\\\memplot{seed-0-hexagon-multi-mem.csv}{\sysB}
+	\caption{Graph des Verlaufs der Speichernutzung in Szenario 1: Hexagon.}\label{fig:seed-0-hexagon-mem}
+\end{figure} 
+
 \end{document}

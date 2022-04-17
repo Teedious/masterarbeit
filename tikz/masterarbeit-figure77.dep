@@ -1,6 +1,6 @@
-tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-single-mem.csv
-tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-single-mem.csv
-tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-single-mem.csv
-tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-single-mem.csv
-tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-single-mem.csv
-tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-single-mem.csv
+tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-multi-mem.csv
+tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-multi-mem.csv
+tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-multi-mem.csv
+tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-multi-mem.csv
+tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-multi-mem.csv
+tikz/masterarbeit-figure77.pdf: performance/measurements/seed-0-walk-multi-mem.csv
