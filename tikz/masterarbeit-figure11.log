@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  16 APR 2022 21:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  18 APR 2022 21:06
 entering extended mode
 **\def\tikzexternalrealjob{masterarbeit}\input{masterarbeit}
 (masterarbeit.tex
@@ -1627,7 +1627,7 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 90.
+(scrhack)             need that hack, on input line 97.
 
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
@@ -2042,12 +2042,12 @@ tion.
 \openout7 = `tikz/masterarbeit-figure11.glo'.
 
 Package glossaries Info: Writing glossary file tikz/masterarbeit-figure11.glo o
-n input line 162.
+n input line 168.
 \glo@acronym@file=\write8
 \openout8 = `tikz/masterarbeit-figure11.acn'.
 
 Package glossaries Info: Writing glossary file tikz/masterarbeit-figure11.acn o
-n input line 162.
+n input line 168.
 
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count549
@@ -2071,7 +2071,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 164.
+Package scrhack Info: loading listings hack on input line 170.
 
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\listings.
 hak
@@ -2319,21 +2319,6 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 \c@lstlisting=\count564
 Package scrhack Info: undefining \float@addtolists on input line 6.
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 7
-.
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
-File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmss' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-LaTeX Warning: Marginpar on page 1 moved.
-
-Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
-line 7.
-FiXme Note: '{\color {red}vref}' on input line 7.
 (titelseite.tex
 The command '\includegraphics [scale=0.2]{IM_Logo.pdf}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
@@ -2390,6 +2375,15 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 The command '\includepdf []{img/Mastererklaerung.pdf}' has been optimized away.
  Use '/tikz/external/optimize=false' to disable this.
 (chapters/abstract.tex
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+.
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
 .
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
@@ -2563,65 +2557,65 @@ LaTeX Warning: Reference `fig:petrinet:graph' on page 3 undefined on input line
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Citation 'Murata1989' on page 3 undefined on input line 41.
+LaTeX Warning: Citation 'Murata1989' on page 4 undefined on input line 41.
 
 
 LaTeX Warning: Reference `fig:petrinet' on page 4 undefined on input line 64.
 
+
+LaTeX Warning: Reference `fig:reachability' on page 5 undefined on input line 6
+9.
+
+
+LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 69.
+
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 88.
+LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 91.
 
 
-LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 88.
+LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 91.
 
 
-LaTeX Warning: Reference `fig:reachability' on page 5 undefined on input line 9
-0.
-
-
-LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 90.
-
-
-LaTeX Warning: Reference `fig:1-bpetrinet' on page 5 undefined on input line 92
+LaTeX Warning: Reference `fig:1-bpetrinet' on page 5 undefined on input line 94
 .
 
 
-LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 92.
+LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 94.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 108.
+LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 110.
 
 
-LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 108.
+LaTeX Warning: Reference `fig:petrinet' on page 5 undefined on input line 110.
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 108--108
+Underfull \hbox (badness 1931) in paragraph at lines 110--110
 [][][]|\T1/lmr/m/n/10.95 (+20) Ab-wand-lung des Petri-Netzes aus Ab-bil-
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Citation 'Goel1990' on page 6 undefined on input line 140.
+LaTeX Warning: Citation 'Goel1990' on page 6 undefined on input line 143.
 
 
-LaTeX Warning: Reference `fig:petrinet' on page 6 undefined on input line 147.
+LaTeX Warning: Reference `fig:petrinet' on page 6 undefined on input line 150.
 
 
-LaTeX Warning: Reference `fig:augpetrinet' on page 6 undefined on input line 14
-7.
+LaTeX Warning: Reference `fig:augpetrinet' on page 6 undefined on input line 15
+0.
 
 
 LaTeX Warning: Reference `fig:augpetrinet:formal' on page 6 undefined on input 
-line 147.
+line 150.
 
 
 LaTeX Warning: Reference `fig:augpetrinet:graph' on page 6 undefined on input l
-ine 147.
+ine 150.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
@@ -2875,6 +2869,14 @@ LaTeX Warning: Citation 'Friesen2015' on page 18 undefined on input line 73.
 LaTeX Warning: Citation 'Friesen2015' on page 18 undefined on input line 75.
 
 
+LaTeX Warning: Hyper reference `appendix:concFrameworkExecutor' on page 18 unde
+fined on input line 77.
+
+
+LaTeX Warning: Reference `appendix:concFrameworkExecutor' on page 18 undefined 
+on input line 77.
+
+
 LaTeX Warning: Reference `appendix:concFrameworkExecutor' on page 18 undefined 
 on input line 77.
 
@@ -2889,6 +2891,14 @@ LaTeX Warning: Citation 'Hettel2016' on page 19 undefined on input line 82.
 
 
 LaTeX Warning: Citation 'Hettel2016' on page 19 undefined on input line 82.
+
+
+LaTeX Warning: Hyper reference `appendix:CompletionStage' on page 19 undefined 
+on input line 82.
+
+
+LaTeX Warning: Reference `appendix:CompletionStage' on page 19 undefined on inp
+ut line 82.
 
 
 LaTeX Warning: Reference `appendix:CompletionStage' on page 19 undefined on inp
@@ -2955,106 +2965,106 @@ LaTeX Warning: Reference `sec:nebenl-folgen' on page 19 undefined on input line
 
 {C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Reference `fig:sot' on page 20 undefined on input line 87.
+LaTeX Warning: Reference `fig:sot' on page 20 undefined on input line 111.
 
 
-LaTeX Warning: Reference `fig:pipelining' on page 20 undefined on input line 87
-.
+LaTeX Warning: Reference `fig:pipelining' on page 20 undefined on input line 11
+1.
 
 
-LaTeX Warning: Citation 'Nystrom2015' on page 20 undefined on input line 89.
-
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-
-LaTeX Warning: Reference `fig:sot' on page 20 undefined on input line 131.
-
-
-LaTeX Warning: Reference `fig:sot' on page 20 undefined on input line 131.
-
-
-LaTeX Warning: Citation 'Davies2006' on page 20 undefined on input line 133.
-
-
-LaTeX Warning: Citation 'Tatarchuk2014' on page 20 undefined on input line 133.
-
-
-
-LaTeX Warning: Citation 'Genova2015' on page 20 undefined on input line 133.
-
-
-LaTeX Warning: Citation 'Hodgman2016' on page 20 undefined on input line 133.
-
-
-LaTeX Warning: Reference `fig:jobt' on page 20 undefined on input line 133.
-
-
-LaTeX Warning: Reference `sec:executor' on page 20 undefined on input line 133.
-
+LaTeX Warning: Citation 'Nystrom2015' on page 20 undefined on input line 113.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `fig:jobt' on page 21 undefined on input line 158.
+LaTeX Warning: Reference `fig:sot' on page 20 undefined on input line 155.
 
 
-LaTeX Warning: Reference `fig:jobt' on page 21 undefined on input line 158.
+LaTeX Warning: Reference `fig:sot' on page 20 undefined on input line 155.
+
+
+LaTeX Warning: Citation 'Davies2006' on page 20 undefined on input line 157.
+
+
+LaTeX Warning: Citation 'Tatarchuk2014' on page 20 undefined on input line 157.
+
+
+
+LaTeX Warning: Citation 'Genova2015' on page 20 undefined on input line 157.
+
+
+LaTeX Warning: Citation 'Hodgman2016' on page 20 undefined on input line 157.
+
+
+LaTeX Warning: Reference `fig:jobt' on page 20 undefined on input line 157.
+
+
+LaTeX Warning: Reference `sec:executor' on page 20 undefined on input line 157.
+
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `fig:jobt' on page 21 undefined on input line 182.
+
+
+LaTeX Warning: Reference `fig:jobt' on page 21 undefined on input line 182.
 
 
 LaTeX Warning: Reference `fig:jobdependencies' on page 21 undefined on input li
-ne 160.
+ne 184.
 
 
-LaTeX Warning: Reference `fig:jobt' on page 22 undefined on input line 165.
+LaTeX Warning: Reference `fig:jobt' on page 22 undefined on input line 189.
 
 
-LaTeX Warning: Reference `fig:jobt' on page 22 undefined on input line 166.
+LaTeX Warning: Reference `fig:jobt' on page 22 undefined on input line 190.
 
 
-LaTeX Warning: Reference `fig:jobt' on page 22 undefined on input line 172.
+LaTeX Warning: Reference `fig:jobt' on page 22 undefined on input line 196.
 
 
-LaTeX Warning: Citation 'Genova2015' on page 22 undefined on input line 174.
+LaTeX Warning: Citation 'Genova2015' on page 22 undefined on input line 198.
 
 
-LaTeX Warning: Citation 'Tatarchuk2014' on page 22 undefined on input line 174.
-
-
-
-LaTeX Warning: Citation 'Davies2006' on page 22 undefined on input line 174.
-
-
-LaTeX Warning: Citation 'Tatarchuk2014' on page 22 undefined on input line 174.
+LaTeX Warning: Citation 'Tatarchuk2014' on page 22 undefined on input line 198.
 
 
 
-LaTeX Warning: Citation 'Genova2015' on page 22 undefined on input line 174.
+LaTeX Warning: Citation 'Davies2006' on page 22 undefined on input line 198.
 
 
-LaTeX Warning: Citation 'Gyrling2015' on page 22 undefined on input line 174.
+LaTeX Warning: Citation 'Tatarchuk2014' on page 22 undefined on input line 198.
 
 
-LaTeX Warning: Citation 'Hodgman2016' on page 22 undefined on input line 174.
+
+LaTeX Warning: Citation 'Genova2015' on page 22 undefined on input line 198.
 
 
-LaTeX Warning: Citation 'White2018' on page 22 undefined on input line 176.
+LaTeX Warning: Citation 'Gyrling2015' on page 22 undefined on input line 198.
 
 
-LaTeX Warning: Citation 'Schott2016' on page 22 undefined on input line 176.
+LaTeX Warning: Citation 'Hodgman2016' on page 22 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'White2018' on page 22 undefined on input line 200.
+
+
+LaTeX Warning: Citation 'Schott2016' on page 22 undefined on input line 200.
 
 The command '\includegraphics [width=.8\textwidth ]{Destiny.png}' has been opti
 mized away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Citation 'Tatarchuk2014' on page 23 undefined on input line 181.
+LaTeX Warning: Citation 'Tatarchuk2014' on page 23 undefined on input line 205.
 
 
 
-LaTeX Warning: Citation 'Tatarchuk2014' on page 23 undefined on input line 181.
+LaTeX Warning: Citation 'Tatarchuk2014' on page 23 undefined on input line 205.
 
 
 
 LaTeX Warning: Reference `fig:destiny-jobgraph' on page 23 undefined on input l
-ine 184.
+ine 208.
 
 ) (chapters/EntwicklungEinerNebenlaeufigen/intro.tex) (chapters/EntwicklungEine
 rNebenlaeufigen/AnalyseDerBlocklib.tex
@@ -3082,23 +3092,22 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 LaTeX Warning: Reference `lst:oldGameLoop' on page 24 undefined on input line 1
-1.
+2.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 15.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 17.
 
 
-LaTeX Warning: Reference `lst:gameUpdate' on page 24 undefined on input line 26
+LaTeX Warning: Reference `lst:gameUpdate' on page 24 undefined on input line 28
 .
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 46.
-Package mdframed Info: Not enough space on this page on input line 47.
+(mdframed)              on input line 48.
 
 LaTeX Warning: Reference `tab:concTasksBlocklib' on page 25 undefined on input 
-line 53.
+line 57.
 
 > Step: init table outer spec.
 > Step: parse table options.
@@ -3126,21 +3135,21 @@ LaTeX Warning: Citation 'Nystrom2015' on page 28 undefined on input line 7.
 
 
 LaTeX Warning: Reference `sec:anforderungen' on page 29 undefined on input line
- 10.
+ 11.
 
 ) (chapters/DesignDerThreadingApi/Renderthread.tex
 
 LaTeX Warning: Reference `sec:gamesJobsystem' on page 29 undefined on input lin
-e 2.
+e 1.
 
 
-LaTeX Warning: Citation 'Tatarchuk2014' on page 29 undefined on input line 8.
+LaTeX Warning: Citation 'Tatarchuk2014' on page 29 undefined on input line 7.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `fig:optimalArchitecture' on page 30 undefined on inpu
-t line 52.
+t line 51.
 
 ) (chapters/DesignDerThreadingApi/JobApi.tex
 
@@ -3171,6 +3180,14 @@ e' to disable this.
 
 LaTeX Warning: Reference `fig:GrobesDesign' on page 31 undefined on input line 
 46.
+
+
+LaTeX Warning: Hyper reference `appendix:BlocklibExecutorService' on page 31 un
+defined on input line 48.
+
+
+LaTeX Warning: Reference `appendix:BlocklibExecutorService' on page 31 undefine
+d on input line 48.
 
 
 LaTeX Warning: Reference `appendix:BlocklibExecutorService' on page 31 undefine
@@ -3218,101 +3235,93 @@ The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=411.14
 e' to disable this.
 
 LaTeX Warning: Reference `fig:loaderDiagram' on page 34 undefined on input line
- 15.
+ 16.
 
 
 LaTeX Warning: Reference `sec:saveRenderState' on page 34 undefined on input li
-ne 19.
+ne 20.
 
 The command '\includegraphics [height=4.5cm]{player.png}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 30.
+(mdframed)              on input line 31.
 
-LaTeX Warning: Reference `fig:player' on page 34 undefined on input line 30.
+LaTeX Warning: Reference `fig:player' on page 35 undefined on input line 31.
 
-Package mdframed Info: Not enough space on this page on input line 33.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 54.
+(mdframed)              on input line 55.
 The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=386.95
 897pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
 e' to disable this.
 
-LaTeX Warning: Reference `fig:renderDiagram' on page 36 undefined on input line
- 64.
+LaTeX Warning: Reference `fig:renderDiagram' on page 37 undefined on input line
+ 65.
 
 
-LaTeX Warning: Reference `fig:renderDiagram' on page 36 undefined on input line
- 64.
+LaTeX Warning: Reference `fig:renderDiagram' on page 37 undefined on input line
+ 65.
 
 
 LaTeX Warning: Reference `fig:renderInterfaceDiagram' on page 37 undefined on i
-nput line 66.
+nput line 67.
 
 The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=435.32
 422pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
 e' to disable this.
 
-LaTeX Warning: Reference `sec:searchRace' on page 37 undefined on input line 76
+LaTeX Warning: Reference `sec:searchRace' on page 37 undefined on input line 77
 .
 
 
-LaTeX Warning: Reference `fig:flackern' on page 37 undefined on input line 76.
+LaTeX Warning: Reference `fig:flackern' on page 37 undefined on input line 77.
 
 
 LaTeX Warning: Reference `fig:copyRenderable' on page 38 undefined on input lin
-e 78.
+e 79.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 104.
+(mdframed)              on input line 105.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 110.
+(mdframed)              on input line 111.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `fig:mrSwapBuffer' on page 39 undefined on input line 
-169.
+170.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 171.
-
-Package mdframed Warning: You got a bad break
-(mdframed)                because the last box will be empty
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 175.
-
+(mdframed)              on input line 172.
 
 LaTeX Warning: Reference `fig:renderDiagram' on page 40 undefined on input line
- 181.
+ 182.
 
 
-LaTeX Warning: Citation 'Vries2020' on page 40 undefined on input line 184.
+LaTeX Warning: Citation 'Vries2020' on page 40 undefined on input line 185.
 
 
-LaTeX Warning: Citation 'Vries2020' on page 40 undefined on input line 184.
+LaTeX Warning: Citation 'Vries2020' on page 40 undefined on input line 185.
 
 
 LaTeX Warning: Reference `fig:DiagGameLoop' on page 41 undefined on input line 
-191.
+192.
 
 The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
 687pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
 e' to disable this.
 
-LaTeX Warning: Reference `fig:DiagGameLoop' on page 41 undefined on input line 
-201.
+LaTeX Warning: Reference `fig:DiagGameLoop' on page 42 undefined on input line 
+204.
 
 
-LaTeX Warning: Reference `fig:stepWindowActivity' on page 41 undefined on input
- line 201.
+LaTeX Warning: Reference `fig:stepWindowActivity' on page 42 undefined on input
+ line 204.
 
 The command '\includegraphics [draft=false,scale=.8,keepaspectratio]{\svg@tempa
  }' has been optimized away. Use '/tikz/external/optimize=false' to disable thi
@@ -3329,37 +3338,37 @@ isable this.
 LaTeX Warning: Reference `fig:flackern' on page 42 undefined on input line 20.
 
 
-LaTeX Warning: Reference `fig:ShadowMap' on page 42 undefined on input line 26.
+LaTeX Warning: Reference `fig:ShadowMap' on page 43 undefined on input line 26.
 
 
 The command '\includegraphics [width=.9\textwidth ]{shadowMap.png}' has been op
 timized away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Citation 'Ebbinger2018' on page 42 undefined on input line 32.
+LaTeX Warning: Citation 'Ebbinger2018' on page 43 undefined on input line 32.
 
 
-LaTeX Warning: Reference `lst:raceLight' on page 43 undefined on input line 48.
+LaTeX Warning: Reference `lst:raceLight' on page 44 undefined on input line 48.
 
 
 
-LaTeX Warning: Reference `lst:updateLightPosition:scale' on page 43 undefined o
+LaTeX Warning: Reference `lst:updateLightPosition:scale' on page 44 undefined o
 n input line 58.
 
 ) (chapters/Implementierung/ImplementierungJobsystem.tex
 
-LaTeX Warning: Hyper reference `sec:reqBackgroundTasks' on page 44 undefined on
+LaTeX Warning: Hyper reference `sec:reqBackgroundTasks' on page 45 undefined on
  input line 3.
 
 
-LaTeX Warning: Reference `sec:reqBackgroundTasks' on page 44 undefined on input
+LaTeX Warning: Reference `sec:reqBackgroundTasks' on page 45 undefined on input
  line 3.
 
 
-LaTeX Warning: Reference `sec:reqBackgroundTasks' on page 44 undefined on input
+LaTeX Warning: Reference `sec:reqBackgroundTasks' on page 45 undefined on input
  line 3.
 
 
-LaTeX Warning: Reference `fig:diag-BlocklibExecutor' on page 44 undefined on in
+LaTeX Warning: Reference `fig:diag-BlocklibExecutor' on page 45 undefined on in
 put line 5.
 
 The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
@@ -3382,61 +3391,61 @@ LaTeX Warning: Reference `sec:Konsolidierung' on page 45 undefined on input lin
 e 15.
 
 
-LaTeX Warning: Reference `sec:Koordinierung' on page 45 undefined on input line
+LaTeX Warning: Reference `sec:Koordinierung' on page 46 undefined on input line
  17.
 
 
-LaTeX Warning: Reference `sec:Verkettung' on page 45 undefined on input line 17
+LaTeX Warning: Reference `sec:Verkettung' on page 46 undefined on input line 17
 .
 
 
-LaTeX Warning: Reference `sec:Konsolidierung' on page 45 undefined on input lin
+LaTeX Warning: Reference `sec:Konsolidierung' on page 46 undefined on input lin
 e 17.
 
 
-LaTeX Warning: Reference `fig:diag-BlocklibExecutor' on page 45 undefined on in
+LaTeX Warning: Reference `fig:diag-BlocklibExecutor' on page 46 undefined on in
 put line 21.
 
 
-LaTeX Warning: Reference `fig:wrapper' on page 46 undefined on input line 34.
-
-
-LaTeX Warning: Reference `lst:CompletingCall' on page 47 undefined on input lin
-e 49.
-
-
-LaTeX Warning: Reference `lst:CompletingCall:call' on page 47 undefined on inpu
-t line 49.
-
-
-LaTeX Warning: Reference `lst:CompletingCall:complete' on page 47 undefined on 
-input line 49.
-
-
-LaTeX Warning: Reference `lst:CompletingCall:exceptionally' on page 47 undefine
-d on input line 49.
+LaTeX Warning: Reference `fig:wrapper' on page 47 undefined on input line 34.
 
 The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=435.32
 422pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
 e' to disable this.
+
+LaTeX Warning: Reference `lst:CompletingCall' on page 47 undefined on input lin
+e 45.
+
+
+LaTeX Warning: Reference `lst:CompletingCall:call' on page 47 undefined on inpu
+t line 45.
+
+
+LaTeX Warning: Reference `lst:CompletingCall:complete' on page 47 undefined on 
+input line 45.
+
+
+LaTeX Warning: Reference `lst:CompletingCall:exceptionally' on page 47 undefine
+d on input line 45.
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 64.
+(mdframed)              on input line 68.
 
-Overfull \hbox (10.41469pt too wide) in paragraph at lines 64--65
+Overfull \hbox (10.41469pt too wide) in paragraph at lines 68--69
 \T1/lmtt/m/n/12 H[][][][][][][][][][][][][]e-U[][][][][][][]k-P[][][][][][]\T1/
 lmr/m/n/12 (-20) . Der über-ge-be-ne Task
  []
 
 
-LaTeX Warning: Reference `tab:concTasksBlocklib' on page 48 undefined on input 
-line 73.
+LaTeX Warning: Reference `tab:concTasksBlocklib' on page 49 undefined on input 
+line 77.
 
 
-LaTeX Warning: Citation 'VMware2022' on page 49 undefined on input line 75.
+LaTeX Warning: Citation 'VMware2022' on page 49 undefined on input line 79.
 
 
-Overfull \hbox (7.83438pt too wide) in paragraph at lines 83--84
+Overfull \hbox (7.83438pt too wide) in paragraph at lines 87--88
 []\T1/lmr/m/n/12 (-20) Die Klas-se []\T1/lmtt/m/n/12 d-M[][][] \T1/lmr/m/n/12 (
 -20) über-gibt den []\T1/lmtt/m/n/12 b-E[][][] \T1/lmr/m/n/12 (-20) an [][][]-O
 bjekte, de-ren Ausbreitungs-
@@ -3463,13 +3472,6 @@ The command '\includegraphics [width=.8\textwidth ]{fps-hexagon.png}' has been
 optimized away. Use '/tikz/external/optimize=false' to disable this.
 
 LaTeX Warning: Reference `fig:hexagon' on page 52 undefined on input line 9.
-
-
-LaTeX Warning: Hyper reference `fig:cube' on page 52 undefined on input line 9.
-
-
-
-LaTeX Warning: Reference `fig:cube' on page 52 undefined on input line 9.
 
 
 LaTeX Warning: Reference `fig:cube' on page 52 undefined on input line 9.
@@ -3583,13 +3585,13 @@ timized away. Use '/tikz/external/optimize=false' to disable this.
 The command '\includegraphics [width=.32\textwidth ]{rotate-6.png}' has been op
 timized away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `fig:seed-0-rotate-fps' on page 59 undefined on input 
+LaTeX Warning: Reference `fig:seed-0-rotate-fps' on page 58 undefined on input 
 line 17.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `fig:rotate' on page 59 undefined on input line 22.
+LaTeX Warning: Reference `fig:rotate' on page 58 undefined on input line 22.
 
 
 LaTeX Warning: Reference `fig:seed-0-rotate-cpu' on page 59 undefined on input 
@@ -3601,10 +3603,14 @@ isable this.
 LaTeX Warning: Reference `fig:seed-0-rotate-gpu' on page 60 undefined on input 
 line 37.
 
+
+LaTeX Warning: Reference `fig:seed-0-rotate-gpu' on page 60 undefined on input 
+line 37.
+
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `fig:seed-0-rotate-mem' on page 60 undefined on input 
+LaTeX Warning: Reference `fig:seed-0-rotate-mem' on page 61 undefined on input 
 line 49.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -3656,21 +3662,21 @@ LaTeX Warning: Reference `appendix:fpsplots' on page 61 undefined on input line
  18.
 
 
-LaTeX Warning: Reference `fig:seed-0-walk-cpu' on page 61 undefined on input li
+LaTeX Warning: Reference `fig:seed-0-walk-cpu' on page 62 undefined on input li
 ne 21.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Hyper reference `appendix:cpuplots' on page 61 undefined on inpu
+LaTeX Warning: Hyper reference `appendix:cpuplots' on page 62 undefined on inpu
 t line 26.
 
 
-LaTeX Warning: Reference `appendix:cpuplots' on page 61 undefined on input line
+LaTeX Warning: Reference `appendix:cpuplots' on page 62 undefined on input line
  26.
 
 
-LaTeX Warning: Reference `appendix:cpuplots' on page 61 undefined on input line
+LaTeX Warning: Reference `appendix:cpuplots' on page 62 undefined on input line
  26.
 
 
@@ -3704,7 +3710,7 @@ LaTeX Warning: Reference `appendix:gpuplots' on page 62 undefined on input line
  38.
 
 
-LaTeX Warning: Reference `fig:seed-0-walk-mem' on page 62 undefined on input li
+LaTeX Warning: Reference `fig:seed-0-walk-mem' on page 63 undefined on input li
 ne 41.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -3724,8 +3730,8 @@ LaTeX Warning: Reference `tab:zusammen' on page 63 undefined on input line 1.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-LaTeX Warning: Reference `fig:Scatterplot' on page 64 undefined on input line 6
-3.
+LaTeX Warning: Reference `fig:Streudiagramm' on page 65 undefined on input line
+ 64.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
@@ -3778,10 +3784,10 @@ LaTeX Warning: Citation 'Seemann2012' on page 67 undefined on input line 13.
 LaTeX Warning: Citation 'Seemann2012' on page 68 undefined on input line 25.
 
 
-LaTeX Warning: Citation 'Martin17' on page 69 undefined on input line 32.
+LaTeX Warning: Citation 'Martin17' on page 69 undefined on input line 31.
 
 
-LaTeX Warning: Citation 'Seemann2012' on page 69 undefined on input line 32.
+LaTeX Warning: Citation 'Seemann2012' on page 69 undefined on input line 31.
 
 ) (chapters/Ausblick/schrift.tex
 
@@ -3814,7 +3820,13 @@ lio-the-ken wie Free-Ty-pe [[];
 
 (chapters/Ausblick/jobsystem.tex
 
-LaTeX Warning: Citation 'Gyrling2015' on page 72 undefined on input line 12.
+LaTeX Warning: Citation 'Gyrling2015' on page 71 undefined on input line 12.
+
+
+Overfull \hbox (4.20018pt too wide) in paragraph at lines 12--13
+\T1/lmr/m/n/12 (-20) dus-trie ist die-se Fra-ge re-le-vant, da dies die Leis-tu
+ng der Soft-wa-re be-ein-flus-sen kann [[]].
+ []
 
 
 LaTeX Warning: Citation 'ChronicleSoftware' on page 72 undefined on input line 
@@ -3826,30 +3838,30 @@ LaTeX Warning: Citation 'Cheremin2011' on page 72 undefined on input line 18.
 )
 No file tikz/masterarbeit-figure11.gls.
 
-Package glossaries-extra Warning: Glossary `main' is missing on input line 111.
+Package glossaries-extra Warning: Glossary `main' is missing on input line 112.
 
 
 
 Package glossaries-extra Warning: Rerun required to build the glossary `main' o
-r check TeX's shell escape allows you to run makeindex on input line 111.
+r check TeX's shell escape allows you to run makeindex on input line 112.
 
 No file tikz/masterarbeit-figure11.acr.
 
 Package glossaries-extra Warning: Glossary `acronym' is missing on input line 1
-14.
+15.
 
 
 Package glossaries-extra Warning: Rerun required to build the glossary `acronym
-' or check TeX's shell escape allows you to run makeindex on input line 114.
+' or check TeX's shell escape allows you to run makeindex on input line 115.
 
 
-LaTeX Warning: Empty bibliography on input line 117.
+LaTeX Warning: Empty bibliography on input line 119.
 
 
-Package biblatex Warning: Keyword 'online' not found on input line 120.
+Package biblatex Warning: Keyword 'online' not found on input line 122.
 
 
-LaTeX Warning: Empty bibliography on input line 120.
+LaTeX Warning: Empty bibliography on input line 122.
 
 (chapters/Anhang/anhang.tex
 The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
@@ -3857,36 +3869,36 @@ The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
 e' to disable this.
 
 LaTeX Warning: Hyper reference `sec:executor' on page II undefined on input lin
-e 31.
+e 33.
 
 
-LaTeX Warning: Reference `sec:executor' on page II undefined on input line 31.
+LaTeX Warning: Reference `sec:executor' on page II undefined on input line 33.
 
 
-LaTeX Warning: Reference `sec:executor' on page II undefined on input line 31.
+LaTeX Warning: Reference `sec:executor' on page II undefined on input line 33.
 
 
-Overfull \hbox (7.05438pt too wide) in paragraph at lines 31--32
+Overfull \hbox (7.05438pt too wide) in paragraph at lines 33--34
 [][][] \T1/lmr/m/n/12 (-20) um ei-ne Rei-he von Me-tho-den. Zum einen wird die 
 Mög-lich-keit ge-bo-ten den [][][][]-
  []
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 34.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 36.
 The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
 687pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
 e' to disable this.
 
 LaTeX Warning: Hyper reference `sec:CompletableFuture' on page III undefined on
- input line 37.
+ input line 39.
 
 
 LaTeX Warning: Reference `sec:CompletableFuture' on page III undefined on input
- line 37.
+ line 39.
 
 
 LaTeX Warning: Reference `sec:CompletableFuture' on page III undefined on input
- line 37.
+ line 39.
 
 > Step: init table outer spec.
 > Step: parse table options.
@@ -3901,34 +3913,34 @@ The command '\includegraphics [draft=false,scale=1,keepaspectratio,height=468.0
 se' to disable this.
 
 LaTeX Warning: Hyper reference `sec:EtablierungEinerKompositionroot' on page IV
- undefined on input line 56.
+ undefined on input line 58.
 
 
 LaTeX Warning: Reference `sec:EtablierungEinerKompositionroot' on page IV undef
-ined on input line 56.
+ined on input line 58.
 
 
 LaTeX Warning: Reference `sec:EtablierungEinerKompositionroot' on page IV undef
-ined on input line 56.
+ined on input line 58.
 
 The command '\includegraphics [draft=false,scale=1,keepaspectratio,width=483.69
 687pt]{\svg@tempa }' has been optimized away. Use '/tikz/external/optimize=fals
 e' to disable this.
 
 LaTeX Warning: Hyper reference `sec:designJobsystem' on page V undefined on inp
-ut line 67.
+ut line 69.
 
 
 LaTeX Warning: Reference `sec:designJobsystem' on page V undefined on input lin
-e 67.
+e 69.
 
 
 LaTeX Warning: Reference `sec:designJobsystem' on page V undefined on input lin
-e 67.
+e 69.
 
 
 LaTeX Warning: Reference `kap:performance' on page VI undefined on input line 7
-2.
+4.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
@@ -4005,11 +4017,11 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 )
 
-FiXme Summary: Number of notes: 1,
+FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
 (FiXme)        Number of errors: 0,
 (FiXme)        Number of fatal errors: 0,
-(FiXme)        Total: 1.
+(FiXme)        Total: 0.
 
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\provideco
 mmand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
@@ -4032,19 +4044,19 @@ Package logreq Info: Writing requests to 'tikz/masterarbeit-figure11.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 72549 strings out of 478870
- 1639823 string characters out of 2847888
- 2724321 words of memory out of 3000000
- 88738 multiletter control sequences out of 15000+600000
- 542690 words of font info for 327 fonts, out of 8000000 for 9000
+ 72804 strings out of 478870
+ 1643985 string characters out of 2847888
+ 2728222 words of memory out of 3000000
+ 89017 multiletter control sequences out of 15000+600000
+ 538692 words of font info for 314 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  119i,21n,137p,10665b,2604s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 <C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb
 >
-Output written on tikz/masterarbeit-figure11.pdf (1 page, 38576 bytes).
+Output written on tikz/masterarbeit-figure11.pdf (1 page, 39756 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
+ 507 PDF objects out of 1000 (max. 8388607)
  1 named destinations out of 1000 (max. 500000)
- 73741 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 71693 words of extra memory for PDF output out of 74296 (max. 10000000)
 
