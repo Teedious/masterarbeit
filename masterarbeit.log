@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  17 APR 2022 20:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  18 APR 2022 13:55
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
@@ -632,14 +632,8 @@ Package: svg 2020/11/26 v2.02k (include SVG pictures)
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.sty
-Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.sty
-Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-))
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
 \c@svg@param@lastpage=\count321
 \svg@box=\box87
 \c@svg@param@currpage=\count322
@@ -1061,15 +1055,15 @@ File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfnodeparttextbox=\box104
-) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+)
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
@@ -1500,8 +1494,7 @@ Package: glossary-tree 2021/09/20 v4.47 (NLCT)
 \glsshortpltok=\toks64
 \glslongpltok=\toks65
 \mglselementindex=\count540
-)
-(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
 Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
@@ -1523,7 +1516,8 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \xmathstrut@dim=\dimen384
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
- (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
+
+(C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
 \t@pgfplots@toka=\toks66
 \t@pgfplots@tokb=\toks67
 \t@pgfplots@tokc=\toks68
@@ -2023,12 +2017,7 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 [14 <./tikz/masterarbeit-figure9.pdf>]) [15] (chapters/Grundlagen/MultithreadingInJava.tex [16]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 22.
- [17] [18] [19])
-Overfull \hbox (3.03781pt too wide) in paragraph at lines 82--48
-\T1/lmr/m/n/12 (-20) face []\T1/lmtt/m/n/12 n-S[][][] \T1/lmr/m/n/12 (-20) und über-nimmt die Ver-wal-tung der Kom-po-si-ti-on asyn-chro-ner Tasks [[]HT16[],
- []
-
-(chapters/Grundlagen/MultithreadingInSpielen.tex [20]
+ [17] [18] [19]) (chapters/Grundlagen/MultithreadingInSpielen.tex [20]
 ===== Image 'tikz/masterarbeit-figure10' is up-to-date. ======
 [21 <./tikz/masterarbeit-figure10.pdf>]
 ===== Image 'tikz/masterarbeit-figure11' is up-to-date. ======
@@ -2421,7 +2410,7 @@ Overfull \hbox (12.64574pt too wide) in paragraph at lines 121--121
 ] (chapters/Anhang/anhang.tex [89] [1
 
 ]
-<./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf, id=4138, 551.05875pt x 551.81157pt>
+<./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf, id=4137, 551.05875pt x 551.81157pt>
 File: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf  used on input line 31.
@@ -2436,7 +2425,7 @@ Overfull \hbox (11.76692pt too wide) in paragraph at lines 31--32
  <./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 36.
-<./svg-inkscape/CompletionStage_svg-raw.pdf, id=4326, 742.27313pt x 666.99188pt>
+<./svg-inkscape/CompletionStage_svg-raw.pdf, id=4325, 742.27313pt x 666.99188pt>
 File: ./svg-inkscape/CompletionStage_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/CompletionStage_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/CompletionStage_svg-raw.pdf  used on input line 37.
@@ -2457,7 +2446,7 @@ Overfull \hbox (11.75934pt too wide) in paragraph at lines 37--38
 [3
 
  <./svg-inkscape/CompletionStage_svg-raw.pdf>]
-<./svg-inkscape/Context_svg-raw.pdf, id=4478, 455.45157pt x 774.64406pt>
+<./svg-inkscape/Context_svg-raw.pdf, id=4477, 455.45157pt x 774.64406pt>
 File: ./svg-inkscape/Context_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Context_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Context_svg-raw.pdf  used on input line 55.
@@ -2465,7 +2454,7 @@ Package pdftex.def Info: ./svg-inkscape/Context_svg-raw.pdf  used on input line 
  [4
 
  <./svg-inkscape/Context_svg-raw.pdf>]
-<./svg-inkscape/ExecuterInterfaces_svg-raw.pdf, id=4648, 751.30687pt x 680.5425pt>
+<./svg-inkscape/ExecuterInterfaces_svg-raw.pdf, id=4647, 751.30687pt x 680.5425pt>
 File: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf  used on input line 66.
@@ -2540,17 +2529,17 @@ Package logreq Info: Writing requests to 'masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 73720 strings out of 478870
- 1662433 string characters out of 2847888
- 2857484 words of memory out of 3000000
- 89288 multiletter control sequences out of 15000+600000
- 526351 words of font info for 303 fonts, out of 8000000 for 9000
+ 73649 strings out of 478870
+ 1661178 string characters out of 2847888
+ 2856810 words of memory out of 3000000
+ 89231 multiletter control sequences out of 15000+600000
+ 526222 words of font info for 302 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  115i,21n,134p,10669b,3770s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on masterarbeit.pdf (107 pages, 29139532 bytes).
+Output written on masterarbeit.pdf (107 pages, 29139418 bytes).
 PDF statistics:
- 5675 PDF objects out of 6186 (max. 8388607)
+ 5674 PDF objects out of 6186 (max. 8388607)
  533 named destinations out of 1000 (max. 500000)
  64693 words of extra memory for PDF output out of 74296 (max. 10000000)
 

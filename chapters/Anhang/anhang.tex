@@ -13,7 +13,7 @@ Der beigelegte Datenträger enthält die folgenden Dateien.
 
 \begin{itemize}
 	\item PDF dieser Masterarbeit,
-	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \code{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \code{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnotemark mit \code{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \code{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig.},
+	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \code{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \code{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnotemark{} mit \code{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \code{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig.},
 	\item UML-Modelle als \code{.asta}-Dateien im Ordner \code{astah},
 	\item den Source-Code im Verzeichnis \code{src}
 	\item die Source-Code-Dokumentation im Ordner \code{doc},
@@ -27,13 +27,13 @@ Der beigelegte Datenträger enthält die folgenden Dateien.
 \clearpage
 \section{Klassendiagramme}
 Dieser Abschnitt enthält einige Klassendiagramme, die detailliertere Informationen bereitstellen als die in der Arbeit gezeigten.
-\subsection{Executor im Concurrency Framework}\label{appendix:concFrameworkExecutor}
+\subsection{Executor im Concurrency-Framework}\label{appendix:concFrameworkExecutor}
 \includesvg[width=\textwidth]{ConcurrencyFrameworkExecutor.svg}
 
 Wie in Abschnitt~\vref{sec:executor} beschrieben, erweitert das Interface \classExecutorService{} das Interface \classExecutor{} um eine Reihe von Methoden. Zum einen wird die Möglichkeit geboten den \code{submit(...)}-Methoden \classRunnable{}- oder auch \classCallable{}-Objekte zu übergeben, zum anderen bietet das Interface auch Methoden zur Verwaltung des Lebenszyklus des \classExecutorService{}.
 
 \clearpage
-\subsection{\texttt{CompletionStage} im Concurrency Framework}\label{appendix:CompletionStage}
+\subsection{\texttt{CompletionStage} im Concurrency-Framework}\label{appendix:CompletionStage}
 \includesvg[width=\textwidth]{CompletionStage.svg}
 
 Klassendiagramm des Interface \classCompletionStage{}, auf das in Abschnitt~\vref{sec:CompletableFuture} verwiesen wird. Die definierten Methoden bieten verschiedene Möglichkeiten der Komposition.
@@ -66,7 +66,7 @@ Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zug
 	\includesvg[width=\textwidth]{ExecuterInterfaces.svg}
 	\par
 }
-In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie die jedes Interface die Schnittstelle, von der es abgeleitet ist, erweitert. Der \classScheduledExecutorService{} Möglichkeiten des Scheduling hinzu und der neu entworfene \classBlocklibExecutorService{} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zum anderen Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \classTaskPriority{}.
+In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie jedes Interface die Schnittstelle erweitert, von der es abgeleitet ist. Der \classScheduledExecutorService{} Möglichkeiten des Scheduling hinzu und der neu entworfene \classBlocklibExecutorService{} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zum anderen Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \classTaskPriority{}.
 
 \clearpage
 \section{Messungen}\label{appendix:plots}
