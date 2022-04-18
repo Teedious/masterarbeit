@@ -43,7 +43,7 @@ private void update(float delta) {
 \end{lstlisting}
 
 \begin{example}
-Man nehme an, dass der \classEntityManager{} prüft, welche Chunks geladen sind, um zu ermitteln, wo ein neuer Gegner erschaffen werden soll. Der \classChunkManager{} ist dafür zuständig, abhängig von der aktuellen Kameraposition zu bestimmen, welche Chunks geladen werden. Wird nun ein Chunks entfernt, auf dem der EntityManager einen Gegner erschaffen hat, könnte das zu unvorhergesehenem Verhalten führen, da der \classEntityManager{} erwartet, dass der erschaffene Gegner auf einem existenten Chunk erstellt wurde.
+Man nehme an, dass der \classEntityManager{} prüft, welche Chunks geladen sind, um zu ermitteln, wo ein neuer Gegner erschaffen werden soll. Der \classChunkManager{} ist dafür zuständig, abhängig von der aktuellen Kameraposition zu bestimmen, welche Chunks geladen werden. Wird nun ein Chunks entfernt, auf dem der \classEntityManager{} einen Gegner erschaffen hat, könnte das zu unvorhergesehenem Verhalten führen, da der \classEntityManager{} erwartet, dass der erschaffene Gegner auf einem existenten Chunk erstellt wurde.
 \end{example}
 
 Die (mögliche) Abhängigkeit des Verhaltens von der Reihenfolge der Updates, zeigt, dass sich diese Berechnungen nicht problemlos parallelisieren lassen, da man den gesamten Simulationscode auf mögliche Wettkampfbedingungen prüfen müsste.

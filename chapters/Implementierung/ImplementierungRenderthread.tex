@@ -43,7 +43,7 @@ In der Blocklib implementieren alle zu zeichnenden Elemente, auch Renderables ge
 	\item[$-$] Die Existenz von paarweise aufzurufenden Funktionen birgt die Gefahr, dass der zweite Aufruf vergessen wird. Wie bei \code{malloc()} und \code{free()} in der Programmiersprache C entsteht durch einen fehlenden Aufruf von \code{hide()} ein Speicherleck. Zudem wird dann die Anzahl der zu zeichnenden Elemente immer größer und der Rendervorgang wird verlangsamt. Des Weiteren werden möglicherweise Renderables gezeichnet, die nicht gezeichnet werden sollen.
 \end{itemize}
 
-Um den Zeichenaufwand zu verringern, implementiert die Klasse \classChunkManager{} das sogenannte \emph{Frustum Culling}. Es wird berechnet, welche Chunks sich im Sichtfeld der Kamera befinden. Nur diese Chunks sollen gezeichnet werden. Dazu entfernt der ChunkManager jeden Frame alle Chunks mittels \code{hide()} aus der Datenstruktur der zu zeichnenden Elemente und fügt nur die als sichtbar ermittelten Chunks wieder ein. Die Chunks machen mit etwa 
+Um den Zeichenaufwand zu verringern, implementiert die Klasse \classChunkManager{} das sogenannte \emph{Frustum Culling}. Es wird berechnet, welche Chunks sich im Sichtfeld der Kamera befinden. Nur diese Chunks sollen gezeichnet werden. Dazu entfernt der \classChunkManager{} jeden Frame alle Chunks mittels \code{hide()} aus der Datenstruktur der zu zeichnenden Elemente und fügt nur die als sichtbar ermittelten Chunks wieder ein. Die Chunks machen mit etwa 
 % 334*2/(334*2+4+73+142)
 75 \% bis
 % 529*2/(529*2+4+73+142)
