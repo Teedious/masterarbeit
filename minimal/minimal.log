@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  17 APR 2022 20:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  17 APR 2022 20:10
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/minimal/minimal.tex
@@ -1291,7 +1291,7 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 90.
+(scrhack)             need that hack, on input line 97.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
@@ -1567,11 +1567,11 @@ File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \glo@main@file=\write6
 \openout6 = `minimal.glo'.
 
-Package glossaries Info: Writing glossary file minimal.glo on input line 162.
+Package glossaries Info: Writing glossary file minimal.glo on input line 169.
 \glo@acronym@file=\write7
 \openout7 = `minimal.acn'.
 
-Package glossaries Info: Writing glossary file minimal.acn on input line 162.
+Package glossaries Info: Writing glossary file minimal.acn on input line 169.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count549
 \lst@gtempboxa=\box143
@@ -1593,7 +1593,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 164.
+Package scrhack Info: loading listings hack on input line 171.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\listings.hak
 File: listings.hak 2021/06/25 v3.34 KOMA-Script scrhack part (hacking package listings)
 Package tocbasic Info: setting babel extension for `lol' on input line 143.
@@ -1624,39 +1624,39 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 21.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (minimal.aux)
 \openout1 = `minimal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Info: Redefining \Ref on input line 21.
-LaTeX Info: Redefining \microtypecontext on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Info: Redefining \Ref on input line 15.
+LaTeX Info: Redefining \microtypecontext on input line 15.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 21.
+LaTeX Info: Redefining \showhyphens on input line 15.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1720,7 +1720,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 )) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
 File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 21.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 15.
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lbx
@@ -1751,8 +1751,8 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'minimal.bbl' found.
  (minimal.bbl)
-Package biblatex Info: Reference section=0 on input line 21.
-Package biblatex Info: Reference segment=0 on input line 21.
+Package biblatex Info: Reference section=0 on input line 15.
+Package biblatex Info: Reference segment=0 on input line 15.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
@@ -1775,15 +1775,15 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 21.
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+Package hyperref Info: Link coloring OFF on input line 15.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
  (minimal.out) (minimal.out)
 \@outlinefile=\write8
 \openout8 = `minimal.out'.
 
-LaTeX Info: Redefining \Ref on input line 21.
+LaTeX Info: Redefining \Ref on input line 15.
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
 (scrartcl)           because of handling of possible bookmark level gaps.
@@ -1791,7 +1791,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 21.
+(scrartcl)           before \begin{document} on input line 15.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
@@ -1801,65 +1801,65 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 \c@lstlisting=\count564
-Package scrhack Info: undefining \float@addtolists on input line 21.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 27.
+Package scrhack Info: undefining \float@addtolists on input line 15.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 21.
 (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 27.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 21.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 27.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 21.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 27.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 21.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 27.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+(Font)              <6> on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 27.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
-LaTeX Warning: Hyper reference `fig:petrinet' on page 1 undefined on input line 37.
+LaTeX Warning: Hyper reference `fig:petrinet' on page 1 undefined on input line 31.
 
 
-LaTeX Warning: Reference `fig:petrinet' on page 1 undefined on input line 37.
+LaTeX Warning: Reference `fig:petrinet' on page 1 undefined on input line 31.
 
 
-LaTeX Warning: Reference `fig:petrinet' on page 1 undefined on input line 37.
+LaTeX Warning: Reference `fig:petrinet' on page 1 undefined on input line 31.
 
 
-LaTeX Warning: Hyper reference `fig:petrinet' on page 1 undefined on input line 37.
+LaTeX Warning: Hyper reference `fig:petrinet' on page 1 undefined on input line 31.
 
 
-LaTeX Warning: Reference `fig:petrinet' on page 1 undefined on input line 37.
+LaTeX Warning: Reference `fig:petrinet' on page 1 undefined on input line 31.
 
 
-LaTeX Warning: Reference `fig:petrinet' on page 1 undefined on input line 37.
+LaTeX Warning: Reference `fig:petrinet' on page 1 undefined on input line 31.
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 37--37
+Underfull \hbox (badness 1931) in paragraph at lines 31--31
 [][][]|\T1/lmr/m/n/10.95 (+20) Ab-wand-lung des Petri-Netzes aus Ab-bil-
  []
 
@@ -1876,7 +1876,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 56.
+(Font)              <10.95> on input line 50.
 [1{C:/Users/Florian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 \openout5 = `minimal.ist'.
@@ -1903,7 +1903,7 @@ Package logreq Info: Writing requests to 'minimal.run.xml'.
 Here is how much of TeX's memory you used:
  69530 strings out of 478870
  1584013 string characters out of 2847888
- 2744364 words of memory out of 3000000
+ 2744344 words of memory out of 3000000
  86280 multiletter control sequences out of 15000+600000
  434904 words of font info for 76 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
