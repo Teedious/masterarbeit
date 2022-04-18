@@ -128,10 +128,11 @@ Ist die Anzahl der Marken pro Platz in jeder Markierung des Erreichbarkeitsgraph
 Um die Arbeit mit Petri-Netzen zu vereinfachen, werden nun noch einige weitere Definitionen eingeführt. Es sei ein Petri-Netz $N = (P,T,F,W,m_0)$ gegeben.
 
 \begin{enumerate}
-	\item Die Menge der Knoten $v$ mit Kanten zu einem Knoten $k \in P\cup T$ heißt \emph{Vorbereich} des Knotens $k$ und ist definiert als $^\circ k = \{v | (v,k) \in F\}$.
-	\item Die Menge der Knoten $n$ mit Kanten von einem Knoten $k \in P\cup T$ heißt \emph{Nachbereich} des Knotens $k$ und ist definiert als $k^\circ  = \{n | (k,n) \in F\}$.
+	\item Die Menge $K = P\cup T$ heißt die Menge der \emph{Knoten} des Petri-Netzes $N$.
+	\item Die Menge der Knoten $v \in K$ mit Kanten zu einem Knoten $k \in K$ heißt \emph{Vorbereich} des Knotens $k$ und ist definiert als $^\circ k = \{v \in K| (v,k) \in F\}$.
+	\item Die Menge der Knoten $n \in K$ mit Kanten von einem Knoten $k \in K$ heißt \emph{Nachbereich} des Knotens $k$ und ist definiert als $k^\circ  = \{n \in K | (k,n) \in F\}$.
 	\item Die Menge der Knoten einer Markierung $m$ mit mindesten $n$ Marken $\{x | m(x)\geq n\}$ wird $m_{\geq n}$ genannt.
-	\item Das Maximum einer Markierung $m$, $\deg(m) \coloneqq \max \{m(p)|p\in P\}$, wird ihr \emph{Grad} genannt.
+	\item Das Maximum einer Markierung $m$, $\deg(m) = \max \{m(p)|p\in P\}$, wird ihr \emph{Grad} genannt.
 	\item Ein Petri-Netz $N$ heißt \emph{$n$-beschränkt}, wenn $n$ das Maximum der Grade der Markierungen des Erreichbarkeitsgraphen $(V,K)=\E{N}$ ist, also $n = \max\{\deg(m)| m\in V \}$.
 	\item Gilt für eine Kante $((a, b),w) \in W$, dass $w = 1$, so kann im dazugehörigen Graphen die Beschriftung entfallen. Kanten ohne Beschriftung haben also ein implizites Gewicht von $1$.
 \end{enumerate}

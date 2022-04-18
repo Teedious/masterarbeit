@@ -13,38 +13,66 @@
 \tikzexternaldisable
 
 \begin{document}
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{.48\textwidth}
-		\centering
-		\begin{tikzpicture}
-			\node[place, label=$p_1$, tokens=1] (p1) at (0,0) {};
-			\node[transV,label=$t_1$, right = of p1] (t1){};
-			\node[place, label=$p_2$, right = of t1] (p2) {};
-			\node[transV,label=$t_2$, right = of p2] (t2){};
+\begin{tikzpicture}
+	\begin{scope}[shift={(0,3.3)}]
+		\fill[lightgray] ($(0,-3mm) - (0,.1)$) rectangle ($(13,3mm) + (-.10,.1)$);
+		\fill[lightgray] ($(0,-12mm) - (0,.1)$) rectangle ($(13,-6mm) + (-.10,.1)$);
+		
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (.1,0) (f1){Daten 1};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (f1.east) (f2){Daten 2};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (f2.east) (f3){Daten 3};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (f3.east) (f4){Daten 4};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (f4.east) (f5){Daten 5};
+		\node[minimum width = 2cm,minimum height = 6mm, fill= orange! 90!blue ,anchor=west] at (f5.east) (f6){Daten 6};
+		
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,below = 3mm of f1] (r1){Daten 1};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (r1.east) (r2){Daten 2};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (r2.east) (r3){Daten 3};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (r3.east) (r4){Daten 4};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (r4.east) (r5){Daten 5};
+		\node[minimum width = 2cm,minimum height = 6mm, fill= orange!  90!blue ,anchor=west] at (r5.east) (r6){Daten 6};
 
-			\draw 
-			(p1) edge[post] node[above] {1} (t1)
-			(t1) edge[post] node[above] {1} (p2)
-			(p2) edge[post] node[above] {1} (t2);
-		\end{tikzpicture}
-		\subcaption{Abwandlung des Petri-Netzes aus Abbildung~\ref{fig:petrinet}. Die Gewichtungsfunktion ist für jede Relation maximal 1.}\label{fig:1-bpetrinet:graph}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{.48\textwidth}
-		\centering
-		\begin{tikzpicture}[node distance=5mm,auto,state/.append style={rounded rectangle}]
-			\node[state, initial] (q1) {$1$};
-			\node[state] (q2) [right=of q1] {$2$};
-			\node[state] (q3) [right=of q2] {};
-			\path[->] 
-			(q1) edge node {$t_1$} (q2)
-			(q2) edge node {$t_2$} (q3);
-		\end{tikzpicture}
-		\subcaption{Erreichbarkeitsgraph, bei dem die Zahl(en) in den Knoten die  Indizes der Plätze beschreiben, die eine Markierung besitzen.}\label{fig:1-bpetrinet:reachability}
-	\end{subfigure}
-\caption{Petri-Netz und zugehöriger Erreichbarkeitsgraph, in dem die Anzahl der Markierungen pro Platz stets maximal 1 ist. }\label{fig:1-bpetrinet}
-\end{figure} 
+		\node[minimum width = 2cm,minimum height = 6mm, above = 1mm of f1] 				(b1){Frame 1};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b1.east) (b2){Frame 2};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b2.east) (b3){Frame 3};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b3.east) (b4){Frame 4};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b4.east) (b5){Frame 5};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b5.east) (b6){Frame 6};
 
-Abb~\ref{fig:1-bpetrinet:graph}
+		\node[anchor=east,xshift=-2mm] at (f1.west) (s) {Simulation};
+		\node[anchor=east,xshift=-2mm] at (r1.west) {Rendering};
+
+		\node[below = 2mm of r3] {Kein Pipelining};
+
+		\draw[->] (0,-14mm) -- ++(13,0) node[below] {Zeit};
+	\end{scope}
+	\fill[lightgray] ($(0,-3mm) - (0,.1)$) rectangle ($(13,3mm) + (-.10,.1)$);
+	\fill[lightgray] ($(0,-12mm) - (0,.1)$) rectangle ($(13,-6mm) + (-.10,.1)$);
+	
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (.1,0) (f1){Daten 1};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (f1.east) (f2){Daten 2};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (f2.east) (f3){Daten 3};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (f3.east) (f4){Daten 4};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (f4.east) (f5){Daten 5};
+	\node[minimum width = 2cm,minimum height = 6mm, anchor=north, below = 3mm of f1] (r0){};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (r0.east) (r1){Daten 1};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (r1.east) (r2){Daten 2};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (r2.east) (r3){Daten 3};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (r3.east) (r4){Daten 4};
+	\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (r4.east) (r5){Daten 5};
+
+	\node[minimum width = 2cm,minimum height = 6mm, above = 1mm of f1] 				(b1){Frame 1};
+	\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b1.east) (b2){Frame 2};
+	\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b2.east) (b3){Frame 3};
+	\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b3.east) (b4){Frame 4};
+	\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b4.east) (b5){Frame 5};
+	\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b5.east) (b6){Frame 6};
+
+	\node[anchor=east,xshift=-2mm] at (f1.west) (s) {Simulation};
+	\node[anchor=east,xshift=-2mm] at (r0.west) {Rendering};
+
+	\node[below = 2mm of r2] {Pipelining};
+
+	\draw[->] (0,-14mm) -- ++(13,0) node[below] {Zeit};
+\end{tikzpicture}
 \end{document}

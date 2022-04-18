@@ -45,41 +45,65 @@ Eine einfache Architektur vergibt, wie in Abbildung~\ref{fig:sot} gezeigt, für 
 	\centering
 	\begin{tikzpicture}
 		\begin{scope}[shift={(0,3.3)}]
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (0,0) (f1){Frame 1};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (f1.east) (f2){Frame 2};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (f2.east) (f3){Frame 3};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (f3.east) (f4){Frame 4};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (f4.east) (f5){Frame 5};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,below = 3mm of f1] (r1){Frame 1};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (r1.east) (r2){Frame 2};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (r2.east) (r3){Frame 3};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (r3.east) (r4){Frame 4};
-			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (r4.east) (r5){Frame 5};
-			\node[anchor=east] at (f1.west) (s) {Simulation:};
-			\node[anchor=east] at (r1.west) {Rendering:};
-
-			\node[above = 1mm of s.north west, anchor=south west,] {Kein Pipelining:};
-
-			\draw[->] (r1.south west) ++(0,-.2) -- ++(13,0) node[below] {Zeit};
+			\fill[lightgray] ($(0,-3mm) - (0,.1)$) rectangle ($(13,3mm) + (-.10,.1)$);
+			\fill[lightgray] ($(0,-12mm) - (0,.1)$) rectangle ($(13,-6mm) + (-.10,.1)$);
+			
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (.1,0) (f1){Daten 1};
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (f1.east) (f2){Daten 2};
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (f2.east) (f3){Daten 3};
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (f3.east) (f4){Daten 4};
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (f4.east) (f5){Daten 5};
+			\node[minimum width = 2cm,minimum height = 6mm, fill= orange! 90!blue ,anchor=west] at (f5.east) (f6){Daten 6};
+			
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,below = 3mm of f1] (r1){Daten 1};
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (r1.east) (r2){Daten 2};
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (r2.east) (r3){Daten 3};
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (r3.east) (r4){Daten 4};
+			\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (r4.east) (r5){Daten 5};
+			\node[minimum width = 2cm,minimum height = 6mm, fill= orange!  90!blue ,anchor=west] at (r5.east) (r6){Daten 6};
+	
+			\node[minimum width = 2cm,minimum height = 6mm, above = 1mm of f1] 				(b1){Frame 1};
+			\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b1.east) (b2){Frame 2};
+			\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b2.east) (b3){Frame 3};
+			\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b3.east) (b4){Frame 4};
+			\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b4.east) (b5){Frame 5};
+			\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b5.east) (b6){Frame 6};
+	
+			\node[anchor=east,xshift=-2mm] at (f1.west) (s) {Simulation};
+			\node[anchor=east,xshift=-2mm] at (r1.west) {Rendering};
+	
+			\node[below = 2mm of r3] {Kein Pipelining};
+	
+			\draw[->] (0,-14mm) -- ++(13,0) node[below] {Zeit};
 		\end{scope}
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (0,0) (f1){Frame 1};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (f1.east) (f2){Frame 2};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (f2.east) (f3){Frame 3};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (f3.east) (f4){Frame 4};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (f4.east) (f5){Frame 5};
+		\fill[lightgray] ($(0,-3mm) - (0,.1)$) rectangle ($(13,3mm) + (-.10,.1)$);
+		\fill[lightgray] ($(0,-12mm) - (0,.1)$) rectangle ($(13,-6mm) + (-.10,.1)$);
+		
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (.1,0) (f1){Daten 1};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (f1.east) (f2){Daten 2};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (f2.east) (f3){Daten 3};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (f3.east) (f4){Daten 4};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (f4.east) (f5){Daten 5};
 		\node[minimum width = 2cm,minimum height = 6mm, anchor=north, below = 3mm of f1] (r0){};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (r0.east) (r1){Frame 1};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (r1.east) (r2){Frame 2};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (r2.east) (r3){Frame 3};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (r3.east) (r4){Frame 4};
-		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (r4.east) (r5){Frame 5};
-
-		\node[anchor=east] at (f1.west) (s) {Simulation:};
-		\node[anchor=east] at (r0.west) {Rendering:};
-
-		\node[ above = 1mm of s.north west,anchor=south west,] {Pipelining:};
-
-		\draw[->] (r0.south west) ++(0,-.2) -- ++(13,0) node[below] {Zeit};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!100!orange,anchor=west] at (r0.east) (r1){Daten 1};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 75!orange,anchor=west] at (r1.east) (r2){Daten 2};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 50!orange,anchor=west] at (r2.east) (r3){Daten 3};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta! 25!orange,anchor=west] at (r3.east) (r4){Daten 4};
+		\node[minimum width = 2cm,minimum height = 6mm, fill=magenta!  0!orange,anchor=west] at (r4.east) (r5){Daten 5};
+	
+		\node[minimum width = 2cm,minimum height = 6mm, above = 1mm of f1] 				(b1){Frame 1};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b1.east) (b2){Frame 2};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b2.east) (b3){Frame 3};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b3.east) (b4){Frame 4};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b4.east) (b5){Frame 5};
+		\node[minimum width = 2cm,minimum height = 6mm, anchor=west] at (b5.east) (b6){Frame 6};
+	
+		\node[anchor=east,xshift=-2mm] at (f1.west) (s) {Simulation};
+		\node[anchor=east,xshift=-2mm] at (r0.west) {Rendering};
+	
+		\node[below = 2mm of r2] {Pipelining};
+	
+		\draw[->] (0,-14mm) -- ++(13,0) node[below] {Zeit};
 	\end{tikzpicture}
 	\caption[Unterschied der Ausführung abhängig von der Nutzung von Pipelining.]{Unterschied der Ausführung abhängig von der Nutzung von Pipelining. Wird Pipelining genutzt, ist die Simulation dem Rendering immer einen Frame voraus.}\label{fig:pipelining}
  \end{figure}

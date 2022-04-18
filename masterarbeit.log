@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  18 APR 2022 19:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  18 APR 2022 20:58
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
@@ -1908,9 +1908,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 9.
-) [1]
-Package tocbasic Info: character protrusion at toc deactivated on input line 16.
- (masterarbeit.toc [2
+) [4]
+Package tocbasic Info: character protrusion at toc deactivated on input line 17.
+ (masterarbeit.toc [1
 
 ]
 Overfull \hbox (3.96545pt too wide) detected at line 228
@@ -1921,9 +1921,9 @@ Overfull \hbox (3.96545pt too wide) detected at line 228
 \tf@toc=\write9
 \openout9 = `masterarbeit.toc'.
 
- [3]
-Package tocbasic Info: character protrusion at lof deactivated on input line 25.
- (masterarbeit.lof [4
+ [2]
+Package tocbasic Info: character protrusion at lof deactivated on input line 26.
+ (masterarbeit.lof [3
 
 ]
 Overfull \hbox (4.4371pt too wide) in paragraph at lines 112--112
@@ -1934,18 +1934,18 @@ Overfull \hbox (4.4371pt too wide) in paragraph at lines 112--112
 \tf@lof=\write10
 \openout10 = `masterarbeit.lof'.
 
-Package tocbasic Info: character protrusion at lot deactivated on input line 27.
+Package tocbasic Info: character protrusion at lot deactivated on input line 28.
  (masterarbeit.lot)
 \tf@lot=\write11
 \openout11 = `masterarbeit.lot'.
 
-Package tocbasic Info: character protrusion at lol deactivated on input line 28.
+Package tocbasic Info: character protrusion at lol deactivated on input line 29.
  (masterarbeit.lol)
 \tf@lol=\write12
 \openout12 = `masterarbeit.lol'.
 
- [5] (chapters/Einleitung.tex
-<./img//unreal-5.png, id=406, 1927.2pt x 1084.05pt>
+ [4] (chapters/Einleitung.tex
+<./img//unreal-5.png, id=407, 1927.2pt x 1084.05pt>
 File: ./img//unreal-5.png Graphic file (type png)
 <use ./img//unreal-5.png>
 Package pdftex.def Info: ./img//unreal-5.png  used on input line 27.
@@ -1956,12 +1956,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 32.
-<./img//blocklib.png, id=421, 883.80188pt x 551.05875pt>
+<./img//blocklib.png, id=422, 883.80188pt x 551.05875pt>
 File: ./img//blocklib.png Graphic file (type png)
 <use ./img//blocklib.png>
 Package pdftex.def Info: ./img//blocklib.png  used on input line 39.
 (pdftex.def)             Requested size: 237.01411pt x 147.77882pt.
-<./img//minecraft.png, id=422, 883.80188pt x 551.05875pt>
+<./img//minecraft.png, id=423, 883.80188pt x 551.05875pt>
 File: ./img//minecraft.png Graphic file (type png)
 <use ./img//minecraft.png>
 Package pdftex.def Info: ./img//minecraft.png  used on input line 43.
@@ -1976,14 +1976,18 @@ l.51
  <./img//unreal-5.png>])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 
+l.38 
       [2 <./img//blocklib.png> <./img//minecraft.png>]pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \clearpage
+l.40 \clearpage
                 [3] (chapters/Grundlagen/intro.tex) (chapters/Grundlagen/PetriNetze.tex
 ===== Image 'tikz/masterarbeit-figure0' is up-to-date. ======
-[4
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 
+      [4
 
 ] [5 <./tikz/masterarbeit-figure0.pdf>]
 ===== Image 'tikz/masterarbeit-figure1' is up-to-date. ======
@@ -2025,10 +2029,10 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 ===== Image 'tikz/masterarbeit-figure12' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure13' is up-to-date. ======
 [23 <./tikz/masterarbeit-figure12.pdf>] [24 <./tikz/masterarbeit-figure13.pdf>]
-<./img//Destiny.png, id=1203, 481.3182pt x 271.0125pt>
+<./img//Destiny.png, id=1204, 481.3182pt x 271.0125pt>
 File: ./img//Destiny.png Graphic file (type png)
 <use ./img//Destiny.png>
-Package pdftex.def Info: ./img//Destiny.png  used on input line 180.
+Package pdftex.def Info: ./img//Destiny.png  used on input line 204.
 (pdftex.def)             Requested size: 386.95897pt x 217.88133pt.
 ) [25] [26 <./img//Destiny.png>] (chapters/EntwicklungEinerNebenlaeufigen/intro.tex) (chapters/EntwicklungEinerNebenlaeufigen/AnalyseDerBlocklib.tex
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7.
@@ -2058,7 +2062,7 @@ Package mdframed Info: mdframed detected package amsthm
 ===== Image 'tikz/masterarbeit-figure14' is up-to-date. ======
 ) (chapters/DesignDerThreadingApi/JobApi.tex [33 <./tikz/masterarbeit-figure14.pdf>]
 ===== Image 'tikz/masterarbeit-figure15' is up-to-date. ======
-<./svg-inkscape/GrobesDesign_svg-raw.pdf, id=1349, 702.37407pt x 242.40562pt>
+<./svg-inkscape/GrobesDesign_svg-raw.pdf, id=1350, 702.37407pt x 242.40562pt>
 File: ./svg-inkscape/GrobesDesign_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/GrobesDesign_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/GrobesDesign_svg-raw.pdf  used on input line 42.
@@ -2066,13 +2070,13 @@ Package pdftex.def Info: ./svg-inkscape/GrobesDesign_svg-raw.pdf  used on input 
 [34 <./tikz/masterarbeit-figure15.pdf>]) [35 <./svg-inkscape/GrobesDesign_svg-raw.pdf>] (chapters/Implementierung/Implementierung.tex) (chapters/Implementierung/ImplementierungRenderthread.tex [36
 
 ]
-<./svg-inkscape/Loader_svg-raw.pdf, id=1589, 502.87875pt x 183.68625pt>
+<./svg-inkscape/Loader_svg-raw.pdf, id=1590, 502.87875pt x 183.68625pt>
 File: ./svg-inkscape/Loader_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Loader_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Loader_svg-raw.pdf  used on input line 12.
 (pdftex.def)             Requested size: 502.87752pt x 183.68578pt.
  [37 <./svg-inkscape/Loader_svg-raw.pdf>]
-<./img//player.png, id=1808, 276.28218pt x 356.83313pt>
+<./img//player.png, id=1809, 276.28218pt x 356.83313pt>
 File: ./img//player.png Graphic file (type png)
 <use ./img//player.png>
 Package pdftex.def Info: ./img//player.png  used on input line 26.
@@ -2084,13 +2088,13 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 55.
-<./svg-inkscape/Rendering_svg-raw.pdf, id=1819, 427.5975pt x 201.75375pt>
+<./svg-inkscape/Rendering_svg-raw.pdf, id=1820, 427.5975pt x 201.75375pt>
 File: ./svg-inkscape/Rendering_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Rendering_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Rendering_svg-raw.pdf  used on input line 62.
 (pdftex.def)             Requested size: 427.59645pt x 201.75325pt.
  [40 <./svg-inkscape/Rendering_svg-raw.pdf>]
-<./svg-inkscape/Rendering-Interface_svg-raw.pdf, id=1989, 548.80031pt x 202.50656pt>
+<./svg-inkscape/Rendering-Interface_svg-raw.pdf, id=1990, 548.80031pt x 202.50656pt>
 File: ./svg-inkscape/Rendering-Interface_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Rendering-Interface_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Rendering-Interface_svg-raw.pdf  used on input line 73.
@@ -2110,35 +2114,34 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 172.
 [43 <./tikz/masterarbeit-figure17.pdf>] [44]
-<./svg-inkscape/GameLoop_svg-raw.pdf, id=2275, 630.10406pt x 365.11406pt>
+<./svg-inkscape/GameLoop_svg-raw.pdf, id=2276, 630.10406pt x 365.11406pt>
 File: ./svg-inkscape/GameLoop_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/GameLoop_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/GameLoop_svg-raw.pdf  used on input line 196.
 (pdftex.def)             Requested size: 630.10252pt x 365.11316pt.
  [45 <./svg-inkscape/GameLoop_svg-raw.pdf>]
-<./svg-inkscape/GameLoopActivity_svg-raw.pdf, id=2456, 454.69875pt x 167.12437pt>
+<./svg-inkscape/GameLoopActivity_svg-raw.pdf, id=2457, 454.69875pt x 167.12437pt>
 File: ./svg-inkscape/GameLoopActivity_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/GameLoopActivity_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/GameLoopActivity_svg-raw.pdf  used on input line 207.
 (pdftex.def)             Requested size: 363.75949pt x 133.69966pt.
-) (chapters/Implementierung/UmstellungRenderarchitektur.tex) (chapters/Implementierung/SucheNachRaceConditions.tex
+) (chapters/Implementierung/UmstellungRenderarchitektur.tex [46 <./svg-inkscape/GameLoopActivity_svg-raw.pdf>]) (chapters/Implementierung/SucheNachRaceConditions.tex
 ===== Image 'tikz/masterarbeit-figure18' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure19' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure20' is up-to-date. ======
-[46 <./svg-inkscape/GameLoopActivity_svg-raw.pdf>]
-<./img//shadowMap.png, id=2677, 724.95844pt x 348.55219pt>
+<./img//shadowMap.png, id=2678, 724.95844pt x 348.55219pt>
 File: ./img//shadowMap.png Graphic file (type png)
 <use ./img//shadowMap.png>
 Package pdftex.def Info: ./img//shadowMap.png  used on input line 29.
 (pdftex.def)             Requested size: 435.32422pt x 209.3031pt.
- [47 <./tikz/masterarbeit-figure18.pdf> <./tikz/masterarbeit-figure19.pdf> <./tikz/masterarbeit-figure20.pdf>] [48 <./img//shadowMap.png>]) (chapters/Implementierung/ImplementierungJobsystem.tex [49]
-<./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf, id=2711, 563.85657pt x 198.7425pt>
+[47 <./tikz/masterarbeit-figure18.pdf> <./tikz/masterarbeit-figure19.pdf> <./tikz/masterarbeit-figure20.pdf>] [48 <./img//shadowMap.png>]) (chapters/Implementierung/ImplementierungJobsystem.tex [49]
+<./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf, id=2712, 563.85657pt x 198.7425pt>
 File: ./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf  used on input line 9.
 (pdftex.def)             Requested size: 563.8552pt x 198.742pt.
  [50 <./svg-inkscape/BlocklibExecutor-shortened_svg-raw.pdf>] [51]
-<./svg-inkscape/Wrapper_svg-raw.pdf, id=2782, 575.14874pt x 325.215pt>
+<./svg-inkscape/Wrapper_svg-raw.pdf, id=2783, 575.14874pt x 325.215pt>
 File: ./svg-inkscape/Wrapper_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Wrapper_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Wrapper_svg-raw.pdf  used on input line 38.
@@ -2160,7 +2163,7 @@ Overfull \hbox (7.83438pt too wide) in paragraph at lines 87--88
 [55]) [56] (chapters/Performance/0-performance.tex) [57
 
 ] (chapters/Performance/1-hexagon.tex
-<./img//fps-hexagon.png, id=3131, 1204.5pt x 803.0pt>
+<./img//fps-hexagon.png, id=3132, 1204.5pt x 803.0pt>
 File: ./img//fps-hexagon.png Graphic file (type png)
 <use ./img//fps-hexagon.png>
 Package pdftex.def Info: ./img//fps-hexagon.png  used on input line 6.
@@ -2223,12 +2226,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 ===== Image 'tikz/masterarbeit-figure30' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure31' is up-to-date. ======
 ) (chapters/Performance/3-static.tex [64 <./tikz/masterarbeit-figure30.pdf> <./tikz/masterarbeit-figure31.pdf>]
-<./img//seed-0.png, id=3354, 1204.5pt x 803.0pt>
+<./img//seed-0.png, id=3355, 1204.5pt x 803.0pt>
 File: ./img//seed-0.png Graphic file (type png)
 <use ./img//seed-0.png>
 Package pdftex.def Info: ./img//seed-0.png  used on input line 5.
 (pdftex.def)             Requested size: 237.01411pt x 157.99956pt.
-<./img//seed-2.png, id=3355, 1204.5pt x 803.0pt>
+<./img//seed-2.png, id=3356, 1204.5pt x 803.0pt>
 File: ./img//seed-2.png Graphic file (type png)
 <use ./img//seed-2.png>
 Package pdftex.def Info: ./img//seed-2.png  used on input line 7.
@@ -2261,32 +2264,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 ===== Image 'tikz/masterarbeit-figure35' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure36' is up-to-date. ======
 ) [66 <./tikz/masterarbeit-figure32.pdf> <./tikz/masterarbeit-figure33.pdf>] (chapters/Performance/4-rotate.tex
-<./img//rotate-1.png, id=3423, 1204.5pt x 803.0pt>
+<./img//rotate-1.png, id=3424, 1204.5pt x 803.0pt>
 File: ./img//rotate-1.png Graphic file (type png)
 <use ./img//rotate-1.png>
 Package pdftex.def Info: ./img//rotate-1.png  used on input line 4.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-2.png, id=3424, 1204.5pt x 803.0pt>
+<./img//rotate-2.png, id=3425, 1204.5pt x 803.0pt>
 File: ./img//rotate-2.png Graphic file (type png)
 <use ./img//rotate-2.png>
 Package pdftex.def Info: ./img//rotate-2.png  used on input line 5.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-3.png, id=3425, 1204.5pt x 803.0pt>
+<./img//rotate-3.png, id=3426, 1204.5pt x 803.0pt>
 File: ./img//rotate-3.png Graphic file (type png)
 <use ./img//rotate-3.png>
 Package pdftex.def Info: ./img//rotate-3.png  used on input line 6.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-4.png, id=3426, 1204.5pt x 803.0pt>
+<./img//rotate-4.png, id=3427, 1204.5pt x 803.0pt>
 File: ./img//rotate-4.png Graphic file (type png)
 <use ./img//rotate-4.png>
 Package pdftex.def Info: ./img//rotate-4.png  used on input line 7.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-5.png, id=3427, 1204.5pt x 803.0pt>
+<./img//rotate-5.png, id=3428, 1204.5pt x 803.0pt>
 File: ./img//rotate-5.png Graphic file (type png)
 <use ./img//rotate-5.png>
 Package pdftex.def Info: ./img//rotate-5.png  used on input line 8.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//rotate-6.png, id=3428, 1204.5pt x 803.0pt>
+<./img//rotate-6.png, id=3429, 1204.5pt x 803.0pt>
 File: ./img//rotate-6.png Graphic file (type png)
 <use ./img//rotate-6.png>
 Package pdftex.def Info: ./img//rotate-6.png  used on input line 9.
@@ -2320,17 +2323,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 ===== Image 'tikz/masterarbeit-figure40' is up-to-date. ======
 ===== Image 'tikz/masterarbeit-figure41' is up-to-date. ======
 ) (chapters/Performance/5-walk.tex
-<./img//walk-1.png, id=3548, 1204.5pt x 803.0pt>
+<./img//walk-1.png, id=3549, 1204.5pt x 803.0pt>
 File: ./img//walk-1.png Graphic file (type png)
 <use ./img//walk-1.png>
 Package pdftex.def Info: ./img//walk-1.png  used on input line 4.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//walk-2.png, id=3549, 1204.5pt x 803.0pt>
+<./img//walk-2.png, id=3550, 1204.5pt x 803.0pt>
 File: ./img//walk-2.png Graphic file (type png)
 <use ./img//walk-2.png>
 Package pdftex.def Info: ./img//walk-2.png  used on input line 5.
 (pdftex.def)             Requested size: 154.78653pt x 103.18063pt.
-<./img//walk-3.png, id=3550, 1204.5pt x 803.0pt>
+<./img//walk-3.png, id=3551, 1204.5pt x 803.0pt>
 File: ./img//walk-3.png Graphic file (type png)
 <use ./img//walk-3.png>
 Package pdftex.def Info: ./img//walk-3.png  used on input line 6.
@@ -2377,7 +2380,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 [75]) [76 <./tikz/masterarbeit-figure47.pdf>] (chapters/Fazit.tex) [77
 
 ] (chapters/Ausblick/ausblick.tex) (chapters/Ausblick/EtablierungEinerKompositionroot.tex
-<./svg-inkscape/Context-shortened_svg-raw.pdf, id=3793, 455.45157pt x 243.91125pt>
+<./svg-inkscape/Context-shortened_svg-raw.pdf, id=3794, 455.45157pt x 243.91125pt>
 File: ./svg-inkscape/Context-shortened_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Context-shortened_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Context-shortened_svg-raw.pdf  used on input line 8.
@@ -2385,7 +2388,7 @@ Package pdftex.def Info: ./svg-inkscape/Context-shortened_svg-raw.pdf  used on i
  [78
 
 ] [79 <./svg-inkscape/Context-shortened_svg-raw.pdf>] [80]) (chapters/Ausblick/schrift.tex
-<./img//ExportedFont.png, id=3913, 513.92pt x 128.48pt>
+<./img//ExportedFont.png, id=3914, 513.92pt x 128.48pt>
 File: ./img//ExportedFont.png Graphic file (type png)
 <use ./img//ExportedFont.png>
 Package pdftex.def Info: ./img//ExportedFont.png  used on input line 4.
@@ -2401,7 +2404,7 @@ Package microtype Info: Character `029' is missing
  [87
 
 ]
-Overfull \hbox (12.64574pt too wide) in paragraph at lines 121--121
+Overfull \hbox (12.64574pt too wide) in paragraph at lines 122--122
 []\T1/lmr/m/n/12 (-20) Sven Kal-le.   Im-ple-men-ta-ti-on of en-vi-ron-men-tal fea-tu-res in-to an exis-ting 3D-Framework.
  []
 
@@ -2410,7 +2413,7 @@ Overfull \hbox (12.64574pt too wide) in paragraph at lines 121--121
 ] (chapters/Anhang/anhang.tex [89] [1
 
 ]
-<./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf, id=4138, 551.05875pt x 551.81157pt>
+<./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf, id=4139, 551.05875pt x 551.81157pt>
 File: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf  used on input line 31.
@@ -2425,7 +2428,7 @@ Overfull \hbox (11.76692pt too wide) in paragraph at lines 31--32
  <./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 36.
-<./svg-inkscape/CompletionStage_svg-raw.pdf, id=4326, 742.27313pt x 666.99188pt>
+<./svg-inkscape/CompletionStage_svg-raw.pdf, id=4327, 742.27313pt x 666.99188pt>
 File: ./svg-inkscape/CompletionStage_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/CompletionStage_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/CompletionStage_svg-raw.pdf  used on input line 37.
@@ -2446,7 +2449,7 @@ Overfull \hbox (11.75934pt too wide) in paragraph at lines 37--38
 [3
 
  <./svg-inkscape/CompletionStage_svg-raw.pdf>]
-<./svg-inkscape/Context_svg-raw.pdf, id=4478, 455.45157pt x 774.64406pt>
+<./svg-inkscape/Context_svg-raw.pdf, id=4479, 455.45157pt x 774.64406pt>
 File: ./svg-inkscape/Context_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Context_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Context_svg-raw.pdf  used on input line 55.
@@ -2454,7 +2457,7 @@ Package pdftex.def Info: ./svg-inkscape/Context_svg-raw.pdf  used on input line 
  [4
 
  <./svg-inkscape/Context_svg-raw.pdf>]
-<./svg-inkscape/ExecuterInterfaces_svg-raw.pdf, id=4648, 751.30687pt x 680.5425pt>
+<./svg-inkscape/ExecuterInterfaces_svg-raw.pdf, id=4649, 751.30687pt x 680.5425pt>
 File: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/ExecuterInterfaces_svg-raw.pdf  used on input line 66.
@@ -2529,17 +2532,17 @@ Package logreq Info: Writing requests to 'masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 73643 strings out of 478870
- 1661114 string characters out of 2847888
- 2856806 words of memory out of 3000000
+ 73645 strings out of 478870
+ 1661137 string characters out of 2847888
+ 2856900 words of memory out of 3000000
  89231 multiletter control sequences out of 15000+600000
- 525997 words of font info for 299 fonts, out of 8000000 for 9000
+ 526084 words of font info for 300 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  115i,21n,134p,10669b,3770s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on masterarbeit.pdf (107 pages, 29139850 bytes).
+Output written on masterarbeit.pdf (107 pages, 29140288 bytes).
 PDF statistics:
- 5675 PDF objects out of 6186 (max. 8388607)
+ 5676 PDF objects out of 6186 (max. 8388607)
  533 named destinations out of 1000 (max. 500000)
  64693 words of extra memory for PDF output out of 74296 (max. 10000000)
 
