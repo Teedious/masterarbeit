@@ -1,9 +1,2 @@
 Meshing
-Kritischer Bereich
-Double Buffer
-Hardwarethread
-FPS
-OpenGL
-API
-Multithreading
-
+MasterRenderer
