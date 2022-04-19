@@ -46,6 +46,7 @@ Nun gilt es die Ursache der Positionsänderung ausfindig zu machen. Die Position
 \end{tabular}
 
 \code{DayNightLightig.updateLightPosition(...)} wird nicht im Render-Thread ausgeführt, sondern während \code{update()} in einem anderen Thread. Der relevante Abschnitt der Methode ist in Listing~\ref{lst:raceLight} dargestellt.
+
 \begin{lstlisting}[caption={Wettkampfbedingung in \code{updateLightPosition(...)}.},label={lst:raceLight},float={htbp}]
 private void updateLightPosition(float progress, boolean day) {
 	// ...
@@ -55,6 +56,7 @@ private void updateLightPosition(float progress, boolean day) {
 	position = Vector3f.add(position, Context.getInstance().getCamera().getPosition(), new Vector3f());
 }
 \end{lstlisting}
+
 Wird also der Wert von \code{DayNightLighting.position} im Render-Thread ausgelesen, während die Methode in Ausführung ist, beispielsweise während Zeile~\ref{lst:updateLightPosition:scale}, so enthält \code{DayNightLighting.position} einen falschen Wert. Hier existiert also die gesuchte Wettkampfbedingung.
 
 Diese Wettkampfbedingung ließe sich nun auch ohne eine Zwischenspeicherung des zu rendernden Spielzustands ansatzweise lösen, indem beispielsweise das Update der Position zu einer atomaren \gls{Anweisung} geändert wird. Um das zu implementieren, müsste das Attribut \var{position} als \code{volatile} deklariert werden. Dann kann die Berechnung der neuen Position auf einer temporären Variablen \var{newPosition} durchgeführt werden. Setzt man nun \code{position = newPosition}, garantiert die Nutzung von \code{volatile} in Java, dass das Update atomar und sofort für alle anderen Threads sichtbar ist. Das Problem, dass nicht festgelegt ist, ob die Simulation vor der Nutzung der Variablen beendet ist, bleibt bestehen. Das führt jedoch lediglich zu nicht wahrnehmbaren Verzögerungen der Bewegung der Sonne um maximal einen Frame.
