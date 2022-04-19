@@ -45,7 +45,7 @@ private void update(float delta) {
 \end{lstlisting}
 
 \begin{example}
-Man nehme an, dass der \classEntityManager{} prüft, welche Chunks geladen sind, um zu ermitteln, wo ein neuer Gegner erschaffen werden soll.
+Man nehme an, dass der \classEntityManager{} (Eine Klasse, die unter anderem alle Charaktere wie Gegner oder den Spieler verwaltet) prüft, welche Chunks geladen sind, um zu ermitteln, wo ein neuer Gegner erschaffen werden soll.
 Der \classChunkManager{} bestimmt, welche Chunks abhängig von der aktuellen Kameraposition geladen werden.
 Wird nun ein Chunk entfernt, auf dem der \classEntityManager{} einen Gegner erschaffen hat, könnte das zu unvorhergesehenem Verhalten führen, da der \classEntityManager{} erwartet, dass der erschaffene Gegner auf einem existenten Chunk erstellt wurde.
 \end{example}
