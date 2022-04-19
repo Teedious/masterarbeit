@@ -13,13 +13,13 @@ Der beigelegte Datenträger enthält die folgenden Dateien.
 
 \begin{itemize}
 	\item PDF dieser Masterarbeit,
-	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \code{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \code{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnotemark{} mit \code{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \code{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig.},
-	\item UML-Modelle als \code{.asta}-Dateien im Ordner \code{astah},
-	\item den Source-Code im Verzeichnis \code{src}
-	\item die Source-Code-Dokumentation im Ordner \code{doc},
-	\item die bei den Messungen erstellten Rohdaten und verarbeitete Daten in den Ordnern\\ \code{latex(-precompiled)/performance/measurements},
-	\item Skripte zur Verarbeitung der Daten in den Ordnern\\ \code{latex(-precompiled)/performance/measurements/python},
-	\item Kopien von referenzierter Literatur und Quellen, die als PDF vorliegen, im Ordner \code{recherche}.
+	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \tcode{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \tcode{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnotemark{} mit \tcode{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \tcode{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig.},
+	\item UML-Modelle als \tcode{.asta}-Dateien im Ordner \tcode{astah},
+	\item den Source-Code im Verzeichnis \tcode{src}
+	\item die Source-Code-Dokumentation im Ordner \tcode{doc},
+	\item die bei den Messungen erstellten Rohdaten und verarbeitete Daten in den Ordnern\\ \tcode{latex(-precompiled)/performance/measurements},
+	\item Skripte zur Verarbeitung der Daten in den Ordnern\\ \tcode{latex(-precompiled)/performance/measurements/python},
+	\item Kopien von referenzierter Literatur und Quellen, die als PDF vorliegen, im Ordner \tcode{recherche}.
 \end{itemize}
 
 \footnotetext{{\url{https://inkscape.org/}}}
@@ -115,18 +115,18 @@ Dies ist die Darstellung aller \glsentryshort{gpu}-Auslastungs-Verläufe. Das Sz
 
 \clearpage
 \subsection{\glsentryshort{ram}-Auslastungs-Verläufe gesammelt}\label{appendix:memplots}
-  				\memplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}{\sysA{}}
+  				\memplot[title={Szenario 1: Hexagon (0)},xticklabels={,,},xlabel={}]{seed-0-hexagon-single-mem.csv}{\sysA{}}
 \\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-hexagon-multi-mem.csv}{\sysB{}}
-\\[-.1em]\memplot[title={Szenario 2: Halbwürfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube-multi-mem.csv}{\sysA{}}
+\\[-.1em]\memplot[title={Szenario 2: Halbwürfel (0)},xticklabels={,,},xlabel={}]{seed-0-cube-single-mem.csv}{\sysA{}}
 \\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-cube-multi-mem.csv}{\sysB{}}
-\\[-.1em]\memplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static-multi-mem.csv}{\sysA{}}
+\\[-.1em]\memplot[title={Szenario 3: Welt-Statisch (0)},xticklabels={,,},xlabel={}]{seed-0-static-single-mem.csv}{\sysA{}}
 \\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-static-multi-mem.csv}{\sysB{}}
-\\[-.1em]\memplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate-multi-mem.csv}{\sysA{}}
+\\[-.1em]\memplot[title={Szenario 4: Welt-Rotation (0)},xticklabels={,,},xlabel={}]{seed-0-rotate-single-mem.csv}{\sysA{}}
 \\[-.2em]\memplot[]{seed-0-rotate-multi-mem.csv}{\sysB{}}
-\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk-multi-mem.csv}{\sysA{}}
+\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk-single-mem.csv}{\sysA{}}
 \\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-0-walk-multi-mem.csv}{\sysB{}}
-\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk-multi-mem.csv}{\sysA{}}
+\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk-single-mem.csv}{\sysA{}}
 \\[-.2em]\memplot[xticklabels={,,},xlabel={}]{seed-3-walk-multi-mem.csv}{\sysB{}}
-\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (10)},xticklabels={,,},xlabel={}]{seed-10-walk-multi-mem.csv}{\sysA{}}
+\\[-.1em]\memplot[title={Szenario 5: Welt-Gehen (10)},xticklabels={,,},xlabel={}]{seed-10-walk-single-mem.csv}{\sysA{}}
 \\[-.2em]\memplot[]{seed-10-walk-multi-mem.csv}{\sysB{}}\\[-.3em]
 Dies ist die Darstellung aller \glsentryshort{ram}-Auslastungs-Verläufe. Das Szenario ist jeweils links oben an dem Graphen zu erkennen.

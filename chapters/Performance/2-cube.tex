@@ -40,7 +40,7 @@ Anders als in Szenario 1 ist in beiden Systemen der Unterschied in der Last unü
 \paragraph{\ac{ram}} Die Speichernutzung in Szenario 2 wird in Abbildung~\ref{fig:seed-0-cube-mem} gezeigt. Der Ge\-samt-Spei\-cher\-ver\-brauch von \sysA{} steigt im Vergleich zum Hexagon-Szenario leicht, während der Speicherverbrauch von \sysB{} beinahe identisch bleibt. \sysA{} benötigt durchschnittlich \SI{643}{\mega\byte} und \sysB{} \SI{941}{\mega\byte}. Das ist ein Anstieg von \SI{12}{\percent} in \sysA{} und eine leichte Verringerung um \SI{1}{\percent} in \sysB{} gegenüber dem letzten Szenario. Weiterhin zeigt \sysB{} einen großen Speicherverbrauch während des Starts der Blocklib (\SI{1732}{\mega\byte}).
 
 \begin{figure}[!htb]
-	\memplot[xticklabels={,,},xlabel={}]{seed-0-cube-multi-mem.csv}{\sysA{}}
+	\memplot[xticklabels={,,},xlabel={}]{seed-0-cube-single-mem.csv}{\sysA{}}
 	\\\memplot{seed-0-cube-multi-mem.csv}{\sysB{}}
 	\caption{Graph des Verlaufs der Speichernutzung in Szenario 2: Halbwürfel.}\label{fig:seed-0-cube-mem}
 \end{figure} 
