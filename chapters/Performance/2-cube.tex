@@ -7,18 +7,18 @@
 		\spy on (-3.8,2.65) in node [right] at (-10,2);
 		\spy on (0.25,.65) in node [right] at (-10,-2);
 	\end{tikzpicture} 
-	\caption[Bildschirmfoto der Blockformation in Szenario 2: Halbwürfel.]{Bildschirmfoto der Blockformation in Szenario 2: Halbwürfel. Es wird das Gitternetz der Blöcke dargestellt, um die Menge der angezeigten Elemente zu maximieren. Zur besseren Ansicht sind zwei Bereiche vergrößert dargestellt. Links unten ist die Zerteilung der Würfelseiten in je zwei Dreiecke zu erkennen. Links oben wird ersichtlich, dass das Gitternetz tatsächlich nur die Kanten der Dreiecke zeichnet.}\label{fig:cube}
+	\caption[Bildschirmfoto der Blockformation in Szenario 2: Halbwürfel.]{Bildschirmfoto der Blockformation in Szenario 2: Halbwürfel. Es wird das Drahtgittermodell der Blöcke dargestellt, um die Menge der angezeigten Elemente zu maximieren. Zur besseren Ansicht sind zwei Bereiche vergrößert dargestellt. Links unten ist die Zerteilung der Würfelseiten in je zwei Dreiecke zu erkennen. Links oben wird ersichtlich, dass das Drahtgittermodell tatsächlich nur die Kanten der Dreiecke zeichnet.}\label{fig:cube}
 \end{figure}
-Da die Anzahl der zu zeichnenden Objekte in dem ersten Szenario relativ gering ist, wird sie in Szenario 2, das in Abbildung~\ref{fig:cube} veranschaulicht ist, erhöht. In diesem Szenario wird ein Bereich von $32 \times 32 \times 32$ Blöcken so befüllt, dass an jeder zweiten Stelle ein Block ist. Zweidimensional entspricht das einem Schachbrettmuster. Die Anzahl der platzierten Blöcke ist damit $\frac{1}{2}\cdot32^3 = 16384$. Die Anzahl der zu zeichnenden Dreiecke ist $16384\cdot6 + 5 = 98309$.
+Da die Anzahl der zu zeichnenden Objekte in dem ersten Szenario relativ gering ist, wird sie in Szenario 2, welches in Abbildung~\ref{fig:cube} veranschaulicht ist, erhöht. In diesem Szenario wird ein Bereich von $32 \times 32 \times 32$\,Blöcken so befüllt, dass sich an jeder zweiten Stelle ein Block befindet. Zweidimensional entspricht das einem Schachbrettmuster. Die Anzahl der platzierten Blöcke ist damit $\frac{1}{2}\cdot32^3 = 16384$. Die Anzahl der zu zeichnenden Dreiecke beträgt $16384\cdot6 + 5 = 98309$.
 
-Aufgrund der Anordnung wären allerdings nur wenige Blöcke sichtbar. Daher wird das Drahtgittermodell gezeichnet, also nur die Kanten der zu zeichnenden Dreiecke. Dennoch kann hier nicht mehr sichergestellt werden, dass auch tatsächlich alle Elemente gezeichnet werden, da selbst mit dem Drahtgittermodell an vielen Stellen Polygone überdeckt werden. Durch die Darstellung als Drahtgittermodell lassen sich nun auch die Kanten der Skybox erkennen. 
+In diesem Szenario wird das Drahtgittermodell der Blöcke gezeichnet (das heißt nur die Kanten der zu zeichnenden Dreiecke), weil sonst aufgrund der Anordnung nur wenige Blöcke sichtbar wären. Dennoch kann hier nicht mehr sichergestellt werden, dass auch tatsächlich alle Elemente gezeichnet werden, da selbst mit dem Drahtgittermodell an vielen Stellen Polygone überdeckt werden. Durch die Darstellung als Drahtgittermodell lassen sich nun auch die Kanten der Skybox erkennen. 
 
 
-\paragraph{\ac{fps}}Der Verlauf der Framerate für Szenario 2 ist in Abbildung~\ref{fig:seed-0-cube-fps} dargestellt.
-In \sysA{} werden Frames ab Sekunde $11$ erzeugt, in \sysB{} ab Sekunde $13$. Die mittlere Framerate in \sysA{} ist \SI{253}{\fps} und in \sysB{} \SI{417}{\fps}. Damit erhöht sich die Framerate in \sysB{} um \SI{65}{\percent}. Dieser Wert ist deutlich geringer als in Szenario 1. Da die Bildwiederholrate in beiden Systemen stark gesunken ist, könnte das daran liegen, das die \ac{gpu} stärker ausgelastet ist. Die Frameraten bleiben in beiden Systemen wieder annähernd konstant.
+\paragraph{\ac{fps}}Der Verlauf der Bildwiederholrate für Szenario 2 ist in Abbildung~\ref{fig:seed-0-cube-fps} dargestellt.
+In \sysA{} werden Frames ab Sekunde $11$ erzeugt, in \sysB{} ab Sekunde $13$. Die mittlere Bildwiederholrate in \sysA{} ist \SI{253}{\fps} und in \sysB{} \SI{417}{\fps}. Damit erhöht sich die Bildwiederholrate in \sysB{} um \SI{65}{\percent}. Dieser Wert ist deutlich geringer als in Szenario 1. Dass die Bildwiederholrate in beiden Systemen stark gesunken ist, könnte an einer höheren Last für die \ac{cpu} oder aber für die \ac{gpu} liegen. Die Bildwiederholraten bleiben in beiden Systemen wieder annähernd konstant.
 \begin{figure}[!htb]
 	\fpsplot{seed-0-cube}
-	\caption{Graph des Verlaufs der Framerate in Szenario 2: Halbwürfel.}\label{fig:seed-0-cube-fps}
+	\caption{Graph des Verlaufs der Bildwiederholrate in Szenario 2: Halbwürfel.}\label{fig:seed-0-cube-fps}
 \end{figure}
 
 \paragraph{\ac{cpu}} Die Last der \ac{cpu} in Szenario 2, zu sehen in Abbildung~\ref{fig:seed-0-cube-cpu}, gestaltet sich vergleichbar zu der in Szenario 1. Die Mittelwerte sind mit \SI{13}{\percent} in \sysA{} und \SI{18}{\percent} in \sysB{} nach Rundung identisch zu Szenario 1.
@@ -26,9 +26,9 @@ In \sysA{} werden Frames ab Sekunde $11$ erzeugt, in \sysB{} ab Sekunde $13$. Di
 	\cpuplot{seed-0-cube}
 	\caption[Graph des Verlaufs der \glsentryshort{cpu}-Auslastung in Szenario 2: Halbwürfel.]{Graph des Verlaufs der \ac{cpu}-Auslastung in Szenario 2: Halbwürfel.}\label{fig:seed-0-cube-cpu}
 \end{figure}
-Auffällig ist, dass \sysB{} wie in Szenario 1 in den ersten Sekunden, während des Starts der Blocklib, zwei Auslastungsspitzen besitzt (\SI{32}{\percent} und \SI{50}{\percent}). \sysA{} dagegen besitzt nur eine (\SI{46}{\percent}). Eine mögliche Erklärung dafür ist die Trennung von Simulation und Rendering in verschiedene Threads. Dadurch könnte es passieren, dass die \ac{cpu} zeitweise  entlastet ist, weil die \ac{gpu} Zeit benötigt, um übergebene \glspl{Anweisung} auszuführen, beispielsweise wenn Texturen zum Start auf die \ac{gpu} geladen werden.
+Auffällig ist, dass \sysB{} wie in Szenario 1 in den ersten Sekunden, während des Starts der Blocklib, zwei Auslastungsspitzen besitzt (\SI{32}{\percent} und \SI{50}{\percent}). \sysA{} dagegen besitzt nur eine (\SI{46}{\percent}). Eine mögliche Erklärung dafür ist die Trennung von Simulation und Rendering in verschiedene Threads. Das könnte zu einer zeitweisen Entlastung \ac{cpu} führen, weil die \ac{gpu} Zeit benötigt, um übergebene \glspl{Anweisung} auszuführen, beispielsweise wenn Texturen zum Start auf die \ac{gpu} geladen werden.
 
-\paragraph{\ac{gpu}} Die \ac{gpu}-Last des Halbwürfel Szenarios unterscheidet sich im Gegensatz zur \ac{cpu}-Auslastung sehr von der im Hexagon-Szenario gemessenen. In Abbildung~\ref{fig:seed-0-cube-gpu} ist die gemessene \ac{gpu}-Auslastung zeitlich aufgetragen. 
+\paragraph{\ac{gpu}} Die \ac{gpu}-Last des Halbwürfel-Szenarios unterscheidet sich im Gegensatz zur \ac{cpu}-Auslastung deutlich von der im Hexagon-Szenario gemessenen. In Abbildung~\ref{fig:seed-0-cube-gpu} ist die gemessene \ac{gpu}-Auslastung zeitlich aufgetragen. 
 \begin{figure}[!htb]
 	\gpuplot{seed-0-cube}
 	\caption[Graph des Verlaufs der \glsentryshort{gpu}-Auslastung in Szenario 2: Halbwürfel.]{Graph des Verlaufs der \ac{gpu}-Auslastung in Szenario 2: Halbwürfel.}\label{fig:seed-0-cube-gpu}

@@ -9,11 +9,11 @@
 \phantomsection
 \addcontentsline{toc}{section}{Anhang}
 
-Der beigelegte Datenträger enthält die folgenden Dateien.
+Der beigelegte Datenträger enthält die folgenden Dateien:
 
 \begin{itemize}
-	\item PDF dieser Masterarbeit,
-	\item Kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \tcode{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \tcode{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnotemark{} mit \tcode{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \tcode{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig.},
+	\item die PDF dieser Masterarbeit,
+	\item kompilierbare \LaTeX-Sourcen dieser Masterarbeit im Verzeichnis \tcode{latex}\footnote{Hinweis: Um die Arbeit vollständig neu kompilieren zu können, ist das Flag \tcode{--shell-escape} (manchmal auch write18) und die Software Inkscape\footnotemark{} mit \tcode{PATH}-Eintrag nötig, da einige Grafiken externalisiert werden. Das Kompilieren der Arbeit dauert dann sehr lange. Die benötigten Grafiken sind im Ordner \tcode{latex-precompiled} bereits vorhanden. Dort ist das Flag nicht nötig.},
 	\item UML-Modelle als \tcode{.asta}-Dateien im Ordner \tcode{astah},
 	\item den Source-Code im Verzeichnis \tcode{src}
 	\item die Source-Code-Dokumentation im Ordner \tcode{doc},
@@ -57,7 +57,7 @@ Klassendiagramm des Interface \classCompletionStage{}, auf das in Abschnitt~\vre
 }
 Die Klasse \classContext{} besitzt, wie in Abschnitt~\vref{sec:EtablierungEinerKompositionroot} beschrieben, Methoden, um beinahe jedes System der Blocklib global für alle anderen Systeme verfügbar zu machen. 
 
-Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zugegriffen werden kann. Allerdings sind dadurch Abhängigkeiten zwischen Systemen schwieriger zu finden und Änderungen können unvorhergesehene Folgen haben, da beispielsweise ein System die ursprüngliche Funktionalität genau so benötigt, wie sie davor war. 
+Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zugegriffen werden kann. Allerdings sind dadurch Abhängigkeiten zwischen Systemen schwieriger zu finden und Änderungen können unvorhergesehene Folgen haben, da beispielsweise ein System die ursprüngliche Funktionalität benötigt.
 
 \clearpage
 \subsection{\texttt{BlocklibExecutorService}}\label{appendix:BlocklibExecutorService}
@@ -66,7 +66,7 @@ Das ist zwar angenehm, da von überall aus leicht auf ein benötigtes System zug
 	\includesvg[width=\textwidth]{ExecuterInterfaces.svg}
 	\par
 }
-In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie jedes Interface die Schnittstelle erweitert, von der es abgeleitet ist. Der \classScheduledExecutorService{} Möglichkeiten des Scheduling hinzu und der neu entworfene \classBlocklibExecutorService{} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zum anderen Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \classTaskPriority{}.
+In Abschnitt~\vref{sec:designJobsystem} werden die hier dargestellten Interfaces besprochen. In dieser detaillierten Version des Klassendiagramms lässt sich nun erkennen, wie jedes Interface die Schnittstelle erweitert, von der es abgeleitet ist. Der \classScheduledExecutorService{} fügt Scheduling-Möglichkeiten hinzu. Der neu entworfene \classBlocklibExecutorService{} überschreibt zum einen den Rückgabewert der definierten Methoden und definiert zum anderen Kopien jeder Ausführungs-Methode mit dem zusätzlichen Parameter \code{priority} des Typs \classTaskPriority{}.
 
 \clearpage
 \section{Messungen}\label{appendix:plots}
@@ -85,7 +85,7 @@ Dieser Abschnitt enthält die Graphen aller Messungen der Performanceanalyse (Ka
 \\[-.3em]\fpsplot[title={Szenario 5: Welt-Gehen (0)},xticklabels={,,},xlabel={}]{seed-0-walk}
 \\[-.3em]\fpsplot[title={Szenario 5: Welt-Gehen (3)},xticklabels={,,},xlabel={}]{seed-3-walk}
 \\[-.3em]\fpsplot[title={Szenario 5: Welt-Gehen (10)},]{seed-10-walk}\\[-.3em]
-Dies ist die Darstellung aller Framerate-Verläufe. Das Szenario ist jeweils links oben an dem Graphen zu erkennen.
+Dies ist die Darstellung aller Bildwiederholraten-Verläufe. Das Szenario ist jeweils links oben an dem Graphen zu erkennen.
 
 \clearpage
 \subsection{\glsentryshort{cpu}-Auslastungs-Verläufe gesammelt}\label{appendix:cpuplots}
