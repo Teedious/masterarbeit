@@ -105,7 +105,7 @@ Eine einfache Architektur vergibt, wie in Abbildung~\ref{fig:sot} gezeigt, für 
 	
 		\draw[->] (0,-14mm) -- ++(13,0) node[below] {Zeit};
 	\end{tikzpicture}
-	\caption[Unterschied der Ausführung abhängig von der Nutzung von Pipelining.]{Unterschied der Ausführung abhängig von der Nutzung von Pipelining. Wird Pipelining genutzt, ist die Simulation dem Rendering immer einen Frame voraus.}\label{fig:pipelining}
+	\caption[Unterschied der Ausführung abhängig von der Nutzung von Pipelining.]{Unterschied der Ausführung abhängig von der Nutzung von Pipelining. Wird wie im oberen Bild Nebenläufigkeit ohne Pipelining genutzt, kommt es zu Wettkampfbedingungen, da gleichzeitig auf dieselben Daten zugegriffen wird. Unter Nutzung von Pipelining wie im unteren Bild ist die Simulation dem Rendering immer einen Frame voraus, wodurch nebenläufige Zugriffe auf dieselben Daten und folglich Wettkampfbedingungen vermieden werden.}\label{fig:pipelining}
  \end{figure}
 
 Die Zwischenspeicherung wird insbesondere dann wichtig, wenn wie in Abbildung~\ref{fig:sot} sogenanntes \emph{Pipelining} betrieben werden soll. Das heißt, dass Systeme nicht gleichzeitig, sondern nacheinander ausgeführt werden. Nachdem ein Schritt vollendet ist, beginnt allerdings gleich die Ausführung des nächsten Schritts. Damit ergibt sich bei zwei Systemen ein Bild wie in Abbildung~\ref{fig:pipelining}. Betrachtet man einen Zeitpunkt, also ein Bild (engl. Frame), so arbeiten alle Systeme gleichzeitig, jedoch an unterschiedlichen Daten. Während die Simulation die Daten für Frame $n$ berechnet, nutzt das Rendering-System die Daten von Thread $n-1$.
@@ -152,7 +152,7 @@ Die Nutzung von \ac{sot} bietet sich an, wenn nur für eine einzige Plattform, b
 	\node at (5.5,3.5) {Frame $n+1$};
 	\node at (9,3.5) {Frame $n+2$};
 	\end{tikzpicture}
-	\caption[Darstellung der Nutzung von Multithreading mit einem Jobsystem.]{Darstellung der Nutzung von Multithreading mit einem Jobsystem. Die Systeme definieren Jobs, die frei auf die vorhandenen Threads aufgeteilt werden. Sim steht für Simulation und Ren für Rendering. Die Abbildung ist schematisch, die Jobs müssen nicht exakt die gleiche Länge haben, wobei jedoch kurze Jobs mit ähnlichen Laufzeiten ideal sind. Im Vergleich zu Abbildung~\ref{fig:sot} lässt sich eine höhere Auslastung der Threads erkennen, was wiederum höhere FPS zur Folge hat.}\label{fig:jobt}
+	\caption[Darstellung der Nutzung von Multithreading mit einem Jobsystem.]{Darstellung der Nutzung von Multithreading mit einem Jobsystem. Die Systeme definieren Jobs, die frei auf die vorhandenen Threads aufgeteilt werden. Sim steht für Simulation und Ren für Rendering. Die Abbildung ist schematisch, die Jobs müssen nicht exakt die gleiche Länge haben, wobei jedoch kurze Jobs mit ähnlichen Laufzeiten ideal sind. Im Vergleich zu Abbildung~\ref{fig:sot} lässt sich durch die geringere Anzahl an grauen Bereichen in den Frames eine höhere Auslastung der Threads erkennen, was wiederum eine höhere Bildwiederholrate zur Folge hat.}\label{fig:jobt}
 \end{figure}
 Eine etwas komplexere Architektur liefert die Implementierung eines sogenannten \emph{Job-} oder \emph{Task-Systems}~\cite{Davies2006,Tatarchuk2014,Genova2015,Hodgman2016}. Ein Schema der Architektur ist in Abbildung~\ref{fig:jobt} zu sehen. Anstatt Aufgaben fest auf einzelne Threads zu verteilen, gibt es \emph{Jobs} (beziehungsweise Tasks) und ein System, das die Jobs auf Threads verteilt. Konzeptuell entspricht die Architektur annähernd dem in Abschnitt~\ref{sec:executor} beschriebenen \classExecutorService{} in Java. 
 
@@ -193,7 +193,7 @@ Das System kann zudem so implementiert werden, dass es Abhängigkeiten zwischen 
 	\item[$-$] Typischerweise haben die Nutzer des Jobsystems keine Möglichkeit zu entscheiden, auf welchem Thread ein Job ausgeführt werden soll. Insbesondere beim Rendering mittels der Grafikbibliothek OpenGL führt das insofern zu Problemen, als die OpenGL Schnittstelle (\acs{api}) nur von einem speziellen Thread aus aufgerufen werden darf. Unter der Nutzung von OpenGL ist es also nicht möglich, das Rendering nebenläufig durchzuführen.
 \end{itemize}
 
-Auch in einem Jobsystem lässt sich Pipelining nutzen, es ist allerdings weniger essentiell als bei \ac{sot}. Unter der Nutzung von Pipelining könnten aber beispielsweise die Lücken in der Auslastung der Threads in Abbildung~\ref{fig:jobt} geschlossen werden, um Leistung zu optimieren.
+Auch in einem Jobsystem lässt sich Pipelining nutzen, es ist allerdings weniger essentiell als bei \ac{sot}. Unter der Nutzung von Pipelining könnten aber beispielsweise die Lücken in der Auslastung der Threads in Abbildung~\vref{fig:jobt} geschlossen werden, um Leistung zu optimieren.
 
 Entwickler von Computerspielen haben zuerst vorwiegend \ac{sot} genutzt, da diese Architektur einfacher und intuitiver als ein Jobsystem ist~\cite{Genova2015,Tatarchuk2014} und Computer zu der Zeit ihrer Nutzung noch wenige Kerne hatten. Seit etwa 2005 nutzen Entwickler jedoch vermehrt Jobsystem-Architekturen in ihren neuen Spielen~\cite{Davies2006,Tatarchuk2014,Genova2015,Gyrling2015,Hodgman2016}.
 

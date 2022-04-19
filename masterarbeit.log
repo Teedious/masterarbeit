@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  19 APR 2022 09:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.25)  19 APR 2022 10:34
 entering extended mode
 **f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
 (f:/Daten/OneDrive/OTH/Master/MI4/Masterarbeit/masterarbeit.tex
@@ -2040,7 +2040,7 @@ File: ./img//Destiny.png Graphic file (type png)
 <use ./img//Destiny.png>
 Package pdftex.def Info: ./img//Destiny.png  used on input line 204.
 (pdftex.def)             Requested size: 386.95897pt x 217.88133pt.
-) [25] [26 <./img//Destiny.png>] (chapters/EntwicklungEinerNebenlaeufigen/intro.tex) (chapters/EntwicklungEinerNebenlaeufigen/AnalyseDerBlocklib.tex
+ [25]) [26 <./img//Destiny.png>] (chapters/EntwicklungEinerNebenlaeufigen/intro.tex) (chapters/EntwicklungEinerNebenlaeufigen/AnalyseDerBlocklib.tex
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7.
  (C:\Users\Florian\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2152,12 +2152,7 @@ File: ./svg-inkscape/Wrapper_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Wrapper_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/Wrapper_svg-raw.pdf  used on input line 38.
 (pdftex.def)             Requested size: 575.14734pt x 325.2142pt.
- [52 <./svg-inkscape/Wrapper_svg-raw.pdf>]
-Overfull \hbox (0.1173pt too wide) in paragraph at lines 64--66
-\T1/lmr/m/n/12 (-20) se \T1/lmtt/m/n/12 Delegating-Completable-Future \T1/lmr/m/n/12 (-20) (in \T1/lmtt/m/n/12 submit(...)\T1/lmr/m/n/12 (-20) -Aufrufen) oder ein \T1/lmtt/m/n/12 Delegating-Scheduled-
- []
-
-[53]
+ [52 <./svg-inkscape/Wrapper_svg-raw.pdf>] [53]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 68.
@@ -2400,7 +2395,7 @@ File: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf Graphic file (type
 Package pdftex.def Info: ./svg-inkscape/ConcurrencyFrameworkExecutor_svg-raw.pdf  used on input line 31.
 (pdftex.def)             Requested size: 551.05739pt x 551.81023pt.
 
-Overfull \hbox (6.93205pt too wide) in paragraph at lines 31--32
+Overfull \hbox (11.76692pt too wide) in paragraph at lines 31--32
 [] 
  []
 
@@ -2415,7 +2410,7 @@ File: ./svg-inkscape/CompletionStage_svg-raw.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./svg-inkscape/CompletionStage_svg-raw.pdf  used on input line 37.
 (pdftex.def)             Requested size: 742.27133pt x 666.99025pt.
 
-Overfull \hbox (6.92307pt too wide) in paragraph at lines 37--38
+Overfull \hbox (11.75934pt too wide) in paragraph at lines 37--38
 [] 
  []
 
@@ -2513,15 +2508,15 @@ Package logreq Info: Writing requests to 'masterarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 73588 strings out of 478870
- 1661142 string characters out of 2847888
- 2861065 words of memory out of 3000000
- 89160 multiletter control sequences out of 15000+600000
+ 73590 strings out of 478870
+ 1661155 string characters out of 2847888
+ 2860093 words of memory out of 3000000
+ 89162 multiletter control sequences out of 15000+600000
  526121 words of font info for 301 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  115i,21n,134p,10669b,3801s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Florian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on masterarbeit.pdf (107 pages, 29140457 bytes).
+Output written on masterarbeit.pdf (107 pages, 29140914 bytes).
 PDF statistics:
  5675 PDF objects out of 6186 (max. 8388607)
  533 named destinations out of 1000 (max. 500000)
